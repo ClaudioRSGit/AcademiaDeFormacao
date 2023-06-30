@@ -229,7 +229,7 @@ Provide examples or code snippets to demonstrate how to create instances of the 
 
 ## Class Diagram
 
-UML class diagram
+<img src="images/UML.png" height="250">
 
 ## Contact Information
 
