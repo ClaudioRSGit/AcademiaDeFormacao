@@ -216,6 +216,7 @@ namespace AcademiaDeFormacao
 }
 
 ```
+---
 
 ## Installation
 
@@ -233,4 +234,51 @@ UML class diagram
 ## Contact Information
 
 Contacts
+
+---
+
+## Instantiating Objects
+
+`Funcionario Class`
+
+To create an instance of the `Funcionario` class, you can use the following code:
+
+```csharp
+Funcionario Claudio = new Funcionario(1, "Claudio Silva", "Rua da Palma", "claudio@example.com", DateTime.Now.AddDays(365), DateTime.Now);
+```
+>This will create a new object called Claudio
+
+<br>
+
+`Director Class`
+
+To create an instance of the `Diretor` class, you can use the following code:
+
+```csharp
+Diretor Paulo = new Diretor(2, "Paulo Peixoto", "Rua da ATEC", "PauloPeixoto@example.com", DateTime.Now.AddDays(730), DateTime.Now, true, 5000.00, true);
+```
+>This will create a new object called Paulo
+
+<br>
+
+`Secretaria Class`
+
+To create an instance of the `Secretaria` class, you can use the following code:
+
+```csharp
+Secretaria Ana = new Secretaria(3, "Ana Mesquita", "Rua da ATEC", "ana@example.com", DateTime.Now.AddDays(365), DateTime.Now, "Paulo Peixoto", "Administration");
+```
+>This will create a new object called Ana
+
+<br>
+
+`Formador Class`
+
+To create an instance of the `Formador` class, you can use the following code:
+
+```csharp
+Formador Ruben = new Formador(4, "Ruben Canelas", "Rua de la", "Ruben@example.com", DateTime.Now.AddDays(365), DateTime.Now, "Programming", "Both", 50.00);
+
+```
+>This will create a new object called Ruben
 
