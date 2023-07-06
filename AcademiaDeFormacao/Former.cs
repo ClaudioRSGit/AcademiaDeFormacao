@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademiaDeFormacao
 {
-    internal class Secretaria
+    internal class Former
     {
     }
 }
