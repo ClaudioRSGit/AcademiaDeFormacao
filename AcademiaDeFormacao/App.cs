@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace AcademiaDeFormacao
 {
-    public partial class Login : Form
+    public partial class App : Form
     {
-        public Login()
+        private registerPanel registerPanel;
+        private loginPanel loginPanel;
+        public App()
         {
             InitializeComponent();
             DisableFormResize();
@@ -26,35 +28,11 @@ namespace AcademiaDeFormacao
             // ControlBox = false; // Disable the control box (close, minimize, maximize buttons)
             // ResizeRedraw = false; // Disable redrawing of the form while resizing
         }
-        //Set the form's start position to center screen
         private void CenterFormOnScreen()
         {
-            StartPosition = FormStartPosition.CenterScreen; 
+            StartPosition = FormStartPosition.CenterScreen;
+            //Set the form's start position to center screen
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            new SignUp().Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void register1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

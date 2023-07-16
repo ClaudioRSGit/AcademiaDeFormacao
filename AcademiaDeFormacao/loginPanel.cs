@@ -10,31 +10,22 @@ using System.Windows.Forms;
 
 namespace AcademiaDeFormacao
 {
-    public partial class SignUp : Form
+    public partial class loginPanel : UserControl
     {
-        public SignUp()
+        public loginPanel()
         {
             InitializeComponent();
-            CenterFormOnScreen();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-        private void CenterFormOnScreen()
-        {
-            StartPosition = FormStartPosition.CenterScreen;
-        }
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new App().Show();
+            new registerPanel().Show();
+            new registerPanel().BringToFront();
         }
     }
 }
