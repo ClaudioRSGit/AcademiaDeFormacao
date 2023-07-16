@@ -224,8 +224,14 @@ Placeholder
 
 ## Usage
 
-Explain how to use the application. 
-Provide examples or code snippets to demonstrate how to create instances of the different employee types and interact with them.
+`login system`
+<br>
+<img src="images/login.png" height="250">
+
+`sign up system`
+<br>
+<img src="images/signup.png" height="250">
+
 
 ## Class Diagram
 
