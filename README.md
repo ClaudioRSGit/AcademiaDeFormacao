@@ -226,11 +226,11 @@ Placeholder
 
 `login system`
 <br>
-<img src="images/login.png" height="250">
+<img src="images/login.png" height="500">
 
 `sign up system`
 <br>
-<img src="images/signup.png" height="250">
+<img src="images/signUp.png" height="500">
 
 
 ## Class Diagram
