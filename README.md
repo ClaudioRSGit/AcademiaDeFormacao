@@ -246,7 +246,7 @@ Placeholder
 
 ## Class Diagram
 
-<img src="images/UML.png" height="250">
+<img src="images/UML.png" height="500">
 
 ## Contact Information
 
