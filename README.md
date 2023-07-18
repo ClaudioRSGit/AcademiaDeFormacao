@@ -1,4 +1,4 @@
-# Academia de Formação Asset Management Application
+# Academia de Formação 🎓 Asset Management Application 🎓
 
 ## Project Overview
 
