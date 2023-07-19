@@ -133,5 +133,11 @@
   <ItemGroup>
     <None Include="Resources\bgMenu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %286%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
