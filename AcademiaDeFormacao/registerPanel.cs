@@ -8,24 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TryProject
+namespace AcademiaDeFormacao
 {
-    public partial class SignUp : Form
+    public partial class registerPanel : UserControl
     {
-        public SignUp()
+        public registerPanel()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new App().Show();
+            new loginPanel().Show();
+            new loginPanel().BringToFront();
         }
     }
 }
