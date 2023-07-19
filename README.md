@@ -1,4 +1,4 @@
-# Academia de Formação Asset Management Application
+# Academia de Formação 🎓 Asset Management Application 🎓
 
 ## Project Overview
 
@@ -226,31 +226,11 @@ Placeholder
 
 `login system`
 <br>
-<img src="images/login.png" height="250">
 
-`sign up system`
-<br>
-<img src="images/signup.png" height="250">
-
-`director/secretary screen`
-<br>
-<img src="images/admin.png" height="250">
-
-`director/secretary screen`
-<br>
-<img src="images/admin.png" height="250">
-
-`director/secretary screen`
-<br>
-<img src="images/admin.png" height="250">
-
-`director/secretary screen`
-<br>
-<img src="images/admin.png" height="250">
 
 ## Class Diagram
 
-<img src="images/UML.png" height="250">
+<img src="images/UML.png" height="500">
 
 ## Contact Information
 
