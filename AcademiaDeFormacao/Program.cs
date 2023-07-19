@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademiaDeFormacao
+namespace TryProject
 {
     internal static class Program
     {

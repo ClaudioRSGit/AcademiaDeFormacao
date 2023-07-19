@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace TryProject
 {
-    public partial class SignUp : Form
+    public partial class Contracts : UserControl
     {
-        public SignUp()
+        public Contracts()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Login().Show();
         }
     }
 }

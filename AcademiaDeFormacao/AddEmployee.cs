@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademiaDeFormacao
+namespace TryProject
 {
-    public partial class testForm : Form
+    public partial class AddEmployee : UserControl
     {
-        public testForm()
+        public AddEmployee()
         {
             InitializeComponent();
         }
