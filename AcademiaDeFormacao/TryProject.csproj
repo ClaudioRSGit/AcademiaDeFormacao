@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D495E15E-2E4C-4D9B-9AF7-ABF0538C87D6}</ProjectGuid>
+    <ProjectGuid>{495DA9AE-68EB-4B7E-80FE-29C0C9C76725}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AcademiaDeFormacao</RootNamespace>
-    <AssemblyName>AcademiaDeFormacao</AssemblyName>
+    <RootNamespace>TryProject</RootNamespace>
+    <AssemblyName>TryProject</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,30 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coordinator.cs" />
-    <Compile Include="Director.cs" />
-    <Compile Include="App.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="App.Designer.cs">
-      <DependentUpon>App.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Former.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registerPanel.cs">
+    <Compile Include="AddEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="registerPanel.Designer.cs">
-      <DependentUpon>registerPanel.cs</DependentUpon>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Secretary.cs" />
-    <Compile Include="SignUp.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Contracts.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="Contracts.Designer.cs">
+      <DependentUpon>Contracts.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -77,14 +70,31 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginPanel.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginPanel.Designer.cs">
-      <DependentUpon>loginPanel.cs</DependentUpon>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="App.resx">
-      <DependentUpon>App.cs</DependentUpon>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contracts.resx">
+      <DependentUpon>Contracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,20 +104,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="registerPanel.resx">
-      <DependentUpon>registerPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="loginPanel.resx">
-      <DependentUpon>loginPanel.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,27 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginButton1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginButton %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\signUpButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\signUp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bgMenu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

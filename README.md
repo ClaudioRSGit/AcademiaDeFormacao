@@ -226,23 +226,7 @@ Placeholder
 
 `login system`
 <br>
-<img src="images/login.png" height="500">
 
-`sign up system`
-<br>
-<img src="images/signUp.png" height="500">
-
-`admin menus`
-<br>
-<img src="images/adminMenu.png" height="500">
-
-<img src="images/adminMenuNewEmployee.png" height="500">
-
-<img src="images/adminMenuCheckContracts.png" height="500">
-
-<img src="images/adminMenuCalculateSalary.png" height="500">
-
-<img src="images/adminMenuExportCSV.png" height="500">
 
 ## Class Diagram
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AcademiaDeFormacao.Properties
+namespace TryProject.Properties
 {
 
 
