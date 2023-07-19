@@ -1,13 +1,13 @@
 ﻿namespace TryProject
 {
-    partial class loginPanel
+    partial class Login
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lbl_singUp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,22 +41,10 @@
             this.btn_login = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-=======
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginPanel));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             // lbl_singUp
             // 
             this.lbl_singUp.AutoSize = true;
@@ -69,70 +56,9 @@
             this.lbl_singUp.TabIndex = 37;
             this.lbl_singUp.Text = "Sing Up";
             this.lbl_singUp.Click += new System.EventHandler(this.lbl_singUp_Click);
-=======
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.maskedTextBox2);
-            this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-9, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(909, 541);
-            this.panel1.TabIndex = 0;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(455, 347);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(199, 22);
-            this.maskedTextBox2.TabIndex = 15;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(455, 316);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(199, 22);
-            this.maskedTextBox1.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 350);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "pass";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 319);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "id";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(41)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(517, 438);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Sign Up";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
-            // 
-            // button2
-            // 
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.Cyan;
@@ -257,41 +183,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 23;
-=======
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(41)))));
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(132, 438);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 50);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = false;
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             this.pictureBox1.Location = new System.Drawing.Point(62, 12);
-=======
-            this.pictureBox1.Location = new System.Drawing.Point(-458, -98);
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             this.pictureBox1.TabIndex = 22;
-=======
-            this.pictureBox1.TabIndex = 9;
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
             this.pictureBox1.TabStop = false;
             // 
-            // loginPanel
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(290, 544);
             this.Controls.Add(this.lbl_singUp);
@@ -311,21 +217,14 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
-=======
-            this.Controls.Add(this.panel1);
-            this.Name = "loginPanel";
-            this.Size = new System.Drawing.Size(900, 541);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-<<<<<<< HEAD:AcademiaDeFormacao/Login.Designer.cs
         private System.Windows.Forms.Label lbl_singUp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
@@ -341,15 +240,3 @@
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
-=======
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-    }
-}
->>>>>>> 15b440fd6ad9e00e3f1a84d33a934101fd44e8af:AcademiaDeFormacao/loginPanel.Designer.cs

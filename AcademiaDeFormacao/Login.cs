@@ -10,22 +10,28 @@ using System.Windows.Forms;
 
 namespace TryProject
 {
-    public partial class SignUp : Form
+    public partial class Login : Form
     {
-        public SignUp()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void lbl_singUp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Login().Show();
+            new SignUp().Show();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Menu().Show();
         }
     }
 }
