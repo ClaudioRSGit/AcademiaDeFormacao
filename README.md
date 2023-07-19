@@ -230,7 +230,7 @@ Placeholder
 
 ## Class Diagram
 
-<img src="images/UML.png" height="500">
+<img src="UML.png" height="500">
 
 ## Contact Information
 
