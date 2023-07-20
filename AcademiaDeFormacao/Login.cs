@@ -63,5 +63,21 @@ namespace TryProject
                 txt_password.PasswordChar = '*';
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.pictureBox3.Parent = this.pictureBox1;
+            this.pictureBox3.BackColor = Color.Yellow;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
