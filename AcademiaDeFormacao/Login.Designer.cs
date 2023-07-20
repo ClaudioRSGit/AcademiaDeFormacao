@@ -30,7 +30,7 @@
         {
             this.lbl_singUp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.check_ShowPassword = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,21 +70,21 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Dont Have An Account";
             // 
-            // button1
+            // btn_clear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(41)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(26, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 36);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "CLEAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(41)))));
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clear.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btn_clear.FlatAppearance.BorderSize = 0;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_clear.Location = new System.Drawing.Point(26, 404);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(234, 36);
+            this.btn_clear.TabIndex = 35;
+            this.btn_clear.Text = "CLEAR";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // check_ShowPassword
             // 
@@ -97,6 +97,7 @@
             this.check_ShowPassword.TabIndex = 34;
             this.check_ShowPassword.Text = "Show Password";
             this.check_ShowPassword.UseVisualStyleBackColor = true;
+            this.check_ShowPassword.CheckedChanged += new System.EventHandler(this.check_ShowPassword_CheckedChanged);
             // 
             // label4
             // 
@@ -124,18 +125,19 @@
             // 
             this.txt_password.BackColor = System.Drawing.Color.Silver;
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(26, 282);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(234, 30);
             this.txt_password.TabIndex = 27;
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // txt_username
             // 
             this.txt_username.BackColor = System.Drawing.Color.Silver;
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Location = new System.Drawing.Point(26, 217);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
@@ -213,7 +215,7 @@
             this.ClientSize = new System.Drawing.Size(290, 544);
             this.Controls.Add(this.lbl_singUp);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.check_ShowPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -241,7 +243,7 @@
 
         private System.Windows.Forms.Label lbl_singUp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.CheckBox check_ShowPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

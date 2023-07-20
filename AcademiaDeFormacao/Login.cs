@@ -17,9 +17,10 @@ namespace TryProject
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            txt_username.Text = "";
+            txt_password.Text = "";
         }
 
         private void lbl_singUp_Click(object sender, EventArgs e)
@@ -37,6 +38,30 @@ namespace TryProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_ShowPassword.Checked)
+            {
+                txt_password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_password.PasswordChar = '*';
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            if (check_ShowPassword.Checked)
+            {
+                txt_password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_password.PasswordChar = '*';
+            }
         }
     }
 }
