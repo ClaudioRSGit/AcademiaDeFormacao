@@ -1,7 +1,7 @@
 # Academia de Formação 🎓 Asset Management Application 🎓
 
 <div align="center">
-    <img src="mainLogo.png" height="500">
+    <img src="facebook_profile_image2.png" height="500">
 </div>
 
 ## Project Overview
