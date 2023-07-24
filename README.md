@@ -1,5 +1,7 @@
 # Academia de Formação 🎓 Asset Management Application 🎓
 
+<img align="center" src="mainLogo.png" height="500">
+
 ## Project Overview
 
 The Academia de Formação is a training company that requires an application for managing its assets. The application will include classes for different types of employees, such as Director, Secretary, Trainer, and Coordinator. The Director, Secretary, Trainer, and Coordinator classes will be derived from the base class Employee. Each class will have specific attributes and behaviors.
