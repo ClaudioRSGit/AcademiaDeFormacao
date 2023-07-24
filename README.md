@@ -1,6 +1,8 @@
 # Academia de Formação 🎓 Asset Management Application 🎓
 
-<img align="center" src="mainLogo.png" height="500">
+<div align="center">
+    <img src="mainLogo.png" height="500">
+</div>
 
 ## Project Overview
 
