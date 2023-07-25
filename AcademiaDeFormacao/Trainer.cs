@@ -32,4 +32,5 @@ namespace AcademiaDeFormacao
             Availability = availability;
             TimeValue = timeValue;
         }
+    }
 }
