@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TryProject
 {
@@ -15,7 +17,14 @@ namespace TryProject
         public Login()
         {
             InitializeComponent();
+
         }
+
+        //Con Goncalo
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        //Con Claudio
+        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -31,14 +40,21 @@ namespace TryProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Menu().Show();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employee WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                this.Hide();
+                new Menu().Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password");
+            }
+
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -64,20 +80,12 @@ namespace TryProject
             }
         }
 
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.pictureBox3.Parent = this.pictureBox1;
             this.pictureBox3.BackColor = Color.Yellow;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
