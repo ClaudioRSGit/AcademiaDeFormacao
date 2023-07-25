@@ -80,6 +80,7 @@ namespace TryProject
             }
         }
 
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.pictureBox3.Parent = this.pictureBox1;
