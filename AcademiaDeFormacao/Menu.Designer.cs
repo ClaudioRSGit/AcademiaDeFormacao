@@ -42,10 +42,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_ExitProgram = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.btn_ExitProgram = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -175,7 +175,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,6 +201,38 @@
             this.panel3.Size = new System.Drawing.Size(817, 54);
             this.panel3.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(712, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 54);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btn_ExitProgram
+            // 
+            this.btn_ExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.btn_ExitProgram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ExitProgram.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btn_ExitProgram.FlatAppearance.BorderSize = 0;
+            this.btn_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ExitProgram.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ExitProgram.Location = new System.Drawing.Point(763, 0);
+            this.btn_ExitProgram.Name = "btn_ExitProgram";
+            this.btn_ExitProgram.Size = new System.Drawing.Size(54, 54);
+            this.btn_ExitProgram.TabIndex = 36;
+            this.btn_ExitProgram.Text = "X";
+            this.btn_ExitProgram.UseVisualStyleBackColor = false;
+            this.btn_ExitProgram.Click += new System.EventHandler(this.btn_ExitProgram_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -221,38 +253,6 @@
             this.mainPanel.Size = new System.Drawing.Size(817, 578);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // btn_ExitProgram
-            // 
-            this.btn_ExitProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.btn_ExitProgram.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ExitProgram.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btn_ExitProgram.FlatAppearance.BorderSize = 0;
-            this.btn_ExitProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ExitProgram.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ExitProgram.Location = new System.Drawing.Point(763, 0);
-            this.btn_ExitProgram.Name = "btn_ExitProgram";
-            this.btn_ExitProgram.Size = new System.Drawing.Size(54, 54);
-            this.btn_ExitProgram.TabIndex = 36;
-            this.btn_ExitProgram.Text = "X";
-            this.btn_ExitProgram.UseVisualStyleBackColor = false;
-            this.btn_ExitProgram.Click += new System.EventHandler(this.btn_ExitProgram_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(712, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 54);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // Menu
             // 
