@@ -169,7 +169,7 @@
             this.check_ShowPassword.AutoSize = true;
             this.check_ShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.check_ShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(41)))));
-            this.check_ShowPassword.Location = new System.Drawing.Point(388, 431);
+            this.check_ShowPassword.Location = new System.Drawing.Point(468, 431);
             this.check_ShowPassword.Name = "check_ShowPassword";
             this.check_ShowPassword.Size = new System.Drawing.Size(121, 20);
             this.check_ShowPassword.TabIndex = 18;
@@ -280,7 +280,6 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
