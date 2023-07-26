@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TryProject
@@ -20,7 +21,7 @@ namespace TryProject
 
         }
 
-        //Con Goncalo
+
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
         //Con Claudio
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
@@ -56,6 +57,8 @@ namespace TryProject
         }
 
 
+
+
         private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (check_ShowPassword.Checked)
@@ -86,6 +89,5 @@ namespace TryProject
             this.pictureBox3.Parent = this.pictureBox1;
             this.pictureBox3.BackColor = Color.Yellow;
         }
-
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Xml.Linq;
+
 
 namespace TryProject
 {
@@ -22,7 +23,6 @@ namespace TryProject
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
         //Con Claudio
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
-
 
         private void lbl_ToLogin_Click(object sender, EventArgs e)
         {
@@ -77,12 +77,15 @@ namespace TryProject
             }
             else if (txt_password.Text == txt_confirmPassword.Text)
             {
+
                 con.Open(); 
+
                 SqlCommand cmd = new SqlCommand("INSERT INTO Employee(Username,Password) values(@Uname,@Upassword)", con);
                 cmd.Parameters.AddWithValue("@Uname", txt_username.Text);
                 cmd.Parameters.AddWithValue("@Upassword", txt_password.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
+
 
                 txt_username.Text = "";
                 txt_password.Text = "";
