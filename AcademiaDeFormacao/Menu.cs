@@ -36,7 +36,11 @@ namespace TryProject
             calculateSalary1.Hide();
             contracts1.Hide();
             //Colocar border no Form
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
+
+            timer1.Tick += timer1_Tick;
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -71,6 +75,29 @@ namespace TryProject
             Application.Exit();
         }
 
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label_Form1_Data.Text = DateTime.Now.ToLongDateString();
+            label_Hora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            
+
+
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             welcomePage1.Hide();
@@ -85,6 +112,7 @@ namespace TryProject
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿ using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 namespace TryProject
 {
     public partial class Login : Form
@@ -16,11 +18,14 @@ namespace TryProject
         public Login()
         {
             InitializeComponent();
+
         }
+
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
         //Con Claudio
         //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -48,7 +53,10 @@ namespace TryProject
             {
                 MessageBox.Show("Invalid username or password");
             }
+
         }
+
+
 
 
         private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -81,7 +89,5 @@ namespace TryProject
             this.pictureBox3.Parent = this.pictureBox1;
             this.pictureBox3.BackColor = Color.Yellow;
         }
-
-        
     }
 }
