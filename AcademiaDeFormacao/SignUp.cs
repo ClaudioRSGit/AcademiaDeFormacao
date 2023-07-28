@@ -20,9 +20,9 @@ namespace TryProject
         }
 
         //Con Goncalo
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
         //Con Claudio
-        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
 
         private void lbl_ToLogin_Click(object sender, EventArgs e)
         {

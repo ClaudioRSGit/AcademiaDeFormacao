@@ -7,30 +7,47 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace AcademiaDeFormacao
 {
-    internal class Employee
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Adress { get; set; }
-        public string Contact { get; set; }
-        public DateTime DateEndContract { get; set; }
-        public DateTime DateCriminalRegistration { get; set; }
-
-        public Employee(int id, string name, string adress, string contact, DateTime endContract, DateTime criminalRecord)
+        internal class Employee
         {
-            Id = id;
-            Name = name;
-            Adress = adress;
-            Contact = contact;
-            DateEndContract = endContract;
-            DateCriminalRegistration = criminalRecord;
+            public int EmployeeId { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
+            public string Name { get; set; }
+            public string Email { get; set; }
+            public double Salary { get; set; }
+            public string Role { get; set; }
+            public string Address { get; set; }
+            public string Contact { get; set; }
+            public DateTime ContractEndDate { get; set; }
+            public DateTime CriminalRecordEndDate { get; set; }
+
+            public Employee(
+                int employeeId,
+                string username,
+                string password,
+                string name,
+                string email,
+                double salary,
+                string role,
+                string address,
+                string contact,
+                DateTime contractEndDate,
+                DateTime criminalRecordEndDate)
+            {
+                EmployeeId = employeeId;
+                Username = username;
+                Password = password;
+                Name = name;
+                Email = email;
+                Salary = salary;
+                Role = role;
+                Address = address;
+                Contact = contact;
+                ContractEndDate = contractEndDate;
+                CriminalRecordEndDate = contractEndDate;
+
+            }
+
         }
-        public override string ToString()
-         {
-            return $"New Employee Created! Id: {Id}";
-         }
-
-    }
-
 
 }

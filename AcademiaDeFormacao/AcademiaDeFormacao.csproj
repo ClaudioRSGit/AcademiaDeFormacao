@@ -190,6 +190,35 @@
   <ItemGroup>
     <None Include="Resources\password.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\addE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradBck.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

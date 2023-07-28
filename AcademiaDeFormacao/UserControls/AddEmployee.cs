@@ -16,5 +16,10 @@ namespace AcademiaDeFormacao.UserControls
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,8 @@ namespace TryProject
             calculateSalary1.Hide();
             contracts1.Hide();
             //Colocar border no Form
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
+
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -85,6 +86,19 @@ namespace TryProject
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            welcomePage1.Hide();
+            addEmployee1.Hide();
+            calculateSalary1.Hide();
+            contracts1.Show();
+        }
+
+        private void lbl_usernameTitle_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
