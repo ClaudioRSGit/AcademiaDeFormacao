@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="Coordinator.cs" />
     <Compile Include="Director.cs" />
     <Compile Include="Login.cs">
@@ -71,6 +73,7 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Training.cs" />
     <Compile Include="UserControls\AddEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
