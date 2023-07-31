@@ -44,7 +44,7 @@ namespace AcademiaDeFormacao
                 Address = address;
                 Contact = contact;
                 ContractEndDate = contractEndDate;
-                CriminalRecordEndDate = contractEndDate;
+                CriminalRecordEndDate = criminalRecordEndDate;
 
             }
 
