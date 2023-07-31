@@ -20,9 +20,56 @@ namespace AcademiaDeFormacao
         public static readonly string SETTINGSFILE = Path.Combine(SETTINGSPATH, "Settings.csv");
 
         //Object Lists
-        private static List<Secretary> _secretariaList = new List<Secretary>();
-        private static List<Director> _diretorList = new List<Director>();
-        private static List<Coordinator> _coordenadorList = new List<Coordinator>();
-        private static List<Trainer> _formadorList = new List<Trainer>();
+        private static List<Secretary> secretaryList = new List<Secretary>();
+        private static List<Director> directorList = new List<Director>();
+        private static List<Coordinator> coordinatorList = new List<Coordinator>();
+        private static List<Trainer> trainerList = new List<Trainer>();
+
+        //Add to list
+        public static void AddCoordinator(Coordinator coordinator)
+        {
+            coordinatorList.Add(coordinator);
+        }
+        public static void AddTrainer(Trainer trainer)
+        {
+            trainerList.Add(trainer);
+        }
+        public static void AddSecretary(Secretary secretary)
+        {
+            secretaryList.Add(secretary);
+        }
+
+        public static void AddDirector(Director director)
+        {
+            directorList.Add(director);
+        }
+
+        //Remove from list
+        public static void RemoveSecretaryById(int id)
+        {
+            var secretaryToRemove = secretaryList.FirstOrDefault(s => s.EmployeeId == id);
+            if (secretaryToRemove != null)
+            {
+                secretaryList.Remove(secretaryToRemove);
+            }
+        }
+
+        public static void RemoveDirectorById(int id)
+        {
+            var directorToRemove = directorList.FirstOrDefault(d => d.EmployeeId == id);
+            if (directorToRemove != null)
+            {
+                directorList.Remove(directorToRemove);
+            }
+        }
+
+        public static void RemoveCoordinatorById(int id)
+        {
+            var coordinatorToRemove = coordinatorList.FirstOrDefault(c => c.EmployeeId == id);
+            if (coordinatorToRemove != null)
+            {
+                coordinatorList.Remove(coordinatorToRemove);
+            }
+        }
     }
 }

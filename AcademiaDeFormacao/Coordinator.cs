@@ -25,12 +25,12 @@ namespace AcademiaDeFormacao
         {
             AssociatedTrainer = new List<Trainer>();
         }
-        public void AdicionarFormador(Trainer formador)
+        public void AddTrainer(Trainer formador)
         {
             AssociatedTrainer.Add(formador);
         }
 
-        public void RemoverFormador(Trainer formador)
+        public void RemoveTrainer(Trainer formador)
         {
             AssociatedTrainer.Remove(formador);
         }
