@@ -55,10 +55,10 @@ namespace AcademiaDeFormacao
                 foreach (var diretor in Empresa.GetDiretorList())
                 {
                     //Salva para lista global
-                    lines.Add($"- {diretor.Id}, {diretor.Nome}, {diretor.Morada}, {diretor.Contacto}, {diretor.DataFimContrato.ToString("yyyy/MM/dd")}, {diretor.DataRegistoCriminal.ToString("yyyy/MM/dd")}, {diretor.Salario},{diretor.Cargo}, {diretor.IsencaoHorario}, {diretor.BonusMensal}, {diretor.CarroEmpresa};");
+                    lines.Add($"- {diretor.EmployeeId}, {diretor.Nome}, {diretor.Morada}, {diretor.Contacto}, {diretor.DataFimContrato.ToString("yyyy/MM/dd")}, {diretor.DataRegistoCriminal.ToString("yyyy/MM/dd")}, {diretor.Salario},{diretor.Cargo}, {diretor.IsencaoHorario}, {diretor.BonusMensal}, {diretor.CarroEmpresa};");
 
                     //Salva diretor
-                    sw.WriteLine($"{diretor.Id},{diretor.Nome},{diretor.Morada},{diretor.Contacto},{diretor.DataFimContrato.ToString("yyyy/MM/dd")},{diretor.DataRegistoCriminal.ToString("yyyy/MM/dd")},{diretor.Salario},{diretor.Cargo},{diretor.IsencaoHorario},{diretor.BonusMensal},{diretor.CarroEmpresa}");
+                    sw.WriteLine($"{diretor.EmployeeId},{diretor.Nome},{diretor.Morada},{diretor.Contacto},{diretor.DataFimContrato.ToString("yyyy/MM/dd")},{diretor.DataRegistoCriminal.ToString("yyyy/MM/dd")},{diretor.Salario},{diretor.Cargo},{diretor.IsencaoHorario},{diretor.BonusMensal},{diretor.CarroEmpresa}");
                 }
                 lines.Add("");
             }

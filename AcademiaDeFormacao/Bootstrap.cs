@@ -64,9 +64,9 @@ namespace AcademiaDeFormacao
                 );
 
             //Add to lists
-            Company.AddTrainer(trainer1);
-            Company.AddTrainer(trainer2);
-            Company.AddTrainer(trainer3);
+            School.AddTrainer(trainer1);
+            School.AddTrainer(trainer2);
+            School.AddTrainer(trainer3);
         }
 
         //Coordinators
@@ -115,9 +115,9 @@ namespace AcademiaDeFormacao
                 );
 
             //Add to lists
-            Company.AddCoordinator(coordinator1);
-            Company.AddCoordinator(coordinator2);
-            Company.AddCoordinator(coordinator3);
+            School.AddCoordinator(coordinator1);
+            School.AddCoordinator(coordinator2);
+            School.AddCoordinator(coordinator3);
         }
 
         //Directors
@@ -175,9 +175,9 @@ namespace AcademiaDeFormacao
                 );
 
             //Add to lists
-            Company.AddDirector(director1);
-            Company.AddDirector(director2);
-            Company.AddDirector(director3);
+            School.AddDirector(director1);
+            School.AddDirector(director2);
+            School.AddDirector(director3);
         }
         //Secretaries
         public static void DefaultSecretaries()
@@ -230,24 +230,29 @@ namespace AcademiaDeFormacao
                     "Finance"          
                 );
 
-            Company.AddSecretary(secretary1);
-            Company.AddSecretary(secretary2);
-            Company.AddSecretary(secretary3);
+            School.AddSecretary(secretary1);
+            School.AddSecretary(secretary2);
+            School.AddSecretary(secretary3);
         }
 
-        //Training Sessions
-        Training training1 = new Training(
-        DateTime.Now.Date,
-        DateTime.Now.Date.AddDays(60));
+        public static void DefaultTrainings()
+        {
+            //Training Sessions
+            Training training1 = new Training(
+                DateTime.Now.Date,
+                DateTime.Now.Date.AddDays(60)
+            );
 
-        Training training2 = new Training(
-        DateTime.Now.Date.AddDays(30),
-        DateTime.Now.Date.AddDays(50));
+            Training training2 = new Training(
+                DateTime.Now.Date.AddDays(30),
+                DateTime.Now.Date.AddDays(50)
+            );
 
-        Training training3 = new Training(
-        DateTime.Now.Date.AddDays(90),
-        DateTime.Now.Date.AddDays(27));
-
+            Training training3 = new Training(
+                DateTime.Now.Date.AddDays(90),
+                DateTime.Now.Date.AddDays(27)
+           );
+        }
 
         //Assign Trainings
 

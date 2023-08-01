@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AcademiaDeFormacao
 {
-    internal class Company
+    internal class School
     {
         //System Paths
         //Exe location

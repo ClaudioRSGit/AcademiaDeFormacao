@@ -13,6 +13,7 @@ namespace TryProject
 {
     public partial class Login : Form
     {
+        //public string AuthenticatedUser { get; set; }
         public Login()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace TryProject
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
+                //AuthenticatedUser = txt_username.Text;
                 this.Hide();
                 new Menu().Show();
             }

@@ -31,43 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.calculateSalary1 = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
@@ -89,59 +91,6 @@
             this.panel8.Size = new System.Drawing.Size(104, 90);
             this.panel8.TabIndex = 41;
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(14, 560);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(105, 60);
-            this.panel7.TabIndex = 40;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(14, 209);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(105, 76);
-            this.panel2.TabIndex = 36;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(14, 393);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(105, 76);
-            this.panel6.TabIndex = 38;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(14, 301);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(105, 76);
-            this.panel5.TabIndex = 37;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(14, 118);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(105, 76);
-            this.panel4.TabIndex = 35;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Controls.Add(this.welcomePage1);
-            this.mainPanel.Controls.Add(this.contracts1);
-            this.mainPanel.Controls.Add(this.calculateSalary1);
-            this.mainPanel.Controls.Add(this.addEmployee1);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(128, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(876, 632);
-            this.mainPanel.TabIndex = 2;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
@@ -151,6 +100,14 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox6);
+            this.panel7.Location = new System.Drawing.Point(14, 560);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(105, 60);
+            this.panel7.TabIndex = 40;
             // 
             // pictureBox6
             // 
@@ -164,6 +121,14 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Location = new System.Drawing.Point(14, 209);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(105, 76);
+            this.panel2.TabIndex = 36;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
@@ -174,6 +139,14 @@
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Location = new System.Drawing.Point(14, 393);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(105, 76);
+            this.panel6.TabIndex = 38;
             // 
             // pictureBox5
             // 
@@ -186,6 +159,14 @@
             this.pictureBox5.TabIndex = 31;
             this.pictureBox5.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Location = new System.Drawing.Point(14, 301);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(105, 76);
+            this.panel5.TabIndex = 37;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -197,6 +178,14 @@
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(14, 118);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(105, 76);
+            this.panel4.TabIndex = 35;
             // 
             // pictureBox2
             // 
@@ -221,6 +210,19 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.welcomePage1);
+            this.mainPanel.Controls.Add(this.contracts1);
+            this.mainPanel.Controls.Add(this.calculateSalary1);
+            this.mainPanel.Controls.Add(this.addEmployee1);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(128, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(876, 632);
+            this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // welcomePage1
             // 
@@ -254,6 +256,16 @@
             this.addEmployee1.Size = new System.Drawing.Size(867, 637);
             this.addEmployee1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -268,20 +280,21 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,5 +320,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label1;
     }
 }
