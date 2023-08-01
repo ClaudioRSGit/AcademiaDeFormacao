@@ -10,7 +10,7 @@ namespace AcademiaDeFormacao
     internal class Director : Employee
     {
         //Director's csv folder path
-        public static readonly string DIRECTORSPATH = Path.Combine(Company.RUNTIMEPATH, "CSV/Diretor");
+        public static readonly string DIRECTORSPATH = Path.Combine(School.RUNTIMEPATH, "CSV/Diretor");
         //add the director's csv file
         public static readonly string DIRECTORSFILE = Path.Combine(DIRECTORSFILE, "Diretor.csv");
         public bool TimeExemption { get; set; }

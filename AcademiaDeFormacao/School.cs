@@ -13,10 +13,8 @@ namespace AcademiaDeFormacao
         //Exe location
         public static readonly string RUNTIMEPATH = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Runtime");
 
-        //vai buscar o caminho da pasta principal do programa e acrescenta a pasta Reservados/Id ao caminho
-        public static readonly string SETTINGSPATH = Path.Combine(RUNTIMEPATH, "Reservados/Settings");
+        public static readonly string SETTINGSPATH = Path.Combine(RUNTIMEPATH, "Settings");
 
-        //acrescenta o ficheiro ao caminho
         public static readonly string SETTINGSFILE = Path.Combine(SETTINGSPATH, "Settings.csv");
 
         //Object Lists
@@ -71,5 +69,25 @@ namespace AcademiaDeFormacao
                 coordinatorList.Remove(coordinatorToRemove);
             }
         }
+        public static Secretary GetSecretaryById(int id)
+        {
+            return secretaryList.FirstOrDefault(s => s.EmployeeId == id);
+        }
+
+        public static Director GetDirectorById(int id)
+        {
+            return directorList.FirstOrDefault(d => d.EmployeeId == id);
+        }
+
+        public static Coordinator GetCoordinatorById(int id)
+        {
+            return coordinatorList.FirstOrDefault(c => c.EmployeeId == id);
+        }
+
+        public static Trainer GetTrainerById(int id)
+        {
+            return trainerList.FirstOrDefault(t => t.EmployeeId == id);
+        }
+
     }
 }
