@@ -48,6 +48,22 @@ namespace AcademiaDeFormacao
 
         }
 
+        public Employee(
+           string username,
+           string password
+           )
+           
+        {
+            Username = username;
+            Password = password;
+            Role = "Student";
+            ContractEndDate = DateTime.MaxValue; 
+            CriminalRecordEndDate = DateTime.MaxValue;
+
+
+        }
+
+
     }
 
 }

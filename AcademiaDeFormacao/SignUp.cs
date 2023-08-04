@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using AcademiaDeFormacao;
 
 namespace TryProject
 {
@@ -77,13 +77,15 @@ namespace TryProject
             }
             else if (txt_password.Text == txt_confirmPassword.Text)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Employee(Username,Password) values(@Uname,@Upassword)", con);
-                cmd.Parameters.AddWithValue("@Uname", txt_username.Text);
-                cmd.Parameters.AddWithValue("@Upassword", txt_password.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                using ( var context = new School())
+                {
+                    Employee NewRegister = new Employee(
+                        txt_username.Text,txt_password.Text
+                        );
 
+                    context.Employees.Add( NewRegister );
+                    context.SaveChanges();
+                }
 
                 txt_username.Text = "";
                 txt_password.Text = "";
