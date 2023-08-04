@@ -13,15 +13,15 @@ namespace TryProject
 {
     public partial class Login : Form
     {
-        //public string AuthenticatedUser { get; set; }
+        public string AuthenticatedUser { get; set; }
         public Login()
         {
             InitializeComponent();
         }
         //Con Goncalo
-        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AcademiaDeFormacao.School;Integrated Security=True");
         //Con Claudio
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -37,14 +37,14 @@ namespace TryProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employee WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employees WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-                //AuthenticatedUser = txt_username.Text;
+                this.AuthenticatedUser = txt_username.Text;
                 this.Hide();
-                new Menu().Show();
+                new Menu(AuthenticatedUser).Show();
             }
             else
             {

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.calculateSalary1 = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -69,7 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_DisplayUserName);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
@@ -82,6 +82,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 632);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_DisplayUserName
+            // 
+            this.lbl_DisplayUserName.AutoSize = true;
+            this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_DisplayUserName.Location = new System.Drawing.Point(30, 84);
+            this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
+            this.lbl_DisplayUserName.Size = new System.Drawing.Size(80, 30);
+            this.lbl_DisplayUserName.TabIndex = 3;
+            this.lbl_DisplayUserName.Text = "label1";
+            this.lbl_DisplayUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel8
             // 
@@ -256,16 +268,6 @@
             this.addEmployee1.Size = new System.Drawing.Size(867, 637);
             this.addEmployee1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,6 +322,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_DisplayUserName;
     }
 }

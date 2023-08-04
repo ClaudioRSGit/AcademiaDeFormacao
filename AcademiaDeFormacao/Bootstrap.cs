@@ -12,22 +12,24 @@ namespace AcademiaDeFormacao
         //Trainers
         public static void DefaultTrainers()
         {
+            using (var context = new School())
+            {
                 Trainer trainer1 = new Trainer(
-                    1,
-                    "ana.silva",
-                    "senha123",
-                    "Ana Silva",
-                    "ana_silva@email.com",
-                    3000.0,
-                    "Instrutor de Programação",
-                    "Rua dos Formadores, Lisboa",
-                    "+351 912345678",
-                    new DateTime(2024, 12, 31),
-                    new DateTime(2023, 6, 30),
-                    "Ciência da Computação",
-                    "Período Integral",
-                    50.0
-                );
+                                    1,
+                                    "ana.silva",
+                                    "senha123",
+                                    "Ana Silva",
+                                    "ana_silva@email.com",
+                                    3000.0,
+                                    "Instrutor de Programação",
+                                    "Rua dos Formadores, Lisboa",
+                                    "+351 912345678",
+                                    new DateTime(2024, 12, 31),
+                                    new DateTime(2023, 6, 30),
+                                    "Ciência da Computação",
+                                    "Período Integral",
+                                    50.0
+                                );
 
                 Trainer trainer2 = new Trainer(
                     2,
@@ -63,28 +65,33 @@ namespace AcademiaDeFormacao
                     45.0
                 );
 
-            //Add to lists
-            School.AddTrainer(trainer1);
-            School.AddTrainer(trainer2);
-            School.AddTrainer(trainer3);
+                //Add to lists
+                context.Trainers.Add(trainer1);
+                context.Trainers.Add(trainer2);
+                context.Trainers.Add(trainer3);
+                context.SaveChanges();
+            }
+
         }
 
         //Coordinators
         public static void DefaultCoordinators()
         {
+            using (var context = new School())
+            {
                 Coordinator coordinator1 = new Coordinator(
-                    1,
-                    "alice.brown",
-                    "password123",
-                    "Alice Brown",
-                    "alice@example.com",
-                    1200,
-                    "Coordinator",
-                    "123 Main St",
-                    "555-1212",
-                    DateTime.Now.Date.AddDays(60),
-                    DateTime.Now.Date.AddDays(90)
-                );
+               1,
+               "alice.brown",
+               "password123",
+               "Alice Brown",
+               "alice@example.com",
+               1200,
+               "Coordinator",
+               "123 Main St",
+               "555-1212",
+               DateTime.Now.Date.AddDays(60),
+               DateTime.Now.Date.AddDays(90)
+           );
 
                 Coordinator coordinator2 = new Coordinator(
                     2,
@@ -113,93 +120,104 @@ namespace AcademiaDeFormacao
                     DateTime.Now.Date.AddDays(60),
                     DateTime.Now.Date.AddDays(90)
                 );
+                //Add to lists
+                context.Coordinators.Add(coordinator1);
+                context.Coordinators.Add(coordinator2);
+                context.Coordinators.Add(coordinator3);
+                context.SaveChanges();
+            }
 
-            //Add to lists
-            School.AddCoordinator(coordinator1);
-            School.AddCoordinator(coordinator2);
-            School.AddCoordinator(coordinator3);
+
+
         }
 
         //Directors
         public static void DefaultDirectors()
         {
+            using (var context = new School())
+            {
                 Director director1 = new Director(
-                    1,
-                    "john.doe",
-                    "password123",
-                    "John Doe",
-                    "john@example.com",
-                    5000,
-                    "Director",
-                    "456 Oak St",
-                    "555-9876",
-                    DateTime.Now.Date.AddDays(90),
-                    DateTime.Now.Date.AddDays(180),
-                    true,
-                    1000,
-                    true
-                );
+               4,
+               "john.doe",
+               "password123",
+               "John Doe",
+               "john@example.com",
+               5000.0,
+               "Director",
+               "456 Oak St",
+               "555-9876",
+               DateTime.Now.Date.AddDays(90),
+               DateTime.Now.Date.AddDays(180),
+               true,
+               1000.0,
+               true
+           );
 
                 Director director2 = new Director(
-                    2,
+                    5,
                     "jane.smith",
                     "pass123",
                     "Jane Smith",
                     "jane@example.com",
-                    6000,
+                    6000.0,
                     "Director",
                     "789 Maple St",
                     "555-1234",
                     DateTime.Now.Date.AddDays(120),
                     DateTime.Now.Date.AddDays(210),
                     false,
-                    1500,
+                    1500.0,
                     false
                 );
 
                 Director director3 = new Director(
-                    3,
+                    6,
                     "michael.johnson",
                     "mypass",
                     "Michael Johnson",
                     "michael@example.com",
-                    5500,
+                    5500.0,
                     "Director",
                     "321 Pine St",
                     "555-5678",
                     DateTime.Now.Date.AddDays(150),
                     DateTime.Now.Date.AddDays(240),
                     true,
-                    1200,
+                    1200.0,
                     true
                 );
 
-            //Add to lists
-            School.AddDirector(director1);
-            School.AddDirector(director2);
-            School.AddDirector(director3);
+                //Add to lists
+                context.Directors.Add(director1);
+                context.Directors.Add(director2);
+                context.Directors.Add(director3);
+                context.SaveChanges();
+            }
+
         }
         //Secretaries
         public static void DefaultSecretaries()
         {
+            using (var context = new School())
+            {
                 Secretary secretary1 = new Secretary(
-                    1,
-                    "susan_johnson",
-                    "pass456",
-                    "Susan Johnson",
-                    "susan@example.com",
-                    2500,
-                    "Secretary",
-                    "789 Oak St",
-                    "555-7890",
-                    DateTime.Now.Date.AddDays(90),
-                    DateTime.Now.Date.AddDays(180),
-                    "Michael Johnson",
-                    "Administration"
-                );
+                7,
+                "susan_johnson",
+                "pass456",
+                "Susan Johnson",
+                "susan@example.com",
+                2500,
+                "Secretary",
+                "789 Oak St",
+                "555-7890",
+                DateTime.Now.Date.AddDays(90),
+                DateTime.Now.Date.AddDays(180),
+                4,
+                "Administration"
+            );
 
                 Secretary secretary2 = new Secretary(
-                    2,
+                    8,
                     "mary_smith",
                     "marypass",
                     "Mary Smith",
@@ -210,12 +228,12 @@ namespace AcademiaDeFormacao
                     "555-2345",
                     DateTime.Now.Date.AddDays(120),
                     DateTime.Now.Date.AddDays(210),
-                    "John Doe",        
-                    "HR"               
+                    6,
+                    "HR"
                 );
 
                 Secretary secretary3 = new Secretary(
-                    3,
+                    9,
                     "robert_white",
                     "pass789",
                     "Robert White",
@@ -226,13 +244,16 @@ namespace AcademiaDeFormacao
                     "555-5678",
                     DateTime.Now.Date.AddDays(150),
                     DateTime.Now.Date.AddDays(240),
-                    "Jane Smith",      
-                    "Finance"          
+                    5,
+                    "Finance"
                 );
 
-            School.AddSecretary(secretary1);
-            School.AddSecretary(secretary2);
-            School.AddSecretary(secretary3);
+                context.Secretaries.Add(secretary1);
+                context.Secretaries.Add(secretary2);
+                context.Secretaries.Add(secretary3);
+                context.SaveChanges();
+            }
+            
         }
 
         public static void DefaultTrainings()
@@ -258,7 +279,10 @@ namespace AcademiaDeFormacao
 
 
 
-       
+
+
+
+
 
     }
 }

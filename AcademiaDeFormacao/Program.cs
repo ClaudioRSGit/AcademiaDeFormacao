@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademiaDeFormacao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,19 @@ namespace TryProject
         [STAThread]
         static void Main()
         {
+
+            using (var context = new School())
+            {
+                context.Database.Initialize(true);
+
+                MessageBox.Show("Criado");
+
+            }
+
+            //Bootstrap.DefaultCoordinators();
+            //Bootstrap.DefaultDirectors();
+            //Bootstrap.DefaultSecretaries();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

@@ -29,16 +29,21 @@ namespace TryProject
 
 
 
-        public Menu()
+        public Menu(string userName)
         {
             InitializeComponent();
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+            this.AuthenticatedUser = userName;
+            lbl_DisplayUserName.Text = userName;
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
 
         }
+
+        public string AuthenticatedUser { get; set; }
+
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -69,7 +74,7 @@ namespace TryProject
 
         private void btn_ExitProgram_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

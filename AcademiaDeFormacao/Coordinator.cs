@@ -8,7 +8,7 @@ namespace AcademiaDeFormacao
 {
     internal class Coordinator : Employee
     {
-        public List<Trainer> AssociatedTrainer { get; set; }
+        public virtual ICollection<Trainer> AssociatedTrainer { get; set; }
 
         public Coordinator(
            int employeeId,
