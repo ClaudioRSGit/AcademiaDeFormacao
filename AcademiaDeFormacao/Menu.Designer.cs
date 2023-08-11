@@ -88,9 +88,9 @@
             this.lbl_DisplayUserName.AutoSize = true;
             this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_DisplayUserName.Location = new System.Drawing.Point(30, 84);
+            this.lbl_DisplayUserName.Location = new System.Drawing.Point(23, 89);
             this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
-            this.lbl_DisplayUserName.Size = new System.Drawing.Size(80, 30);
+            this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
             this.lbl_DisplayUserName.TabIndex = 3;
             this.lbl_DisplayUserName.Text = "label1";
             this.lbl_DisplayUserName.Click += new System.EventHandler(this.label1_Click);
@@ -105,6 +105,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
             this.pictureBox8.Location = new System.Drawing.Point(-119, -105);
             this.pictureBox8.Name = "pictureBox8";
@@ -143,6 +144,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
             this.pictureBox3.Location = new System.Drawing.Point(-74, -93);
             this.pictureBox3.Name = "pictureBox3";

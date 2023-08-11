@@ -25,6 +25,9 @@ namespace AcademiaDeFormacao
         {
             AssociatedTrainer = new List<Trainer>();
         }
+
+        public Coordinator() { }
+
         public void AddTrainer(Trainer formador)
         {
             AssociatedTrainer.Add(formador);

@@ -15,9 +15,76 @@ namespace AcademiaDeFormacao.UserControls
         public AddEmployee()
         {
             InitializeComponent();
+            cbx_timeExemption.Hide();
+            cbx_Car.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_Role_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string selectedRole = cmb_Role.SelectedItem.ToString();
+
+            if (selectedRole == "Director")
+            {
+                cbx_Car.Show();
+                cbx_timeExemption.Show();
+            }
+            else
+            {
+                cbx_timeExemption.Hide();
+                cbx_Car.Hide();
+            }
+        }
+
+        private void button_addEmployee_Click(object sender, EventArgs e)
+        {
+            string selectedRole = cmb_Role.SelectedItem.ToString();
+
+            if (selectedRole == "Director")
+            {
+                using(var context = new School())
+                {
+                    Director newDirector = new Director();
+
+                    newDirector.Username = txt_username.Text;
+                    newDirector.Password = txt_password.Text;
+                    newDirector.Name = txt_name.Text;
+                    newDirector.Email = txt_email.Text;
+                    newDirector.Salary =Convert.ToDouble(txt_salary.Text);
+                    newDirector.Role = selectedRole;
+                    newDirector.Address = txt_address.Text;
+                    newDirector.Contact = txt_contact.Text;
+                    newDirector.ContractEndDate = dtp_ContractEndDate.Value;
+                    newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
+                    newDirector.MonthlyBonus = 1200;        //Colocar uma txt box talvez para escrever o input
+                    newDirector.CompanyCar = cbx_Car.Checked;
+                    newDirector.TimeExemption = cbx_timeExemption.Checked;
+
+                    context.Directors.Add(newDirector);
+                    context.SaveChanges();
+                    MessageBox.Show("ADICIONADO");
+                }
+            }
+            else if (selectedRole == "Secretary")
+            {
+                //Colocar coisas para secretaria
+            }
+            else if (selectedRole == "Trainer")
+            {
+                //Para trainer
+            }
+            else
+            {
+                //Para coordinator
+            }
+        }
+
+        private void cbx_Car_CheckedChanged(object sender, EventArgs e)
         {
 
         }

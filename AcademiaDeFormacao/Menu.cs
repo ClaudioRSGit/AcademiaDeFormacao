@@ -29,20 +29,23 @@ namespace TryProject
 
 
 
-        public Menu(string userName)
+        public Menu(string userName, string userRole)
         {
             InitializeComponent();
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
             this.AuthenticatedUser = userName;
+            this.UserRole = userRole;
             lbl_DisplayUserName.Text = userName;
+            UserRole = userRole;
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
-
+            MessageBox.Show(UserRole.ToString());
         }
 
         public string AuthenticatedUser { get; set; }
+        public string UserRole { get; set; } 
 
 
         private void pictureBox6_Click(object sender, EventArgs e)

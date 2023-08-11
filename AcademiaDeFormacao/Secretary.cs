@@ -34,5 +34,7 @@ namespace AcademiaDeFormacao
             DiretorID = reportingToDirector;
             Area = area;
         }
+
+        public Secretary() { }
     }
 }

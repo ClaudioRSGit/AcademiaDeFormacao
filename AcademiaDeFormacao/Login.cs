@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AcademiaDeFormacao;
 
 namespace TryProject
 {
     public partial class Login : Form
     {
         public string AuthenticatedUser { get; set; }
+        public string UserRole { get; set; }
+
         public Login()
         {
             InitializeComponent();
@@ -37,7 +40,7 @@ namespace TryProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employees WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
+            /*SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employees WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -49,7 +52,40 @@ namespace TryProject
             else
             {
                 MessageBox.Show("Invalid username or password");
+            }*/
+
+            using(var context = new School())
+            {
+
+                Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == txt_password.Text);
+
+                if (employee != null)
+                {
+                    if (employee.Role == "Director" || employee.Role == "Secretary")
+                    {
+                        this.AuthenticatedUser = txt_username.Text;
+                        this.UserRole = employee.Role;
+                        this.Hide();
+                        new Menu(AuthenticatedUser, UserRole).Show();
+                    }
+                    else
+                    {
+                        this.AuthenticatedUser = txt_username.Text;
+                        this.UserRole = employee.Role;
+                        //this.Hide();
+                        MessageBox.Show("OUTRO FORM");
+                        // vai entrar no outro menu
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password");
+                }
+
+
             }
+
         }
 
 

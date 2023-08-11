@@ -20,8 +20,6 @@ namespace TryProject
             {
                 context.Database.Initialize(true);
 
-                MessageBox.Show("Criado");
-
             }
 
             //Bootstrap.DefaultCoordinators();

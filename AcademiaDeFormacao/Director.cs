@@ -38,6 +38,7 @@ namespace AcademiaDeFormacao
             CompanyCar = companyCar;
         }
 
+        public Director() { }
 
 
         /*public static List<string> SaveDiretorToFile()

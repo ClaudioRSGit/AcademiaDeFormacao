@@ -19,10 +19,6 @@ namespace TryProject
             InitializeComponent();
         }
 
-        //Con Goncalo
-        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-VEKAU7O;Initial Catalog=ADOSMELHORES;Integrated Security=True");
-        //Con Claudio
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
 
         private void lbl_ToLogin_Click(object sender, EventArgs e)
         {
@@ -70,28 +66,39 @@ namespace TryProject
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            if (txt_username.Text == string.Empty && txt_password.Text == string.Empty && txt_confirmPassword.Text == string.Empty )
+            if (txt_username.Text == string.Empty && txt_password.Text == string.Empty && txt_confirmPassword.Text == string.Empty)
             {
                 MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_username.Focus();
             }
             else if (txt_password.Text == txt_confirmPassword.Text)
             {
-                using ( var context = new School())
+                using (var context = new School())
                 {
-                    Employee NewRegister = new Employee(
-                        txt_username.Text,txt_password.Text
-                        );
+                    var existUser = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text);
+                    if (existUser != null)
+                    {
+                        MessageBox.Show("Username already exists", "Try another UserName", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txt_username.Text = "";
+                        txt_username.Focus();
+                    }
+                    else
+                    {
+                        Employee NewRegister = new Employee(
+                            txt_username.Text, txt_password.Text
+                            );
 
-                    context.Employees.Add( NewRegister );
-                    context.SaveChanges();
+                        context.Employees.Add(NewRegister);
+                        context.SaveChanges();
+                        MessageBox.Show("Account Successfully Created", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
 
                 txt_username.Text = "";
                 txt_password.Text = "";
                 txt_confirmPassword.Text = "";
-                MessageBox.Show("Account Successfully Created", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
             }
             else
             {
@@ -100,7 +107,7 @@ namespace TryProject
                 MessageBox.Show("The passwords did not match", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_password.Focus();
             }
-            
+
         }
 
         private void btn_clear_Click(object sender, EventArgs e)

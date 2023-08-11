@@ -63,6 +63,11 @@ namespace AcademiaDeFormacao
 
         }
 
+        public Employee()
+        {
+            // Construtor sem parâmetros vazio
+            // Não é necessário adicionar nenhum código aqui
+        }
 
     }
 
