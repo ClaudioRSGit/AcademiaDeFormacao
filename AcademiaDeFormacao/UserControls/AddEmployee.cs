@@ -29,64 +29,58 @@ namespace AcademiaDeFormacao.UserControls
 
             string selectedRole = cmb_Role.SelectedItem.ToString();
 
-            if (selectedRole == "Director")
+            switch (selectedRole)
             {
-                cbx_Car.Show();
-                cbx_timeExemption.Show();
-            }
-            else
-            {
-                cbx_timeExemption.Hide();
-                cbx_Car.Hide();
+                case "Director":
+                    cbx_Car.Show();
+                    cbx_timeExemption.Show();
+                    break;
+                default:
+                    cbx_timeExemption.Hide();
+                    cbx_Car.Hide();
+                    break;
             }
         }
 
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
             string selectedRole = cmb_Role.SelectedItem.ToString();
-
-            if (selectedRole == "Director")
+            switch (selectedRole)
             {
-                using(var context = new School())
-                {
-                    Director newDirector = new Director();
+                case "Director":
+                    using (var context = new School())
+                    {
+                        Director newDirector = new Director();
 
-                    newDirector.Username = txt_username.Text;
-                    newDirector.Password = txt_password.Text;
-                    newDirector.Name = txt_name.Text;
-                    newDirector.Email = txt_email.Text;
-                    newDirector.Salary =Convert.ToDouble(txt_salary.Text);
-                    newDirector.Role = selectedRole;
-                    newDirector.Address = txt_address.Text;
-                    newDirector.Contact = txt_contact.Text;
-                    newDirector.ContractEndDate = dtp_ContractEndDate.Value;
-                    newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
-                    newDirector.MonthlyBonus = 1200;        //Colocar uma txt box talvez para escrever o input
-                    newDirector.CompanyCar = cbx_Car.Checked;
-                    newDirector.TimeExemption = cbx_timeExemption.Checked;
+                        newDirector.Username = txt_username.Text;
+                        newDirector.Password = txt_password.Text;
+                        newDirector.Name = txt_name.Text;
+                        newDirector.Email = txt_email.Text;
+                        newDirector.Salary = Convert.ToDouble(txt_salary.Text);
+                        newDirector.Role = selectedRole;
+                        newDirector.Address = txt_address.Text;
+                        newDirector.Contact = txt_contact.Text;
+                        newDirector.ContractEndDate = dtp_ContractEndDate.Value;
+                        newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
+                        newDirector.MonthlyBonus = 1200;        //Colocar uma txt box talvez para escrever o input
+                        newDirector.CompanyCar = cbx_Car.Checked;
+                        newDirector.TimeExemption = cbx_timeExemption.Checked;
 
-                    context.Directors.Add(newDirector);
-                    context.SaveChanges();
-                    MessageBox.Show("ADICIONADO");
-                }
-            }
-            else if (selectedRole == "Secretary")
-            {
-                //Colocar coisas para secretaria
-            }
-            else if (selectedRole == "Trainer")
-            {
-                //Para trainer
-            }
-            else
-            {
-                //Para coordinator
-            }
-        }
+                        context.Directors.Add(newDirector);
+                        context.SaveChanges();
+                        MessageBox.Show("ADICIONADO");
+                    }
+                    break;
 
-        private void cbx_Car_CheckedChanged(object sender, EventArgs e)
-        {
+                case "Secretary":
+                    //placeholder secretary
+                break;
 
+                case "Trainer":
+                    //placeholder trainer
+                break;
+             
+            }
         }
     }
 }

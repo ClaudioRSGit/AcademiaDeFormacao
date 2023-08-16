@@ -20,11 +20,7 @@ namespace TryProject
         public Login()
         {
             InitializeComponent();
-        }
-        //Con Goncalo
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AcademiaDeFormacao.School;Integrated Security=True");
-        //Con Claudio
-        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D08A4VR;Initial Catalog=ADOSMELHORES;Integrated Security=True");
+        }        
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -57,33 +53,35 @@ namespace TryProject
             using(var context = new School())
             {
 
-                Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == txt_password.Text);
-
-                if (employee != null)
+                try
                 {
-                    if (employee.Role == "Director" || employee.Role == "Secretary")
+                    Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == txt_password.Text);
+
+
+                    if (employee != null)
                     {
-                        this.AuthenticatedUser = txt_username.Text;
-                        this.UserRole = employee.Role;
-                        this.Hide();
-                        new Menu(AuthenticatedUser, UserRole).Show();
+                        if (employee.Role == "Director" || employee.Role == "Secretary")
+                        {
+                            this.AuthenticatedUser = txt_username.Text;
+                            this.UserRole = employee.Role;
+                            this.Hide();
+                            new Menu(AuthenticatedUser, UserRole).Show();
+                        }
+                        else
+                        {
+                            this.AuthenticatedUser = txt_username.Text;
+                            this.UserRole = employee.Role;
+                            //this.Hide();
+                            MessageBox.Show("OUTRO FORM");
+                            // vai entrar no outro menu
+                        }
                     }
-                    else
-                    {
-                        this.AuthenticatedUser = txt_username.Text;
-                        this.UserRole = employee.Role;
-                        //this.Hide();
-                        MessageBox.Show("OUTRO FORM");
-                        // vai entrar no outro menu
-                    }
-                    
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid username or password");
+                    // Handle any exceptions that might occur during the database query
+                    MessageBox.Show("An error occurred while trying to log in: " + ex.Message);
                 }
-
-
             }
 
         }
