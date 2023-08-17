@@ -108,6 +108,12 @@
     <Compile Include="UserControls\EditProfile.Designer.cs">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ExportCSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExportCSV.Designer.cs">
+      <DependentUpon>ExportCSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,10 +151,14 @@
     <EmbeddedResource Include="UserControls\EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExportCSV.resx">
+      <DependentUpon>ExportCSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\School.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -233,6 +243,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gradBck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

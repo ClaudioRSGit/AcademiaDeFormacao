@@ -29,38 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label_Hora = new System.Windows.Forms.Label();
-            this.label_Form1_Data = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_Form1_Data = new System.Windows.Forms.Label();
+            this.label_Hora = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_Hora
-            // 
-            this.label_Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Hora.AutoSize = true;
-            this.label_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Hora.ForeColor = System.Drawing.Color.White;
-            this.label_Hora.Location = new System.Drawing.Point(680, 550);
-            this.label_Hora.Name = "label_Hora";
-            this.label_Hora.Size = new System.Drawing.Size(78, 15);
-            this.label_Hora.TabIndex = 25;
-            this.label_Hora.Text = "label_Hora";
-            this.label_Hora.Click += new System.EventHandler(this.label_Hora_Click);
-            // 
-            // label_Form1_Data
-            // 
-            this.label_Form1_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Form1_Data.AutoSize = true;
-            this.label_Form1_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Form1_Data.ForeColor = System.Drawing.Color.White;
-            this.label_Form1_Data.Location = new System.Drawing.Point(475, 550);
-            this.label_Form1_Data.Name = "label_Form1_Data";
-            this.label_Form1_Data.Size = new System.Drawing.Size(160, 15);
-            this.label_Form1_Data.TabIndex = 24;
-            this.label_Form1_Data.Text = "Saturday, April 15, 2023";
-            this.label_Form1_Data.Click += new System.EventHandler(this.label_Form1_Data_Click);
             // 
             // timer1
             // 
@@ -70,12 +44,38 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AcademiaDeFormacao.Properties.Resources.backg1;
-            this.pictureBox1.Location = new System.Drawing.Point(-135, -69);
+            this.pictureBox1.Location = new System.Drawing.Point(-135, -41);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1242, 801);
+            this.pictureBox1.Size = new System.Drawing.Size(1120, 724);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
+            // 
+            // label_Form1_Data
+            // 
+            this.label_Form1_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Form1_Data.AutoSize = true;
+            this.label_Form1_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Form1_Data.ForeColor = System.Drawing.Color.White;
+            this.label_Form1_Data.Location = new System.Drawing.Point(371, 387);
+            this.label_Form1_Data.Name = "label_Form1_Data";
+            this.label_Form1_Data.Size = new System.Drawing.Size(160, 15);
+            this.label_Form1_Data.TabIndex = 24;
+            this.label_Form1_Data.Text = "Saturday, April 15, 2023";
+            this.label_Form1_Data.Click += new System.EventHandler(this.label_Form1_Data_Click);
+            // 
+            // label_Hora
+            // 
+            this.label_Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Hora.AutoSize = true;
+            this.label_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Hora.ForeColor = System.Drawing.Color.White;
+            this.label_Hora.Location = new System.Drawing.Point(669, 387);
+            this.label_Hora.Name = "label_Hora";
+            this.label_Hora.Size = new System.Drawing.Size(78, 15);
+            this.label_Hora.TabIndex = 25;
+            this.label_Hora.Text = "label_Hora";
+            this.label_Hora.Click += new System.EventHandler(this.label_Hora_Click);
             // 
             // WelcomePage
             // 
@@ -94,9 +94,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label_Hora;
-        private System.Windows.Forms.Label label_Form1_Data;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_Form1_Data;
+        private System.Windows.Forms.Label label_Hora;
     }
 }

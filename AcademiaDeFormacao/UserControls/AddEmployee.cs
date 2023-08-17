@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,11 +43,14 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        
+
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
             string selectedRole = cmb_Role.SelectedItem.ToString();
             switch (selectedRole)
             {
+                case "Secretary":
                 case "Director":
                     using (var context = new School())
                     {
@@ -69,18 +73,31 @@ namespace AcademiaDeFormacao.UserControls
                         context.Directors.Add(newDirector);
                         context.SaveChanges();
                         MessageBox.Show("ADICIONADO");
+
+                        //wipe all fields
+                        txt_username.Text = "";
+                        txt_password.Text = "";
+                        txt_name.Text = "";
+                        txt_email.Text = "";
+                        txt_salary.Text = "";
+                        txt_address.Text = "";
+                        txt_contact.Text = "";
+
                     }
                     break;
-
-                case "Secretary":
-                    //placeholder secretary
-                break;
 
                 case "Trainer":
                     //placeholder trainer
                 break;
              
             }
+
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

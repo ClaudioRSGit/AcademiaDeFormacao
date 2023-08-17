@@ -9,6 +9,7 @@ namespace AcademiaDeFormacao
 {
     internal class Bootstrap
     {
+
         //Trainers
         public static void DefaultTrainers()
         {

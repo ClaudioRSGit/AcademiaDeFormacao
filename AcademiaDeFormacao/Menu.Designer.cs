@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -44,11 +43,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.calculateSalary1 = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
+            this.exportCSV1 = new AcademiaDeFormacao.UserControls.ExportCSV();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -64,12 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.lbl_DisplayUserName);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
@@ -82,18 +86,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 632);
             this.panel1.TabIndex = 0;
-            // 
-            // lbl_DisplayUserName
-            // 
-            this.lbl_DisplayUserName.AutoSize = true;
-            this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_DisplayUserName.Location = new System.Drawing.Point(23, 89);
-            this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
-            this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
-            this.lbl_DisplayUserName.TabIndex = 3;
-            this.lbl_DisplayUserName.Text = "label1";
-            this.lbl_DisplayUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel8
             // 
@@ -172,6 +164,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 31;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel5
             // 
@@ -225,12 +218,27 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lbl_DisplayUserName
+            // 
+            this.lbl_DisplayUserName.AutoSize = true;
+            this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_DisplayUserName.Location = new System.Drawing.Point(372, 14);
+            this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
+            this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
+            this.lbl_DisplayUserName.TabIndex = 3;
+            this.lbl_DisplayUserName.Text = "label1";
+            this.lbl_DisplayUserName.Click += new System.EventHandler(this.label1_Click);
+            // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.panel3);
+            this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
             this.mainPanel.Controls.Add(this.calculateSalary1);
             this.mainPanel.Controls.Add(this.addEmployee1);
+            this.mainPanel.Controls.Add(this.exportCSV1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";
@@ -241,9 +249,9 @@
             // welcomePage1
             // 
             this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.welcomePage1.Location = new System.Drawing.Point(0, 0);
+            this.welcomePage1.Location = new System.Drawing.Point(0, 3);
             this.welcomePage1.Name = "welcomePage1";
-            this.welcomePage1.Size = new System.Drawing.Size(876, 632);
+            this.welcomePage1.Size = new System.Drawing.Size(860, 616);
             this.welcomePage1.TabIndex = 2;
             // 
             // contracts1
@@ -270,6 +278,33 @@
             this.addEmployee1.Size = new System.Drawing.Size(867, 637);
             this.addEmployee1.TabIndex = 0;
             // 
+            // exportCSV1
+            // 
+            this.exportCSV1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.exportCSV1.Location = new System.Drawing.Point(-2, 0);
+            this.exportCSV1.Name = "exportCSV1";
+            this.exportCSV1.Size = new System.Drawing.Size(878, 637);
+            this.exportCSV1.TabIndex = 43;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::AcademiaDeFormacao.Properties.Resources.l1;
+            this.pictureBox7.Location = new System.Drawing.Point(-77, -64);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(238, 177);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 42;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox7);
+            this.panel3.Location = new System.Drawing.Point(303, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(63, 36);
+            this.panel3.TabIndex = 44;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,7 +319,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
@@ -299,6 +333,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,5 +362,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lbl_DisplayUserName;
+        private AcademiaDeFormacao.UserControls.ExportCSV exportCSV1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel3;
     }
 }

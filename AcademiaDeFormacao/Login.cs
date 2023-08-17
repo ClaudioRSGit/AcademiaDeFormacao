@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using AcademiaDeFormacao;
+using System.IO;
 
 namespace TryProject
 {
@@ -36,19 +37,7 @@ namespace TryProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            /*SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Employees WHERE Username='" + txt_username.Text + "' AND Password='" + txt_password.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
-            {
-                this.AuthenticatedUser = txt_username.Text;
-                this.Hide();
-                new Menu(AuthenticatedUser).Show();
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password");
-            }*/
+            
 
             using(var context = new School())
             {

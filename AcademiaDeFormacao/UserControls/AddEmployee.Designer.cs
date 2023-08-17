@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label_Username = new System.Windows.Forms.Label();
             this.label_Password = new System.Windows.Forms.Label();
             this.label_Name = new System.Windows.Forms.Label();
@@ -54,19 +53,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbx_timeExemption = new System.Windows.Forms.CheckBox();
             this.cbx_Car = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Ivory;
-            this.label1.Location = new System.Drawing.Point(48, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add EMPLOYEE";
             // 
             // label_Username
             // 
@@ -323,11 +312,23 @@
             this.cbx_Car.Text = "Company Car";
             this.cbx_Car.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Ivory;
+            this.label4.Location = new System.Drawing.Point(48, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(199, 49);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Add Employee";
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cbx_Car);
             this.Controls.Add(this.cbx_timeExemption);
             this.Controls.Add(this.cmb_Role);
@@ -352,7 +353,6 @@
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_Username);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);
@@ -363,8 +363,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_Username;
         private System.Windows.Forms.Label label_Password;
         private System.Windows.Forms.Label label_Name;
@@ -390,5 +388,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox cbx_timeExemption;
         private System.Windows.Forms.CheckBox cbx_Car;
+        private System.Windows.Forms.Label label4;
     }
 }
