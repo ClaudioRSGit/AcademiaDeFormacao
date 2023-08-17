@@ -72,7 +72,7 @@
             this.lb_Preview.AutoSize = true;
             this.lb_Preview.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Preview.ForeColor = System.Drawing.Color.Ivory;
-            this.lb_Preview.Location = new System.Drawing.Point(360, 128);
+            this.lb_Preview.Location = new System.Drawing.Point(370, 149);
             this.lb_Preview.Name = "lb_Preview";
             this.lb_Preview.Size = new System.Drawing.Size(86, 36);
             this.lb_Preview.TabIndex = 48;
@@ -81,13 +81,17 @@
             // cmb_filter
             // 
             this.cmb_filter.AllowDrop = true;
+            this.cmb_filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_filter.FormattingEnabled = true;
             this.cmb_filter.Items.AddRange(new object[] {
-            "Role",
-            "Name"});
-            this.cmb_filter.Location = new System.Drawing.Point(98, 128);
+            "Director",
+            "Secretary",
+            "Trainer",
+            "Coordinator",
+            "All"});
+            this.cmb_filter.Location = new System.Drawing.Point(99, 128);
             this.cmb_filter.Name = "cmb_filter";
-            this.cmb_filter.Size = new System.Drawing.Size(126, 24);
+            this.cmb_filter.Size = new System.Drawing.Size(155, 24);
             this.cmb_filter.TabIndex = 50;
             // 
             // label1

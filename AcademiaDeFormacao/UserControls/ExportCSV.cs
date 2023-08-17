@@ -25,15 +25,24 @@ namespace AcademiaDeFormacao.UserControls
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("ID");
-            dataTable.Columns.Add("Nome de Usuário");
+            dataTable.Columns.Add("Nome");
             dataTable.Columns.Add("Função");
+            dataTable.Columns.Add("Email");
 
             using (var context = new School())
             {
                 List<Employee> employees = context.Employees.ToList();
+
+                string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
+                
+                if (selectedFilter != "All")
+                {
+                    employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
+                }
+
                 foreach (var employee in employees)
                 {
-                    dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role);
+                    dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email);
                 }
             }
             dataGridViewEmployees.ReadOnly = true;
