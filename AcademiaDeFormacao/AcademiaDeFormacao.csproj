@@ -114,6 +114,12 @@
     <Compile Include="UserControls\ExportCSV.Designer.cs">
       <DependentUpon>ExportCSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ExportData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExportData.Designer.cs">
+      <DependentUpon>ExportData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ExportCSV.resx">
       <DependentUpon>ExportCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExportData.resx">
+      <DependentUpon>ExportData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>

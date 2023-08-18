@@ -116,7 +116,7 @@ namespace TryProject
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            exportCSV1.Show();
+            exportData1.Show();
             welcomePage1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();

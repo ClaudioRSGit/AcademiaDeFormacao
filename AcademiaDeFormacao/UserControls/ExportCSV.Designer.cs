@@ -48,6 +48,7 @@
             this.label2.Size = new System.Drawing.Size(187, 49);
             this.label2.TabIndex = 34;
             this.label2.Text = "Export to CSV";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -56,6 +57,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 1);
             this.panel2.TabIndex = 35;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btn_exportCSV
             // 
@@ -77,6 +79,7 @@
             this.lb_Preview.Size = new System.Drawing.Size(86, 36);
             this.lb_Preview.TabIndex = 48;
             this.lb_Preview.Text = "Preview";
+            this.lb_Preview.Click += new System.EventHandler(this.lb_Preview_Click);
             // 
             // cmb_filter
             // 
@@ -93,6 +96,7 @@
             this.cmb_filter.Name = "cmb_filter";
             this.cmb_filter.Size = new System.Drawing.Size(155, 24);
             this.cmb_filter.TabIndex = 50;
+            this.cmb_filter.SelectedIndexChanged += new System.EventHandler(this.cmb_filter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -104,6 +108,7 @@
             this.label1.Size = new System.Drawing.Size(60, 36);
             this.label1.TabIndex = 51;
             this.label1.Text = "Filter";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridViewEmployees
             // 

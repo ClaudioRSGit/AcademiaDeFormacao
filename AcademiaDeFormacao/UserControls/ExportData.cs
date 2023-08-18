@@ -5,18 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace AcademiaDeFormacao.UserControls
 {
-    public partial class ExportCSV : UserControl
+    public partial class ExportData : UserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AcademiaDeFormacao.School;Integrated Security=True");
-        public ExportCSV()
+        public ExportData()
         {
             InitializeComponent();
             LoadDatabasePreview();
@@ -33,8 +30,8 @@ namespace AcademiaDeFormacao.UserControls
             {
                 List<Employee> employees = context.Employees.ToList();
 
-                string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
-                
+                // Apply filter based on the selected option in cmb_filter
+                string selectedFilter = cmb_filter?.SelectedItem?.ToString()??"All";
                 if (selectedFilter != "All")
                 {
                     employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
@@ -45,10 +42,9 @@ namespace AcademiaDeFormacao.UserControls
                     dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email);
                 }
             }
-            dataGridViewEmployees.ReadOnly = true;
-            dataGridViewEmployees.DataSource = dataTable;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = dataTable;
         }
-
         private void btn_exportCSV_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -62,52 +58,64 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     try
                     {
+                        string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
                         List<Employee> employees = context.Employees.ToList();
+
+                        // Apply filter based on the selected option in cmb_filter
+                        if (selectedFilter != "All")
+                        {
+                            employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
+                        }
 
                         using (StreamWriter writer = new StreamWriter(csvFilePath))
                         {
-                            writer.WriteLine("ID,Nome de Usuário,Função");
+                            writer.WriteLine("ID,Name,Function, Email");
 
                             foreach (var employee in employees)
                             {
-                                writer.WriteLine($"{employee.EmployeeId},{employee.Username},{employee.Role}");
+                                writer.WriteLine($"{employee.EmployeeId},{employee.Username},{employee.Role}, {employee.Email}");
                             }
                         }
 
-                        MessageBox.Show("Dados do funcionário exportados para CSV com sucesso!");
+                        MessageBox.Show("Data Exported Successfully!!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Ocorreu um erro ao exportar para CSV: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
             }
-
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void LoadDatabasePreview(string selectedFilter)
         {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("Nome");
+            dataTable.Columns.Add("Função");
+            dataTable.Columns.Add("Email");
 
+            using (var context = new School())
+            {
+                List<Employee> employees = context.Employees.ToList();
+
+                // Apply filter based on the selected option in cmb_filter
+                if (selectedFilter != "All")
+                {
+                    employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
+                }
+
+                foreach (var employee in employees)
+                {
+                    dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email);
+                }
+            }
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = dataTable;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_Preview_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmb_filter_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            string selectedFilter = cmb_filter.SelectedItem.ToString();
+            LoadDatabasePreview(selectedFilter);
         }
     }
 }
