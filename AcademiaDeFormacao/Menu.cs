@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;   //Colocar border no Form
+using AcademiaDeFormacao.UserControls;
+using System.Threading;
 
 namespace TryProject
 {
@@ -41,7 +43,7 @@ namespace TryProject
             UserRole = userRole;
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
-            MessageBox.Show(UserRole.ToString());
+            //MessageBox.Show(UserRole.ToString());
         }
 
         public string AuthenticatedUser { get; set; }
@@ -86,6 +88,7 @@ namespace TryProject
             addEmployee1.Hide();
             calculateSalary1.Show();
             contracts1.Hide();
+            //exportData1.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -94,6 +97,7 @@ namespace TryProject
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+            //exportData1.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -102,6 +106,7 @@ namespace TryProject
             addEmployee1.Hide();
             calculateSalary1.Hide();
             contracts1.Show();
+            //exportData1.Hide();
         }
 
         private void lbl_usernameTitle_Click(object sender, EventArgs e)
@@ -116,10 +121,20 @@ namespace TryProject
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            exportData1.Show();
+            //exportData1.Show();
             welcomePage1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            //exportData1.Hide();
+            welcomePage1.Hide();
+            calculateSalary1.Hide();
+            contracts1.Hide();
+            editProfile1 = new EditProfile(AuthenticatedUser);
+            editProfile1.Show();
         }
     }
 }
