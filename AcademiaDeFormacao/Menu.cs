@@ -68,11 +68,21 @@ namespace TryProject
 
         }
 
-        public string UserRole { get; set; } 
+        public string UserRole { get; set; }
 
 
 
+        private void ShowUserControl(UserControl userControl)
+        {
+            addEmployee1.Hide();
+            welcomePage1.Hide();
+            calculateSalary1.Hide();
+            contracts1.Hide();
+            OnMenuEditProf.Hide();
+            exportData2.Show();
 
+            userControl.Show();
+        }
 
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -88,18 +98,12 @@ namespace TryProject
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            addEmployee1.Show();
-            welcomePage1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Hide();
+            ShowUserControl(addEmployee1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            welcomePage1.Hide();
-            addEmployee1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Show();
+            ShowUserControl(contracts1);
         }
 
         private void btn_ExitProgram_Click(object sender, EventArgs e)
@@ -109,29 +113,17 @@ namespace TryProject
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            welcomePage1.Hide();
-            addEmployee1.Hide();
-            calculateSalary1.Show();
-            contracts1.Hide();
-            //exportData1.Hide();
+            ShowUserControl(calculateSalary1);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            welcomePage1.Show();
-            addEmployee1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Hide();
-            //exportData1.Hide();
+            ShowUserControl(welcomePage1);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            welcomePage1.Hide();
-            addEmployee1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Show();
-            //exportData1.Hide();
+            ShowUserControl(contracts1);
         }
 
         private void lbl_usernameTitle_Click(object sender, EventArgs e)
@@ -146,24 +138,15 @@ namespace TryProject
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            //exportData1.Show();
-            welcomePage1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Hide();
-            OnMenuEditProf.Hide();
             exportData2.LoadDatabasePreview();
-            exportData2.Show();
+            ShowUserControl(exportData2);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            //exportData1.Hide();
-            welcomePage1.Hide();
-            calculateSalary1.Hide();
-            contracts1.Hide();
             OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
-            OnMenuEditProf.Show();
-           // OnMenuEditProf = new EditUserProfile();
+            ShowUserControl(OnMenuEditProf);
+            // OnMenuEditProf = new EditUserProfile();
         }
     }
 }
