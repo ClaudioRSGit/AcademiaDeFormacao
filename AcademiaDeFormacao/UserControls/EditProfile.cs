@@ -14,40 +14,52 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class EditProfile : UserControl
     {
+        public string AuthenticatedUser { get; set; }
         public EditProfile(string userName)
         {
             InitializeComponent();
-            AuthenticatedUser = userName;
-            PopulateFormFields();
+            this.AuthenticatedUser = userName;
+            PopulateFormFields(userName);
         }
 
-        public string AuthenticatedUser { get; set; }
-
-        public string MyProperty { get; set; }
-
-        private void PopulateFormFields()
+        private void PopulateFormFields(string userName)
         {
-            using (var context = new School())
+            try
             {
-                // Query the Employees table based on the authenticated username
-                var employee = context.Employees.FirstOrDefault(emp => emp.Username == AuthenticatedUser);
-
-                if (employee != null)
+                using (var context = new School())
                 {
-                    MyProperty = employee.Name;
+                    var employee = context.Employees.FirstOrDefault(emp => emp.Username == userName);
+                    
+                    if (employee != null)
+                    {
+                        MessageBox.Show("name: " + employee.Name + "\n" + "pass: " + employee.Password + "\n" + "contact: " + employee.Contact);
+                        
+                        
+                        userName = txt_name.Text;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Employee not found.");
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
         
 
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void txt_name_TextChanged(object sender, EventArgs e)
         {
            
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txt_name.Text = MyProperty;
         }
     }
 }
