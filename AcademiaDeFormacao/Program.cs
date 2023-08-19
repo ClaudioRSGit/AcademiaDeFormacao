@@ -1,6 +1,7 @@
 ﻿using AcademiaDeFormacao;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,7 @@ namespace TryProject
                 context.Database.Initialize(true);
 
             }
-
+            
             //Bootstrap.DefaultCoordinators();
             //Bootstrap.DefaultDirectors();
             //Bootstrap.DefaultSecretaries();

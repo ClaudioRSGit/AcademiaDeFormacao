@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;   //Colocar border no Form
 using AcademiaDeFormacao.UserControls;
 using System.Threading;
+using AcademiaDeFormacao;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Runtime.Remoting.Contexts;
 
 namespace TryProject
 {
@@ -29,7 +33,9 @@ namespace TryProject
             );
         #endregion
 
+        
 
+        public string AuthenticatedUser { get; set; }
 
         public Menu(string userName, string userRole)
         {
@@ -39,15 +45,34 @@ namespace TryProject
             contracts1.Hide();
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
-            lbl_DisplayUserName.Text = userName;
+            //lbl_DisplayUserName.Text = userName;
             UserRole = userRole;
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
             //MessageBox.Show(UserRole.ToString());
+            using (var context = new School())
+            {
+                var employee = context.Employees.FirstOrDefault(emp => emp.Username == userName);
+
+                if (employee != null)
+                {
+                    MessageBox.Show("name: " + employee.Name + "\n" + "pass: " + employee.Password + "\n" + "contact: " + employee.Contact);
+
+                    lbl_DisplayUserName.Text = employee.Role;
+                }
+                else
+                {
+                    MessageBox.Show("Employee not found.");
+                }
+            }
+
         }
 
-        public string AuthenticatedUser { get; set; }
         public string UserRole { get; set; } 
+
+
+
+
 
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -125,6 +150,9 @@ namespace TryProject
             welcomePage1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
+            OnMenuEditProf.Hide();
+            exportData2.LoadDatabasePreview();
+            exportData2.Show();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -133,8 +161,9 @@ namespace TryProject
             welcomePage1.Hide();
             calculateSalary1.Hide();
             contracts1.Hide();
-            editProfile1 = new EditProfile(AuthenticatedUser);
-            editProfile1.Show();
+            OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
+            OnMenuEditProf.Show();
+           // OnMenuEditProf = new EditUserProfile();
         }
     }
 }

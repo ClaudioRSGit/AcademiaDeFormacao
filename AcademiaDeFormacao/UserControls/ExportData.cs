@@ -16,9 +16,9 @@ namespace AcademiaDeFormacao.UserControls
         public ExportData()
         {
             InitializeComponent();
-            LoadDatabasePreview();
+           // LoadDatabasePreview();
         }
-        private void LoadDatabasePreview()
+        public void LoadDatabasePreview()
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("ID");
@@ -117,5 +117,7 @@ namespace AcademiaDeFormacao.UserControls
             string selectedFilter = cmb_filter.SelectedItem.ToString();
             LoadDatabasePreview(selectedFilter);
         }
+
+        
     }
 }

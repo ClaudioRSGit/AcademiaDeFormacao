@@ -41,11 +41,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Ivory;
             this.label1.Location = new System.Drawing.Point(64, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 36);
+            this.label1.Size = new System.Drawing.Size(81, 36);
             this.label1.TabIndex = 57;
             this.label1.Text = "Filter";
             // 
@@ -69,11 +69,11 @@
             // lb_Preview
             // 
             this.lb_Preview.AutoSize = true;
-            this.lb_Preview.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Preview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Preview.ForeColor = System.Drawing.Color.Ivory;
             this.lb_Preview.Location = new System.Drawing.Point(688, 194);
             this.lb_Preview.Name = "lb_Preview";
-            this.lb_Preview.Size = new System.Drawing.Size(67, 28);
+            this.lb_Preview.Size = new System.Drawing.Size(100, 29);
             this.lb_Preview.TabIndex = 55;
             this.lb_Preview.Text = "Preview";
             // 
@@ -98,11 +98,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Ivory;
             this.label2.Location = new System.Drawing.Point(46, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 49);
+            this.label2.Size = new System.Drawing.Size(276, 46);
             this.label2.TabIndex = 52;
             this.label2.Text = "Export to CSV";
             // 
