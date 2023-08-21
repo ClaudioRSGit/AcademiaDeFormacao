@@ -39,7 +39,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_CalculateSalary = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,7 +63,7 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,23 +170,23 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.btn_CalculateSalary);
             this.panel5.Location = new System.Drawing.Point(14, 301);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(105, 76);
             this.panel5.TabIndex = 37;
             // 
-            // pictureBox4
+            // btn_CalculateSalary
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::AcademiaDeFormacao.Properties.Resources.calc;
-            this.pictureBox4.Location = new System.Drawing.Point(-105, -93);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(317, 265);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.btn_CalculateSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CalculateSalary.Image = global::AcademiaDeFormacao.Properties.Resources.calc;
+            this.btn_CalculateSalary.Location = new System.Drawing.Point(-105, -93);
+            this.btn_CalculateSalary.Name = "btn_CalculateSalary";
+            this.btn_CalculateSalary.Size = new System.Drawing.Size(317, 265);
+            this.btn_CalculateSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_CalculateSalary.TabIndex = 29;
+            this.btn_CalculateSalary.TabStop = false;
+            this.btn_CalculateSalary.Click += new System.EventHandler(this.btn_CalculateSalary_Click);
             // 
             // panel4
             // 
@@ -339,7 +339,7 @@
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -357,7 +357,7 @@
             private System.Windows.Forms.PictureBox pictureBox1;
             private System.Windows.Forms.PictureBox pictureBox6;
             private System.Windows.Forms.PictureBox pictureBox5;
-            private System.Windows.Forms.PictureBox pictureBox4;
+            private System.Windows.Forms.PictureBox btn_CalculateSalary;
             private System.Windows.Forms.PictureBox pictureBox2;
             private System.Windows.Forms.Panel mainPanel;
             private AcademiaDeFormacao.UserControls.AddEmployee addEmployee1;

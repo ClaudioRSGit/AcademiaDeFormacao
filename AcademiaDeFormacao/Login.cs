@@ -21,7 +21,26 @@ namespace TryProject
         public Login()
         {
             InitializeComponent();
-        }        
+            txt_password.KeyPress += TxtPassword_KeyPress;
+            txt_username.KeyPress += Txt_username_KeyPress;
+        }
+
+        private void Txt_username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
+        }
+
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
+        }
+
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -44,8 +63,8 @@ namespace TryProject
 
                 try
                 {
+                    
                     Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == txt_password.Text);
-
 
                     if (employee != null)
                     {
@@ -65,6 +84,19 @@ namespace TryProject
                             // vai entrar no outro menu
                         }
                     }
+                    else if (txt_username.Text == string.Empty && txt_password.Text == string.Empty)
+                    {
+                            MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txt_username.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txt_password.Text = string.Empty;
+                        txt_username.Text = string.Empty;
+                        txt_username.Focus();
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -90,6 +122,7 @@ namespace TryProject
 
         private void txt_password_TextChanged(object sender, EventArgs e)
         {
+            
             if (check_ShowPassword.Checked)
             {
                 txt_password.PasswordChar = '\0';

@@ -36,6 +36,7 @@ namespace TryProject
         
 
         public string AuthenticatedUser { get; set; }
+        public string UserRole { get; set; }
 
         public Menu(string userName, string userRole)
         {
@@ -45,30 +46,13 @@ namespace TryProject
             contracts1.Hide();
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
-            //lbl_DisplayUserName.Text = userName;
+            lbl_DisplayUserName.Text = userName;
             UserRole = userRole;
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
             //MessageBox.Show(UserRole.ToString());
-            using (var context = new School())
-            {
-                var employee = context.Employees.FirstOrDefault(emp => emp.Username == userName);
-
-                if (employee != null)
-                {
-                    MessageBox.Show("name: " + employee.Name + "\n" + "pass: " + employee.Password + "\n" + "contact: " + employee.Contact);
-
-                    lbl_DisplayUserName.Text = employee.Role;
-                }
-                else
-                {
-                    MessageBox.Show("Employee not found.");
-                }
-            }
-
         }
 
-        public string UserRole { get; set; }
 
 
 
@@ -111,7 +95,7 @@ namespace TryProject
             Environment.Exit(0);
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void btn_CalculateSalary_Click(object sender, EventArgs e)
         {
             ShowUserControl(calculateSalary1);
         }
