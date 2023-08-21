@@ -373,7 +373,6 @@
             private System.Windows.Forms.Panel panel8;
             private System.Windows.Forms.PictureBox pictureBox8;
             private System.Windows.Forms.Label lbl_DisplayUserName;
-            private AcademiaDeFormacao.UserControls.ExportCSV exportCSV1;
             private System.Windows.Forms.PictureBox pictureBox7;
             private System.Windows.Forms.Panel panel3;
             private AcademiaDeFormacao.UserControls.ExportData exportData1;

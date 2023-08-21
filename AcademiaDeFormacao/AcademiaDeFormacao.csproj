@@ -124,12 +124,6 @@
     <Compile Include="UserControls\EditUserProfile.Designer.cs">
       <DependentUpon>EditUserProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ExportCSV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ExportCSV.Designer.cs">
-      <DependentUpon>ExportCSV.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ExportData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EditUserProfile.resx">
       <DependentUpon>EditUserProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ExportCSV.resx">
-      <DependentUpon>ExportCSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ExportData.resx">
       <DependentUpon>ExportData.cs</DependentUpon>
