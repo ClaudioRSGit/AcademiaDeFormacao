@@ -21,12 +21,13 @@ namespace TryProject
             using (var context = new School())
             {
                 context.Database.Initialize(true);
-
             }
-            
+            //Bootstrap.DefaultTrainings();
             //Bootstrap.DefaultCoordinators();
             //Bootstrap.DefaultDirectors();
             //Bootstrap.DefaultSecretaries();
+            //Bootstrap.DefaultTrainers();
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

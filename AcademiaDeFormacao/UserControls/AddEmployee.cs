@@ -18,6 +18,11 @@ namespace AcademiaDeFormacao.UserControls
             InitializeComponent();
             cbx_timeExemption.Hide();
             cbx_Car.Hide();
+            lbl_MensalBonus.Hide();
+            txt_mensalBonus.Hide();
+            lbl_Area.Hide();
+            cbx_Area.Hide();
+            btn_ShowDirectors.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -35,6 +40,20 @@ namespace AcademiaDeFormacao.UserControls
                 case "Director":
                     cbx_Car.Show();
                     cbx_timeExemption.Show();
+                    lbl_MensalBonus.Show();
+                    txt_mensalBonus.Show();
+                    btn_ShowDirectors.Hide();
+                    lbl_Area.Hide();
+                    cbx_Area.Hide();
+                    break;
+                case "Secretary":
+                    btn_ShowDirectors.Show();
+                    lbl_Area.Show();
+                    cbx_Area.Show();
+                    cbx_timeExemption.Hide();
+                    cbx_Car.Hide();
+                    lbl_MensalBonus.Hide();
+                    txt_mensalBonus.Hide();
                     break;
                 default:
                     cbx_timeExemption.Hide();
@@ -66,7 +85,8 @@ namespace AcademiaDeFormacao.UserControls
                         newDirector.Contact = txt_contact.Text;
                         newDirector.ContractEndDate = dtp_ContractEndDate.Value;
                         newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
-                        newDirector.MonthlyBonus = 1200;        //Colocar uma txt box talvez para escrever o input
+                        newDirector.DateOfBirth = dtp_BirthDate.Value;
+                        newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);        //Colocar uma txt box talvez para escrever o input
                         newDirector.CompanyCar = cbx_Car.Checked;
                         newDirector.TimeExemption = cbx_timeExemption.Checked;
 

@@ -55,7 +55,12 @@
             this.cbx_Car = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_mensalBonus = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_MensalBonus = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtp_BirthDate = new System.Windows.Forms.DateTimePicker();
+            this.btn_ShowDirectors = new System.Windows.Forms.Button();
+            this.cbx_Area = new System.Windows.Forms.ComboBox();
+            this.lbl_Area = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -270,14 +275,14 @@
             this.dtp_ContractEndDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.dtp_ContractEndDate.Location = new System.Drawing.Point(57, 409);
             this.dtp_ContractEndDate.Name = "dtp_ContractEndDate";
-            this.dtp_ContractEndDate.Size = new System.Drawing.Size(254, 22);
+            this.dtp_ContractEndDate.Size = new System.Drawing.Size(235, 22);
             this.dtp_ContractEndDate.TabIndex = 47;
             // 
             // dtp_CriminalRecord
             // 
             this.dtp_CriminalRecord.Location = new System.Drawing.Point(61, 469);
             this.dtp_CriminalRecord.Name = "dtp_CriminalRecord";
-            this.dtp_CriminalRecord.Size = new System.Drawing.Size(250, 22);
+            this.dtp_CriminalRecord.Size = new System.Drawing.Size(231, 22);
             this.dtp_CriminalRecord.TabIndex = 48;
             // 
             // cmb_Role
@@ -311,7 +316,7 @@
             // 
             this.cbx_timeExemption.AutoSize = true;
             this.cbx_timeExemption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.cbx_timeExemption.Location = new System.Drawing.Point(363, 469);
+            this.cbx_timeExemption.Location = new System.Drawing.Point(333, 475);
             this.cbx_timeExemption.Name = "cbx_timeExemption";
             this.cbx_timeExemption.Size = new System.Drawing.Size(126, 20);
             this.cbx_timeExemption.TabIndex = 52;
@@ -322,7 +327,7 @@
             // 
             this.cbx_Car.AutoSize = true;
             this.cbx_Car.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.cbx_Car.Location = new System.Drawing.Point(521, 469);
+            this.cbx_Car.Location = new System.Drawing.Point(465, 475);
             this.cbx_Car.Name = "cbx_Car";
             this.cbx_Car.Size = new System.Drawing.Size(111, 20);
             this.cbx_Car.TabIndex = 53;
@@ -332,11 +337,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Ivory;
             this.label4.Location = new System.Drawing.Point(48, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 49);
+            this.label4.Size = new System.Drawing.Size(280, 46);
             this.label4.TabIndex = 54;
             this.label4.Text = "Add Employee";
             // 
@@ -345,29 +350,87 @@
             this.txt_mensalBonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_mensalBonus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_mensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mensalBonus.Location = new System.Drawing.Point(628, 163);
+            this.txt_mensalBonus.Location = new System.Drawing.Point(610, 469);
             this.txt_mensalBonus.Multiline = true;
             this.txt_mensalBonus.Name = "txt_mensalBonus";
             this.txt_mensalBonus.Size = new System.Drawing.Size(129, 30);
             this.txt_mensalBonus.TabIndex = 55;
             // 
-            // label1
+            // lbl_MensalBonus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.label1.Location = new System.Drawing.Point(622, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Mensal Bonus";
+            this.lbl_MensalBonus.AutoSize = true;
+            this.lbl_MensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MensalBonus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.lbl_MensalBonus.Location = new System.Drawing.Point(605, 441);
+            this.lbl_MensalBonus.Name = "lbl_MensalBonus";
+            this.lbl_MensalBonus.Size = new System.Drawing.Size(137, 25);
+            this.lbl_MensalBonus.TabIndex = 56;
+            this.lbl_MensalBonus.Text = "Mensal Bonus";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label5.Location = new System.Drawing.Point(302, 381);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 25);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Birth Date";
+            // 
+            // dtp_BirthDate
+            // 
+            this.dtp_BirthDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.dtp_BirthDate.Location = new System.Drawing.Point(307, 409);
+            this.dtp_BirthDate.Name = "dtp_BirthDate";
+            this.dtp_BirthDate.Size = new System.Drawing.Size(224, 22);
+            this.dtp_BirthDate.TabIndex = 58;
+            // 
+            // btn_ShowDirectors
+            // 
+            this.btn_ShowDirectors.Location = new System.Drawing.Point(610, 165);
+            this.btn_ShowDirectors.Name = "btn_ShowDirectors";
+            this.btn_ShowDirectors.Size = new System.Drawing.Size(123, 31);
+            this.btn_ShowDirectors.TabIndex = 59;
+            this.btn_ShowDirectors.Text = "Show Directors";
+            this.btn_ShowDirectors.UseVisualStyleBackColor = true;
+            // 
+            // cbx_Area
+            // 
+            this.cbx_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_Area.FormattingEnabled = true;
+            this.cbx_Area.Items.AddRange(new object[] {
+            "teste1",
+            "teste2",
+            "teste3",
+            "teste4"});
+            this.cbx_Area.Location = new System.Drawing.Point(598, 415);
+            this.cbx_Area.Name = "cbx_Area";
+            this.cbx_Area.Size = new System.Drawing.Size(159, 24);
+            this.cbx_Area.TabIndex = 60;
+            // 
+            // lbl_Area
+            // 
+            this.lbl_Area.AutoSize = true;
+            this.lbl_Area.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Area.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.lbl_Area.Location = new System.Drawing.Point(593, 381);
+            this.lbl_Area.Name = "lbl_Area";
+            this.lbl_Area.Size = new System.Drawing.Size(54, 25);
+            this.lbl_Area.TabIndex = 61;
+            this.lbl_Area.Text = "Area";
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Area);
+            this.Controls.Add(this.cbx_Area);
+            this.Controls.Add(this.btn_ShowDirectors);
+            this.Controls.Add(this.dtp_BirthDate);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_MensalBonus);
             this.Controls.Add(this.txt_mensalBonus);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbx_Car);
@@ -431,6 +494,11 @@
         private System.Windows.Forms.CheckBox cbx_Car;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_mensalBonus;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_MensalBonus;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtp_BirthDate;
+        private System.Windows.Forms.Button btn_ShowDirectors;
+        private System.Windows.Forms.ComboBox cbx_Area;
+        private System.Windows.Forms.Label lbl_Area;
     }
 }

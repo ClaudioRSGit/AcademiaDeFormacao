@@ -61,6 +61,7 @@ namespace AcademiaDeFormacao
             Username = username;
             Password = password;
             Role = "Student";
+            DateOfBirth = DateTime.MaxValue;
             ContractEndDate = DateTime.MaxValue; 
             CriminalRecordEndDate = DateTime.MaxValue;
 
