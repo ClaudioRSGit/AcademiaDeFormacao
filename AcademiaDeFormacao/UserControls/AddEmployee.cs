@@ -139,7 +139,7 @@ namespace AcademiaDeFormacao.UserControls
                         txt_salary.Text = "";
                         txt_address.Text = "";
                         txt_contact.Text = "";
-
+                        txt_mensalBonus.Text = "";
                     }
                     break;
 

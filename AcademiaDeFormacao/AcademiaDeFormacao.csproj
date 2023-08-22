@@ -164,6 +164,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CalculateSalary.resx">
       <DependentUpon>CalculateSalary.cs</DependentUpon>

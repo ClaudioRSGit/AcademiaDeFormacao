@@ -48,7 +48,6 @@ namespace AcademiaDeFormacao.UserControls
             InitializeCharts();
             CalculateTotalSalary();
             UpdateChartData();
-            //UpdateAgeDistributionChart();
 
 
             using (var context = new School())
@@ -107,17 +106,35 @@ namespace AcademiaDeFormacao.UserControls
             chartArea2.Position.Width = 100;
             chartArea2.Position.Height = 100;
 
+
             // chart3
-            /*
             ChartArea chartArea3 = new ChartArea();
             chartArea3.Name = "AgeDistribution";
             chart3.ChartAreas.Add(chartArea3);
 
+            // Adjust the aspect ratio of the chart area for the pie chart
+            chartArea3.Position.X = 0;
+            chartArea3.Position.Y = 0;
+            chartArea3.Position.Width = 100;
+            chartArea3.Position.Height = 100;
+
             Series series3 = new Series("Age Distribution");
             series3.ChartType = SeriesChartType.Pie;
+            series3.ChartArea = "AgeDistribution"; // Assign the chart area for the pie chart
             chart3.Series.Add(series3);
-            // chart3 
-            */
+
+            // Hide the legend for chart3
+            chart3.Legends.Clear();
+        }
+
+        private void UpdateAgeDistributionChart()
+        {
+            chart3.Series["Age Distribution"].Points.Clear();
+
+            foreach (var kvp in ageDistribution)
+            {
+                chart3.Series["Age Distribution"].Points.AddXY(kvp.Key, kvp.Value);
+            }
         }
         private int CalculateAge(DateTime birthdate)
         {
@@ -130,22 +147,14 @@ namespace AcademiaDeFormacao.UserControls
 
         private string GetAgeGroup(int age)
         {
-            if (age < 20) return "Less than 20";
+            if (age < 20) return "< 20";
             if (age < 30) return "20s";
             if (age < 40) return "30s";
             if (age < 50) return "40s";
-            return "50 and above";
+            return "> 50";
         }
 
-        private void UpdateAgeDistributionChart()
-        {
-            chart3.Series["Age Distribution"].Points.Clear();
 
-            foreach (var kvp in ageDistribution)
-            {
-                chart3.Series["Age Distribution"].Points.AddXY(kvp.Key, kvp.Value);
-            }
-        }
         public void UpdateChartData()
         {
             ageDistribution.Clear(); // Clear the dictionary before updating
@@ -189,8 +198,8 @@ namespace AcademiaDeFormacao.UserControls
                     chart2.Series["Average Salary"].Points.AddXY(item.Role, item.AverageSalary);
                 }
                 //chart2
-                
-                //chart3
+
+                // Calculate age distribution
                 foreach (var employee in employees)
                 {
                     int age = CalculateAge(employee.DateOfBirth);
@@ -201,8 +210,10 @@ namespace AcademiaDeFormacao.UserControls
                     else
                         ageDistribution[ageGroup] = 1;
                 }
-                //chart3
-                
+
+                // Update the age distribution chart
+                UpdateAgeDistributionChart();
+
             }
 
 

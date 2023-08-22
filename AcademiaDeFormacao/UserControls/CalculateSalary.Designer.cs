@@ -60,6 +60,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -156,7 +157,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(484, 299);
+            this.chart1.Location = new System.Drawing.Point(484, 332);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
@@ -179,7 +180,7 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(32, 299);
+            this.chart2.Location = new System.Drawing.Point(32, 332);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series2.ChartArea = "ChartArea1";
@@ -231,7 +232,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(314, 299);
+            this.panel6.Location = new System.Drawing.Point(314, 332);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(164, 77);
             this.panel6.TabIndex = 62;
@@ -254,7 +255,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Ivory;
-            this.label9.Location = new System.Drawing.Point(69, 517);
+            this.label9.Location = new System.Drawing.Point(69, 550);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(201, 22);
             this.label9.TabIndex = 60;
@@ -266,7 +267,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Ivory;
-            this.label10.Location = new System.Drawing.Point(502, 517);
+            this.label10.Location = new System.Drawing.Point(502, 550);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(254, 22);
             this.label10.TabIndex = 63;
@@ -300,7 +301,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(314, 382);
+            this.panel4.Location = new System.Drawing.Point(314, 415);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(164, 77);
             this.panel4.TabIndex = 63;
@@ -322,7 +323,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(314, 465);
+            this.panel5.Location = new System.Drawing.Point(314, 498);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(164, 49);
             this.panel5.TabIndex = 63;
@@ -373,11 +374,24 @@
             this.label11.TabIndex = 59;
             this.label11.Text = "Total Employees";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Ivory;
+            this.label12.Location = new System.Drawing.Point(567, 296);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 22);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "Age Distribution";
+            // 
             // CalculateSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -439,5 +453,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
