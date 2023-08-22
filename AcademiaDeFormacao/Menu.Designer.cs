@@ -47,12 +47,12 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
-            this.calculateSalary2 = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -236,12 +236,12 @@
             // 
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
-            this.mainPanel.Controls.Add(this.calculateSalary2);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
             this.mainPanel.Controls.Add(this.OnMenuEditProf);
             this.mainPanel.Controls.Add(this.addEmployee1);
             this.mainPanel.Controls.Add(this.exportData2);
+            this.mainPanel.Controls.Add(this.DashBoard);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";
@@ -267,6 +267,14 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
+            // 
+            // DashBoard
+            // 
+            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.DashBoard.Location = new System.Drawing.Point(0, 31);
+            this.DashBoard.Name = "DashBoard";
+            this.DashBoard.Size = new System.Drawing.Size(873, 575);
+            this.DashBoard.TabIndex = 48;
             // 
             // welcomePage1
             // 
@@ -297,6 +305,7 @@
             this.addEmployee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.addEmployee1.Location = new System.Drawing.Point(0, 22);
             this.addEmployee1.Name = "addEmployee1";
+            this.addEmployee1.SecretaryShowDirector = null;
             this.addEmployee1.Size = new System.Drawing.Size(784, 578);
             this.addEmployee1.TabIndex = 0;
             // 
@@ -307,14 +316,6 @@
             this.exportData2.Name = "exportData2";
             this.exportData2.Size = new System.Drawing.Size(858, 605);
             this.exportData2.TabIndex = 47;
-            // 
-            // calculateSalary2
-            // 
-            this.calculateSalary2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.calculateSalary2.Location = new System.Drawing.Point(0, 31);
-            this.calculateSalary2.Name = "calculateSalary2";
-            this.calculateSalary2.Size = new System.Drawing.Size(873, 575);
-            this.calculateSalary2.TabIndex = 48;
             // 
             // Menu
             // 
@@ -374,10 +375,8 @@
             private System.Windows.Forms.Label lbl_DisplayUserName;
             private System.Windows.Forms.PictureBox pictureBox7;
             private System.Windows.Forms.Panel panel3;
-            private AcademiaDeFormacao.UserControls.ExportData exportData1;
         private AcademiaDeFormacao.UserControls.EditUserProfile OnMenuEditProf;
         private AcademiaDeFormacao.UserControls.ExportData exportData2;
-        private AcademiaDeFormacao.UserControls.CalculateSalary calculateSalary1;
-        private AcademiaDeFormacao.UserControls.CalculateSalary calculateSalary2;
+        private AcademiaDeFormacao.UserControls.CalculateSalary DashBoard;
     }
     }

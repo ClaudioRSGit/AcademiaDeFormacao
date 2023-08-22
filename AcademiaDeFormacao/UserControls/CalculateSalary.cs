@@ -18,7 +18,7 @@ namespace AcademiaDeFormacao.UserControls
         public CalculateSalary()
         {
             InitializeComponent();
-            PopulateDashboard();
+            //PopulateDashboard();
         }
 
         public void CalculateTotalSalary()
@@ -43,7 +43,7 @@ namespace AcademiaDeFormacao.UserControls
             }
 
         }
-        private void PopulateDashboard()
+        public void PopulateDashboard()
         {
             InitializeCharts();
             CalculateTotalSalary();
@@ -108,7 +108,7 @@ namespace AcademiaDeFormacao.UserControls
             chartArea2.Position.Height = 100;
 
             // chart3
-            
+            /*
             ChartArea chartArea3 = new ChartArea();
             chartArea3.Name = "AgeDistribution";
             chart3.ChartAreas.Add(chartArea3);
@@ -117,7 +117,7 @@ namespace AcademiaDeFormacao.UserControls
             series3.ChartType = SeriesChartType.Pie;
             chart3.Series.Add(series3);
             // chart3 
-
+            */
         }
         private int CalculateAge(DateTime birthdate)
         {

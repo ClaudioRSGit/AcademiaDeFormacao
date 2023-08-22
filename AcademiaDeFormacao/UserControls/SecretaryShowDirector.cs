@@ -18,7 +18,7 @@ namespace AcademiaDeFormacao.UserControls
         public SecretaryShowDirector()
         {
             InitializeComponent();
-            LoadDirectors();
+            //LoadDirectors();
         }
 
         private void LoadDirectors()
@@ -35,7 +35,7 @@ namespace AcademiaDeFormacao.UserControls
         }
 
         private void list_Directors_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {/*
             if (list_Directors.SelectedIndex != -1)
             {
                 using (var context = new School())
@@ -46,7 +46,7 @@ namespace AcademiaDeFormacao.UserControls
                         this.SelectedDirectorId = selectedDirector.EmployeeId;
                     }
                 }
-            }
+            }*/
         }
 
         private void btn_back_Click(object sender, EventArgs e)

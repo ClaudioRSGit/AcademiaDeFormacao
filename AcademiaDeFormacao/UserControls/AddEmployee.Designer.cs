@@ -60,8 +60,8 @@
             this.btn_ShowDirectors = new System.Windows.Forms.Button();
             this.cbx_Area = new System.Windows.Forms.ComboBox();
             this.lbl_Area = new System.Windows.Forms.Label();
-            this.secretaryShowDirector1 = new AcademiaDeFormacao.UserControls.SecretaryShowDirector();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -412,14 +412,6 @@
             this.lbl_Area.TabIndex = 61;
             this.lbl_Area.Text = "Area";
             // 
-            // secretaryShowDirector1
-            // 
-            this.secretaryShowDirector1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.secretaryShowDirector1.Location = new System.Drawing.Point(131, 102);
-            this.secretaryShowDirector1.Name = "secretaryShowDirector1";
-            this.secretaryShowDirector1.Size = new System.Drawing.Size(268, 309);
-            this.secretaryShowDirector1.TabIndex = 62;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(-105, -160);
@@ -430,12 +422,22 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(662, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "label1";
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.secretaryShowDirector1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Area);
             this.Controls.Add(this.cbx_Area);
             this.Controls.Add(this.btn_ShowDirectors);
@@ -511,6 +513,6 @@
         private System.Windows.Forms.Button btn_ShowDirectors;
         private System.Windows.Forms.ComboBox cbx_Area;
         private System.Windows.Forms.Label lbl_Area;
-        private SecretaryShowDirector secretaryShowDirector1;
+        private System.Windows.Forms.Label label1;
     }
 }

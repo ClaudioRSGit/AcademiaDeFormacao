@@ -58,10 +58,10 @@ namespace TryProject
         {
             addEmployee1.Hide();
             welcomePage1.Hide();
-            calculateSalary2.Hide();
+            DashBoard.Hide();
             contracts1.Hide();
             OnMenuEditProf.Hide();
-            exportData2.Show();
+            exportData2.Hide();
 
             userControl.Show();
         }
@@ -95,7 +95,8 @@ namespace TryProject
 
         private void btn_CalculateSalary_Click(object sender, EventArgs e)
         {
-            ShowUserControl(calculateSalary2);
+            DashBoard.PopulateDashboard();
+            ShowUserControl(DashBoard);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace TryProject
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
+            //OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
             ShowUserControl(OnMenuEditProf);
             // OnMenuEditProf = new EditUserProfile();
         }

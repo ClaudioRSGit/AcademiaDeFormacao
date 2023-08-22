@@ -13,6 +13,8 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class AddEmployee : UserControl
     {
+        public SecretaryShowDirector SecretaryShowDirector { get; set; }
+
         public AddEmployee()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace AcademiaDeFormacao.UserControls
             lbl_Area.Hide();
             cbx_Area.Hide();
             btn_ShowDirectors.Hide();
-            secretaryShowDirector1.Hide();
+            //secretaryShowDirector1.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -73,8 +75,7 @@ namespace AcademiaDeFormacao.UserControls
                 case "Secretary":
                     using (var context = new School())
                     {
-                        SecretaryShowDirector secretaryShowDirector = new SecretaryShowDirector(); // Crie uma instância
-                        Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == secretaryShowDirector.SelectedDirectorId);
+                        Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == SecretaryShowDirector.SelectedDirectorId);
                         Secretary newSecretary = new Secretary();
                         MessageBox.Show(selectedDirector.ToString());
                         newSecretary.Username = txt_username.Text;
@@ -122,7 +123,7 @@ namespace AcademiaDeFormacao.UserControls
                         newDirector.ContractEndDate = dtp_ContractEndDate.Value;
                         newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newDirector.DateOfBirth = dtp_BirthDate.Value;
-                        newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);        //Colocar uma txt box talvez para escrever o input
+                        newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);   
                         newDirector.CompanyCar = cbx_Car.Checked;
                         newDirector.TimeExemption = cbx_timeExemption.Checked;
 
@@ -163,7 +164,7 @@ namespace AcademiaDeFormacao.UserControls
 
         private void btn_ShowDirectors_Click(object sender, EventArgs e)
         {
-            secretaryShowDirector1.Show();
+            //secretaryShowDirector1.Show();
         }
     }
 }
