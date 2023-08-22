@@ -54,6 +54,8 @@
             this.cbx_timeExemption = new System.Windows.Forms.CheckBox();
             this.cbx_Car = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_mensalBonus = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,8 @@
             // 
             this.label_Username.AutoSize = true;
             this.label_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Username.Location = new System.Drawing.Point(52, 62);
+            this.label_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Username.Location = new System.Drawing.Point(49, 75);
             this.label_Username.Name = "label_Username";
             this.label_Username.Size = new System.Drawing.Size(102, 25);
             this.label_Username.TabIndex = 28;
@@ -71,7 +74,8 @@
             // 
             this.label_Password.AutoSize = true;
             this.label_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Password.Location = new System.Drawing.Point(434, 62);
+            this.label_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Password.Location = new System.Drawing.Point(433, 75);
             this.label_Password.Name = "label_Password";
             this.label_Password.Size = new System.Drawing.Size(98, 25);
             this.label_Password.TabIndex = 29;
@@ -81,7 +85,8 @@
             // 
             this.label_Name.AutoSize = true;
             this.label_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.Location = new System.Drawing.Point(56, 123);
+            this.label_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Name.Location = new System.Drawing.Point(51, 136);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(64, 25);
             this.label_Name.TabIndex = 30;
@@ -91,7 +96,8 @@
             // 
             this.label_Email.AutoSize = true;
             this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Email.Location = new System.Drawing.Point(56, 184);
+            this.label_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Email.Location = new System.Drawing.Point(51, 197);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(60, 25);
             this.label_Email.TabIndex = 31;
@@ -100,7 +106,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(57, 58);
+            this.panel2.Location = new System.Drawing.Point(57, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 1);
             this.panel2.TabIndex = 32;
@@ -109,7 +115,8 @@
             // 
             this.label_Salary.AutoSize = true;
             this.label_Salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Salary.Location = new System.Drawing.Point(52, 245);
+            this.label_Salary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Salary.Location = new System.Drawing.Point(52, 257);
             this.label_Salary.Name = "label_Salary";
             this.label_Salary.Size = new System.Drawing.Size(68, 25);
             this.label_Salary.TabIndex = 33;
@@ -119,7 +126,8 @@
             // 
             this.label_Role.AutoSize = true;
             this.label_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Role.Location = new System.Drawing.Point(434, 123);
+            this.label_Role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_Role.Location = new System.Drawing.Point(432, 141);
             this.label_Role.Name = "label_Role";
             this.label_Role.Size = new System.Drawing.Size(51, 25);
             this.label_Role.TabIndex = 34;
@@ -129,7 +137,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 306);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label2.Location = new System.Drawing.Point(53, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 25);
             this.label2.TabIndex = 35;
@@ -139,17 +148,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(434, 245);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label3.Location = new System.Drawing.Point(431, 258);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 36;
             this.label3.Text = "Contact";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label_ContractEndDate
             // 
             this.label_ContractEndDate.AutoSize = true;
             this.label_ContractEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ContractEndDate.Location = new System.Drawing.Point(56, 367);
+            this.label_ContractEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_ContractEndDate.Location = new System.Drawing.Point(56, 381);
             this.label_ContractEndDate.Name = "label_ContractEndDate";
             this.label_ContractEndDate.Size = new System.Drawing.Size(172, 25);
             this.label_ContractEndDate.TabIndex = 37;
@@ -159,7 +171,8 @@
             // 
             this.label_CriminalRecordEndDate.AutoSize = true;
             this.label_CriminalRecordEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CriminalRecordEndDate.Location = new System.Drawing.Point(434, 367);
+            this.label_CriminalRecordEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label_CriminalRecordEndDate.Location = new System.Drawing.Point(56, 441);
             this.label_CriminalRecordEndDate.Name = "label_CriminalRecordEndDate";
             this.label_CriminalRecordEndDate.Size = new System.Drawing.Size(236, 25);
             this.label_CriminalRecordEndDate.TabIndex = 38;
@@ -167,21 +180,21 @@
             // 
             // txt_username
             // 
-            this.txt_username.BackColor = System.Drawing.Color.Silver;
-            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.Location = new System.Drawing.Point(56, 90);
+            this.txt_username.Location = new System.Drawing.Point(56, 102);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(245, 30);
+            this.txt_username.Size = new System.Drawing.Size(317, 30);
             this.txt_username.TabIndex = 39;
             // 
             // txt_password
             // 
-            this.txt_password.BackColor = System.Drawing.Color.Silver;
-            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(439, 90);
+            this.txt_password.Location = new System.Drawing.Point(439, 102);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(318, 30);
@@ -189,10 +202,10 @@
             // 
             // txt_name
             // 
-            this.txt_name.BackColor = System.Drawing.Color.Silver;
-            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(57, 151);
+            this.txt_name.Location = new System.Drawing.Point(57, 163);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(316, 30);
@@ -200,10 +213,10 @@
             // 
             // txt_email
             // 
-            this.txt_email.BackColor = System.Drawing.Color.Silver;
-            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(57, 212);
+            this.txt_email.Location = new System.Drawing.Point(57, 224);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(700, 30);
@@ -211,10 +224,10 @@
             // 
             // txt_salary
             // 
-            this.txt_salary.BackColor = System.Drawing.Color.Silver;
-            this.txt_salary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_salary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_salary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_salary.Location = new System.Drawing.Point(57, 273);
+            this.txt_salary.Location = new System.Drawing.Point(57, 285);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(316, 30);
@@ -222,10 +235,10 @@
             // 
             // txt_address
             // 
-            this.txt_address.BackColor = System.Drawing.Color.Silver;
-            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.Location = new System.Drawing.Point(57, 334);
+            this.txt_address.Location = new System.Drawing.Point(57, 346);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(700, 30);
@@ -233,10 +246,10 @@
             // 
             // txt_contact
             // 
-            this.txt_contact.BackColor = System.Drawing.Color.Silver;
-            this.txt_contact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_contact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.Location = new System.Drawing.Point(439, 273);
+            this.txt_contact.Location = new System.Drawing.Point(439, 285);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(318, 30);
@@ -244,7 +257,7 @@
             // 
             // button_addEmployee
             // 
-            this.button_addEmployee.Location = new System.Drawing.Point(57, 517);
+            this.button_addEmployee.Location = new System.Drawing.Point(57, 520);
             this.button_addEmployee.Name = "button_addEmployee";
             this.button_addEmployee.Size = new System.Drawing.Size(700, 29);
             this.button_addEmployee.TabIndex = 46;
@@ -254,21 +267,23 @@
             // 
             // dtp_ContractEndDate
             // 
-            this.dtp_ContractEndDate.Location = new System.Drawing.Point(57, 395);
+            this.dtp_ContractEndDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.dtp_ContractEndDate.Location = new System.Drawing.Point(57, 409);
             this.dtp_ContractEndDate.Name = "dtp_ContractEndDate";
-            this.dtp_ContractEndDate.Size = new System.Drawing.Size(316, 22);
+            this.dtp_ContractEndDate.Size = new System.Drawing.Size(254, 22);
             this.dtp_ContractEndDate.TabIndex = 47;
             // 
             // dtp_CriminalRecord
             // 
-            this.dtp_CriminalRecord.Location = new System.Drawing.Point(439, 395);
+            this.dtp_CriminalRecord.Location = new System.Drawing.Point(61, 469);
             this.dtp_CriminalRecord.Name = "dtp_CriminalRecord";
-            this.dtp_CriminalRecord.Size = new System.Drawing.Size(318, 22);
+            this.dtp_CriminalRecord.Size = new System.Drawing.Size(250, 22);
             this.dtp_CriminalRecord.TabIndex = 48;
             // 
             // cmb_Role
             // 
             this.cmb_Role.AllowDrop = true;
+            this.cmb_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.cmb_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Role.FormattingEnabled = true;
             this.cmb_Role.Items.AddRange(new object[] {
@@ -276,9 +291,9 @@
             "Secretary",
             "Trainer",
             "Coordinator"});
-            this.cmb_Role.Location = new System.Drawing.Point(439, 151);
+            this.cmb_Role.Location = new System.Drawing.Point(439, 169);
             this.cmb_Role.Name = "cmb_Role";
-            this.cmb_Role.Size = new System.Drawing.Size(318, 24);
+            this.cmb_Role.Size = new System.Drawing.Size(146, 24);
             this.cmb_Role.TabIndex = 49;
             this.cmb_Role.SelectedIndexChanged += new System.EventHandler(this.cmb_Role_SelectedIndexChanged);
             // 
@@ -295,7 +310,8 @@
             // cbx_timeExemption
             // 
             this.cbx_timeExemption.AutoSize = true;
-            this.cbx_timeExemption.Location = new System.Drawing.Point(61, 457);
+            this.cbx_timeExemption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.cbx_timeExemption.Location = new System.Drawing.Point(363, 469);
             this.cbx_timeExemption.Name = "cbx_timeExemption";
             this.cbx_timeExemption.Size = new System.Drawing.Size(126, 20);
             this.cbx_timeExemption.TabIndex = 52;
@@ -305,7 +321,8 @@
             // cbx_Car
             // 
             this.cbx_Car.AutoSize = true;
-            this.cbx_Car.Location = new System.Drawing.Point(219, 457);
+            this.cbx_Car.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.cbx_Car.Location = new System.Drawing.Point(521, 469);
             this.cbx_Car.Name = "cbx_Car";
             this.cbx_Car.Size = new System.Drawing.Size(111, 20);
             this.cbx_Car.TabIndex = 53;
@@ -323,11 +340,35 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Add Employee";
             // 
+            // txt_mensalBonus
+            // 
+            this.txt_mensalBonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_mensalBonus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_mensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mensalBonus.Location = new System.Drawing.Point(628, 163);
+            this.txt_mensalBonus.Multiline = true;
+            this.txt_mensalBonus.Name = "txt_mensalBonus";
+            this.txt_mensalBonus.Size = new System.Drawing.Size(129, 30);
+            this.txt_mensalBonus.TabIndex = 55;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.label1.Location = new System.Drawing.Point(622, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 25);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Mensal Bonus";
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_mensalBonus);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbx_Car);
             this.Controls.Add(this.cbx_timeExemption);
@@ -389,5 +430,7 @@
         private System.Windows.Forms.CheckBox cbx_timeExemption;
         private System.Windows.Forms.CheckBox cbx_Car;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_mensalBonus;
+        private System.Windows.Forms.Label label1;
     }
 }

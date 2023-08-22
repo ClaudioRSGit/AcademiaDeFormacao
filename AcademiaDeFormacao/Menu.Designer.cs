@@ -224,8 +224,8 @@
             // 
             this.lbl_DisplayUserName.AutoSize = true;
             this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_DisplayUserName.Location = new System.Drawing.Point(371, 15);
+            this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lbl_DisplayUserName.Location = new System.Drawing.Point(726, 17);
             this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
             this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
             this.lbl_DisplayUserName.TabIndex = 3;
@@ -234,14 +234,14 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
-            this.mainPanel.Controls.Add(this.welcomePage1);
-            this.mainPanel.Controls.Add(this.contracts1);
-            this.mainPanel.Controls.Add(this.calculateSalary1);
+            this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.addEmployee1);
             this.mainPanel.Controls.Add(this.OnMenuEditProf);
             this.mainPanel.Controls.Add(this.exportData2);
+            this.mainPanel.Controls.Add(this.welcomePage1);
+            this.mainPanel.Controls.Add(this.contracts1);
+            this.mainPanel.Controls.Add(this.calculateSalary1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";
@@ -252,7 +252,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Location = new System.Drawing.Point(303, 3);
+            this.panel3.Location = new System.Drawing.Point(657, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(63, 36);
             this.panel3.TabIndex = 44;
@@ -261,7 +261,7 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::AcademiaDeFormacao.Properties.Resources.l1;
-            this.pictureBox7.Location = new System.Drawing.Point(-77, -64);
+            this.pictureBox7.Location = new System.Drawing.Point(-71, -71);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(238, 177);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,9 +295,9 @@
             // addEmployee1
             // 
             this.addEmployee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.addEmployee1.Location = new System.Drawing.Point(-3, 0);
+            this.addEmployee1.Location = new System.Drawing.Point(0, 22);
             this.addEmployee1.Name = "addEmployee1";
-            this.addEmployee1.Size = new System.Drawing.Size(867, 637);
+            this.addEmployee1.Size = new System.Drawing.Size(784, 578);
             this.addEmployee1.TabIndex = 0;
             // 
             // OnMenuEditProf
@@ -313,7 +313,7 @@
             this.exportData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.exportData2.Location = new System.Drawing.Point(6, -17);
             this.exportData2.Name = "exportData2";
-            this.exportData2.Size = new System.Drawing.Size(883, 605);
+            this.exportData2.Size = new System.Drawing.Size(858, 605);
             this.exportData2.TabIndex = 47;
             // 
             // Menu
