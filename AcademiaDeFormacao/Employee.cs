@@ -18,6 +18,8 @@ namespace AcademiaDeFormacao
         public string Role { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
         public DateTime ContractEndDate { get; set; }
         public DateTime CriminalRecordEndDate { get; set; }
 
@@ -31,6 +33,7 @@ namespace AcademiaDeFormacao
             string role,
             string address,
             string contact,
+            DateTime dateOfBirth,
             DateTime contractEndDate,
             DateTime criminalRecordEndDate)
         {
@@ -43,6 +46,7 @@ namespace AcademiaDeFormacao
             Role = role;
             Address = address;
             Contact = contact;
+            DateOfBirth = dateOfBirth;
             ContractEndDate = contractEndDate;
             CriminalRecordEndDate = criminalRecordEndDate;
 

@@ -52,6 +52,7 @@
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
+            this.calculateSalary2 = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -235,6 +236,7 @@
             // 
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
+            this.mainPanel.Controls.Add(this.calculateSalary2);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
             this.mainPanel.Controls.Add(this.OnMenuEditProf);
@@ -301,10 +303,18 @@
             // exportData2
             // 
             this.exportData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.exportData2.Location = new System.Drawing.Point(6, -17);
+            this.exportData2.Location = new System.Drawing.Point(0, 12);
             this.exportData2.Name = "exportData2";
             this.exportData2.Size = new System.Drawing.Size(858, 605);
             this.exportData2.TabIndex = 47;
+            // 
+            // calculateSalary2
+            // 
+            this.calculateSalary2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.calculateSalary2.Location = new System.Drawing.Point(0, 31);
+            this.calculateSalary2.Name = "calculateSalary2";
+            this.calculateSalary2.Size = new System.Drawing.Size(873, 575);
+            this.calculateSalary2.TabIndex = 48;
             // 
             // Menu
             // 
@@ -367,5 +377,7 @@
             private AcademiaDeFormacao.UserControls.ExportData exportData1;
         private AcademiaDeFormacao.UserControls.EditUserProfile OnMenuEditProf;
         private AcademiaDeFormacao.UserControls.ExportData exportData2;
+        private AcademiaDeFormacao.UserControls.CalculateSalary calculateSalary1;
+        private AcademiaDeFormacao.UserControls.CalculateSalary calculateSalary2;
     }
     }

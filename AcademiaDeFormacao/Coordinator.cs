@@ -20,8 +20,9 @@ namespace AcademiaDeFormacao
            string role,
            string address,
            string contact,
+           DateTime dateOfBirth,
            DateTime contractEndDate,
-           DateTime criminalRecordEndDate) : base(employeeId, username, password, name, email, salary, role, address, contact, contractEndDate, contractEndDate)
+           DateTime criminalRecordEndDate) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, contractEndDate)
         {
             AssociatedTrainer = new List<Trainer>();
         }

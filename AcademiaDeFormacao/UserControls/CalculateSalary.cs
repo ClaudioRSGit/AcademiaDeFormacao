@@ -13,10 +13,12 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class CalculateSalary : UserControl
     {
+        private Dictionary<string, int> ageDistribution = new Dictionary<string, int>();
+
         public CalculateSalary()
         {
             InitializeComponent();
-            //PopulateDashboard();
+            PopulateDashboard();
         }
 
         public void CalculateTotalSalary()
@@ -46,6 +48,8 @@ namespace AcademiaDeFormacao.UserControls
             InitializeCharts();
             CalculateTotalSalary();
             UpdateChartData();
+            //UpdateAgeDistributionChart();
+
 
             using (var context = new School())
             {
@@ -76,6 +80,7 @@ namespace AcademiaDeFormacao.UserControls
             chartArea.Position.Y = 0;
             chartArea.Position.Width = 100;
             chartArea.Position.Height = 100;
+            // chart1
 
             // ...
 
@@ -93,17 +98,57 @@ namespace AcademiaDeFormacao.UserControls
 
             // Hide the legend for chart2
             chart2.Legends.Clear();
+            // chart2
+
 
             // Adjust chart area margins and positions for chart2
             chartArea2.Position.X = 0;
             chartArea2.Position.Y = 0;
             chartArea2.Position.Width = 100;
             chartArea2.Position.Height = 100;
+
+            // chart3
+            
+            ChartArea chartArea3 = new ChartArea();
+            chartArea3.Name = "AgeDistribution";
+            chart3.ChartAreas.Add(chartArea3);
+
+            Series series3 = new Series("Age Distribution");
+            series3.ChartType = SeriesChartType.Pie;
+            chart3.Series.Add(series3);
+            // chart3 
+
+        }
+        private int CalculateAge(DateTime birthdate)
+        {
+            int age = DateTime.Now.Year - birthdate.Year;
+            if (birthdate > DateTime.Now.AddYears(-age))
+                age--;
+
+            return age;
         }
 
+        private string GetAgeGroup(int age)
+        {
+            if (age < 20) return "Less than 20";
+            if (age < 30) return "20s";
+            if (age < 40) return "30s";
+            if (age < 50) return "40s";
+            return "50 and above";
+        }
 
+        private void UpdateAgeDistributionChart()
+        {
+            chart3.Series["Age Distribution"].Points.Clear();
+
+            foreach (var kvp in ageDistribution)
+            {
+                chart3.Series["Age Distribution"].Points.AddXY(kvp.Key, kvp.Value);
+            }
+        }
         public void UpdateChartData()
         {
+            ageDistribution.Clear(); // Clear the dictionary before updating
             using (var context = new School())
             {
                 //chart1
@@ -125,6 +170,7 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     chart1.Series["Roles"].Points.AddXY(kvp.Key, kvp.Value);
                 }
+                //chart1
 
                 //chart2
                 var averageSalaryByRole = employees
@@ -142,6 +188,21 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     chart2.Series["Average Salary"].Points.AddXY(item.Role, item.AverageSalary);
                 }
+                //chart2
+                
+                //chart3
+                foreach (var employee in employees)
+                {
+                    int age = CalculateAge(employee.DateOfBirth);
+                    string ageGroup = GetAgeGroup(age);
+
+                    if (ageDistribution.ContainsKey(ageGroup))
+                        ageDistribution[ageGroup]++;
+                    else
+                        ageDistribution[ageGroup] = 1;
+                }
+                //chart3
+                
             }
 
 
@@ -159,7 +220,7 @@ namespace AcademiaDeFormacao.UserControls
 
         private void cmb_filter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CalculateTotalSalary();
+            //CalculateTotalSalary();
         }
 
         private void CalculateSalary_Load(object sender, EventArgs e)

@@ -27,11 +27,12 @@ namespace AcademiaDeFormacao
             string role,
             string address,
             string contact,
+            DateTime dateOfBirth,
             DateTime contractEndDate,
             DateTime criminalRecordEndDate,
             bool timeExemption,
             double monthlyBonus,
-            bool companyCar) : base(employeeId, username, password, name, email, salary, role, address, contact, contractEndDate, criminalRecordEndDate)
+            bool companyCar) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate)
         {
             TimeExemption = timeExemption;
             MonthlyBonus = monthlyBonus;

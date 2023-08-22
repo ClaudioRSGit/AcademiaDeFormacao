@@ -22,11 +22,12 @@ namespace AcademiaDeFormacao
             string role,
             string address,
             string contact,
+            DateTime dateOfBirth,
             DateTime contractEndDate,
             DateTime criminalRecordEndDate,
             string educationArea,
             string availability,
-            double timeValue) : base(employeeId, username, password, name, email, salary, role, address, contact, contractEndDate, criminalRecordEndDate)
+            double timeValue) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate)
         {
             EducationArea = educationArea;
             Availability = availability;
