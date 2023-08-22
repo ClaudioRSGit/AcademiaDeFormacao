@@ -220,7 +220,7 @@ namespace AcademiaDeFormacao.UserControls
 
         private void cmb_filter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //CalculateTotalSalary();
+            CalculateTotalSalary();
         }
 
         private void CalculateSalary_Load(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace AcademiaDeFormacao.UserControls
             lbl_Area.Hide();
             cbx_Area.Hide();
             btn_ShowDirectors.Hide();
+            secretaryShowDirector1.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -70,6 +71,41 @@ namespace AcademiaDeFormacao.UserControls
             switch (selectedRole)
             {
                 case "Secretary":
+                    using (var context = new School())
+                    {
+                        SecretaryShowDirector secretaryShowDirector = new SecretaryShowDirector(); // Crie uma instância
+                        Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == secretaryShowDirector.SelectedDirectorId);
+                        Secretary newSecretary = new Secretary();
+                        MessageBox.Show(selectedDirector.ToString());
+                        newSecretary.Username = txt_username.Text;
+                        newSecretary.Password = txt_password.Text;
+                        newSecretary.Name = txt_name.Text;
+                        newSecretary.Email = txt_email.Text;
+                        newSecretary.Salary = Convert.ToDouble(txt_salary.Text);
+                        newSecretary.Role = selectedRole;
+                        newSecretary.Address = txt_address.Text;
+                        newSecretary.Contact = txt_contact.Text;
+                        newSecretary.ContractEndDate = dtp_ContractEndDate.Value;
+                        newSecretary.CriminalRecordEndDate = dtp_CriminalRecord.Value;
+                        newSecretary.DateOfBirth = dtp_BirthDate.Value;
+                        newSecretary.Area = cbx_Area.SelectedIndex.ToString();
+                        newSecretary.DiretorReporta = selectedDirector;
+                        context.Secretaries.Add(newSecretary);
+                        context.SaveChanges();
+                        
+                        MessageBox.Show("ADICIONADO");
+
+                        //wipe all fields
+                        txt_username.Text = "";
+                        txt_password.Text = "";
+                        txt_name.Text = "";
+                        txt_email.Text = "";
+                        txt_salary.Text = "";
+                        txt_address.Text = "";
+                        txt_contact.Text = "";
+
+                    }
+                    break;
                 case "Director":
                     using (var context = new School())
                     {
@@ -123,6 +159,11 @@ namespace AcademiaDeFormacao.UserControls
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ShowDirectors_Click(object sender, EventArgs e)
+        {
+            secretaryShowDirector1.Show();
         }
     }
 }

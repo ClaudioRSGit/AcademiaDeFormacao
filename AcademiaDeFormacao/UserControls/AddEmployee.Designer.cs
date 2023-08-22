@@ -50,7 +50,6 @@
             this.dtp_ContractEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtp_CriminalRecord = new System.Windows.Forms.DateTimePicker();
             this.cmb_Role = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbx_timeExemption = new System.Windows.Forms.CheckBox();
             this.cbx_Car = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,6 +60,8 @@
             this.btn_ShowDirectors = new System.Windows.Forms.Button();
             this.cbx_Area = new System.Windows.Forms.ComboBox();
             this.lbl_Area = new System.Windows.Forms.Label();
+            this.secretaryShowDirector1 = new AcademiaDeFormacao.UserControls.SecretaryShowDirector();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,16 +303,6 @@
             this.cmb_Role.TabIndex = 49;
             this.cmb_Role.SelectedIndexChanged += new System.EventHandler(this.cmb_Role_SelectedIndexChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-105, -160);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1227, 912);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // cbx_timeExemption
             // 
             this.cbx_timeExemption.AutoSize = true;
@@ -394,6 +385,7 @@
             this.btn_ShowDirectors.TabIndex = 59;
             this.btn_ShowDirectors.Text = "Show Directors";
             this.btn_ShowDirectors.UseVisualStyleBackColor = true;
+            this.btn_ShowDirectors.Click += new System.EventHandler(this.btn_ShowDirectors_Click);
             // 
             // cbx_Area
             // 
@@ -420,11 +412,30 @@
             this.lbl_Area.TabIndex = 61;
             this.lbl_Area.Text = "Area";
             // 
+            // secretaryShowDirector1
+            // 
+            this.secretaryShowDirector1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.secretaryShowDirector1.Location = new System.Drawing.Point(131, 102);
+            this.secretaryShowDirector1.Name = "secretaryShowDirector1";
+            this.secretaryShowDirector1.Size = new System.Drawing.Size(268, 309);
+            this.secretaryShowDirector1.TabIndex = 62;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-105, -160);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1227, 912);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.secretaryShowDirector1);
             this.Controls.Add(this.lbl_Area);
             this.Controls.Add(this.cbx_Area);
             this.Controls.Add(this.btn_ShowDirectors);
@@ -500,5 +511,6 @@
         private System.Windows.Forms.Button btn_ShowDirectors;
         private System.Windows.Forms.ComboBox cbx_Area;
         private System.Windows.Forms.Label lbl_Area;
+        private SecretaryShowDirector secretaryShowDirector1;
     }
 }
