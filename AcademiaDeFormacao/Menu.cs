@@ -42,7 +42,7 @@ namespace TryProject
         {
             InitializeComponent();
             addEmployee1.Hide();
-            calculateSalary1.Hide();
+            //calculateSalary1.Hide();
             contracts1.Hide();
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
@@ -60,7 +60,7 @@ namespace TryProject
         {
             addEmployee1.Hide();
             welcomePage1.Hide();
-            calculateSalary1.Hide();
+            //calculateSalary1.Hide();
             contracts1.Hide();
             OnMenuEditProf.Hide();
             exportData2.Show();
@@ -97,7 +97,7 @@ namespace TryProject
 
         private void btn_CalculateSalary_Click(object sender, EventArgs e)
         {
-            ShowUserControl(calculateSalary1);
+            //ShowUserControl(calculateSalary1);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

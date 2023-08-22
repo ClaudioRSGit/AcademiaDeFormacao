@@ -35,13 +35,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_CalculateSalary = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_CalculateSalary = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -49,9 +49,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
-            this.calculateSalary1 = new AcademiaDeFormacao.UserControls.CalculateSalary();
-            this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
+            this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -59,13 +58,13 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,23 +129,23 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(14, 209);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(105, 76);
             this.panel2.TabIndex = 36;
             // 
-            // pictureBox3
+            // pictureBox2
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
-            this.pictureBox3.Location = new System.Drawing.Point(-74, -93);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(249, 264);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::AcademiaDeFormacao.Properties.Resources.addE;
+            this.pictureBox2.Location = new System.Drawing.Point(-84, -94);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(274, 265);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel6
             // 
@@ -170,43 +169,43 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btn_CalculateSalary);
+            this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(14, 301);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(105, 76);
             this.panel5.TabIndex = 37;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
+            this.pictureBox3.Location = new System.Drawing.Point(-74, -94);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(249, 264);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_CalculateSalary);
+            this.panel4.Location = new System.Drawing.Point(14, 118);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(105, 76);
+            this.panel4.TabIndex = 35;
+            // 
             // btn_CalculateSalary
             // 
             this.btn_CalculateSalary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CalculateSalary.Image = global::AcademiaDeFormacao.Properties.Resources.calc;
-            this.btn_CalculateSalary.Location = new System.Drawing.Point(-105, -93);
+            this.btn_CalculateSalary.Image = global::AcademiaDeFormacao.Properties.Resources.dashboardIcon;
+            this.btn_CalculateSalary.Location = new System.Drawing.Point(-107, -96);
             this.btn_CalculateSalary.Name = "btn_CalculateSalary";
             this.btn_CalculateSalary.Size = new System.Drawing.Size(317, 265);
             this.btn_CalculateSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_CalculateSalary.TabIndex = 29;
             this.btn_CalculateSalary.TabStop = false;
             this.btn_CalculateSalary.Click += new System.EventHandler(this.btn_CalculateSalary_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(14, 118);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(105, 76);
-            this.panel4.TabIndex = 35;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::AcademiaDeFormacao.Properties.Resources.addE;
-            this.pictureBox2.Location = new System.Drawing.Point(-84, -96);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 265);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -236,12 +235,11 @@
             // 
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
-            this.mainPanel.Controls.Add(this.addEmployee1);
-            this.mainPanel.Controls.Add(this.OnMenuEditProf);
-            this.mainPanel.Controls.Add(this.exportData2);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
-            this.mainPanel.Controls.Add(this.calculateSalary1);
+            this.mainPanel.Controls.Add(this.OnMenuEditProf);
+            this.mainPanel.Controls.Add(this.addEmployee1);
+            this.mainPanel.Controls.Add(this.exportData2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";
@@ -284,13 +282,13 @@
             this.contracts1.Size = new System.Drawing.Size(876, 642);
             this.contracts1.TabIndex = 1;
             // 
-            // calculateSalary1
+            // OnMenuEditProf
             // 
-            this.calculateSalary1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.calculateSalary1.Location = new System.Drawing.Point(-2, 3);
-            this.calculateSalary1.Name = "calculateSalary1";
-            this.calculateSalary1.Size = new System.Drawing.Size(876, 634);
-            this.calculateSalary1.TabIndex = 0;
+            this.OnMenuEditProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.OnMenuEditProf.Location = new System.Drawing.Point(23, 31);
+            this.OnMenuEditProf.Name = "OnMenuEditProf";
+            this.OnMenuEditProf.Size = new System.Drawing.Size(816, 578);
+            this.OnMenuEditProf.TabIndex = 46;
             // 
             // addEmployee1
             // 
@@ -299,14 +297,6 @@
             this.addEmployee1.Name = "addEmployee1";
             this.addEmployee1.Size = new System.Drawing.Size(784, 578);
             this.addEmployee1.TabIndex = 0;
-            // 
-            // OnMenuEditProf
-            // 
-            this.OnMenuEditProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.OnMenuEditProf.Location = new System.Drawing.Point(23, 33);
-            this.OnMenuEditProf.Name = "OnMenuEditProf";
-            this.OnMenuEditProf.Size = new System.Drawing.Size(816, 578);
-            this.OnMenuEditProf.TabIndex = 46;
             // 
             // exportData2
             // 
@@ -335,13 +325,13 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
@@ -362,7 +352,6 @@
             private System.Windows.Forms.Panel mainPanel;
             private AcademiaDeFormacao.UserControls.AddEmployee addEmployee1;
             private AcademiaDeFormacao.UserControls.Contracts contracts1;
-            private AcademiaDeFormacao.UserControls.CalculateSalary calculateSalary1;
             private AcademiaDeFormacao.UserControls.WelcomePage welcomePage1;
             private System.Windows.Forms.Panel panel4;
             private System.Windows.Forms.Panel panel2;
