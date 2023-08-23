@@ -53,6 +53,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txt_dateOfBirth = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txt_contractEndDate = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_criminalRecordEndDate = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // test
@@ -134,7 +138,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label6.Location = new System.Drawing.Point(202, 105);
+            this.label6.Location = new System.Drawing.Point(181, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 25);
             this.label6.TabIndex = 41;
@@ -196,7 +200,7 @@
             this.txt_id.Location = new System.Drawing.Point(40, 132);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(138, 30);
+            this.txt_id.Size = new System.Drawing.Size(121, 30);
             this.txt_id.TabIndex = 46;
             // 
             // txt_role
@@ -206,10 +210,10 @@
             this.txt_role.Enabled = false;
             this.txt_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_role.Location = new System.Drawing.Point(207, 132);
+            this.txt_role.Location = new System.Drawing.Point(186, 132);
             this.txt_role.Multiline = true;
             this.txt_role.Name = "txt_role";
-            this.txt_role.Size = new System.Drawing.Size(176, 30);
+            this.txt_role.Size = new System.Drawing.Size(197, 30);
             this.txt_role.TabIndex = 54;
             // 
             // txt_name
@@ -221,7 +225,7 @@
             this.txt_name.Location = new System.Drawing.Point(42, 216);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(211, 30);
+            this.txt_name.Size = new System.Drawing.Size(197, 30);
             this.txt_name.TabIndex = 55;
             // 
             // txt_contact
@@ -245,7 +249,7 @@
             this.txt_email.Location = new System.Drawing.Point(42, 377);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(728, 30);
+            this.txt_email.Size = new System.Drawing.Size(377, 30);
             this.txt_email.TabIndex = 57;
             // 
             // txt_address
@@ -257,7 +261,7 @@
             this.txt_address.Location = new System.Drawing.Point(42, 447);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(728, 30);
+            this.txt_address.Size = new System.Drawing.Size(377, 30);
             this.txt_address.TabIndex = 58;
             this.txt_address.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -295,7 +299,7 @@
             this.txt_newPassword.Location = new System.Drawing.Point(271, 307);
             this.txt_newPassword.Multiline = true;
             this.txt_newPassword.Name = "txt_newPassword";
-            this.txt_newPassword.Size = new System.Drawing.Size(208, 30);
+            this.txt_newPassword.Size = new System.Drawing.Size(217, 30);
             this.txt_newPassword.TabIndex = 61;
             // 
             // txt_salary
@@ -305,10 +309,10 @@
             this.txt_salary.Enabled = false;
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_salary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_salary.Location = new System.Drawing.Point(283, 216);
+            this.txt_salary.Location = new System.Drawing.Point(271, 216);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(205, 30);
+            this.txt_salary.Size = new System.Drawing.Size(217, 30);
             this.txt_salary.TabIndex = 62;
             // 
             // label10
@@ -316,7 +320,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label10.Location = new System.Drawing.Point(276, 189);
+            this.label10.Location = new System.Drawing.Point(266, 189);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 25);
             this.label10.TabIndex = 63;
@@ -329,10 +333,10 @@
             this.txt_dateOfBirth.Enabled = false;
             this.txt_dateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_dateOfBirth.Location = new System.Drawing.Point(524, 216);
+            this.txt_dateOfBirth.Location = new System.Drawing.Point(510, 216);
             this.txt_dateOfBirth.Multiline = true;
             this.txt_dateOfBirth.Name = "txt_dateOfBirth";
-            this.txt_dateOfBirth.Size = new System.Drawing.Size(246, 30);
+            this.txt_dateOfBirth.Size = new System.Drawing.Size(260, 30);
             this.txt_dateOfBirth.TabIndex = 64;
             // 
             // label11
@@ -340,17 +344,69 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label11.Location = new System.Drawing.Point(519, 189);
+            this.label11.Location = new System.Drawing.Point(505, 189);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 25);
             this.label11.TabIndex = 65;
             this.label11.Text = "Date of Birth";
+            // 
+            // txt_contractEndDate
+            // 
+            this.txt_contractEndDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_contractEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_contractEndDate.Enabled = false;
+            this.txt_contractEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contractEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_contractEndDate.Location = new System.Drawing.Point(448, 377);
+            this.txt_contractEndDate.Multiline = true;
+            this.txt_contractEndDate.Name = "txt_contractEndDate";
+            this.txt_contractEndDate.Size = new System.Drawing.Size(322, 30);
+            this.txt_contractEndDate.TabIndex = 67;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label12.Location = new System.Drawing.Point(442, 350);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 25);
+            this.label12.TabIndex = 66;
+            this.label12.Text = "Contract End Date";
+            // 
+            // txt_criminalRecordEndDate
+            // 
+            this.txt_criminalRecordEndDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_criminalRecordEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_criminalRecordEndDate.Enabled = false;
+            this.txt_criminalRecordEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_criminalRecordEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(447, 447);
+            this.txt_criminalRecordEndDate.Multiline = true;
+            this.txt_criminalRecordEndDate.Name = "txt_criminalRecordEndDate";
+            this.txt_criminalRecordEndDate.Size = new System.Drawing.Size(323, 30);
+            this.txt_criminalRecordEndDate.TabIndex = 69;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label13.Location = new System.Drawing.Point(441, 420);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(236, 25);
+            this.label13.TabIndex = 68;
+            this.label13.Text = "Criminal Record End Date";
             // 
             // EditUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.txt_criminalRecordEndDate);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txt_contractEndDate);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_dateOfBirth);
             this.Controls.Add(this.label10);
@@ -409,5 +465,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_dateOfBirth;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_contractEndDate;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_criminalRecordEndDate;
+        private System.Windows.Forms.Label label13;
     }
 }

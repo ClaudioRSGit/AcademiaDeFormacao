@@ -85,7 +85,8 @@ namespace TryProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ShowUserControl(contracts1);
+            //contracts1.PopulateFormFields();
+            //ShowUserControl(contracts1);
         }
 
         private void btn_ExitProgram_Click(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace TryProject
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            contracts1.PopulateFormFields();
             ShowUserControl(contracts1);
         }
 

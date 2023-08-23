@@ -43,6 +43,8 @@ namespace AcademiaDeFormacao.UserControls
                         txt_contact.Text = employee.Contact;
                         txt_salary.Text = employee.Salary.ToString();
                         txt_dateOfBirth.Text = employee.DateOfBirth.ToString();
+                        txt_contractEndDate.Text = employee.ContractEndDate.ToString();
+                        txt_criminalRecordEndDate.Text = employee.CriminalRecordEndDate.ToString();
                     }
                 }
             }

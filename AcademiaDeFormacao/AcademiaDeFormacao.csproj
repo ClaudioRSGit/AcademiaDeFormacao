@@ -313,6 +313,18 @@
   <ItemGroup>
     <None Include="Resources\celebration.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goldenMedal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silverMedal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bronzeMedal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newbieMedal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
