@@ -127,9 +127,9 @@ namespace TryProject
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            //OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
+            OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
+            //OnMenuEditProf = new EditUserProfile();
             ShowUserControl(OnMenuEditProf);
-            // OnMenuEditProf = new EditUserProfile();
         }
     }
 }
