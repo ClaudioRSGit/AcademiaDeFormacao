@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,11 +51,35 @@ namespace AcademiaDeFormacao.UserControls
             CalculateTotalSalary();
             UpdateChartData();
 
-
             using (var context = new School())
             {
+                //total employee label
                 int totalEmployees = context.Employees.Count();
                 lbl_totalEmployees.Text = totalEmployees.ToString();
+           
+                //average salary label
+                double averageSalary = context.Employees.Average(emp => emp.Salary);
+                lbl_averageSalary.Text = averageSalary.ToString("C2");
+
+                //monthly birthday label
+                string currentMonth = DateTime.Now.ToString("MMMM");
+                var birthdayEmployees = context.Employees
+                    .Where(emp => emp.DateOfBirth.Month == DateTime.Now.Month)
+                    .ToList();
+
+                StringBuilder birthdayText = new StringBuilder();
+                foreach (var employee in birthdayEmployees)
+                {
+                    birthdayText.AppendLine($"{employee.Name} ({employee.DateOfBirth.Day}/{employee.DateOfBirth.Month})");
+                }
+                lbl_birthdays.Text = birthdayText.ToString();
+
+                //latest employee
+                var latestEmployee = context.Employees.OrderByDescending(emp => emp.EmployeeId).FirstOrDefault();
+                if (latestEmployee != null)
+                {
+                    lbl_latestEmployee.Text = $"{latestEmployee.Role} {latestEmployee.Name}";
+                }
             }
         }
 
@@ -65,6 +91,7 @@ namespace AcademiaDeFormacao.UserControls
 
             ChartArea chartArea = new ChartArea();
             chartArea.Name = "EmployeeRoles";
+            chartArea.BackColor = Color.FromArgb(61, 69, 76); // Set background color
             chart1.ChartAreas.Add(chartArea);
 
             Series series = new Series("Roles");
@@ -89,6 +116,7 @@ namespace AcademiaDeFormacao.UserControls
 
             ChartArea chartArea2 = new ChartArea();
             chartArea2.Name = "AverageSalaryRoles";
+            chartArea2.BackColor = Color.FromArgb(61, 69, 76); // Set background color
             chart2.ChartAreas.Add(chartArea2);
 
             Series series2 = new Series("Average Salary");
@@ -108,15 +136,22 @@ namespace AcademiaDeFormacao.UserControls
 
 
             // chart3
-            ChartArea chartArea3 = new ChartArea();
-            chartArea3.Name = "AgeDistribution";
-            chart3.ChartAreas.Add(chartArea3);
+            // Check if the chart area already exists
+            // Check if the chart area already exists
+            ChartArea chartArea3 = chart3.ChartAreas.FindByName("AgeDistribution");
+            if (chartArea3 == null)
+            {
+                chartArea3 = new ChartArea();
+                chartArea3.Name = "AgeDistribution";
 
-            // Adjust the aspect ratio of the chart area for the pie chart
-            chartArea3.Position.X = 0;
-            chartArea3.Position.Y = 0;
-            chartArea3.Position.Width = 100;
-            chartArea3.Position.Height = 100;
+                // Set the background color of the chart area
+                chartArea3.BackColor = Color.FromArgb(61, 69, 76); // Set background color
+
+                chart3.ChartAreas.Add(chartArea3);
+            }
+
+            // Clear the existing series collection
+            chart3.Series.Clear();
 
             Series series3 = new Series("Age Distribution");
             series3.ChartType = SeriesChartType.Pie;
@@ -125,6 +160,62 @@ namespace AcademiaDeFormacao.UserControls
 
             // Hide the legend for chart3
             chart3.Legends.Clear();
+
+            // Add title to the chart area
+            Title chartTitle = new Title("Age Distribution");
+            chartTitle.Font = new Font("Arial", 14, FontStyle.Bold);
+            chart3.Titles.Add(chartTitle);
+
+            // Adjust chart area margins and positions for chart3
+            chartArea3.Position.X = 5;
+            chartArea3.Position.Y = 5;
+            chartArea3.Position.Width = 90;
+            chartArea3.Position.Height = 80;
+
+            // Hide the legend for chart3
+            chart3.Legends.Clear();
+
+
+            // chart4
+            // Check if the chart area already exists
+            ChartArea chartArea4 = chart4.ChartAreas.FindByName("AverageSalaryTrends");
+            if (chartArea4 == null)
+            {
+                chartArea4 = new ChartArea();
+                chartArea4.Name = "AverageSalaryTrends";
+
+                // Set the background color of the chart area
+                chartArea4.BackColor = Color.FromArgb(61, 69, 76); // Set background color
+
+                chart4.ChartAreas.Add(chartArea4);
+            }
+
+            // Clear the existing series collection
+            chart4.Series.Clear();
+
+            Series series4 = new Series("Average Salary");
+            series4.ChartType = SeriesChartType.Line;
+            series4.ChartArea = "AverageSalaryTrends"; // Assign the chart area
+            chart4.Series.Add(series4);
+
+            // Set axis labels
+            chart4.ChartAreas["AverageSalaryTrends"].AxisX.Title = "Time";
+            chart4.ChartAreas["AverageSalaryTrends"].AxisY.Title = "Average Salary";
+
+            // Hide the legend for the line chart
+            chart4.Legends.Clear();
+
+            // Add title to the chart area
+            Title chartTitle4 = new Title("Salary Trend Over Time");
+            chartTitle4.Font = new Font("Arial", 14, FontStyle.Bold);
+            chart4.Titles.Add(chartTitle4);
+
+            // Adjust chart area margins and positions for chart4
+            chartArea4.Position.X = 5;
+            chartArea4.Position.Y = 5;
+            chartArea4.Position.Width = 90;
+            chartArea4.Position.Height = 80;
+
         }
 
         private void UpdateAgeDistributionChart()
@@ -153,7 +244,10 @@ namespace AcademiaDeFormacao.UserControls
             if (age < 50) return "40s";
             return "> 50";
         }
-
+        private string GetMonthName(int monthNumber)
+        {
+            return DateTimeFormatInfo.CurrentInfo.GetMonthName(monthNumber);
+        }
 
         public void UpdateChartData()
         {
@@ -214,6 +308,24 @@ namespace AcademiaDeFormacao.UserControls
                 // Update the age distribution chart
                 UpdateAgeDistributionChart();
 
+
+                //chart4
+                var averageSalaryByYear = context.Employees
+                 .GroupBy(emp => emp.ContractEndDate.Year)
+                 .OrderBy(group => group.Key)
+                 .Select(group => new
+                 {
+                     Year = group.Key,
+                     AverageSalary = group.Average(emp => emp.Salary)
+                 })
+                 .ToList();
+
+                chart4.Series["Average Salary"].Points.Clear();
+
+                foreach (var item in averageSalaryByYear)
+                {
+                    chart4.Series["Average Salary"].Points.AddXY(item.Year, item.AverageSalary);
+                }
             }
 
 

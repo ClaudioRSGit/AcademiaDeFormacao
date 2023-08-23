@@ -292,6 +292,27 @@
   <ItemGroup>
     <None Include="Resources\dashboardIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avgSalary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celebration.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

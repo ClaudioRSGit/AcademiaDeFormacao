@@ -47,12 +47,12 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
+            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -268,14 +268,6 @@
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
             // 
-            // DashBoard
-            // 
-            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.DashBoard.Location = new System.Drawing.Point(0, 31);
-            this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Size = new System.Drawing.Size(873, 575);
-            this.DashBoard.TabIndex = 48;
-            // 
             // welcomePage1
             // 
             this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
@@ -316,6 +308,14 @@
             this.exportData2.Name = "exportData2";
             this.exportData2.Size = new System.Drawing.Size(858, 605);
             this.exportData2.TabIndex = 47;
+            // 
+            // DashBoard
+            // 
+            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.DashBoard.Location = new System.Drawing.Point(-7, -4);
+            this.DashBoard.Name = "DashBoard";
+            this.DashBoard.Size = new System.Drawing.Size(873, 633);
+            this.DashBoard.TabIndex = 48;
             // 
             // Menu
             // 
