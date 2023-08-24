@@ -47,12 +47,12 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
-            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -230,24 +230,22 @@
             this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
             this.lbl_DisplayUserName.TabIndex = 3;
             this.lbl_DisplayUserName.Text = "label1";
-            this.lbl_DisplayUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
+            this.mainPanel.Controls.Add(this.DashBoard);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
             this.mainPanel.Controls.Add(this.OnMenuEditProf);
             this.mainPanel.Controls.Add(this.addEmployee1);
             this.mainPanel.Controls.Add(this.exportData2);
-            this.mainPanel.Controls.Add(this.DashBoard);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(876, 632);
             this.mainPanel.TabIndex = 2;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // panel3
             // 
@@ -267,6 +265,14 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
+            // 
+            // DashBoard
+            // 
+            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.DashBoard.Location = new System.Drawing.Point(-25, -1);
+            this.DashBoard.Name = "DashBoard";
+            this.DashBoard.Size = new System.Drawing.Size(896, 633);
+            this.DashBoard.TabIndex = 48;
             // 
             // welcomePage1
             // 
@@ -306,16 +312,8 @@
             this.exportData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.exportData2.Location = new System.Drawing.Point(0, 12);
             this.exportData2.Name = "exportData2";
-            this.exportData2.Size = new System.Drawing.Size(858, 605);
+            this.exportData2.Size = new System.Drawing.Size(873, 605);
             this.exportData2.TabIndex = 47;
-            // 
-            // DashBoard
-            // 
-            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.DashBoard.Location = new System.Drawing.Point(-7, -4);
-            this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Size = new System.Drawing.Size(873, 633);
-            this.DashBoard.TabIndex = 48;
             // 
             // Menu
             // 

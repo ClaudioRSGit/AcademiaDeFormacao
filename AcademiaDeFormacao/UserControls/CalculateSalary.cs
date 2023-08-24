@@ -143,7 +143,6 @@ namespace AcademiaDeFormacao.UserControls
             {
                 chartArea3 = new ChartArea();
                 chartArea3.Name = "AgeDistribution";
-
                 // Set the background color of the chart area
                 chartArea3.BackColor = Color.FromArgb(61, 69, 76); // Set background color
 
@@ -158,63 +157,18 @@ namespace AcademiaDeFormacao.UserControls
             series3.ChartArea = "AgeDistribution"; // Assign the chart area for the pie chart
             chart3.Series.Add(series3);
 
-            // Hide the legend for chart3
-            chart3.Legends.Clear();
-
-            // Add title to the chart area
-            Title chartTitle = new Title("Age Distribution");
-            chartTitle.Font = new Font("Arial", 14, FontStyle.Bold);
-            chart3.Titles.Add(chartTitle);
-
             // Adjust chart area margins and positions for chart3
-            chartArea3.Position.X = 5;
-            chartArea3.Position.Y = 5;
-            chartArea3.Position.Width = 90;
-            chartArea3.Position.Height = 80;
+            chartArea3.Position.X = 2;
+            chartArea3.Position.Y = 2;
+            chartArea3.Position.Width = 95;
+            chartArea3.Position.Height = 95;
 
             // Hide the legend for chart3
             chart3.Legends.Clear();
 
 
             // chart4
-            // Check if the chart area already exists
-            ChartArea chartArea4 = chart4.ChartAreas.FindByName("AverageSalaryTrends");
-            if (chartArea4 == null)
-            {
-                chartArea4 = new ChartArea();
-                chartArea4.Name = "AverageSalaryTrends";
-
-                // Set the background color of the chart area
-                chartArea4.BackColor = Color.FromArgb(61, 69, 76); // Set background color
-
-                chart4.ChartAreas.Add(chartArea4);
-            }
-
-            // Clear the existing series collection
-            chart4.Series.Clear();
-
-            Series series4 = new Series("Average Salary");
-            series4.ChartType = SeriesChartType.Line;
-            series4.ChartArea = "AverageSalaryTrends"; // Assign the chart area
-            chart4.Series.Add(series4);
-
-            // Set axis labels
-            chart4.ChartAreas["AverageSalaryTrends"].AxisX.Title = "Time";
-            chart4.ChartAreas["AverageSalaryTrends"].AxisY.Title = "Average Salary";
-
-            // Hide the legend for the line chart
-            chart4.Legends.Clear();
-
-            // Add title to the chart area
-            Title chartTitle4 = new Title("Salary Trend Over Time");
-            chartTitle4.Font = new Font("Arial", 14, FontStyle.Bold);
-            chart4.Titles.Add(chartTitle4);
-
-            // Adjust chart area margins and positions for chart4
-            chartArea4.Position.X = 5;
-            chartArea4.Position.Y = 5;
-            chartArea4.Position.Width = 90;
-            chartArea4.Position.Height = 80;
+            
 
         }
 
@@ -309,35 +263,9 @@ namespace AcademiaDeFormacao.UserControls
                 UpdateAgeDistributionChart();
 
 
-                //chart4
-                var averageSalaryByYear = context.Employees
-                 .GroupBy(emp => emp.ContractEndDate.Year)
-                 .OrderBy(group => group.Key)
-                 .Select(group => new
-                 {
-                     Year = group.Key,
-                     AverageSalary = group.Average(emp => emp.Salary)
-                 })
-                 .ToList();
-
-                chart4.Series["Average Salary"].Points.Clear();
-
-                foreach (var item in averageSalaryByYear)
-                {
-                    chart4.Series["Average Salary"].Points.AddXY(item.Year, item.AverageSalary);
-                }
+                
             }
 
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -346,19 +274,6 @@ namespace AcademiaDeFormacao.UserControls
             CalculateTotalSalary();
         }
 
-        private void CalculateSalary_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_totalEmployees_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -73,11 +73,6 @@ namespace TryProject
             new Login().Show();
         }
 
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ShowUserControl(addEmployee1);
@@ -109,16 +104,6 @@ namespace TryProject
         {
             contracts1.PopulateFormFields();
             ShowUserControl(contracts1);
-        }
-
-        private void lbl_usernameTitle_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
