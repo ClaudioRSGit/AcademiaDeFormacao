@@ -76,6 +76,7 @@ namespace TryProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ShowUserControl(addEmployee1);
+            addEmployee1.LoadDirectors();
         }
 
         private void button1_Click(object sender, EventArgs e)

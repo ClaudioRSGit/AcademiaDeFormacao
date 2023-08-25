@@ -61,8 +61,14 @@
             this.cbx_Area = new System.Windows.Forms.ComboBox();
             this.lbl_Area = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.list_director = new System.Windows.Forms.ListBox();
+            this.panel_listDirectors = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.director_name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_listDirectors.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Username
@@ -392,14 +398,15 @@
             this.cbx_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Area.FormattingEnabled = true;
             this.cbx_Area.Items.AddRange(new object[] {
-            "teste1",
-            "teste2",
-            "teste3",
-            "teste4"});
+            "Recursos Humanos",
+            "Designer",
+            "Desenvolvimento",
+            "Contabilidade"});
             this.cbx_Area.Location = new System.Drawing.Point(598, 415);
             this.cbx_Area.Name = "cbx_Area";
             this.cbx_Area.Size = new System.Drawing.Size(159, 24);
             this.cbx_Area.TabIndex = 60;
+            this.cbx_Area.SelectedIndexChanged += new System.EventHandler(this.cbx_Area_SelectedIndexChanged);
             // 
             // lbl_Area
             // 
@@ -422,22 +429,76 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // list_director
+            // 
+            this.list_director.FormattingEnabled = true;
+            this.list_director.ItemHeight = 16;
+            this.list_director.Location = new System.Drawing.Point(9, 44);
+            this.list_director.Name = "list_director";
+            this.list_director.Size = new System.Drawing.Size(250, 180);
+            this.list_director.TabIndex = 62;
+            this.list_director.SelectedIndexChanged += new System.EventHandler(this.list_director_SelectedIndexChanged);
+            // 
+            // panel_listDirectors
+            // 
+            this.panel_listDirectors.Controls.Add(this.button2);
+            this.panel_listDirectors.Controls.Add(this.button1);
+            this.panel_listDirectors.Controls.Add(this.label1);
+            this.panel_listDirectors.Controls.Add(this.list_director);
+            this.panel_listDirectors.Location = new System.Drawing.Point(117, 125);
+            this.panel_listDirectors.Name = "panel_listDirectors";
+            this.panel_listDirectors.Size = new System.Drawing.Size(267, 278);
+            this.panel_listDirectors.TabIndex = 63;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(662, 204);
+            this.label1.Location = new System.Drawing.Point(4, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 29);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Directors";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(9, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(147, 241);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 23);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // director_name
+            // 
+            this.director_name.AutoSize = true;
+            this.director_name.BackColor = System.Drawing.Color.Transparent;
+            this.director_name.ForeColor = System.Drawing.Color.Yellow;
+            this.director_name.Location = new System.Drawing.Point(447, 197);
+            this.director_name.Name = "director_name";
+            this.director_name.Size = new System.Drawing.Size(118, 20);
+            this.director_name.TabIndex = 64;
+            this.director_name.Text = "Director Name";
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.director_name);
+            this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.lbl_Area);
             this.Controls.Add(this.cbx_Area);
             this.Controls.Add(this.btn_ShowDirectors);
@@ -474,6 +535,8 @@
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_listDirectors.ResumeLayout(false);
+            this.panel_listDirectors.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,6 +576,11 @@
         private System.Windows.Forms.Button btn_ShowDirectors;
         private System.Windows.Forms.ComboBox cbx_Area;
         private System.Windows.Forms.Label lbl_Area;
+        private System.Windows.Forms.ListBox list_director;
+        private System.Windows.Forms.Panel panel_listDirectors;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label director_name;
     }
 }

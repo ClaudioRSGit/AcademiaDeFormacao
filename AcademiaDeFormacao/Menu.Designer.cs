@@ -303,7 +303,6 @@
             this.addEmployee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.addEmployee1.Location = new System.Drawing.Point(0, 22);
             this.addEmployee1.Name = "addEmployee1";
-            this.addEmployee1.SecretaryShowDirector = null;
             this.addEmployee1.Size = new System.Drawing.Size(784, 578);
             this.addEmployee1.TabIndex = 0;
             // 

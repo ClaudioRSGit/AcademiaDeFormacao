@@ -13,7 +13,7 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class AddEmployee : UserControl
     {
-        public SecretaryShowDirector SecretaryShowDirector { get; set; }
+        public int SelectedDirectorId { get; set; }
 
         public AddEmployee()
         {
@@ -25,7 +25,21 @@ namespace AcademiaDeFormacao.UserControls
             lbl_Area.Hide();
             cbx_Area.Hide();
             btn_ShowDirectors.Hide();
-            //secretaryShowDirector1.Hide();
+            panel_listDirectors.Hide();
+            director_name.Hide();
+        }
+
+        public void LoadDirectors()
+        {
+            using (var context = new School())
+            {
+                List<Director> directors = context.Directors.ToList();
+
+                foreach (Director director in directors)
+                {
+                    list_director.Items.Add(director.Name);
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -48,24 +62,38 @@ namespace AcademiaDeFormacao.UserControls
                     btn_ShowDirectors.Hide();
                     lbl_Area.Hide();
                     cbx_Area.Hide();
+                    director_name.Hide();
                     break;
                 case "Secretary":
                     btn_ShowDirectors.Show();
                     lbl_Area.Show();
                     cbx_Area.Show();
+                    director_name.Show();
                     cbx_timeExemption.Hide();
                     cbx_Car.Hide();
                     lbl_MensalBonus.Hide();
                     txt_mensalBonus.Hide();
+
                     break;
                 default:
                     cbx_timeExemption.Hide();
                     cbx_Car.Hide();
+                    director_name.Hide();
+
                     break;
             }
         }
 
-        
+        private void wipeFields()
+        {
+            txt_username.Text = "";
+            txt_password.Text = "";
+            txt_name.Text = "";
+            txt_email.Text = "";
+            txt_salary.Text = "";
+            txt_address.Text = "";
+            txt_contact.Text = "";
+        }
 
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
@@ -75,9 +103,8 @@ namespace AcademiaDeFormacao.UserControls
                 case "Secretary":
                     using (var context = new School())
                     {
-                        Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == SecretaryShowDirector.SelectedDirectorId);
+                        Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == this.SelectedDirectorId);
                         Secretary newSecretary = new Secretary();
-                        MessageBox.Show(selectedDirector.ToString());
                         newSecretary.Username = txt_username.Text;
                         newSecretary.Password = txt_password.Text;
                         newSecretary.Name = txt_name.Text;
@@ -89,7 +116,7 @@ namespace AcademiaDeFormacao.UserControls
                         newSecretary.ContractEndDate = dtp_ContractEndDate.Value;
                         newSecretary.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newSecretary.DateOfBirth = dtp_BirthDate.Value;
-                        newSecretary.Area = cbx_Area.SelectedIndex.ToString();
+                        newSecretary.Area = cbx_Area.SelectedItem.ToString();
                         newSecretary.DiretorReporta = selectedDirector;
                         context.Secretaries.Add(newSecretary);
                         context.SaveChanges();
@@ -97,13 +124,7 @@ namespace AcademiaDeFormacao.UserControls
                         MessageBox.Show("ADICIONADO");
 
                         //wipe all fields
-                        txt_username.Text = "";
-                        txt_password.Text = "";
-                        txt_name.Text = "";
-                        txt_email.Text = "";
-                        txt_salary.Text = "";
-                        txt_address.Text = "";
-                        txt_contact.Text = "";
+                        wipeFields();
 
                     }
                     break;
@@ -132,14 +153,7 @@ namespace AcademiaDeFormacao.UserControls
                         MessageBox.Show("ADICIONADO");
 
                         //wipe all fields
-                        txt_username.Text = "";
-                        txt_password.Text = "";
-                        txt_name.Text = "";
-                        txt_email.Text = "";
-                        txt_salary.Text = "";
-                        txt_address.Text = "";
-                        txt_contact.Text = "";
-                        txt_mensalBonus.Text = "";
+                        wipeFields();
                     }
                     break;
 
@@ -164,7 +178,39 @@ namespace AcademiaDeFormacao.UserControls
 
         private void btn_ShowDirectors_Click(object sender, EventArgs e)
         {
-            //secretaryShowDirector1.Show();
+            panel_listDirectors.Show();
+        }
+
+        private void list_director_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (list_director.SelectedIndex != -1)
+            {
+                using (var context = new School())
+                {
+                    var selectedDirector = context.Directors.FirstOrDefault(d => d.Name == list_director.SelectedItem.ToString());
+                    if (selectedDirector != null)
+                    {
+                        this.SelectedDirectorId = selectedDirector.EmployeeId;
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel_listDirectors.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            director_name.Show();
+            director_name.Text = list_director.SelectedItem.ToString();
+            panel_listDirectors.Hide();
+        }
+
+        private void cbx_Area_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
