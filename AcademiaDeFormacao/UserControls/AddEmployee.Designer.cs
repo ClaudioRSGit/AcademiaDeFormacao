@@ -57,18 +57,27 @@
             this.lbl_MensalBonus = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtp_BirthDate = new System.Windows.Forms.DateTimePicker();
-            this.btn_ShowDirectors = new System.Windows.Forms.Button();
+            this.btn_ShowPanels = new System.Windows.Forms.Button();
             this.cbx_Area = new System.Windows.Forms.ComboBox();
             this.lbl_Area = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.list_director = new System.Windows.Forms.ListBox();
             this.panel_listDirectors = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.director_name = new System.Windows.Forms.Label();
+            this.cbx_area_trainer = new System.Windows.Forms.ComboBox();
+            this.panel_Trainer = new System.Windows.Forms.Panel();
+            this.txt_timevalue = new System.Windows.Forms.TextBox();
+            this.lbl_timevalue = new System.Windows.Forms.Label();
+            this.cmb_availability = new System.Windows.Forms.ComboBox();
+            this.btn_back_trainer = new System.Windows.Forms.Button();
+            this.btn_save_trainer = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_listDirectors.SuspendLayout();
+            this.panel_Trainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Username
@@ -166,7 +175,6 @@
             this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 36;
             this.label3.Text = "Contact";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label_ContractEndDate
             // 
@@ -383,15 +391,15 @@
             this.dtp_BirthDate.Size = new System.Drawing.Size(224, 22);
             this.dtp_BirthDate.TabIndex = 58;
             // 
-            // btn_ShowDirectors
+            // btn_ShowPanels
             // 
-            this.btn_ShowDirectors.Location = new System.Drawing.Point(610, 165);
-            this.btn_ShowDirectors.Name = "btn_ShowDirectors";
-            this.btn_ShowDirectors.Size = new System.Drawing.Size(123, 31);
-            this.btn_ShowDirectors.TabIndex = 59;
-            this.btn_ShowDirectors.Text = "Show Directors";
-            this.btn_ShowDirectors.UseVisualStyleBackColor = true;
-            this.btn_ShowDirectors.Click += new System.EventHandler(this.btn_ShowDirectors_Click);
+            this.btn_ShowPanels.Location = new System.Drawing.Point(610, 165);
+            this.btn_ShowPanels.Name = "btn_ShowPanels";
+            this.btn_ShowPanels.Size = new System.Drawing.Size(123, 31);
+            this.btn_ShowPanels.TabIndex = 59;
+            this.btn_ShowPanels.Text = "Show Directors";
+            this.btn_ShowPanels.UseVisualStyleBackColor = true;
+            this.btn_ShowPanels.Click += new System.EventHandler(this.btn_ShowPanels_Click);
             // 
             // cbx_Area
             // 
@@ -406,7 +414,6 @@
             this.cbx_Area.Name = "cbx_Area";
             this.cbx_Area.Size = new System.Drawing.Size(159, 24);
             this.cbx_Area.TabIndex = 60;
-            this.cbx_Area.SelectedIndexChanged += new System.EventHandler(this.cbx_Area_SelectedIndexChanged);
             // 
             // lbl_Area
             // 
@@ -427,7 +434,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // list_director
             // 
@@ -445,10 +451,30 @@
             this.panel_listDirectors.Controls.Add(this.button1);
             this.panel_listDirectors.Controls.Add(this.label1);
             this.panel_listDirectors.Controls.Add(this.list_director);
-            this.panel_listDirectors.Location = new System.Drawing.Point(117, 125);
+            this.panel_listDirectors.Location = new System.Drawing.Point(25, 63);
             this.panel_listDirectors.Name = "panel_listDirectors";
             this.panel_listDirectors.Size = new System.Drawing.Size(267, 278);
             this.panel_listDirectors.TabIndex = 63;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(147, 241);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 23);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(9, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -461,26 +487,6 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Directors";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(147, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 23);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // director_name
             // 
             this.director_name.AutoSize = true;
@@ -488,20 +494,110 @@
             this.director_name.ForeColor = System.Drawing.Color.Yellow;
             this.director_name.Location = new System.Drawing.Point(447, 197);
             this.director_name.Name = "director_name";
-            this.director_name.Size = new System.Drawing.Size(118, 20);
+            this.director_name.Size = new System.Drawing.Size(94, 16);
             this.director_name.TabIndex = 64;
             this.director_name.Text = "Director Name";
+            // 
+            // cbx_area_trainer
+            // 
+            this.cbx_area_trainer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_area_trainer.FormattingEnabled = true;
+            this.cbx_area_trainer.Items.AddRange(new object[] {
+            "Intrutor Design",
+            "Intrutor Mecatronica",
+            "Instrutor Programacao"});
+            this.cbx_area_trainer.Location = new System.Drawing.Point(598, 415);
+            this.cbx_area_trainer.Name = "cbx_area_trainer";
+            this.cbx_area_trainer.Size = new System.Drawing.Size(159, 24);
+            this.cbx_area_trainer.TabIndex = 65;
+            // 
+            // panel_Trainer
+            // 
+            this.panel_Trainer.Controls.Add(this.txt_timevalue);
+            this.panel_Trainer.Controls.Add(this.lbl_timevalue);
+            this.panel_Trainer.Controls.Add(this.cmb_availability);
+            this.panel_Trainer.Controls.Add(this.btn_back_trainer);
+            this.panel_Trainer.Controls.Add(this.btn_save_trainer);
+            this.panel_Trainer.Controls.Add(this.label6);
+            this.panel_Trainer.Location = new System.Drawing.Point(338, 121);
+            this.panel_Trainer.Name = "panel_Trainer";
+            this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
+            this.panel_Trainer.TabIndex = 66;
+            // 
+            // txt_timevalue
+            // 
+            this.txt_timevalue.Location = new System.Drawing.Point(10, 131);
+            this.txt_timevalue.Name = "txt_timevalue";
+            this.txt_timevalue.Size = new System.Drawing.Size(216, 22);
+            this.txt_timevalue.TabIndex = 68;
+            // 
+            // lbl_timevalue
+            // 
+            this.lbl_timevalue.AutoSize = true;
+            this.lbl_timevalue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_timevalue.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_timevalue.Location = new System.Drawing.Point(5, 92);
+            this.lbl_timevalue.Name = "lbl_timevalue";
+            this.lbl_timevalue.Size = new System.Drawing.Size(142, 29);
+            this.lbl_timevalue.TabIndex = 67;
+            this.lbl_timevalue.Text = "Time Value";
+            // 
+            // cmb_availability
+            // 
+            this.cmb_availability.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_availability.FormattingEnabled = true;
+            this.cmb_availability.Items.AddRange(new object[] {
+            "After Hours",
+            "Working Hours",
+            "Both"});
+            this.cmb_availability.Location = new System.Drawing.Point(9, 54);
+            this.cmb_availability.Name = "cmb_availability";
+            this.cmb_availability.Size = new System.Drawing.Size(217, 24);
+            this.cmb_availability.TabIndex = 66;
+            // 
+            // btn_back_trainer
+            // 
+            this.btn_back_trainer.Location = new System.Drawing.Point(152, 175);
+            this.btn_back_trainer.Name = "btn_back_trainer";
+            this.btn_back_trainer.Size = new System.Drawing.Size(83, 23);
+            this.btn_back_trainer.TabIndex = 65;
+            this.btn_back_trainer.Text = "Back";
+            this.btn_back_trainer.UseVisualStyleBackColor = true;
+            this.btn_back_trainer.Click += new System.EventHandler(this.btn_back_trainer_Click);
+            // 
+            // btn_save_trainer
+            // 
+            this.btn_save_trainer.Location = new System.Drawing.Point(10, 175);
+            this.btn_save_trainer.Name = "btn_save_trainer";
+            this.btn_save_trainer.Size = new System.Drawing.Size(91, 23);
+            this.btn_save_trainer.TabIndex = 64;
+            this.btn_save_trainer.Text = "Save";
+            this.btn_save_trainer.UseVisualStyleBackColor = true;
+            this.btn_save_trainer.Click += new System.EventHandler(this.btn_save_trainer_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(4, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 29);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "Availability";
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.panel_Trainer);
+            this.Controls.Add(this.cbx_area_trainer);
             this.Controls.Add(this.director_name);
             this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.lbl_Area);
             this.Controls.Add(this.cbx_Area);
-            this.Controls.Add(this.btn_ShowDirectors);
+            this.Controls.Add(this.btn_ShowPanels);
             this.Controls.Add(this.dtp_BirthDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_MensalBonus);
@@ -537,6 +633,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_listDirectors.ResumeLayout(false);
             this.panel_listDirectors.PerformLayout();
+            this.panel_Trainer.ResumeLayout(false);
+            this.panel_Trainer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,7 +671,7 @@
         private System.Windows.Forms.Label lbl_MensalBonus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtp_BirthDate;
-        private System.Windows.Forms.Button btn_ShowDirectors;
+        private System.Windows.Forms.Button btn_ShowPanels;
         private System.Windows.Forms.ComboBox cbx_Area;
         private System.Windows.Forms.Label lbl_Area;
         private System.Windows.Forms.ListBox list_director;
@@ -582,5 +680,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label director_name;
+        private System.Windows.Forms.ComboBox cbx_area_trainer;
+        private System.Windows.Forms.Panel panel_Trainer;
+        private System.Windows.Forms.Button btn_back_trainer;
+        private System.Windows.Forms.Button btn_save_trainer;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_timevalue;
+        private System.Windows.Forms.ComboBox cmb_availability;
+        private System.Windows.Forms.TextBox txt_timevalue;
     }
 }

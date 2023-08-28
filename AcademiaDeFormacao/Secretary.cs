@@ -30,7 +30,8 @@ namespace AcademiaDeFormacao
             DateTime contractEndDate,
             DateTime criminalRecordEndDate,
             int reportingToDirector,
-            string area) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, contractEndDate)
+            string area,
+            bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate, accountStatus)
         {
             DiretorID = reportingToDirector;
             Area = area;

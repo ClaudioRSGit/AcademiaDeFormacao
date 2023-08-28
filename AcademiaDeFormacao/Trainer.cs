@@ -27,11 +27,17 @@ namespace AcademiaDeFormacao
             DateTime criminalRecordEndDate,
             string educationArea,
             string availability,
-            double timeValue) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate)
+            double timeValue,
+            bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate, accountStatus)
         {
             EducationArea = educationArea;
             Availability = availability;
             TimeValue = timeValue;
+
+            int currentMonth = DateTime.Today.Month;
+            int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
+            double calculatedSalary = (timeValue * 6) * daysInCurrentMonth;
+            Salary = calculatedSalary;
         }
 
         public Trainer() { }

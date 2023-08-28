@@ -18,6 +18,7 @@ namespace AcademiaDeFormacao
         public string Role { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
+        public bool AccountStatus { get; set; }
 
         public DateTime DateOfBirth { get; set; }
         public DateTime ContractEndDate { get; set; }
@@ -35,7 +36,8 @@ namespace AcademiaDeFormacao
             string contact,
             DateTime dateOfBirth,
             DateTime contractEndDate,
-            DateTime criminalRecordEndDate)
+            DateTime criminalRecordEndDate,
+            bool accountStatus)
         {
             EmployeeId = employeeId;
             Username = username;
@@ -49,7 +51,7 @@ namespace AcademiaDeFormacao
             DateOfBirth = dateOfBirth;
             ContractEndDate = contractEndDate;
             CriminalRecordEndDate = criminalRecordEndDate;
-
+            AccountStatus = accountStatus;
         }
 
         public Employee(
@@ -64,7 +66,7 @@ namespace AcademiaDeFormacao
             DateOfBirth = DateTime.MaxValue;
             ContractEndDate = DateTime.MaxValue; 
             CriminalRecordEndDate = DateTime.MaxValue;
-
+            AccountStatus = true;
 
         }
 

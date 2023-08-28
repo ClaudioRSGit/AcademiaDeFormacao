@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//ToDo Ver bugs quando se clica no btn_add pois pode haver campos nao escritos
+
 namespace AcademiaDeFormacao.UserControls
 {
     public partial class AddEmployee : UserControl
@@ -18,16 +21,43 @@ namespace AcademiaDeFormacao.UserControls
         public AddEmployee()
         {
             InitializeComponent();
+            HideAll();
+        }
+
+        #region Utils
+        //Hide all Components
+        private void HideAll()
+        {
             cbx_timeExemption.Hide();
             cbx_Car.Hide();
             lbl_MensalBonus.Hide();
             txt_mensalBonus.Hide();
             lbl_Area.Hide();
             cbx_Area.Hide();
-            btn_ShowDirectors.Hide();
+            btn_ShowPanels.Hide();
             panel_listDirectors.Hide();
+            panel_Trainer.Hide();
             director_name.Hide();
+            cbx_area_trainer.Hide();
         }
+
+        //Wipe all inputs
+        private void wipeFields()
+        {
+            txt_username.Text = "";
+            txt_password.Text = "";
+            txt_name.Text = "";
+            txt_email.Text = "";
+            txt_salary.Text = "";
+            txt_address.Text = "";
+            txt_contact.Text = "";
+
+            //Todo Colocar aqui o resto
+        }
+
+        #endregion
+
+
 
         public void LoadDirectors()
         {
@@ -42,11 +72,6 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmb_Role_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -59,21 +84,41 @@ namespace AcademiaDeFormacao.UserControls
                     cbx_timeExemption.Show();
                     lbl_MensalBonus.Show();
                     txt_mensalBonus.Show();
-                    btn_ShowDirectors.Hide();
+                    btn_ShowPanels.Hide();
                     lbl_Area.Hide();
                     cbx_Area.Hide();
+                    cbx_area_trainer.Hide();
                     director_name.Hide();
                     break;
                 case "Secretary":
-                    btn_ShowDirectors.Show();
+                    btn_ShowPanels.Show();
                     lbl_Area.Show();
                     cbx_Area.Show();
+                    cbx_area_trainer.Hide();
                     director_name.Show();
                     cbx_timeExemption.Hide();
                     cbx_Car.Hide();
                     lbl_MensalBonus.Hide();
                     txt_mensalBonus.Hide();
-
+                    btn_ShowPanels.Text = "Show Directors";
+                    break;
+                case "Trainer":
+                    lbl_Area.Show();
+                    cbx_area_trainer.Show();
+                    btn_ShowPanels.Show();
+                    cbx_Area.Hide();
+                    director_name.Hide();
+                    cbx_timeExemption.Hide();
+                    cbx_Car.Hide();
+                    lbl_MensalBonus.Hide();
+                    txt_mensalBonus.Hide();
+                    btn_ShowPanels.Text = "Availability";
+                    txt_salary.Enabled = false;
+                    break;
+                case "Coordinator":
+                    
+                    
+                    
                     break;
                 default:
                     cbx_timeExemption.Hide();
@@ -84,16 +129,7 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
-        private void wipeFields()
-        {
-            txt_username.Text = "";
-            txt_password.Text = "";
-            txt_name.Text = "";
-            txt_email.Text = "";
-            txt_salary.Text = "";
-            txt_address.Text = "";
-            txt_contact.Text = "";
-        }
+       
 
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
@@ -120,7 +156,7 @@ namespace AcademiaDeFormacao.UserControls
                         newSecretary.DiretorReporta = selectedDirector;
                         context.Secretaries.Add(newSecretary);
                         context.SaveChanges();
-                        
+
                         MessageBox.Show("ADICIONADO");
 
                         //wipe all fields
@@ -144,7 +180,7 @@ namespace AcademiaDeFormacao.UserControls
                         newDirector.ContractEndDate = dtp_ContractEndDate.Value;
                         newDirector.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newDirector.DateOfBirth = dtp_BirthDate.Value;
-                        newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);   
+                        newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);
                         newDirector.CompanyCar = cbx_Car.Checked;
                         newDirector.TimeExemption = cbx_timeExemption.Checked;
 
@@ -158,27 +194,54 @@ namespace AcademiaDeFormacao.UserControls
                     break;
 
                 case "Trainer":
-                    //placeholder trainer
-                break;
-             
+                    using (var context = new School())
+                    {
+                        Trainer newTrainer = new Trainer();
+
+                        newTrainer.Username = txt_username.Text;
+                        newTrainer.Password = txt_password.Text;
+                        newTrainer.Name = txt_name.Text;
+                        newTrainer.Email = txt_email.Text;
+                        newTrainer.Salary = Convert.ToDouble(txt_salary.Text);
+                        newTrainer.Role = selectedRole;
+                        newTrainer.Address = txt_address.Text;
+                        newTrainer.Contact = txt_contact.Text;
+                        newTrainer.ContractEndDate = dtp_ContractEndDate.Value;
+                        newTrainer.CriminalRecordEndDate = dtp_CriminalRecord.Value;
+                        newTrainer.DateOfBirth = dtp_BirthDate.Value;
+                        newTrainer.EducationArea = cbx_area_trainer.SelectedItem.ToString();
+                        newTrainer.Availability = cmb_availability.SelectedItem.ToString();
+                        newTrainer.TimeValue = Convert.ToDouble( txt_timevalue.Text);
+
+                        context.Trainers.Add(newTrainer);
+                        context.SaveChanges();
+                        MessageBox.Show("ADICIONADO");
+
+                        //wipe all fields
+                        wipeFields();
+                    }
+
+                    break;
+                case "Coordinator":
+                    //placeholder coordinator
+                    break;
+
             }
 
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btn_ShowPanels_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_ShowDirectors_Click(object sender, EventArgs e)
-        {
-            panel_listDirectors.Show();
+            string selectedRole = cmb_Role.SelectedItem.ToString();
+            if (selectedRole == "Secretary")
+            {
+                panel_listDirectors.Show();
+            }
+            else if (selectedRole == "Trainer")
+            {
+                panel_Trainer.Show();
+            }
         }
 
         private void list_director_SelectedIndexChanged(object sender, EventArgs e)
@@ -208,9 +271,27 @@ namespace AcademiaDeFormacao.UserControls
             panel_listDirectors.Hide();
         }
 
-        private void cbx_Area_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_back_trainer_Click(object sender, EventArgs e)
         {
+            panel_Trainer.Hide();
+        }
 
+        private void btn_save_trainer_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_timevalue.Text) || cmb_availability.SelectedIndex == -1)
+            {
+                MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //BUGS A VER ... Podem colocar um "." em vez de "," / Podem colocar letras
+                double timevalue = Convert.ToDouble( txt_timevalue.Text);
+                int currentMonth = DateTime.Today.Month;
+                int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
+                double calculatedSalary = (timevalue * 6) * daysInCurrentMonth;
+                txt_salary.Text = calculatedSalary.ToString();
+                panel_Trainer.Hide();
+            }
         }
     }
 }

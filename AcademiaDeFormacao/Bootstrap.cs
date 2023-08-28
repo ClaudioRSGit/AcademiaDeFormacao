@@ -9,8 +9,8 @@ namespace AcademiaDeFormacao
 {
     internal class Bootstrap
     {
-            //Trainers
-            public static void DefaultTrainers()
+        //Trainers
+        public static void DefaultTrainers()
         {
             using (var context = new School())
             {
@@ -20,8 +20,8 @@ namespace AcademiaDeFormacao
                     "senha123",                 //string password,
                     "Ana Silva",                //string name,
                     "ana_silva@email.com",      //string email,
-                    3000.0,                     //double salary,
-                    "Instrutor de Programação", //string role,
+                    0.0,                        //double salary,
+                    "Trainer",                  //string role,
                     "Rua dos Formadores, Lisboa",//string address,
                     "+351 912345678",           //string contact,
                     new DateTime(1997, 12, 31), //DateTime dateOfBirth,
@@ -29,7 +29,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2027, 6, 30),  //DateTime criminalRecordEndDate,
                     "Ciência da Computação",    //string educationArea,
                     "Período Integral",         //string availability,
-                    50.0                        //double timeValue
+                    9.5,                        //double timeValue
+                    true                        //bool accountStatus
                 );
 
                 Trainer trainer2 = new Trainer(
@@ -38,8 +39,8 @@ namespace AcademiaDeFormacao
                     "ricardo123",
                     "Ricardo Sousa",
                     "ricardo_sousa@email.com",
-                    2500.0,
-                    "Instrutor de Web Design",
+                    0.0,
+                    "Trainer",
                     "Avenida dos Designers, Porto",
                     "+351 919876543",
                     new DateTime(1980, 10, 11),
@@ -47,7 +48,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2028, 12, 31),
                     "Web Design e Multimédia",
                     "Meio Período",
-                    40.0
+                    10.0,
+                    true
                 );
 
                 Trainer trainer3 = new Trainer(
@@ -56,8 +58,8 @@ namespace AcademiaDeFormacao
                     "marta123",
                     "Marta Pereira",
                     "marta.pereira@email.com",
-                    2800.0,
-                    "Instrutora de Marketing Digital",
+                    0.0,
+                    "Trainer",
                     "Praça do Marketing, Coimbra",
                     "+351 934567890",
                     new DateTime(1994, 02, 20),
@@ -65,7 +67,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2030, 8, 31),
                     "Marketing e Publicidade",
                     "Período Integral",
-                    45.0
+                    15.0,
+                    true
                 );
 
                 //Add to lists
@@ -94,7 +97,9 @@ namespace AcademiaDeFormacao
                    "555-1212",
                    new DateTime(1995, 12, 31),
                    DateTime.Now.Date.AddDays(60),
-                   DateTime.Now.Date.AddDays(90)
+                   DateTime.Now.Date.AddDays(90),
+                   true
+
                 );
 
                 Coordinator coordinator2 = new Coordinator(
@@ -109,7 +114,8 @@ namespace AcademiaDeFormacao
                     "555-9101",
                     new DateTime(1997, 12, 31),
                     DateTime.Now.Date.AddDays(60),
-                    DateTime.Now.Date.AddDays(90)
+                    DateTime.Now.Date.AddDays(90),
+                    true
                 );
 
                 Coordinator coordinator3 = new Coordinator(
@@ -124,7 +130,8 @@ namespace AcademiaDeFormacao
                     "555-4321",
                     new DateTime(1997, 12, 31),
                     DateTime.Now.Date.AddDays(60),
-                    DateTime.Now.Date.AddDays(90)
+                    DateTime.Now.Date.AddDays(90),
+                    true
                 );
                 //Add to lists
                 context.Coordinators.Add(coordinator1);
@@ -174,6 +181,7 @@ namespace AcademiaDeFormacao
                    new DateTime(2036, 12, 31),
                    true,
                    1000.0,
+                   true,
                    true
                 );
 
@@ -192,7 +200,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2027, 12, 31),
                     false,
                     1500.0,
-                    false
+                    false,
+                    true
                 );
 
                 Director director3 = new Director(
@@ -210,6 +219,7 @@ namespace AcademiaDeFormacao
                     new DateTime(2036, 12, 31),
                     true,
                     1200.0,
+                    true,
                     true
                 );
 
@@ -240,7 +250,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2030, 12, 31),
                     new DateTime(2026, 12, 31),
                     4,
-                    "Administration"
+                    "Administration",
+                    true
                 );
 
                 Secretary secretary2 = new Secretary(
@@ -257,7 +268,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2030, 12, 31),
                     new DateTime(2026, 12, 31),
                     6,
-                    "HR"
+                    "HR",
+                    true
                 );
 
                 Secretary secretary3 = new Secretary(
@@ -274,7 +286,8 @@ namespace AcademiaDeFormacao
                     new DateTime(2031, 12, 31),
                     new DateTime(2032, 12, 31),
                     5,
-                    "Finance"
+                    "Finance",
+                    true
                 );
 
                 context.Secretaries.Add(secretary1);
@@ -282,7 +295,7 @@ namespace AcademiaDeFormacao
                 context.Secretaries.Add(secretary3);
                 context.SaveChanges();
             }
-            
+
         }
 
         public static void DefaultTrainings()

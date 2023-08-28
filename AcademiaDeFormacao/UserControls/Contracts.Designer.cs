@@ -45,20 +45,20 @@
             this.lbl_remainingContractDays = new System.Windows.Forms.Label();
             this.lbl_criminalRecordDays = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_partner = new System.Windows.Forms.Label();
-            this.lbl_partnerCondition = new System.Windows.Forms.Label();
-            this.btn_renewContract = new System.Windows.Forms.Button();
-            this.disabledAccount = new System.Windows.Forms.PictureBox();
             this.newbieMedal = new System.Windows.Forms.PictureBox();
             this.bronzeMedal = new System.Windows.Forms.PictureBox();
             this.silverMedal = new System.Windows.Forms.PictureBox();
             this.goldenMedal = new System.Windows.Forms.PictureBox();
+            this.disabledAccount = new System.Windows.Forms.PictureBox();
+            this.lbl_partner = new System.Windows.Forms.Label();
+            this.lbl_partnerCondition = new System.Windows.Forms.Label();
+            this.btn_renewContract = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.silverMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldenMedal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -72,16 +72,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Ivory;
             this.label2.Location = new System.Drawing.Point(35, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 49);
+            this.label2.Size = new System.Drawing.Size(414, 46);
             this.label2.TabIndex = 35;
             this.label2.Text = "Contract Management";
             // 
             // cmb_employee
             // 
+            this.cmb_employee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_employee.FormattingEnabled = true;
             this.cmb_employee.Location = new System.Drawing.Point(232, 142);
             this.cmb_employee.Name = "cmb_employee";
@@ -238,48 +239,6 @@
             this.panel1.Size = new System.Drawing.Size(108, 91);
             this.panel1.TabIndex = 74;
             // 
-            // lbl_partner
-            // 
-            this.lbl_partner.AutoSize = true;
-            this.lbl_partner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_partner.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_partner.Location = new System.Drawing.Point(508, 144);
-            this.lbl_partner.Name = "lbl_partner";
-            this.lbl_partner.Size = new System.Drawing.Size(22, 25);
-            this.lbl_partner.TabIndex = 75;
-            this.lbl_partner.Text = "x";
-            // 
-            // lbl_partnerCondition
-            // 
-            this.lbl_partnerCondition.AutoSize = true;
-            this.lbl_partnerCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_partnerCondition.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_partnerCondition.Location = new System.Drawing.Point(508, 116);
-            this.lbl_partnerCondition.Name = "lbl_partnerCondition";
-            this.lbl_partnerCondition.Size = new System.Drawing.Size(22, 25);
-            this.lbl_partnerCondition.TabIndex = 76;
-            this.lbl_partnerCondition.Text = "x";
-            // 
-            // btn_renewContract
-            // 
-            this.btn_renewContract.Location = new System.Drawing.Point(44, 510);
-            this.btn_renewContract.Name = "btn_renewContract";
-            this.btn_renewContract.Size = new System.Drawing.Size(344, 37);
-            this.btn_renewContract.TabIndex = 77;
-            this.btn_renewContract.Text = "Renew Contract";
-            this.btn_renewContract.UseVisualStyleBackColor = true;
-            this.btn_renewContract.Click += new System.EventHandler(this.btn_renewContract_Click);
-            // 
-            // disabledAccount
-            // 
-            this.disabledAccount.Image = global::AcademiaDeFormacao.Properties.Resources.disabled;
-            this.disabledAccount.Location = new System.Drawing.Point(-63, -87);
-            this.disabledAccount.Name = "disabledAccount";
-            this.disabledAccount.Size = new System.Drawing.Size(232, 261);
-            this.disabledAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.disabledAccount.TabIndex = 80;
-            this.disabledAccount.TabStop = false;
-            // 
             // newbieMedal
             // 
             this.newbieMedal.Image = global::AcademiaDeFormacao.Properties.Resources.newbieMedal;
@@ -320,6 +279,48 @@
             this.goldenMedal.TabIndex = 75;
             this.goldenMedal.TabStop = false;
             // 
+            // disabledAccount
+            // 
+            this.disabledAccount.Image = global::AcademiaDeFormacao.Properties.Resources.disabled;
+            this.disabledAccount.Location = new System.Drawing.Point(-63, -87);
+            this.disabledAccount.Name = "disabledAccount";
+            this.disabledAccount.Size = new System.Drawing.Size(232, 261);
+            this.disabledAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.disabledAccount.TabIndex = 80;
+            this.disabledAccount.TabStop = false;
+            // 
+            // lbl_partner
+            // 
+            this.lbl_partner.AutoSize = true;
+            this.lbl_partner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_partner.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_partner.Location = new System.Drawing.Point(508, 144);
+            this.lbl_partner.Name = "lbl_partner";
+            this.lbl_partner.Size = new System.Drawing.Size(22, 25);
+            this.lbl_partner.TabIndex = 75;
+            this.lbl_partner.Text = "x";
+            // 
+            // lbl_partnerCondition
+            // 
+            this.lbl_partnerCondition.AutoSize = true;
+            this.lbl_partnerCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_partnerCondition.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_partnerCondition.Location = new System.Drawing.Point(508, 116);
+            this.lbl_partnerCondition.Name = "lbl_partnerCondition";
+            this.lbl_partnerCondition.Size = new System.Drawing.Size(22, 25);
+            this.lbl_partnerCondition.TabIndex = 76;
+            this.lbl_partnerCondition.Text = "x";
+            // 
+            // btn_renewContract
+            // 
+            this.btn_renewContract.Location = new System.Drawing.Point(44, 510);
+            this.btn_renewContract.Name = "btn_renewContract";
+            this.btn_renewContract.Size = new System.Drawing.Size(344, 37);
+            this.btn_renewContract.TabIndex = 77;
+            this.btn_renewContract.Text = "Renew Contract";
+            this.btn_renewContract.UseVisualStyleBackColor = true;
+            this.btn_renewContract.Click += new System.EventHandler(this.btn_renewContract_Click);
+            // 
             // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -348,11 +349,11 @@
             this.Name = "Contracts";
             this.Size = new System.Drawing.Size(817, 578);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.silverMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldenMedal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

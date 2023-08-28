@@ -22,21 +22,22 @@ namespace AcademiaDeFormacao
            string contact,
            DateTime dateOfBirth,
            DateTime contractEndDate,
-           DateTime criminalRecordEndDate) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, contractEndDate)
+           DateTime criminalRecordEndDate,
+           bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate, accountStatus)
         {
             AssociatedTrainer = new List<Trainer>();
         }
 
         public Coordinator() { }
 
-        public void AddTrainer(Trainer formador)
+        public void AddTrainer(Trainer trainer)
         {
-            AssociatedTrainer.Add(formador);
+            AssociatedTrainer.Add(trainer);
         }
 
-        public void RemoveTrainer(Trainer formador)
+        public void RemoveTrainer(Trainer trainer)
         {
-            AssociatedTrainer.Remove(formador);
+            AssociatedTrainer.Remove(trainer);
         }
     }
 }
