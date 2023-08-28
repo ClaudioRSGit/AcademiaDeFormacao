@@ -163,6 +163,16 @@ namespace AcademiaDeFormacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contractEnding {
+            get {
+                object obj = ResourceManager.GetObject("contractEnding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap csv {
             get {
                 object obj = ResourceManager.GetObject("csv", resourceCulture);
@@ -183,9 +193,39 @@ namespace AcademiaDeFormacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap disabled {
+            get {
+                object obj = ResourceManager.GetObject("disabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disabled1 {
+            get {
+                object obj = ResourceManager.GetObject("disabled1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enabled {
+            get {
+                object obj = ResourceManager.GetObject("enabled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

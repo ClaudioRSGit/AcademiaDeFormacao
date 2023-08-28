@@ -124,11 +124,17 @@
   <data name="l" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\l.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newbieMedal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newbieMedal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="username" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\username.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bronzeMedal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bronzeMedal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +144,9 @@
   </data>
   <data name="celebration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\celebration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disabled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disabled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +172,9 @@
   <data name="total1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\total.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,9 +190,6 @@
   <data name="contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="silverMedal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\silverMedal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +198,9 @@
   </data>
   <data name="money1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gradBck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gradBck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +217,7 @@
   <data name="csv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\csv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newbieMedal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newbieMedal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contractEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contractEnding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

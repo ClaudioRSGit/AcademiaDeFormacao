@@ -165,9 +165,6 @@ namespace AcademiaDeFormacao.UserControls
 
             // Hide the legend for chart3
             chart3.Legends.Clear();
-
-
-            // chart4
             
 
         }

@@ -131,6 +131,12 @@
     <Compile Include="UserControls\ExportData.Designer.cs">
       <DependentUpon>ExportData.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SecretaryShowDirector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SecretaryShowDirector.Designer.cs">
+      <DependentUpon>SecretaryShowDirector.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ExportData.resx">
       <DependentUpon>ExportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SecretaryShowDirector.resx">
+      <DependentUpon>SecretaryShowDirector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
@@ -315,18 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\newbieMedal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\disabled1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contractEnding.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

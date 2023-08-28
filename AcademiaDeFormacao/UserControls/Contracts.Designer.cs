@@ -42,17 +42,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lbl_remainingContractDays = new System.Windows.Forms.Label();
             this.lbl_criminalRecordDays = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_partner = new System.Windows.Forms.Label();
+            this.lbl_partnerCondition = new System.Windows.Forms.Label();
+            this.btn_renewContract = new System.Windows.Forms.Button();
+            this.disabledAccount = new System.Windows.Forms.PictureBox();
             this.newbieMedal = new System.Windows.Forms.PictureBox();
             this.bronzeMedal = new System.Windows.Forms.PictureBox();
             this.silverMedal = new System.Windows.Forms.PictureBox();
             this.goldenMedal = new System.Windows.Forms.PictureBox();
-            this.lbl_partner = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.silverMedal)).BeginInit();
@@ -105,6 +107,7 @@
             this.button1.TabIndex = 39;
             this.button1.Text = "End Contract";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -114,6 +117,7 @@
             this.button2.TabIndex = 40;
             this.button2.Text = "Save Data";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label3
             // 
@@ -200,45 +204,23 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(335, 22);
             this.dateTimePicker2.TabIndex = 67;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(39, 285);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 25);
-            this.label7.TabIndex = 69;
-            this.label7.Text = "Remaining Days";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(404, 285);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 25);
-            this.label8.TabIndex = 70;
-            this.label8.Text = "Remaining Days";
-            // 
             // lbl_remainingContractDays
             // 
             this.lbl_remainingContractDays.AutoSize = true;
             this.lbl_remainingContractDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_remainingContractDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_remainingContractDays.Location = new System.Drawing.Point(366, 285);
+            this.lbl_remainingContractDays.Location = new System.Drawing.Point(39, 285);
             this.lbl_remainingContractDays.Name = "lbl_remainingContractDays";
-            this.lbl_remainingContractDays.Size = new System.Drawing.Size(22, 25);
+            this.lbl_remainingContractDays.Size = new System.Drawing.Size(52, 25);
             this.lbl_remainingContractDays.TabIndex = 71;
-            this.lbl_remainingContractDays.Text = "x";
+            this.lbl_remainingContractDays.Text = "xxxx";
             // 
             // lbl_criminalRecordDays
             // 
             this.lbl_criminalRecordDays.AutoSize = true;
             this.lbl_criminalRecordDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_criminalRecordDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(722, 285);
+            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(404, 285);
             this.lbl_criminalRecordDays.Name = "lbl_criminalRecordDays";
             this.lbl_criminalRecordDays.Size = new System.Drawing.Size(22, 25);
             this.lbl_criminalRecordDays.TabIndex = 72;
@@ -250,10 +232,53 @@
             this.panel1.Controls.Add(this.bronzeMedal);
             this.panel1.Controls.Add(this.silverMedal);
             this.panel1.Controls.Add(this.goldenMedal);
+            this.panel1.Controls.Add(this.disabledAccount);
             this.panel1.Location = new System.Drawing.Point(404, 103);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(108, 91);
             this.panel1.TabIndex = 74;
+            // 
+            // lbl_partner
+            // 
+            this.lbl_partner.AutoSize = true;
+            this.lbl_partner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_partner.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_partner.Location = new System.Drawing.Point(508, 144);
+            this.lbl_partner.Name = "lbl_partner";
+            this.lbl_partner.Size = new System.Drawing.Size(22, 25);
+            this.lbl_partner.TabIndex = 75;
+            this.lbl_partner.Text = "x";
+            // 
+            // lbl_partnerCondition
+            // 
+            this.lbl_partnerCondition.AutoSize = true;
+            this.lbl_partnerCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_partnerCondition.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_partnerCondition.Location = new System.Drawing.Point(508, 116);
+            this.lbl_partnerCondition.Name = "lbl_partnerCondition";
+            this.lbl_partnerCondition.Size = new System.Drawing.Size(22, 25);
+            this.lbl_partnerCondition.TabIndex = 76;
+            this.lbl_partnerCondition.Text = "x";
+            // 
+            // btn_renewContract
+            // 
+            this.btn_renewContract.Location = new System.Drawing.Point(44, 510);
+            this.btn_renewContract.Name = "btn_renewContract";
+            this.btn_renewContract.Size = new System.Drawing.Size(344, 37);
+            this.btn_renewContract.TabIndex = 77;
+            this.btn_renewContract.Text = "Renew Contract";
+            this.btn_renewContract.UseVisualStyleBackColor = true;
+            this.btn_renewContract.Click += new System.EventHandler(this.btn_renewContract_Click);
+            // 
+            // disabledAccount
+            // 
+            this.disabledAccount.Image = global::AcademiaDeFormacao.Properties.Resources.disabled;
+            this.disabledAccount.Location = new System.Drawing.Point(-63, -87);
+            this.disabledAccount.Name = "disabledAccount";
+            this.disabledAccount.Size = new System.Drawing.Size(232, 261);
+            this.disabledAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.disabledAccount.TabIndex = 80;
+            this.disabledAccount.TabStop = false;
             // 
             // newbieMedal
             // 
@@ -295,28 +320,17 @@
             this.goldenMedal.TabIndex = 75;
             this.goldenMedal.TabStop = false;
             // 
-            // lbl_partner
-            // 
-            this.lbl_partner.AutoSize = true;
-            this.lbl_partner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_partner.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_partner.Location = new System.Drawing.Point(508, 138);
-            this.lbl_partner.Name = "lbl_partner";
-            this.lbl_partner.Size = new System.Drawing.Size(22, 25);
-            this.lbl_partner.TabIndex = 75;
-            this.lbl_partner.Text = "x";
-            // 
             // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.btn_renewContract);
+            this.Controls.Add(this.lbl_partnerCondition);
             this.Controls.Add(this.lbl_partner);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_criminalRecordDays);
             this.Controls.Add(this.lbl_remainingContractDays);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
@@ -334,6 +348,7 @@
             this.Name = "Contracts";
             this.Size = new System.Drawing.Size(817, 578);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.disabledAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.silverMedal)).EndInit();
@@ -359,8 +374,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbl_remainingContractDays;
         private System.Windows.Forms.Label lbl_criminalRecordDays;
         private System.Windows.Forms.Panel panel1;
@@ -369,5 +382,8 @@
         private System.Windows.Forms.PictureBox bronzeMedal;
         private System.Windows.Forms.PictureBox newbieMedal;
         private System.Windows.Forms.Label lbl_partner;
+        private System.Windows.Forms.Label lbl_partnerCondition;
+        private System.Windows.Forms.Button btn_renewContract;
+        private System.Windows.Forms.PictureBox disabledAccount;
     }
 }

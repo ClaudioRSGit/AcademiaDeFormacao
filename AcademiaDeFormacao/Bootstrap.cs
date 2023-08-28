@@ -9,29 +9,28 @@ namespace AcademiaDeFormacao
 {
     internal class Bootstrap
     {
-
-        //Trainers
-        public static void DefaultTrainers()
+            //Trainers
+            public static void DefaultTrainers()
         {
             using (var context = new School())
             {
                 Trainer trainer1 = new Trainer(
-                                    1,
-                                    "ana.silva",
-                                    "senha123",
-                                    "Ana Silva",
-                                    "ana_silva@email.com",
-                                    3000.0,
-                                    "Instrutor de Programação",
-                                    "Rua dos Formadores, Lisboa",
-                                    "+351 912345678",
-                                    new DateTime(1997, 12, 31),
-                                    new DateTime(2024, 12, 31),
-                                    new DateTime(2023, 6, 30),
-                                    "Ciência da Computação",
-                                    "Período Integral",
-                                    50.0
-                                );
+                    1,                          //int employeeId,
+                    "ana.silva",                //string username,
+                    "senha123",                 //string password,
+                    "Ana Silva",                //string name,
+                    "ana_silva@email.com",      //string email,
+                    3000.0,                     //double salary,
+                    "Instrutor de Programação", //string role,
+                    "Rua dos Formadores, Lisboa",//string address,
+                    "+351 912345678",           //string contact,
+                    new DateTime(1997, 12, 31), //DateTime dateOfBirth,
+                    new DateTime(2027, 12, 31), //DateTime contractEndDate,
+                    new DateTime(2027, 6, 30),  //DateTime criminalRecordEndDate,
+                    "Ciência da Computação",    //string educationArea,
+                    "Período Integral",         //string availability,
+                    50.0                        //double timeValue
+                );
 
                 Trainer trainer2 = new Trainer(
                     2,
@@ -44,8 +43,8 @@ namespace AcademiaDeFormacao
                     "Avenida dos Designers, Porto",
                     "+351 919876543",
                     new DateTime(1980, 10, 11),
-                    new DateTime(2025, 6, 30),
-                    new DateTime(2023, 12, 31),
+                    new DateTime(2029, 6, 30),
+                    new DateTime(2028, 12, 31),
                     "Web Design e Multimédia",
                     "Meio Período",
                     40.0
@@ -62,8 +61,8 @@ namespace AcademiaDeFormacao
                     "Praça do Marketing, Coimbra",
                     "+351 934567890",
                     new DateTime(1994, 02, 20),
-                    new DateTime(2024, 9, 30),
-                    new DateTime(2023, 8, 31),
+                    new DateTime(2031, 9, 30),
+                    new DateTime(2030, 8, 31),
                     "Marketing e Publicidade",
                     "Período Integral",
                     45.0
@@ -84,19 +83,19 @@ namespace AcademiaDeFormacao
             using (var context = new School())
             {
                 Coordinator coordinator1 = new Coordinator(
-               1,
-               "alice.brown",
-               "password123",
-               "Alice Brown",
-               "alice@example.com",
-               1200,
-               "Coordinator",
-               "123 Main St",
-               "555-1212",
-               new DateTime(1995, 12, 31),
-               DateTime.Now.Date.AddDays(60),
-               DateTime.Now.Date.AddDays(90)
-           );
+                   1,
+                   "alice.brown",
+                   "password123",
+                   "Alice Brown",
+                   "alice@example.com",
+                   1200,
+                   "Coordinator",
+                   "123 Main St",
+                   "555-1212",
+                   new DateTime(1995, 12, 31),
+                   DateTime.Now.Date.AddDays(60),
+                   DateTime.Now.Date.AddDays(90)
+                );
 
                 Coordinator coordinator2 = new Coordinator(
                     2,
@@ -141,25 +140,42 @@ namespace AcademiaDeFormacao
         //Directors
         public static void DefaultDirectors()
         {
+            /*
+             int employeeId,
+            string username,
+            string password,
+            string name,
+            string email,
+            double salary,
+            string role,
+            string address,
+            string contact,
+            DateTime dateOfBirth,
+            DateTime contractEndDate,
+            DateTime criminalRecordEndDate,
+            bool timeExemption,
+            double monthlyBonus,
+            bool companyCar*/
+
             using (var context = new School())
             {
                 Director director1 = new Director(
-               4,
-               "john.doe",
-               "password123",
-               "John Doe",
-               "john@example.com",
-               5000.0,
-               "Director",
-               "456 Oak St",
-               "555-9876",
-               new DateTime(1985, 12, 31),
-               DateTime.Now.Date.AddDays(90),
-               DateTime.Now.Date.AddDays(180),
-               true,
-               1000.0,
-               true
-           );
+                   4,
+                   "john.doe",
+                   "password123",
+                   "John Doe",
+                   "john@example.com",
+                   5000.0,
+                   "Director",
+                   "456 Oak St",
+                   "555-9876",
+                   new DateTime(1985, 12, 31),
+                   new DateTime(2040, 12, 31),
+                   new DateTime(2036, 12, 31),
+                   true,
+                   1000.0,
+                   true
+                );
 
                 Director director2 = new Director(
                     5,
@@ -172,8 +188,8 @@ namespace AcademiaDeFormacao
                     "789 Maple St",
                     "555-1234",
                     new DateTime(1985, 12, 31),
-                    DateTime.Now.Date.AddDays(120),
-                    DateTime.Now.Date.AddDays(210),
+                    new DateTime(2039, 12, 31),
+                    new DateTime(2027, 12, 31),
                     false,
                     1500.0,
                     false
@@ -190,8 +206,8 @@ namespace AcademiaDeFormacao
                     "321 Pine St",
                     "555-5678",
                     new DateTime(1985, 12, 31),
-                    DateTime.Now.Date.AddDays(150),
-                    DateTime.Now.Date.AddDays(240),
+                    new DateTime(2050, 12, 31),
+                    new DateTime(2036, 12, 31),
                     true,
                     1200.0,
                     true
@@ -211,21 +227,21 @@ namespace AcademiaDeFormacao
             using (var context = new School())
             {
                 Secretary secretary1 = new Secretary(
-                7,
-                "susan_johnson",
-                "pass456",
-                "Susan Johnson",
-                "susan@example.com",
-                2500,
-                "Secretary",
-                "789 Oak St",
-                "555-7890",
-                new DateTime(1985, 12, 31),
-                DateTime.Now.Date.AddDays(90),
-                DateTime.Now.Date.AddDays(180),
-                4,
-                "Administration"
-            );
+                    7,
+                    "susan_johnson",
+                    "pass456",
+                    "Susan Johnson",
+                    "susan@example.com",
+                    2500,
+                    "Secretary",
+                    "789 Oak St",
+                    "555-7890",
+                    new DateTime(1985, 12, 31),
+                    new DateTime(2030, 12, 31),
+                    new DateTime(2026, 12, 31),
+                    4,
+                    "Administration"
+                );
 
                 Secretary secretary2 = new Secretary(
                     8,
@@ -238,8 +254,8 @@ namespace AcademiaDeFormacao
                     "123 Elm St",
                     "555-2345",
                     new DateTime(1977, 12, 31),
-                    DateTime.Now.Date.AddDays(120),
-                    DateTime.Now.Date.AddDays(210),
+                    new DateTime(2030, 12, 31),
+                    new DateTime(2026, 12, 31),
                     6,
                     "HR"
                 );
@@ -255,8 +271,8 @@ namespace AcademiaDeFormacao
                     "456 Maple St",
                     "555-5678",
                     new DateTime(1972, 12, 31),
-                    DateTime.Now.Date.AddDays(150),
-                    DateTime.Now.Date.AddDays(240),
+                    new DateTime(2031, 12, 31),
+                    new DateTime(2032, 12, 31),
                     5,
                     "Finance"
                 );
