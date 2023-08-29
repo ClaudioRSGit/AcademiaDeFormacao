@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Ivory;
-            this.label1.Location = new System.Drawing.Point(64, 129);
+            this.label1.Location = new System.Drawing.Point(49, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 36);
             this.label1.TabIndex = 57;
@@ -60,7 +60,7 @@
             "Trainer",
             "Coordinator",
             "All"});
-            this.cmb_filter.Location = new System.Drawing.Point(120, 138);
+            this.cmb_filter.Location = new System.Drawing.Point(152, 134);
             this.cmb_filter.Name = "cmb_filter";
             this.cmb_filter.Size = new System.Drawing.Size(155, 24);
             this.cmb_filter.TabIndex = 56;
@@ -69,11 +69,11 @@
             // lb_Preview
             // 
             this.lb_Preview.AutoSize = true;
-            this.lb_Preview.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Preview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Preview.ForeColor = System.Drawing.Color.Ivory;
-            this.lb_Preview.Location = new System.Drawing.Point(688, 194);
+            this.lb_Preview.Location = new System.Drawing.Point(681, 200);
             this.lb_Preview.Name = "lb_Preview";
-            this.lb_Preview.Size = new System.Drawing.Size(100, 29);
+            this.lb_Preview.Size = new System.Drawing.Size(74, 22);
             this.lb_Preview.TabIndex = 55;
             this.lb_Preview.Text = "Preview";
             // 

@@ -74,12 +74,26 @@ namespace AcademiaDeFormacao.UserControls
                 }
                 lbl_birthdays.Text = birthdayText.ToString();
 
+                //disabled accounts
+                int disabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == false);
+                lbl_disabledAccounts.Text = $"{disabledAccountsCount}";
+
+                //enabled accounts
+                int enabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == true);
+                lbl_enabledAccounts.Text = $"{enabledAccountsCount}";
+
                 //latest employee
                 var latestEmployee = context.Employees.OrderByDescending(emp => emp.EmployeeId).FirstOrDefault();
                 if (latestEmployee != null)
                 {
                     lbl_latestEmployee.Text = $"{latestEmployee.Role} {latestEmployee.Name}";
                 }
+
+                // Count of contracts ending in the current month
+                int contractsEndingThisMonthCount = context.Employees
+                    .Count(emp => emp.ContractEndDate.Month == DateTime.Now.Month);
+
+                lbl_contractsEnding.Text = contractsEndingThisMonthCount.ToString();
             }
         }
 
@@ -168,7 +182,6 @@ namespace AcademiaDeFormacao.UserControls
             
 
         }
-
         private void UpdateAgeDistributionChart()
         {
             chart3.Series["Age Distribution"].Points.Clear();
@@ -271,6 +284,77 @@ namespace AcademiaDeFormacao.UserControls
             CalculateTotalSalary();
         }
 
+        private void lbl_disabledAccounts_MouseHover(object sender, EventArgs e)
+        {
+            using (var context = new School())
+            {
+                var disabledEmployees = context.Employees.Where(emp => emp.AccountStatus == false).ToList();
+
+                if (disabledEmployees.Any())
+                {
+                    StringBuilder tooltipText = new StringBuilder("Disabled Accounts:\n");
+                    foreach (var employee in disabledEmployees)
+                    {
+                        tooltipText.AppendLine(employee.Name);
+                    }
+
+                    ToolTip tooltip = new ToolTip();
+                    tooltip.IsBalloon = true;
+                    tooltip.ShowAlways = false;
+                    tooltip.Show(tooltipText.ToString(), lbl_disabledAccounts, 0, lbl_disabledAccounts.Height);
+                    tooltip.AutoPopDelay = 50;
+                }
+            }
+        }
+
+        private void lbl_enabledAccounts_MouseHover_1(object sender, EventArgs e)
+        {
+            using (var context = new School())
+            {
+                var disabledEmployees = context.Employees.Where(emp => emp.AccountStatus == true).ToList();
+
+                if (disabledEmployees.Any())
+                {
+                    StringBuilder tooltipText = new StringBuilder("Enabled Accounts:\n");
+                    foreach (var employee in disabledEmployees)
+                    {
+                        tooltipText.AppendLine(employee.Name);
+                    }
+
+                    ToolTip tooltip = new ToolTip();
+                    tooltip.IsBalloon = true;
+                    tooltip.ShowAlways = false;
+                    tooltip.Show(tooltipText.ToString(), lbl_disabledAccounts, 0, lbl_disabledAccounts.Height);
+                    tooltip.AutoPopDelay = 50;
+                }
+            }
+        }
+
+        private void lbl_contractsEnding_MouseHover(object sender, EventArgs e)
+        {
+            using (var context = new School())
+            {
+                // Contracts ending in the current month
+                var contractsEndingThisMonth = context.Employees
+                    .Where(emp => emp.ContractEndDate.Month == DateTime.Now.Month)
+                    .ToList();
+
+                if (contractsEndingThisMonth.Any())
+                {
+                    StringBuilder tooltipText = new StringBuilder("Contracts Ending This Month:\n");
+                    foreach (var employee in contractsEndingThisMonth)
+                    {
+                        tooltipText.AppendLine(employee.Name);
+                    }
+
+                    ToolTip tooltip = new ToolTip();
+                    tooltip.IsBalloon = true;
+                    tooltip.ShowAlways = false;
+                    tooltip.Show(tooltipText.ToString(), lbl_contractsEnding, 0, lbl_contractsEnding.Height);
+                    tooltip.AutoPopDelay = 1000;
+                }
+            }
+        }
 
     }
 }

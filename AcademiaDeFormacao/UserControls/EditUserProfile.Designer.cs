@@ -154,7 +154,6 @@
             this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 42;
             this.label7.Text = "Username";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -166,7 +165,6 @@
             this.label8.Size = new System.Drawing.Size(142, 25);
             this.label8.TabIndex = 43;
             this.label8.Text = "New Password";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -178,7 +176,6 @@
             this.label9.Size = new System.Drawing.Size(171, 25);
             this.label9.TabIndex = 44;
             this.label9.Text = "Confirm Password";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // button1
             // 
@@ -227,6 +224,7 @@
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(197, 30);
             this.txt_name.TabIndex = 55;
+            this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
             // 
             // txt_contact
             // 
@@ -239,6 +237,7 @@
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(197, 30);
             this.txt_contact.TabIndex = 56;
+            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
             // 
             // txt_email
             // 
@@ -263,7 +262,6 @@
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(377, 30);
             this.txt_address.TabIndex = 58;
-            this.txt_address.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // txt_username
             // 

@@ -108,6 +108,7 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email);
                 }
+
             }
             dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = dataTable;

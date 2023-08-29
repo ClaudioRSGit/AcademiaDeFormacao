@@ -230,6 +230,7 @@
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(316, 30);
             this.txt_name.TabIndex = 40;
+            this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
             // 
             // txt_email
             // 
@@ -252,6 +253,7 @@
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(316, 30);
             this.txt_salary.TabIndex = 42;
+            this.txt_salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
             // txt_address
             // 
@@ -274,6 +276,7 @@
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(318, 30);
             this.txt_contact.TabIndex = 45;
+            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
             // button_addEmployee
             // 
@@ -360,6 +363,7 @@
             this.txt_mensalBonus.Name = "txt_mensalBonus";
             this.txt_mensalBonus.Size = new System.Drawing.Size(129, 30);
             this.txt_mensalBonus.TabIndex = 55;
+            this.txt_mensalBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
             // lbl_MensalBonus
             // 
@@ -451,7 +455,7 @@
             this.panel_listDirectors.Controls.Add(this.button1);
             this.panel_listDirectors.Controls.Add(this.label1);
             this.panel_listDirectors.Controls.Add(this.list_director);
-            this.panel_listDirectors.Location = new System.Drawing.Point(25, 63);
+            this.panel_listDirectors.Location = new System.Drawing.Point(106, 77);
             this.panel_listDirectors.Name = "panel_listDirectors";
             this.panel_listDirectors.Size = new System.Drawing.Size(267, 278);
             this.panel_listDirectors.TabIndex = 63;
@@ -519,7 +523,7 @@
             this.panel_Trainer.Controls.Add(this.btn_back_trainer);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label6);
-            this.panel_Trainer.Location = new System.Drawing.Point(340, 186);
+            this.panel_Trainer.Location = new System.Drawing.Point(439, 121);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;
@@ -530,6 +534,7 @@
             this.txt_timevalue.Name = "txt_timevalue";
             this.txt_timevalue.Size = new System.Drawing.Size(216, 22);
             this.txt_timevalue.TabIndex = 68;
+            this.txt_timevalue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
             // lbl_timevalue
             // 
