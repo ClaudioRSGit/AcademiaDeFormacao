@@ -53,6 +53,10 @@
             this.lbl_partner = new System.Windows.Forms.Label();
             this.lbl_partnerCondition = new System.Windows.Forms.Label();
             this.btn_renewContract = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmb_roles = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_role = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).BeginInit();
@@ -321,11 +325,63 @@
             this.btn_renewContract.UseVisualStyleBackColor = true;
             this.btn_renewContract.Click += new System.EventHandler(this.btn_renewContract_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(404, 454);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 25);
+            this.label7.TabIndex = 78;
+            this.label7.Text = "Select New Role";
+            // 
+            // cmb_roles
+            // 
+            this.cmb_roles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_roles.FormattingEnabled = true;
+            this.cmb_roles.Items.AddRange(new object[] {
+            "Director",
+            "Secretary",
+            "Coordinator",
+            "Trainer"});
+            this.cmb_roles.Location = new System.Drawing.Point(588, 455);
+            this.cmb_roles.Name = "cmb_roles";
+            this.cmb_roles.Size = new System.Drawing.Size(156, 24);
+            this.cmb_roles.TabIndex = 79;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(39, 455);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 25);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "Current Role";
+            // 
+            // txt_role
+            // 
+            this.txt_role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.txt_role.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_role.Location = new System.Drawing.Point(184, 453);
+            this.txt_role.Multiline = true;
+            this.txt_role.Name = "txt_role";
+            this.txt_role.Size = new System.Drawing.Size(202, 30);
+            this.txt_role.TabIndex = 81;
+            // 
             // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.txt_role);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmb_roles);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_renewContract);
             this.Controls.Add(this.lbl_partnerCondition);
             this.Controls.Add(this.lbl_partner);
@@ -386,5 +442,9 @@
         private System.Windows.Forms.Label lbl_partnerCondition;
         private System.Windows.Forms.Button btn_renewContract;
         private System.Windows.Forms.PictureBox disabledAccount;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_roles;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_role;
     }
 }

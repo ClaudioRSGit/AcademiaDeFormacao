@@ -68,20 +68,27 @@ namespace TryProject
 
                     if (employee != null)
                     {
-                        if (employee.Role == "Director" || employee.Role == "Secretary")
+                        if (employee.AccountStatus == true) // Check if the account is enabled
                         {
-                            this.AuthenticatedUser = txt_username.Text;
-                            this.UserRole = employee.Role;
-                            this.Hide();
-                            new Menu(AuthenticatedUser, UserRole).Show();
+                            if (employee.Role == "Director" || employee.Role == "Secretary")
+                            {
+                                this.AuthenticatedUser = txt_username.Text;
+                                this.UserRole = employee.Role;
+                                this.Hide();
+                                new Menu(AuthenticatedUser, UserRole).Show();
+                            }
+                            else
+                            {
+                                this.AuthenticatedUser = txt_username.Text;
+                                this.UserRole = employee.Role;
+                                //this.Hide();
+                                MessageBox.Show("OUTRO FORM");
+                                // vai entrar no outro menu
+                            }
                         }
                         else
                         {
-                            this.AuthenticatedUser = txt_username.Text;
-                            this.UserRole = employee.Role;
-                            //this.Hide();
-                            MessageBox.Show("OUTRO FORM");
-                            // vai entrar no outro menu
+                            MessageBox.Show("Account is currently disabled.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else if (txt_username.Text == string.Empty && txt_password.Text == string.Empty)

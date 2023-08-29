@@ -22,11 +22,11 @@ namespace TryProject
             {
                 context.Database.Initialize(true);
             }
-            //Bootstrap.DefaultTrainings();
-            //Bootstrap.DefaultCoordinators();
-            //Bootstrap.DefaultDirectors();
-            //Bootstrap.DefaultSecretaries();
-            //Bootstrap.DefaultTrainers();
+            /*Bootstrap.DefaultTrainings();
+            Bootstrap.DefaultCoordinators();
+            Bootstrap.DefaultDirectors();
+            Bootstrap.DefaultSecretaries();
+            Bootstrap.DefaultTrainers();*/
 
 
             Application.EnableVisualStyles();

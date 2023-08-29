@@ -519,7 +519,7 @@
             this.panel_Trainer.Controls.Add(this.btn_back_trainer);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label6);
-            this.panel_Trainer.Location = new System.Drawing.Point(338, 121);
+            this.panel_Trainer.Location = new System.Drawing.Point(340, 186);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;

@@ -74,7 +74,8 @@ namespace AcademiaDeFormacao.UserControls
 
         private void cmb_Role_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            wipeFields();
+            
             string selectedRole = cmb_Role.SelectedItem.ToString();
 
             switch (selectedRole)
@@ -153,6 +154,7 @@ namespace AcademiaDeFormacao.UserControls
                         newSecretary.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newSecretary.DateOfBirth = dtp_BirthDate.Value;
                         newSecretary.Area = cbx_Area.SelectedItem.ToString();
+                        newSecretary.AccountStatus = true;
                         newSecretary.DiretorReporta = selectedDirector;
                         context.Secretaries.Add(newSecretary);
                         context.SaveChanges();
@@ -183,6 +185,7 @@ namespace AcademiaDeFormacao.UserControls
                         newDirector.MonthlyBonus = Convert.ToDouble(txt_mensalBonus.Text);
                         newDirector.CompanyCar = cbx_Car.Checked;
                         newDirector.TimeExemption = cbx_timeExemption.Checked;
+                        newDirector.AccountStatus = true;
 
                         context.Directors.Add(newDirector);
                         context.SaveChanges();
@@ -212,6 +215,7 @@ namespace AcademiaDeFormacao.UserControls
                         newTrainer.EducationArea = cbx_area_trainer.SelectedItem.ToString();
                         newTrainer.Availability = cmb_availability.SelectedItem.ToString();
                         newTrainer.TimeValue = Convert.ToDouble( txt_timevalue.Text);
+                        newTrainer.AccountStatus = true;
 
                         context.Trainers.Add(newTrainer);
                         context.SaveChanges();

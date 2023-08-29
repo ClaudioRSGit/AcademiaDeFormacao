@@ -17,6 +17,8 @@ namespace AcademiaDeFormacao.UserControls
         List<Employee> employees;
         double yearsOfService;
 
+  
+
         public Contracts()
         {
             InitializeComponent();
@@ -69,10 +71,13 @@ namespace AcademiaDeFormacao.UserControls
                 UpdateMedalVisibility(false, true, false, false, false);
             else if (yearsOfService >= 2 && yearsOfService < 5)
                 UpdateMedalVisibility(false, false, true, false, false);
-            else if (yearsOfService == 1)
+            else if (yearsOfService == 0 || yearsOfService == 1)
                 UpdateMedalVisibility(false, false, false, true, false);
-            else if (yearsOfService <= 0)
+            else if (yearsOfService < 0)
+            {
                 UpdateMedalVisibility(false, false, false, false, true);
+                lbl_partner.Visible = false;
+            }
             else
             {
                 UpdateMedalVisibility(false, false, false, false, false);
@@ -87,9 +92,18 @@ namespace AcademiaDeFormacao.UserControls
 
                 txt_contractEndDate.Text = selectedEmployee.ContractEndDate.ToString();
                 txt_criminalRecordEndDate.Text = selectedEmployee.CriminalRecordEndDate.ToString();
+                txt_role.Text = selectedEmployee.Role;
+                txt_role.Enabled = false;
 
                 yearsOfService = CalculateYearsOfService(selectedEmployee.ContractEndDate);
                 UpdatePartnerInfo(yearsOfService);
+
+                if (selectedEmployee.AccountStatus == true)
+                {
+                    lbl_partner.Visible = true;
+                    dateTimePicker1.Enabled = true;
+                    dateTimePicker2.Enabled = true;
+                }
 
                 lbl_partner.Text = $"Contract ends in {yearsOfService.ToString()} years";
 
@@ -114,6 +128,14 @@ namespace AcademiaDeFormacao.UserControls
 
                 txt_contractEndDate.Text = selectedEmployee.ContractEndDate.ToString();
                 txt_criminalRecordEndDate.Text = selectedEmployee.ContractEndDate.ToString();
+                txt_role.Text = selectedEmployee.Role;
+                txt_role.Enabled = false;
+
+                if (selectedEmployee.AccountStatus == false)
+                {
+                    dateTimePicker1.Enabled = false;
+                    dateTimePicker2.Enabled = false;
+                }
 
                 UpdatePartnerInfo(yearsOfService);
 
@@ -129,8 +151,8 @@ namespace AcademiaDeFormacao.UserControls
             int remainingDays = (int)remainingTime.TotalDays;
 
             lbl_remainingContractDays.Text =  remainingDays > 0 
-                ? $"Remaining Contract Days: {remainingDays}" 
-                : $"Account disabled for {remainingDays} days";
+                ? $"Remaining Contract Days: {Math.Abs(remainingDays)}" 
+                : $"Account disabled for {Math.Abs(remainingDays)} days";
 
         }
         private void UpdateCriminalRecordDays(DateTime criminalRecordEndDate)
@@ -161,7 +183,6 @@ namespace AcademiaDeFormacao.UserControls
             Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
 
             // Disable the "End Contract" button since the contract is already ended
-            button1.Enabled = false;
             button1.Visible = false;
 
             // Update contract end date labels
@@ -187,7 +208,9 @@ namespace AcademiaDeFormacao.UserControls
             Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
 
             // Update the contract end date to today's date
-            selectedEmployee.ContractEndDate = DateTime.Now.Date;
+            selectedEmployee.ContractEndDate = DateTime.Now.Date.AddYears(-1);
+            //disable account
+            selectedEmployee.AccountStatus = false;
 
             using (var context = new School())
             {
@@ -229,6 +252,8 @@ namespace AcademiaDeFormacao.UserControls
                 confirmButton.BackColor = Color.FromArgb(61, 69, 76);
                 confirmButton.ForeColor = Color.White;
 
+                selectedEmployee.AccountStatus = selectedEmployee.ContractEndDate > DateTime.Today ? true : false;
+
                 dateDialog.Controls.AddRange(new Control[] { datePicker, confirmButton });
 
                 if (dateDialog.ShowDialog() == DialogResult.OK)
@@ -262,6 +287,13 @@ namespace AcademiaDeFormacao.UserControls
             if (result == DialogResult.Yes)
             {
                 // The user confirmed, perform the contract ending action
+                
+                //disable date pickers
+                dateTimePicker1.Enabled = false;
+                dateTimePicker2.Enabled = false;
+                UpdateMedalVisibility(false, false, false, true, false);
+                lbl_partner.Visible = false;
+
                 EndContract();
             }
         }
@@ -278,28 +310,42 @@ namespace AcademiaDeFormacao.UserControls
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (cmb_employee.SelectedIndex >= 0)
+            if (cmb_employee.SelectedIndex >= 0 && cmb_roles.SelectedIndex >= 0)
             {
-                Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
+                DialogResult confirmationResult = MessageBox.Show(
+                    "Are you sure you want to save the changes?",
+                    "Confirm Save",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
-                selectedEmployee.ContractEndDate = dateTimePicker1.Value.Date;
-                selectedEmployee.CriminalRecordEndDate = dateTimePicker2.Value.Date;
-
-                using (var context = new School())
+                if (confirmationResult == DialogResult.Yes)
                 {
-                    context.Entry(selectedEmployee).State = EntityState.Modified;
-                    context.SaveChanges();
-                }
+                    Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
 
-                // Update the UI to reflect the changes
-                txt_contractEndDate.Text = selectedEmployee.ContractEndDate.ToString();
-                txt_criminalRecordEndDate.Text = selectedEmployee.CriminalRecordEndDate.ToString();
-                UpdateRemainingContractDays(selectedEmployee.ContractEndDate);
-                UpdateCriminalRecordDays(selectedEmployee.CriminalRecordEndDate);
-                UpdatePartnerInfo(yearsOfService);
-                UpdatePartnerInfo(yearsOfService);
+                    selectedEmployee.ContractEndDate = dateTimePicker1.Value.Date;
+                    selectedEmployee.CriminalRecordEndDate = dateTimePicker2.Value.Date;
+
+                    selectedEmployee.AccountStatus = selectedEmployee.ContractEndDate > DateTime.Today;
+
+                    // Update the role to the new role from the combo box
+                    selectedEmployee.Role = cmb_roles.SelectedItem.ToString();
+                    UpdatePartnerInfo(yearsOfService);
+                    using (var context = new School())
+                    {
+                        context.Entry(selectedEmployee).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+
+                    // Update the UI to reflect the changes
+                    txt_contractEndDate.Text = selectedEmployee.ContractEndDate.ToString();
+                    txt_criminalRecordEndDate.Text = selectedEmployee.CriminalRecordEndDate.ToString();
+                    UpdateRemainingContractDays(selectedEmployee.ContractEndDate);
+                    UpdateCriminalRecordDays(selectedEmployee.CriminalRecordEndDate);
+                    UpdatePartnerInfo(CalculateYearsOfService(selectedEmployee.ContractEndDate));
+                }
             }
         }
+
 
     }
 }
