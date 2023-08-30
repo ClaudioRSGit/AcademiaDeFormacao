@@ -16,7 +16,8 @@ namespace AcademiaDeFormacao.UserControls
     public partial class CalculateSalary : UserControl
     {
         private Dictionary<string, int> ageDistribution = new Dictionary<string, int>();
-
+        DateTime currentDate = DateTime.Today;
+        int disabledAccountsCount, expiredContractsCount, contractsEndingThisMonthCount, enabledAccountsCount;
         public CalculateSalary()
         {
             InitializeComponent();
@@ -56,46 +57,72 @@ namespace AcademiaDeFormacao.UserControls
                 //total employee label
                 int totalEmployees = context.Employees.Count();
                 lbl_totalEmployees.Text = totalEmployees.ToString();
-           
+
                 //average salary label
                 double averageSalary = context.Employees.Average(emp => emp.Salary);
                 lbl_averageSalary.Text = averageSalary.ToString("C2");
 
                 //monthly birthday label
-                string currentMonth = DateTime.Now.ToString("MMMM");
                 var birthdayEmployees = context.Employees
-                    .Where(emp => emp.DateOfBirth.Month == DateTime.Now.Month)
+                    .Where(emp => emp.DateOfBirth.Month == currentDate.Month && emp.DateOfBirth.Year == currentDate.Year)
                     .ToList();
 
                 StringBuilder birthdayText = new StringBuilder();
                 foreach (var employee in birthdayEmployees)
                 {
-                    birthdayText.AppendLine($"{employee.Name} ({employee.DateOfBirth.Day}/{employee.DateOfBirth.Month})");
+                    birthdayText.AppendLine($"{employee.Name} ({employee.DateOfBirth.Day}/{employee.DateOfBirth.Month}/{employee.DateOfBirth.Year})");
                 }
                 lbl_birthdays.Text = birthdayText.ToString();
 
-                //disabled accounts
-                int disabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == false);
-                lbl_disabledAccounts.Text = $"{disabledAccountsCount}";
-
-                //enabled accounts
-                int enabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == true);
-                lbl_enabledAccounts.Text = $"{enabledAccountsCount}";
 
                 //latest employee
                 var latestEmployee = context.Employees.OrderByDescending(emp => emp.EmployeeId).FirstOrDefault();
                 if (latestEmployee != null)
                 {
-                    lbl_latestEmployee.Text = $"{latestEmployee.Role} {latestEmployee.Name}";
+                    lbl_latestEmployee.Text = $"New Emp: {latestEmployee.Role} {latestEmployee.Name}";
+                }
+
+                //update AccountStatus
+                foreach (var employee in context.Employees)
+                {
+                    if (employee.ContractEndDate < currentDate)
+                    {
+                        employee.AccountStatus = false;
+                        employee.ContractEndDate = DateTime.Now;
+                    }
+                    else
+                    {
+                        employee.AccountStatus = true;
+                    }
                 }
 
                 // Count of contracts ending in the current month
-                int contractsEndingThisMonthCount = context.Employees
-                    .Count(emp => emp.ContractEndDate.Month == DateTime.Now.Month);
+                contractsEndingThisMonthCount = context.Employees
+                    .Count(emp => emp.ContractEndDate.Month == currentDate.Month && emp.ContractEndDate.Year == currentDate.Year);
 
                 lbl_contractsEnding.Text = contractsEndingThisMonthCount.ToString();
+
+                //disabled accounts count
+                disabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == false);
+                lbl_disabledAccounts.Text = $"{disabledAccountsCount}";
+
+                //expired contracts count
+                expiredContractsCount = context.Employees.Count(emp => emp.AccountStatus == false);
+                lbl_expiredContracts.Text = $"{expiredContractsCount}";
+
+                //enabled accounts
+                enabledAccountsCount = context.Employees.Count(emp => emp.AccountStatus == true);
+                lbl_enabledAccounts.Text = $"{enabledAccountsCount}";
+
+
+                // Save changes to the database
+                context.SaveChanges();
             }
+
+            //current date
+            lbl_currentDate.Text = currentDate.ToString("MM/dd/yyyy");
         }
+
 
         private void InitializeCharts()
         {
@@ -193,8 +220,8 @@ namespace AcademiaDeFormacao.UserControls
         }
         private int CalculateAge(DateTime birthdate)
         {
-            int age = DateTime.Now.Year - birthdate.Year;
-            if (birthdate > DateTime.Now.AddYears(-age))
+            int age = currentDate.Year - birthdate.Year;
+            if (birthdate > currentDate.AddYears(-age))
                 age--;
 
             return age;
@@ -336,7 +363,7 @@ namespace AcademiaDeFormacao.UserControls
             {
                 // Contracts ending in the current month
                 var contractsEndingThisMonth = context.Employees
-                    .Where(emp => emp.ContractEndDate.Month == DateTime.Now.Month)
+                    .Where(emp => emp.ContractEndDate.Month == currentDate.Month)
                     .ToList();
 
                 if (contractsEndingThisMonth.Any())
@@ -356,5 +383,32 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        private void lbl_currentDate_Click(object sender, EventArgs e)
+        {
+            //add one day
+            currentDate = currentDate.AddDays(1);
+            //current date
+            lbl_currentDate.Text = currentDate.ToString("MM/dd/yyyy");
+
+            PopulateDashboard();
+        }
+        private void lbl_currentDate_DoubleClick(object sender, EventArgs e)
+        {
+            DialogResult confirmationResult = MessageBox.Show(
+                    "Are you sure you want to advance one year?",
+                    "Confirm",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (confirmationResult == DialogResult.Yes)
+            {
+                //add one day
+                currentDate = currentDate.AddYears(1);
+                //current date
+                lbl_currentDate.Text = currentDate.ToString("MM/dd/yyyy");
+
+                PopulateDashboard();
+            }
+        }
     }
 }

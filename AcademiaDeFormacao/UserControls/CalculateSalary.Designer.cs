@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,15 +66,13 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lbl_birthdays = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lbl_birthdays = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_contractsEnding = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbl_enabledAccounts = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -86,6 +84,10 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbl_currentDate = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_expiredContracts = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,14 +107,13 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -214,17 +215,17 @@
             this.chart1.BorderSkin.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.chart1.BorderSkin.PageColor = System.Drawing.Color.Silver;
-            chartArea16.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart1.Legends.Add(legend16);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(314, 386);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chart1.Series.Add(series16);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(299, 215);
             this.chart1.TabIndex = 61;
             this.chart1.Text = "chart1";
@@ -237,17 +238,17 @@
             this.chart2.BorderSkin.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
             this.chart2.BorderSkin.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.chart2.BorderSkin.PageColor = System.Drawing.Color.Silver;
-            chartArea17.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chart2.Legends.Add(legend17);
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart2.Legends.Add(legend5);
             this.chart2.Location = new System.Drawing.Point(32, 386);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chart2.Series.Add(series17);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart2.Series.Add(series5);
             this.chart2.Size = new System.Drawing.Size(276, 215);
             this.chart2.TabIndex = 62;
             this.chart2.Text = "chart2";
@@ -337,17 +338,17 @@
             this.chart3.BorderSkin.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
             this.chart3.BorderSkin.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.chart3.BorderSkin.PageColor = System.Drawing.Color.Silver;
-            chartArea18.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chart3.Legends.Add(legend18);
+            chartArea6.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart3.Legends.Add(legend6);
             this.chart3.Location = new System.Drawing.Point(561, 116);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chart3.Series.Add(series18);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart3.Series.Add(series6);
             this.chart3.Size = new System.Drawing.Size(331, 237);
             this.chart3.TabIndex = 64;
             this.chart3.Text = "chart3";
@@ -410,8 +411,8 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.lbl_latestEmployee);
+            this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.panel14);
             this.panel8.Location = new System.Drawing.Point(33, 285);
             this.panel8.Name = "panel8";
@@ -434,11 +435,11 @@
             // 
             this.lbl_latestEmployee.AutoSize = true;
             this.lbl_latestEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.lbl_latestEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_latestEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_latestEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lbl_latestEmployee.Location = new System.Drawing.Point(11, 35);
             this.lbl_latestEmployee.Name = "lbl_latestEmployee";
-            this.lbl_latestEmployee.Size = new System.Drawing.Size(82, 20);
+            this.lbl_latestEmployee.Size = new System.Drawing.Size(72, 18);
             this.lbl_latestEmployee.TabIndex = 68;
             this.lbl_latestEmployee.Text = "xxx xxx.xx";
             // 
@@ -453,9 +454,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::AcademiaDeFormacao.Properties.Resources.celebration;
-            this.pictureBox5.Location = new System.Drawing.Point(-25, -42);
+            this.pictureBox5.Location = new System.Drawing.Point(30, -18);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(162, 134);
+            this.pictureBox5.Size = new System.Drawing.Size(84, 86);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 66;
             this.pictureBox5.TabStop = false;
@@ -464,25 +465,13 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lbl_birthdays);
             this.panel9.Controls.Add(this.label8);
+            this.panel9.Controls.Add(this.lbl_birthdays);
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Location = new System.Drawing.Point(306, 116);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(249, 77);
             this.panel9.TabIndex = 63;
-            // 
-            // lbl_birthdays
-            // 
-            this.lbl_birthdays.AutoSize = true;
-            this.lbl_birthdays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.lbl_birthdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_birthdays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_birthdays.Location = new System.Drawing.Point(6, 42);
-            this.lbl_birthdays.Name = "lbl_birthdays";
-            this.lbl_birthdays.Size = new System.Drawing.Size(134, 22);
-            this.lbl_birthdays.TabIndex = 62;
-            this.lbl_birthdays.Text = "birthday person";
             // 
             // label8
             // 
@@ -496,6 +485,18 @@
             this.label8.TabIndex = 62;
             this.label8.Text = "Monthly Birthday";
             // 
+            // lbl_birthdays
+            // 
+            this.lbl_birthdays.AutoSize = true;
+            this.lbl_birthdays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.lbl_birthdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_birthdays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbl_birthdays.Location = new System.Drawing.Point(6, 42);
+            this.lbl_birthdays.Name = "lbl_birthdays";
+            this.lbl_birthdays.Size = new System.Drawing.Size(134, 22);
+            this.lbl_birthdays.TabIndex = 62;
+            this.lbl_birthdays.Text = "birthday person";
+            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.pictureBox3);
@@ -507,9 +508,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.birthday;
-            this.pictureBox3.Location = new System.Drawing.Point(-24, -35);
+            this.pictureBox3.Location = new System.Drawing.Point(7, -18);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 126);
+            this.pictureBox3.Size = new System.Drawing.Size(102, 93);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 69;
             this.pictureBox3.TabStop = false;
@@ -520,23 +521,22 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.lbl_contractsEnding);
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(619, 386);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(269, 77);
+            this.panel4.Size = new System.Drawing.Size(130, 77);
             this.panel4.TabIndex = 69;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Ivory;
-            this.label6.Location = new System.Drawing.Point(5, 13);
+            this.label6.Location = new System.Drawing.Point(19, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 20);
+            this.label6.Size = new System.Drawing.Size(95, 36);
             this.label6.TabIndex = 62;
-            this.label6.Text = "Soon to End Contracts";
+            this.label6.Text = "Soon to End \r\n  Contracts";
             // 
             // lbl_contractsEnding
             // 
@@ -544,30 +544,12 @@
             this.lbl_contractsEnding.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.lbl_contractsEnding.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contractsEnding.ForeColor = System.Drawing.Color.Red;
-            this.lbl_contractsEnding.Location = new System.Drawing.Point(9, 44);
+            this.lbl_contractsEnding.Location = new System.Drawing.Point(53, 48);
             this.lbl_contractsEnding.Name = "lbl_contractsEnding";
             this.lbl_contractsEnding.Size = new System.Drawing.Size(17, 20);
             this.lbl_contractsEnding.TabIndex = 62;
             this.lbl_contractsEnding.Text = "x";
             this.lbl_contractsEnding.MouseHover += new System.EventHandler(this.lbl_contractsEnding_MouseHover);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox8);
-            this.panel5.Location = new System.Drawing.Point(166, 9);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(98, 55);
-            this.panel5.TabIndex = 68;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.contractEnding;
-            this.pictureBox8.Location = new System.Drawing.Point(-28, -41);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(165, 138);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 69;
-            this.pictureBox8.TabStop = false;
             // 
             // panel6
             // 
@@ -647,6 +629,7 @@
             this.lbl_disabledAccounts.Size = new System.Drawing.Size(19, 22);
             this.lbl_disabledAccounts.TabIndex = 62;
             this.lbl_disabledAccounts.Text = "x";
+            this.lbl_disabledAccounts.DoubleClick += new System.EventHandler(this.lbl_currentDate_DoubleClick);
             this.lbl_disabledAccounts.MouseHover += new System.EventHandler(this.lbl_disabledAccounts_MouseHover);
             // 
             // label15
@@ -691,11 +674,58 @@
             this.label5.TabIndex = 72;
             this.label5.Text = "Age Distribution Chart";
             // 
+            // lbl_currentDate
+            // 
+            this.lbl_currentDate.AutoSize = true;
+            this.lbl_currentDate.Location = new System.Drawing.Point(796, 607);
+            this.lbl_currentDate.Name = "lbl_currentDate";
+            this.lbl_currentDate.Size = new System.Drawing.Size(75, 16);
+            this.lbl_currentDate.TabIndex = 73;
+            this.lbl_currentDate.Text = "xx / xx / xxxx";
+            this.lbl_currentDate.Click += new System.EventHandler(this.lbl_currentDate_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.lbl_expiredContracts);
+            this.panel5.Location = new System.Drawing.Point(755, 386);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(133, 77);
+            this.panel5.TabIndex = 70;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Ivory;
+            this.label7.Location = new System.Drawing.Point(28, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 36);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "  Expired \r\nContracts";
+            // 
+            // lbl_expiredContracts
+            // 
+            this.lbl_expiredContracts.AutoSize = true;
+            this.lbl_expiredContracts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.lbl_expiredContracts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_expiredContracts.ForeColor = System.Drawing.Color.Red;
+            this.lbl_expiredContracts.Location = new System.Drawing.Point(57, 48);
+            this.lbl_expiredContracts.Name = "lbl_expiredContracts";
+            this.lbl_expiredContracts.Size = new System.Drawing.Size(17, 20);
+            this.lbl_expiredContracts.TabIndex = 62;
+            this.lbl_expiredContracts.Text = "x";
+            // 
             // CalculateSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.lbl_currentDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel6);
@@ -739,8 +769,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -749,6 +777,8 @@
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,7 +822,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_contractsEnding;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lbl_enabledAccounts;
         private System.Windows.Forms.Label label12;
@@ -803,8 +832,11 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbl_currentDate;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_expiredContracts;
     }
 }

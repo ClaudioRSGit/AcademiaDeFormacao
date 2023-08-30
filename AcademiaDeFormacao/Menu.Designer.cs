@@ -269,9 +269,9 @@
             // DashBoard
             // 
             this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.DashBoard.Location = new System.Drawing.Point(-25, -1);
+            this.DashBoard.Location = new System.Drawing.Point(-24, -1);
             this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Size = new System.Drawing.Size(896, 633);
+            this.DashBoard.Size = new System.Drawing.Size(897, 633);
             this.DashBoard.TabIndex = 48;
             // 
             // welcomePage1
@@ -303,6 +303,7 @@
             this.addEmployee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.addEmployee1.Location = new System.Drawing.Point(0, 22);
             this.addEmployee1.Name = "addEmployee1";
+            this.addEmployee1.SelectedDirectorId = 0;
             this.addEmployee1.Size = new System.Drawing.Size(784, 578);
             this.addEmployee1.TabIndex = 0;
             // 

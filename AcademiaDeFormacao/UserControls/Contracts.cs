@@ -53,7 +53,13 @@ namespace AcademiaDeFormacao.UserControls
         }
         private string GetPartnerCondition(double yearsOfService)
         {
-            if (yearsOfService >= 10)
+            Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
+
+            if (selectedEmployee.AccountStatus == false)
+            {
+                return "User Disabled";
+            }
+            else if (yearsOfService >= 10)
                 return "Golden Partner";
             else if (yearsOfService >= 5 && yearsOfService < 10)
                 return "Silver Partner";
@@ -65,7 +71,14 @@ namespace AcademiaDeFormacao.UserControls
         }
         private void UpdatePartnerInfo(double yearsOfService)
         {
-            if (yearsOfService >= 10)
+            Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
+
+            if (selectedEmployee.AccountStatus == false)
+            {
+                UpdateMedalVisibility(false, false, false, false, true);
+                lbl_partner.Visible = false;
+            }
+            else if (yearsOfService >= 10)
                 UpdateMedalVisibility(true, false, false, false, false);
             else if (yearsOfService >= 5 && yearsOfService < 10)
                 UpdateMedalVisibility(false, true, false, false, false);
@@ -84,6 +97,7 @@ namespace AcademiaDeFormacao.UserControls
             }
             lbl_partnerCondition.Text = GetPartnerCondition(yearsOfService);
         }
+
         private void cmb_employee_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_employee.SelectedIndex >= 0)
@@ -103,6 +117,14 @@ namespace AcademiaDeFormacao.UserControls
                     lbl_partner.Visible = true;
                     dateTimePicker1.Enabled = true;
                     dateTimePicker2.Enabled = true;
+
+                    button1.Visible = true;
+                    btn_renewContract.Visible = false;
+                }
+                else
+                {
+                    button1.Visible = false;
+                    btn_renewContract.Visible = true;
                 }
 
                 lbl_partner.Text = $"Contract ends in {yearsOfService.ToString()} years";
@@ -117,6 +139,7 @@ namespace AcademiaDeFormacao.UserControls
         {
             cmb_employee.DisplayMember = "Name";
             cmb_employee.DataSource = employees;
+
 
             //standard option
             cmb_employee.SelectedIndex = 1;
@@ -135,6 +158,7 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     dateTimePicker1.Enabled = false;
                     dateTimePicker2.Enabled = false;
+
                 }
 
                 UpdatePartnerInfo(yearsOfService);
@@ -270,6 +294,8 @@ namespace AcademiaDeFormacao.UserControls
                 }
                 btn_renewContract.Visible = false;
                 button1.Visible = true;
+
+                selectedEmployee.AccountStatus = true;
             }
         }
 

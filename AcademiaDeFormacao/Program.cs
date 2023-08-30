@@ -10,24 +10,27 @@ namespace TryProject
 {
     internal static class Program
     {
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            bool databaseExists;
 
             using (var context = new School())
             {
-                context.Database.Initialize(true);
+                databaseExists = context.Database.Exists();
             }
-            /*Bootstrap.DefaultTrainings();
-            Bootstrap.DefaultCoordinators();
-            Bootstrap.DefaultDirectors();
-            Bootstrap.DefaultSecretaries();
-            Bootstrap.DefaultTrainers();*/
 
+            if (!databaseExists)
+            {
+                Bootstrap.DefaultTrainings();
+                Bootstrap.DefaultCoordinators();
+                Bootstrap.DefaultDirectors();
+                Bootstrap.DefaultSecretaries();
+                Bootstrap.DefaultTrainers();
+            }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
