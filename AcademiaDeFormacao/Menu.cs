@@ -38,7 +38,7 @@ namespace TryProject
         public string AuthenticatedUser { get; set; }
         public string UserRole { get; set; }
 
-        public Menu(string userName, string userRole)
+        public Menu(string userName, string userRole, Form log)
         {
             InitializeComponent();
             ShowUserControl(welcomePage1);
@@ -49,6 +49,12 @@ namespace TryProject
             //Colocar border no Form
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
             //MessageBox.Show(UserRole.ToString());
+
+            void CloseForm(object sender,EventArgs e)
+            {
+                log.Close();
+            }
+            this.FormClosing += CloseForm;
         }
 
 

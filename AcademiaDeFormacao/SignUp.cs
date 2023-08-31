@@ -15,9 +15,14 @@ namespace TryProject
     public partial class SignUp : Form
     {
 
-        public SignUp()
+        public SignUp(Form log)
         {
             InitializeComponent();
+            void CloseForm(object sender, EventArgs e)
+            {
+                log.Close();
+            }
+            this.FormClosing += CloseForm;
         }
 
 

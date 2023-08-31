@@ -90,6 +90,7 @@ namespace AcademiaDeFormacao.UserControls
                     cbx_Area.Hide();
                     cbx_area_trainer.Hide();
                     director_name.Hide();
+                    txt_salary.Enabled = true;
                     break;
                 case "Secretary":
                     btn_ShowPanels.Show();
@@ -102,6 +103,7 @@ namespace AcademiaDeFormacao.UserControls
                     lbl_MensalBonus.Hide();
                     txt_mensalBonus.Hide();
                     btn_ShowPanels.Text = "Show Directors";
+                    txt_salary.Enabled = true;
                     break;
                 case "Trainer":
                     lbl_Area.Show();

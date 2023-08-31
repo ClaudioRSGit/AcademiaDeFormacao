@@ -51,7 +51,7 @@ namespace TryProject
         private void lbl_singUp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SignUp().Show();
+            new SignUp(this).Show();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace TryProject
                                 this.AuthenticatedUser = txt_username.Text;
                                 this.UserRole = employee.Role;
                                 this.Hide();
-                                new Menu(AuthenticatedUser, UserRole).Show();
+                                new Menu(AuthenticatedUser, UserRole,this).Show();
                             }
                             else
                             {
