@@ -98,11 +98,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Agency FB", 24F);
             this.label2.ForeColor = System.Drawing.Color.Ivory;
             this.label2.Location = new System.Drawing.Point(46, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 46);
+            this.label2.Size = new System.Drawing.Size(187, 49);
             this.label2.TabIndex = 52;
             this.label2.Text = "Export to CSV";
             // 

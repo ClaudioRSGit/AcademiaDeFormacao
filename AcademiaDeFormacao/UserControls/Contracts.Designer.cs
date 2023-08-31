@@ -68,7 +68,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(44, 91);
+            this.panel2.Location = new System.Drawing.Point(65, 109);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 1);
             this.panel2.TabIndex = 36;
@@ -76,11 +76,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Agency FB", 24F);
             this.label2.ForeColor = System.Drawing.Color.Ivory;
-            this.label2.Location = new System.Drawing.Point(35, 39);
+            this.label2.Location = new System.Drawing.Point(56, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(414, 46);
+            this.label2.Size = new System.Drawing.Size(305, 49);
             this.label2.TabIndex = 35;
             this.label2.Text = "Contract Management";
             // 
@@ -88,7 +88,7 @@
             // 
             this.cmb_employee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_employee.FormattingEnabled = true;
-            this.cmb_employee.Location = new System.Drawing.Point(232, 142);
+            this.cmb_employee.Location = new System.Drawing.Point(253, 160);
             this.cmb_employee.Name = "cmb_employee";
             this.cmb_employee.Size = new System.Drawing.Size(156, 24);
             this.cmb_employee.TabIndex = 37;
@@ -98,7 +98,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(39, 142);
+            this.label1.Location = new System.Drawing.Point(60, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 38;
@@ -106,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(44, 510);
+            this.button1.Location = new System.Drawing.Point(65, 528);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(344, 37);
             this.button1.TabIndex = 39;
@@ -116,7 +116,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(409, 510);
+            this.button2.Location = new System.Drawing.Point(430, 528);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(335, 37);
             this.button2.TabIndex = 40;
@@ -129,7 +129,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(39, 203);
+            this.label3.Location = new System.Drawing.Point(60, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(172, 25);
             this.label3.TabIndex = 42;
@@ -140,7 +140,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(404, 203);
+            this.label4.Location = new System.Drawing.Point(425, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(236, 25);
             this.label4.TabIndex = 44;
@@ -152,7 +152,7 @@
             this.txt_contractEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contractEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contractEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_contractEndDate.Location = new System.Drawing.Point(44, 240);
+            this.txt_contractEndDate.Location = new System.Drawing.Point(65, 258);
             this.txt_contractEndDate.Multiline = true;
             this.txt_contractEndDate.Name = "txt_contractEndDate";
             this.txt_contractEndDate.Size = new System.Drawing.Size(344, 30);
@@ -164,7 +164,7 @@
             this.txt_criminalRecordEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_criminalRecordEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_criminalRecordEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(409, 240);
+            this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(430, 258);
             this.txt_criminalRecordEndDate.Multiline = true;
             this.txt_criminalRecordEndDate.Name = "txt_criminalRecordEndDate";
             this.txt_criminalRecordEndDate.Size = new System.Drawing.Size(335, 30);
@@ -175,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(39, 362);
+            this.label5.Location = new System.Drawing.Point(60, 380);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 25);
             this.label5.TabIndex = 64;
@@ -186,7 +186,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(404, 362);
+            this.label6.Location = new System.Drawing.Point(425, 380);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(230, 25);
             this.label6.TabIndex = 65;
@@ -196,7 +196,7 @@
             // 
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.GrayText;
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Location = new System.Drawing.Point(44, 390);
+            this.dateTimePicker1.Location = new System.Drawing.Point(65, 408);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(344, 22);
             this.dateTimePicker1.TabIndex = 66;
@@ -204,7 +204,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker2.Location = new System.Drawing.Point(409, 390);
+            this.dateTimePicker2.Location = new System.Drawing.Point(430, 408);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(335, 22);
             this.dateTimePicker2.TabIndex = 67;
@@ -214,7 +214,7 @@
             this.lbl_remainingContractDays.AutoSize = true;
             this.lbl_remainingContractDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_remainingContractDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_remainingContractDays.Location = new System.Drawing.Point(39, 285);
+            this.lbl_remainingContractDays.Location = new System.Drawing.Point(60, 303);
             this.lbl_remainingContractDays.Name = "lbl_remainingContractDays";
             this.lbl_remainingContractDays.Size = new System.Drawing.Size(52, 25);
             this.lbl_remainingContractDays.TabIndex = 71;
@@ -225,7 +225,7 @@
             this.lbl_criminalRecordDays.AutoSize = true;
             this.lbl_criminalRecordDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_criminalRecordDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(404, 285);
+            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(425, 303);
             this.lbl_criminalRecordDays.Name = "lbl_criminalRecordDays";
             this.lbl_criminalRecordDays.Size = new System.Drawing.Size(22, 25);
             this.lbl_criminalRecordDays.TabIndex = 72;
@@ -238,7 +238,7 @@
             this.panel1.Controls.Add(this.silverMedal);
             this.panel1.Controls.Add(this.goldenMedal);
             this.panel1.Controls.Add(this.disabledAccount);
-            this.panel1.Location = new System.Drawing.Point(404, 103);
+            this.panel1.Location = new System.Drawing.Point(425, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(108, 91);
             this.panel1.TabIndex = 74;
@@ -298,7 +298,7 @@
             this.lbl_partner.AutoSize = true;
             this.lbl_partner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_partner.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_partner.Location = new System.Drawing.Point(508, 144);
+            this.lbl_partner.Location = new System.Drawing.Point(529, 162);
             this.lbl_partner.Name = "lbl_partner";
             this.lbl_partner.Size = new System.Drawing.Size(22, 25);
             this.lbl_partner.TabIndex = 75;
@@ -309,7 +309,7 @@
             this.lbl_partnerCondition.AutoSize = true;
             this.lbl_partnerCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_partnerCondition.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_partnerCondition.Location = new System.Drawing.Point(508, 116);
+            this.lbl_partnerCondition.Location = new System.Drawing.Point(529, 134);
             this.lbl_partnerCondition.Name = "lbl_partnerCondition";
             this.lbl_partnerCondition.Size = new System.Drawing.Size(22, 25);
             this.lbl_partnerCondition.TabIndex = 76;
@@ -317,7 +317,7 @@
             // 
             // btn_renewContract
             // 
-            this.btn_renewContract.Location = new System.Drawing.Point(44, 510);
+            this.btn_renewContract.Location = new System.Drawing.Point(65, 528);
             this.btn_renewContract.Name = "btn_renewContract";
             this.btn_renewContract.Size = new System.Drawing.Size(344, 37);
             this.btn_renewContract.TabIndex = 77;
@@ -330,7 +330,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(404, 454);
+            this.label7.Location = new System.Drawing.Point(425, 472);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 25);
             this.label7.TabIndex = 78;
@@ -345,7 +345,7 @@
             "Secretary",
             "Coordinator",
             "Trainer"});
-            this.cmb_roles.Location = new System.Drawing.Point(588, 455);
+            this.cmb_roles.Location = new System.Drawing.Point(609, 473);
             this.cmb_roles.Name = "cmb_roles";
             this.cmb_roles.Size = new System.Drawing.Size(156, 24);
             this.cmb_roles.TabIndex = 79;
@@ -355,7 +355,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(39, 455);
+            this.label8.Location = new System.Drawing.Point(60, 473);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 25);
             this.label8.TabIndex = 80;
@@ -367,7 +367,7 @@
             this.txt_role.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.txt_role.Location = new System.Drawing.Point(184, 453);
+            this.txt_role.Location = new System.Drawing.Point(205, 471);
             this.txt_role.Multiline = true;
             this.txt_role.Name = "txt_role";
             this.txt_role.Size = new System.Drawing.Size(202, 30);
@@ -403,7 +403,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Name = "Contracts";
-            this.Size = new System.Drawing.Size(817, 578);
+            this.Size = new System.Drawing.Size(849, 634);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).EndInit();

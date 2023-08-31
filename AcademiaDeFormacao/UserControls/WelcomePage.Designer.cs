@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_Form1_Data = new System.Windows.Forms.Label();
             this.label_Hora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,16 +40,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AcademiaDeFormacao.Properties.Resources.backg1;
-            this.pictureBox1.Location = new System.Drawing.Point(-135, -41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1120, 724);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // label_Form1_Data
             // 
@@ -76,6 +66,16 @@
             this.label_Hora.TabIndex = 25;
             this.label_Hora.Text = "label_Hora";
             this.label_Hora.Click += new System.EventHandler(this.label_Hora_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AcademiaDeFormacao.Properties.Resources.Untitled__10__transformed;
+            this.pictureBox1.Location = new System.Drawing.Point(-480, -344);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1820, 1307);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // WelcomePage
             // 

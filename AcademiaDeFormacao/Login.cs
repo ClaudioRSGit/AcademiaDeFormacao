@@ -100,7 +100,7 @@ namespace TryProject
                     {
                         MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txt_password.Text = string.Empty;
-                        txt_username.Text = string.Empty;
+                        txt_username.Text = "";
                         txt_username.Focus();
                     }
 

@@ -719,6 +719,7 @@
             this.lbl_expiredContracts.Size = new System.Drawing.Size(17, 20);
             this.lbl_expiredContracts.TabIndex = 62;
             this.lbl_expiredContracts.Text = "x";
+            this.lbl_expiredContracts.MouseHover += new System.EventHandler(this.lbl_expiredContracts_MouseHover);
             // 
             // CalculateSalary
             // 

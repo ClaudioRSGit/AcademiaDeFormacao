@@ -357,6 +357,32 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        private void lbl_expiredContracts_MouseHover(object sender, EventArgs e)
+        {
+            using (var context = new School())
+            {
+                //expired
+                var contractsEndingThisMonth = context.Employees
+                    .Where(emp => emp.ContractEndDate < currentDate)
+                    .ToList();
+
+                if (contractsEndingThisMonth.Any())
+                {
+                    StringBuilder tooltipText = new StringBuilder("Contracts Expired:\n");
+                    foreach (var employee in contractsEndingThisMonth)
+                    {
+                        tooltipText.AppendLine(employee.Name + " : " + employee.ContractEndDate.ToString("MM/dd/yy"));
+                    }
+
+                    ToolTip tooltip = new ToolTip();
+                    tooltip.IsBalloon = true;
+                    tooltip.ShowAlways = false;
+                    tooltip.Show(tooltipText.ToString(), lbl_contractsEnding, 0, lbl_contractsEnding.Height);
+                    tooltip.AutoPopDelay = 1000;
+                }
+            }
+        }
+
         private void lbl_contractsEnding_MouseHover(object sender, EventArgs e)
         {
             using (var context = new School())
@@ -371,7 +397,7 @@ namespace AcademiaDeFormacao.UserControls
                     StringBuilder tooltipText = new StringBuilder("Contracts Ending This Month:\n");
                     foreach (var employee in contractsEndingThisMonth)
                     {
-                        tooltipText.AppendLine(employee.Name);
+                        tooltipText.AppendLine(employee.Name + " : " + employee.ContractEndDate.ToString("MM/dd/yy"));
                     }
 
                     ToolTip tooltip = new ToolTip();

@@ -47,12 +47,12 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
-            this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
+            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
+            this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -266,28 +266,12 @@
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
             // 
-            // DashBoard
-            // 
-            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.DashBoard.Location = new System.Drawing.Point(-24, -1);
-            this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Size = new System.Drawing.Size(897, 633);
-            this.DashBoard.TabIndex = 48;
-            // 
-            // welcomePage1
-            // 
-            this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.welcomePage1.Location = new System.Drawing.Point(0, 3);
-            this.welcomePage1.Name = "welcomePage1";
-            this.welcomePage1.Size = new System.Drawing.Size(876, 629);
-            this.welcomePage1.TabIndex = 2;
-            // 
             // contracts1
             // 
             this.contracts1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.contracts1.Location = new System.Drawing.Point(0, -5);
+            this.contracts1.Location = new System.Drawing.Point(6, 12);
             this.contracts1.Name = "contracts1";
-            this.contracts1.Size = new System.Drawing.Size(876, 642);
+            this.contracts1.Size = new System.Drawing.Size(867, 617);
             this.contracts1.TabIndex = 1;
             // 
             // OnMenuEditProf
@@ -304,7 +288,7 @@
             this.addEmployee1.Location = new System.Drawing.Point(0, 22);
             this.addEmployee1.Name = "addEmployee1";
             this.addEmployee1.SelectedDirectorId = 0;
-            this.addEmployee1.Size = new System.Drawing.Size(784, 578);
+            this.addEmployee1.Size = new System.Drawing.Size(851, 598);
             this.addEmployee1.TabIndex = 0;
             // 
             // exportData2
@@ -314,6 +298,22 @@
             this.exportData2.Name = "exportData2";
             this.exportData2.Size = new System.Drawing.Size(873, 605);
             this.exportData2.TabIndex = 47;
+            // 
+            // DashBoard
+            // 
+            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.DashBoard.Location = new System.Drawing.Point(-24, -1);
+            this.DashBoard.Name = "DashBoard";
+            this.DashBoard.Size = new System.Drawing.Size(897, 633);
+            this.DashBoard.TabIndex = 48;
+            // 
+            // welcomePage1
+            // 
+            this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.welcomePage1.Location = new System.Drawing.Point(0, 3);
+            this.welcomePage1.Name = "welcomePage1";
+            this.welcomePage1.Size = new System.Drawing.Size(876, 629);
+            this.welcomePage1.TabIndex = 2;
             // 
             // Menu
             // 

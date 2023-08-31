@@ -84,8 +84,10 @@ namespace AcademiaDeFormacao.UserControls
                 UpdateMedalVisibility(false, true, false, false, false);
             else if (yearsOfService >= 2 && yearsOfService < 5)
                 UpdateMedalVisibility(false, false, true, false, false);
-            else if (yearsOfService == 0 || yearsOfService == 1)
+            else if (yearsOfService == 0 || yearsOfService == 1 && selectedEmployee.AccountStatus == true)
                 UpdateMedalVisibility(false, false, false, true, false);
+            else if (yearsOfService == 0 || yearsOfService == 1 && selectedEmployee.AccountStatus == false)
+                UpdateMedalVisibility(false, false, false, false, true);
             else if (yearsOfService < 0)
             {
                 UpdateMedalVisibility(false, false, false, false, true);

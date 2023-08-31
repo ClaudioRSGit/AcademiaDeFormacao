@@ -280,9 +280,9 @@
             // 
             // button_addEmployee
             // 
-            this.button_addEmployee.Location = new System.Drawing.Point(57, 520);
+            this.button_addEmployee.Location = new System.Drawing.Point(54, 520);
             this.button_addEmployee.Name = "button_addEmployee";
-            this.button_addEmployee.Size = new System.Drawing.Size(700, 29);
+            this.button_addEmployee.Size = new System.Drawing.Size(703, 29);
             this.button_addEmployee.TabIndex = 46;
             this.button_addEmployee.Text = "Add New Employee";
             this.button_addEmployee.UseVisualStyleBackColor = true;
@@ -293,14 +293,14 @@
             this.dtp_ContractEndDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.dtp_ContractEndDate.Location = new System.Drawing.Point(57, 409);
             this.dtp_ContractEndDate.Name = "dtp_ContractEndDate";
-            this.dtp_ContractEndDate.Size = new System.Drawing.Size(235, 22);
+            this.dtp_ContractEndDate.Size = new System.Drawing.Size(257, 22);
             this.dtp_ContractEndDate.TabIndex = 47;
             // 
             // dtp_CriminalRecord
             // 
-            this.dtp_CriminalRecord.Location = new System.Drawing.Point(61, 469);
+            this.dtp_CriminalRecord.Location = new System.Drawing.Point(57, 469);
             this.dtp_CriminalRecord.Name = "dtp_CriminalRecord";
-            this.dtp_CriminalRecord.Size = new System.Drawing.Size(231, 22);
+            this.dtp_CriminalRecord.Size = new System.Drawing.Size(257, 22);
             this.dtp_CriminalRecord.TabIndex = 48;
             // 
             // cmb_Role
@@ -345,11 +345,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Agency FB", 24F);
             this.label4.ForeColor = System.Drawing.Color.Ivory;
             this.label4.Location = new System.Drawing.Point(48, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 46);
+            this.label4.Size = new System.Drawing.Size(199, 49);
             this.label4.TabIndex = 54;
             this.label4.Text = "Add Employee";
             // 
@@ -358,10 +358,10 @@
             this.txt_mensalBonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_mensalBonus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_mensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mensalBonus.Location = new System.Drawing.Point(610, 469);
+            this.txt_mensalBonus.Location = new System.Drawing.Point(598, 469);
             this.txt_mensalBonus.Multiline = true;
             this.txt_mensalBonus.Name = "txt_mensalBonus";
-            this.txt_mensalBonus.Size = new System.Drawing.Size(129, 30);
+            this.txt_mensalBonus.Size = new System.Drawing.Size(159, 30);
             this.txt_mensalBonus.TabIndex = 55;
             this.txt_mensalBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
@@ -370,7 +370,7 @@
             this.lbl_MensalBonus.AutoSize = true;
             this.lbl_MensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MensalBonus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.lbl_MensalBonus.Location = new System.Drawing.Point(605, 441);
+            this.lbl_MensalBonus.Location = new System.Drawing.Point(591, 442);
             this.lbl_MensalBonus.Name = "lbl_MensalBonus";
             this.lbl_MensalBonus.Size = new System.Drawing.Size(137, 25);
             this.lbl_MensalBonus.TabIndex = 56;
@@ -381,7 +381,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
-            this.label5.Location = new System.Drawing.Point(302, 381);
+            this.label5.Location = new System.Drawing.Point(330, 381);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 25);
             this.label5.TabIndex = 57;
@@ -390,7 +390,7 @@
             // dtp_BirthDate
             // 
             this.dtp_BirthDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.dtp_BirthDate.Location = new System.Drawing.Point(307, 409);
+            this.dtp_BirthDate.Location = new System.Drawing.Point(335, 409);
             this.dtp_BirthDate.Name = "dtp_BirthDate";
             this.dtp_BirthDate.Size = new System.Drawing.Size(224, 22);
             this.dtp_BirthDate.TabIndex = 58;
@@ -399,7 +399,7 @@
             // 
             this.btn_ShowPanels.Location = new System.Drawing.Point(610, 165);
             this.btn_ShowPanels.Name = "btn_ShowPanels";
-            this.btn_ShowPanels.Size = new System.Drawing.Size(123, 31);
+            this.btn_ShowPanels.Size = new System.Drawing.Size(147, 31);
             this.btn_ShowPanels.TabIndex = 59;
             this.btn_ShowPanels.Text = "Show Directors";
             this.btn_ShowPanels.UseVisualStyleBackColor = true;
@@ -410,11 +410,11 @@
             this.cbx_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Area.FormattingEnabled = true;
             this.cbx_Area.Items.AddRange(new object[] {
-            "Recursos Humanos",
+            "Human Ressources",
             "Designer",
-            "Desenvolvimento",
-            "Contabilidade"});
-            this.cbx_Area.Location = new System.Drawing.Point(598, 415);
+            "Development",
+            "Accountant"});
+            this.cbx_Area.Location = new System.Drawing.Point(598, 409);
             this.cbx_Area.Name = "cbx_Area";
             this.cbx_Area.Size = new System.Drawing.Size(159, 24);
             this.cbx_Area.TabIndex = 60;
@@ -496,7 +496,7 @@
             this.director_name.AutoSize = true;
             this.director_name.BackColor = System.Drawing.Color.Transparent;
             this.director_name.ForeColor = System.Drawing.Color.Yellow;
-            this.director_name.Location = new System.Drawing.Point(447, 197);
+            this.director_name.Location = new System.Drawing.Point(-2, 81);
             this.director_name.Name = "director_name";
             this.director_name.Size = new System.Drawing.Size(94, 16);
             this.director_name.TabIndex = 64;
@@ -507,10 +507,10 @@
             this.cbx_area_trainer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_area_trainer.FormattingEnabled = true;
             this.cbx_area_trainer.Items.AddRange(new object[] {
-            "Intrutor Design",
-            "Intrutor Mecatronica",
-            "Instrutor Programacao"});
-            this.cbx_area_trainer.Location = new System.Drawing.Point(598, 415);
+            "Design Instructor",
+            "Mecanic Instructor",
+            "Development Instructor"});
+            this.cbx_area_trainer.Location = new System.Drawing.Point(598, 409);
             this.cbx_area_trainer.Name = "cbx_area_trainer";
             this.cbx_area_trainer.Size = new System.Drawing.Size(159, 24);
             this.cbx_area_trainer.TabIndex = 65;
@@ -518,12 +518,13 @@
             // panel_Trainer
             // 
             this.panel_Trainer.Controls.Add(this.txt_timevalue);
+            this.panel_Trainer.Controls.Add(this.director_name);
             this.panel_Trainer.Controls.Add(this.lbl_timevalue);
             this.panel_Trainer.Controls.Add(this.cmb_availability);
             this.panel_Trainer.Controls.Add(this.btn_back_trainer);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label6);
-            this.panel_Trainer.Location = new System.Drawing.Point(439, 121);
+            this.panel_Trainer.Location = new System.Drawing.Point(438, 121);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;
@@ -598,7 +599,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel_Trainer);
             this.Controls.Add(this.cbx_area_trainer);
-            this.Controls.Add(this.director_name);
             this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.lbl_Area);
             this.Controls.Add(this.cbx_Area);

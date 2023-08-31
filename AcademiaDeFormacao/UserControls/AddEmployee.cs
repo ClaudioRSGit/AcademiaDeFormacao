@@ -302,10 +302,11 @@ namespace AcademiaDeFormacao.UserControls
         {
             // Check if the pressed key is a valid numeric character or control key
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                e.KeyChar != '\b' && e.KeyChar != '\u007F') // Backspace and Delete keys
+                e.KeyChar != '\b' && e.KeyChar != '\u007F' && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true; // Cancel the key press event
             }
+
         }
 
         private void txt_onlyLetters(object sender, KeyPressEventArgs e)

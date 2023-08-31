@@ -363,6 +363,16 @@ namespace AcademiaDeFormacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Untitled__10__transformed {
+            get {
+                object obj = ResourceManager.GetObject("Untitled_(10)-transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled__5_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled (5)", resourceCulture);
