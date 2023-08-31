@@ -280,12 +280,16 @@
             // 
             // button_addEmployee
             // 
+            this.button_addEmployee.BackColor = System.Drawing.Color.FloralWhite;
+            this.button_addEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.button_addEmployee.FlatAppearance.BorderSize = 2;
+            this.button_addEmployee.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_addEmployee.Location = new System.Drawing.Point(54, 520);
             this.button_addEmployee.Name = "button_addEmployee";
             this.button_addEmployee.Size = new System.Drawing.Size(703, 29);
             this.button_addEmployee.TabIndex = 46;
             this.button_addEmployee.Text = "Add New Employee";
-            this.button_addEmployee.UseVisualStyleBackColor = true;
+            this.button_addEmployee.UseVisualStyleBackColor = false;
             this.button_addEmployee.Click += new System.EventHandler(this.button_addEmployee_Click);
             // 
             // dtp_ContractEndDate

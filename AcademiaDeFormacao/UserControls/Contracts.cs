@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,8 +17,6 @@ namespace AcademiaDeFormacao.UserControls
     {
         List<Employee> employees;
         double yearsOfService;
-
-  
 
         public Contracts()
         {
@@ -33,7 +32,6 @@ namespace AcademiaDeFormacao.UserControls
             cmb_employee.SelectedIndexChanged += cmb_employee_SelectedIndexChanged;
             txt_contractEndDate.Enabled = false;
             txt_criminalRecordEndDate.Enabled = false;
-
         }
         // Fetch employees from the database and populate the employees list
         public void GetAllEmployees()
@@ -128,7 +126,17 @@ namespace AcademiaDeFormacao.UserControls
                     button1.Visible = false;
                     btn_renewContract.Visible = true;
                 }
-
+                if (selectedEmployee.Role == "Trainer")
+                {
+                    calculatorPNG.Visible = true;
+                    lbl_salaryCalculator.Visible = true;
+                }
+                else
+                {
+                    calculatorPNG.Visible = false;
+                    lbl_salaryCalculator.Visible = false;
+                    panel_Trainer.Visible = false;
+                }
                 lbl_partner.Text = $"Contract ends in {yearsOfService.ToString()} years";
 
                 UpdateRemainingContractDays(selectedEmployee.ContractEndDate);
@@ -142,6 +150,9 @@ namespace AcademiaDeFormacao.UserControls
             cmb_employee.DisplayMember = "Name";
             cmb_employee.DataSource = employees;
 
+            calculatorPNG.Visible = false;
+            lbl_salaryCalculator.Visible = false;
+            panel_Trainer.Visible = false;
 
             //standard option
             cmb_employee.SelectedIndex = 1;
@@ -160,7 +171,18 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     dateTimePicker1.Enabled = false;
                     dateTimePicker2.Enabled = false;
+                }
 
+                if (selectedEmployee.Role == "Trainer")
+                {
+                    calculatorPNG.Visible = true;
+                    lbl_salaryCalculator.Visible = true;
+                }
+                else
+                {
+                    calculatorPNG.Visible = false;
+                    lbl_salaryCalculator.Visible = false;
+                    panel_Trainer.Visible = false;
                 }
 
                 UpdatePartnerInfo(yearsOfService);
@@ -374,6 +396,49 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        private void calculatorPNG_Click(object sender, EventArgs e)
+        {
+            panel_Trainer.Show();
+        }
 
+        private void btn_save_trainer_Click(object sender, EventArgs e)
+        {
+            Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
+
+            DateTime trainingStart = dateTimePicker1.Value.Date;
+            DateTime trainingEnd = dateTimePicker2.Value.Date;
+            double numberOfDaysWorked = (trainingEnd - trainingStart).TotalDays;
+
+            double salaryMultiplier = GetSalaryMultiplierForEmployee(selectedEmployee); // Implement this method to fetch the appropriate multiplier based on employee's role, experience, etc.
+
+            double salary = (numberOfDaysWorked * 6) + (salaryMultiplier * numberOfDaysWorked);
+
+            // Do something with the calculated salary, like updating UI elements or saving to the database
+            // For example, you can display the calculated salary in a label:
+            txt_salary.Text = $"Calculated Salary: {salary:C}";
+
+            // You might also want to update any other relevant UI elements or save the calculated salary to the database.
+        }
+        private double GetSalaryMultiplierForEmployee(Employee employee)
+        {
+            if (employee.Role == "Trainer")
+            {
+                return 1.5;
+            }
+            else if (employee.Role == "OtherRole")
+            {
+                return 1.2;
+            }
+            else
+            {
+                return 1.0;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            panel_Trainer.Hide();
+
+        }
     }
 }

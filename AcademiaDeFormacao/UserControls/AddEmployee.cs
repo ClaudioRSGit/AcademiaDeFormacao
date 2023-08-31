@@ -132,10 +132,16 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
-       
-
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
+                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return;
+            }
             string selectedRole = cmb_Role.SelectedItem.ToString();
             switch (selectedRole)
             {
