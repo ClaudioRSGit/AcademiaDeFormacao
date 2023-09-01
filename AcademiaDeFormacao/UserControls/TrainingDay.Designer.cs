@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lb_days = new System.Windows.Forms.Label();
+            this.lbl_trainer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_days
@@ -41,15 +42,26 @@
             this.lb_days.TabIndex = 0;
             this.lb_days.Text = "00";
             // 
+            // lbl_trainer
+            // 
+            this.lbl_trainer.AutoSize = true;
+            this.lbl_trainer.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_trainer.ForeColor = System.Drawing.Color.Lime;
+            this.lbl_trainer.Location = new System.Drawing.Point(15, 45);
+            this.lbl_trainer.Name = "lbl_trainer";
+            this.lbl_trainer.Size = new System.Drawing.Size(10, 16);
+            this.lbl_trainer.TabIndex = 1;
+            this.lbl_trainer.Text = " ";
+            // 
             // TrainingDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.Controls.Add(this.lbl_trainer);
             this.Controls.Add(this.lb_days);
             this.Name = "TrainingDay";
             this.Size = new System.Drawing.Size(110, 97);
-            this.Load += new System.EventHandler(this.TrainingDay_Load);
             this.Click += new System.EventHandler(this.TrainingDay_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -59,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label lb_days;
+        private System.Windows.Forms.Label lbl_trainer;
     }
 }

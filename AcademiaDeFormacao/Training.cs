@@ -9,15 +9,26 @@ namespace AcademiaDeFormacao
 {
     internal class Training
     {
+        public int TrainingID { get; set; }
         public string TrainerName { get; set; }
-        public int TrainingId { get; set; }
         public string Description { get; set; }
         public DateTime TrainingStartDate { get; set; }
         public DateTime TrainingEndDate { get; set; }
         
-        public Training(int trainingID,string description, DateTime trainingStartDate, DateTime trainingEndDate, string trainerName)
+        public Training()
         {
-            TrainingId = trainingID;
+
+        }
+        public Training(string description, DateTime trainingStartDate, DateTime trainingEndDate, string trainerName)
+        {
+            Description = description;
+            TrainingStartDate = trainingStartDate;
+            TrainingEndDate = trainingEndDate;
+            TrainerName = trainerName;
+        }
+        public Training(int trainingID, string description, DateTime trainingStartDate, DateTime trainingEndDate, string trainerName)
+        {
+            TrainingID = trainingID;
             Description = description;
             TrainingStartDate = trainingStartDate;
             TrainingEndDate = trainingEndDate;

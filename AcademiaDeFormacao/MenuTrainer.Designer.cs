@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuTrainer));
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.associateTrainings = new System.Windows.Forms.PictureBox();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.editUserProfile1 = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.calendar1 = new AcademiaDeFormacao.UserControls.Calendar();
+            this.associateTrainings = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.associateTrainings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel8
@@ -58,30 +58,6 @@
             this.panel8.Size = new System.Drawing.Size(104, 90);
             this.panel8.TabIndex = 41;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
-            this.pictureBox8.Location = new System.Drawing.Point(-121, -105);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(346, 307);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.pictureBox6);
@@ -89,17 +65,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(105, 60);
             this.panel7.TabIndex = 40;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::AcademiaDeFormacao.Properties.Resources.signout;
-            this.pictureBox6.Location = new System.Drawing.Point(-105, -51);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(310, 181);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 33;
-            this.pictureBox6.TabStop = false;
             // 
             // panel1
             // 
@@ -121,18 +86,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(104, 90);
             this.panel2.TabIndex = 42;
-            // 
-            // associateTrainings
-            // 
-            this.associateTrainings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.associateTrainings.Image = global::AcademiaDeFormacao.Properties.Resources.birthday;
-            this.associateTrainings.Location = new System.Drawing.Point(-44, -60);
-            this.associateTrainings.Name = "associateTrainings";
-            this.associateTrainings.Size = new System.Drawing.Size(193, 203);
-            this.associateTrainings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.associateTrainings.TabIndex = 4;
-            this.associateTrainings.TabStop = false;
-            this.associateTrainings.Click += new System.EventHandler(this.associateTrainings_Click);
             // 
             // welcomePage1
             // 
@@ -159,6 +112,53 @@
             this.calendar1.Size = new System.Drawing.Size(882, 632);
             this.calendar1.TabIndex = 10;
             // 
+            // associateTrainings
+            // 
+            this.associateTrainings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.associateTrainings.Image = global::AcademiaDeFormacao.Properties.Resources.agenda;
+            this.associateTrainings.Location = new System.Drawing.Point(-85, -95);
+            this.associateTrainings.Name = "associateTrainings";
+            this.associateTrainings.Size = new System.Drawing.Size(273, 291);
+            this.associateTrainings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.associateTrainings.TabIndex = 4;
+            this.associateTrainings.TabStop = false;
+            this.associateTrainings.Click += new System.EventHandler(this.associateTrainings_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
+            this.pictureBox8.Location = new System.Drawing.Point(-129, -112);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(366, 324);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::AcademiaDeFormacao.Properties.Resources.signout;
+            this.pictureBox6.Location = new System.Drawing.Point(-105, -51);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(310, 181);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 33;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MenuTrainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,13 +171,13 @@
             this.Name = "MenuTrainer";
             this.Text = "MenuTrainer";
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.associateTrainings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

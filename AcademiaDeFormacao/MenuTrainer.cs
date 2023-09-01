@@ -14,9 +14,13 @@ namespace AcademiaDeFormacao
 {
     public partial class MenuTrainer : Form
     {
+        public string AuthenticatedUser { get; set; }
+        public string UserRole { get; set; }
         public MenuTrainer(string userName, string userRole, Form log)
         {
             InitializeComponent();
+            AuthenticatedUser = userName;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void ShowUserControl(UserControl userControl)
         {
@@ -44,6 +48,7 @@ namespace AcademiaDeFormacao
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
+            editUserProfile1.PopulateFormFields(this.AuthenticatedUser);
             ShowUserControl(editUserProfile1);
         }
         public void showScheduler()

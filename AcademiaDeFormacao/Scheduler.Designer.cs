@@ -48,6 +48,7 @@
             this.btn_saveTraining.TabIndex = 18;
             this.btn_saveTraining.Text = "Save";
             this.btn_saveTraining.UseVisualStyleBackColor = true;
+            this.btn_saveTraining.Click += new System.EventHandler(this.btn_saveTraining_Click);
             // 
             // label5
             // 
@@ -73,7 +74,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(410, 119);
+            this.label4.Location = new System.Drawing.Point(399, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 15;
@@ -118,7 +119,7 @@
             // 
             // dt_trainingStartDate
             // 
-            this.dt_trainingStartDate.Location = new System.Drawing.Point(144, 119);
+            this.dt_trainingStartDate.Location = new System.Drawing.Point(132, 119);
             this.dt_trainingStartDate.Name = "dt_trainingStartDate";
             this.dt_trainingStartDate.Size = new System.Drawing.Size(247, 22);
             this.dt_trainingStartDate.TabIndex = 10;
@@ -128,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(52, 119);
+            this.label1.Location = new System.Drawing.Point(40, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 9;
@@ -139,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(780, 321);
+            this.ClientSize = new System.Drawing.Size(773, 298);
             this.Controls.Add(this.btn_saveTraining);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmb_classes);

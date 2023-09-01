@@ -405,48 +405,20 @@ namespace AcademiaDeFormacao.UserControls
         {
             Trainer selectedEmployee = (Trainer)cmb_employee.SelectedItem;
 
-            if (selectedEmployee != null)
-            {
-                DateTime trainingStart = dt_trainingStart.Value.Date;
-                DateTime trainingEnd = dt_trainingEnd.Value.Date;
-                double numberOfDaysWorked = (trainingEnd - trainingStart).Days;
+            DateTime trainingStart = dt_trainingStart.Value.Date;
+            DateTime trainingEnd = dt_trainingEnd.Value.Date;
+            double numberOfDaysWorked = (trainingEnd - trainingStart).Days;
 
-                double salary = (numberOfDaysWorked * 6) + (Convert.ToDouble(selectedEmployee.TimeValue) * numberOfDaysWorked);
-                txt_salary.Text = $"Calculated Salary: {salary:C}";
-
-                using (var context = new School())
-                {
-                    // Retrieve the trainer record from the database
-                    Trainer trainerFromDB = context.Trainers.FirstOrDefault(t => t.EmployeeId == selectedEmployee.EmployeeId);
-
-                    if (trainerFromDB != null)
-                    {
-                        // Update the trainer's salary in the database
-                        trainerFromDB.Salary = salary;
-                        context.SaveChanges();
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Trainer with ID {selectedEmployee.EmployeeId} not found in the database.");
-                    }
-                }
-
-                // Reset the form controls
-                dt_trainingStart.Value = DateTime.Today;
-                dt_trainingEnd.Value = DateTime.Today;
-                txt_salary.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Please select a trainer.");
-            }
+            double salary = (numberOfDaysWorked * 6) + (Convert.ToDouble(selectedEmployee.TimeValue) * numberOfDaysWorked);
+            txt_salary.Text = $"Calculated Salary: {salary:C}";
         }
-
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            dt_trainingStart.Value = DateTime.Today;
+            dt_trainingEnd.Value = DateTime.Today;
+            txt_salary.Text = "";
             panel_Trainer.Hide();
-
         }
     }
 }

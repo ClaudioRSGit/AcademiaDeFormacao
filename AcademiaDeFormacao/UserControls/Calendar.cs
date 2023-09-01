@@ -14,6 +14,7 @@ namespace AcademiaDeFormacao.UserControls
     public partial class Calendar : UserControl
     {
         int month, year;
+
         public Calendar()
         {
             InitializeComponent();
@@ -43,8 +44,23 @@ namespace AcademiaDeFormacao.UserControls
             {
                 TrainingDay trainingDay = new TrainingDay();
                 trainingDay.TrainingDays(i);
+
+                // Set the Year and Month properties
+                trainingDay.Year = year;
+                trainingDay.Month = month;
+
                 dayContainer.Controls.Add(trainingDay);
+
+                trainingDay.DayClicked += DayClicked;
             }
+        }
+        public void PopulateTrainingDays(int year, int month)
+        {
+
+        }
+        private void DayClicked(DateTime clickedDate)
+        {
+            
         }
         private void displayDays()
         {
@@ -77,14 +93,6 @@ namespace AcademiaDeFormacao.UserControls
             }
             dayContainer.Controls.Clear();
             displayMonth();
-        }
-        public void showScheduler()
-        {
-            //trainingScheduler1.Show();
-        }
-        public void hideScheduler()
-        {
-            //trainingScheduler1.Hide();
         }
 
     }
