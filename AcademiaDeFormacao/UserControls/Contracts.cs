@@ -403,37 +403,45 @@ namespace AcademiaDeFormacao.UserControls
 
         private void btn_save_trainer_Click(object sender, EventArgs e)
         {
-            Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
+            Trainer selectedEmployee = (Trainer)cmb_employee.SelectedItem;
 
-            DateTime trainingStart = dateTimePicker1.Value.Date;
-            DateTime trainingEnd = dateTimePicker2.Value.Date;
-            double numberOfDaysWorked = (trainingEnd - trainingStart).TotalDays;
-
-            double salaryMultiplier = GetSalaryMultiplierForEmployee(selectedEmployee); // Implement this method to fetch the appropriate multiplier based on employee's role, experience, etc.
-
-            double salary = (numberOfDaysWorked * 6) + (salaryMultiplier * numberOfDaysWorked);
-
-            // Do something with the calculated salary, like updating UI elements or saving to the database
-            // For example, you can display the calculated salary in a label:
-            txt_salary.Text = $"Calculated Salary: {salary:C}";
-
-            // You might also want to update any other relevant UI elements or save the calculated salary to the database.
-        }
-        private double GetSalaryMultiplierForEmployee(Employee employee)
-        {
-            if (employee.Role == "Trainer")
+            if (selectedEmployee != null)
             {
-                return 1.5;
-            }
-            else if (employee.Role == "OtherRole")
-            {
-                return 1.2;
+                DateTime trainingStart = dt_trainingStart.Value.Date;
+                DateTime trainingEnd = dt_trainingEnd.Value.Date;
+                double numberOfDaysWorked = (trainingEnd - trainingStart).Days;
+
+                double salary = (numberOfDaysWorked * 6) + (Convert.ToDouble(selectedEmployee.TimeValue) * numberOfDaysWorked);
+                txt_salary.Text = $"Calculated Salary: {salary:C}";
+
+                using (var context = new School())
+                {
+                    // Retrieve the trainer record from the database
+                    Trainer trainerFromDB = context.Trainers.FirstOrDefault(t => t.EmployeeId == selectedEmployee.EmployeeId);
+
+                    if (trainerFromDB != null)
+                    {
+                        // Update the trainer's salary in the database
+                        trainerFromDB.Salary = salary;
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Trainer with ID {selectedEmployee.EmployeeId} not found in the database.");
+                    }
+                }
+
+                // Reset the form controls
+                dt_trainingStart.Value = DateTime.Today;
+                dt_trainingEnd.Value = DateTime.Today;
+                txt_salary.Text = "";
             }
             else
             {
-                return 1.0;
+                MessageBox.Show("Please select a trainer.");
             }
         }
+
 
         private void button3_Click_1(object sender, EventArgs e)
         {

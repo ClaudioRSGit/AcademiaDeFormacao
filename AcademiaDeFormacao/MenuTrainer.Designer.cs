@@ -39,6 +39,7 @@
             this.associateTrainings = new System.Windows.Forms.PictureBox();
             this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.editUserProfile1 = new AcademiaDeFormacao.UserControls.EditUserProfile();
+            this.calendar1 = new AcademiaDeFormacao.UserControls.Calendar();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +68,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox1
             // 
@@ -78,6 +80,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel7
             // 
@@ -122,13 +125,14 @@
             // associateTrainings
             // 
             this.associateTrainings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.associateTrainings.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
-            this.associateTrainings.Location = new System.Drawing.Point(-121, -112);
+            this.associateTrainings.Image = global::AcademiaDeFormacao.Properties.Resources.birthday;
+            this.associateTrainings.Location = new System.Drawing.Point(-44, -60);
             this.associateTrainings.Name = "associateTrainings";
-            this.associateTrainings.Size = new System.Drawing.Size(346, 307);
+            this.associateTrainings.Size = new System.Drawing.Size(193, 203);
             this.associateTrainings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.associateTrainings.TabIndex = 4;
             this.associateTrainings.TabStop = false;
+            this.associateTrainings.Click += new System.EventHandler(this.associateTrainings_Click);
             // 
             // welcomePage1
             // 
@@ -143,8 +147,17 @@
             this.editUserProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.editUserProfile1.Location = new System.Drawing.Point(120, 0);
             this.editUserProfile1.Name = "editUserProfile1";
-            this.editUserProfile1.Size = new System.Drawing.Size(879, 632);
+            this.editUserProfile1.Size = new System.Drawing.Size(890, 632);
             this.editUserProfile1.TabIndex = 8;
+            // 
+            // calendar1
+            // 
+            this.calendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.calendar1.Location = new System.Drawing.Point(128, 0);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.calendar1.Size = new System.Drawing.Size(882, 632);
+            this.calendar1.TabIndex = 10;
             // 
             // MenuTrainer
             // 
@@ -154,6 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.welcomePage1);
             this.Controls.Add(this.editUserProfile1);
+            this.Controls.Add(this.calendar1);
             this.Name = "MenuTrainer";
             this.Text = "MenuTrainer";
             this.panel8.ResumeLayout(false);
@@ -180,5 +194,6 @@
         private System.Windows.Forms.PictureBox associateTrainings;
         private UserControls.WelcomePage welcomePage1;
         private UserControls.EditUserProfile editUserProfile1;
+        private UserControls.Calendar calendar1;
     }
 }

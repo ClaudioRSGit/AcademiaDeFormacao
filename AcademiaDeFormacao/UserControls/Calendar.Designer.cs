@@ -182,7 +182,7 @@
             this.Controls.Add(this.label6);
             this.Name = "Calendar";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Size = new System.Drawing.Size(844, 626);
+            this.Size = new System.Drawing.Size(837, 626);
             this.ResumeLayout(false);
             this.PerformLayout();
 

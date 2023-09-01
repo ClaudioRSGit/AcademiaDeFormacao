@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AcademiaDeFormacao
 {
@@ -295,36 +297,42 @@ namespace AcademiaDeFormacao
                 context.Secretaries.Add(secretary3);
                 context.SaveChanges();
             }
-
+            
         }
-
         public static void DefaultTrainings()
         {
-            //Training Sessions
-            Training training1 = new Training(
+            using (var context = new School())
+            {
+                //Training Sessions
+                Training training1 = new Training(
+                1,
+                "Web Development",
                 DateTime.Now.Date,
-                DateTime.Now.Date.AddDays(60)
+                DateTime.Now.Date.AddDays(60),
+                "Ricardo Sousa"
             );
 
             Training training2 = new Training(
+                2,
+                "Web Design",
                 DateTime.Now.Date.AddDays(30),
-                DateTime.Now.Date.AddDays(50)
+                DateTime.Now.Date.AddDays(50),
+                "Ricardo Sousa"
             );
 
             Training training3 = new Training(
+                3,
+                "Laravel",
                 DateTime.Now.Date.AddDays(90),
-                DateTime.Now.Date.AddDays(27)
-           );
+                DateTime.Now.Date.AddDays(60),
+                "Ricardo Sousa"
+            );
+
+            context.TrainingSessions.Add(training1);
+            context.TrainingSessions.Add(training2);
+            context.TrainingSessions.Add(training3);
+            context.SaveChanges();
+            }
         }
-
-        //Assign Trainings
-
-
-
-
-
-
-
-
     }
 }

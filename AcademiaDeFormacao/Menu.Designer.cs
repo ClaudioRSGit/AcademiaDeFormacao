@@ -45,7 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.calendar1 = new AcademiaDeFormacao.UserControls.Calendar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
@@ -234,7 +233,6 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.calendar1);
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.DashBoard);
@@ -248,15 +246,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(876, 632);
             this.mainPanel.TabIndex = 2;
-            // 
-            // calendar1
-            // 
-            this.calendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.calendar1.Location = new System.Drawing.Point(0, 0);
-            this.calendar1.Name = "calendar1";
-            this.calendar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.calendar1.Size = new System.Drawing.Size(876, 632);
-            this.calendar1.TabIndex = 49;
             // 
             // panel3
             // 
@@ -387,6 +376,5 @@
         private AcademiaDeFormacao.UserControls.EditUserProfile OnMenuEditProf;
         private AcademiaDeFormacao.UserControls.ExportData exportData2;
         private AcademiaDeFormacao.UserControls.CalculateSalary DashBoard;
-        private AcademiaDeFormacao.UserControls.Calendar calendar1;
     }
     }

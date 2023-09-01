@@ -78,6 +78,14 @@ namespace AcademiaDeFormacao.UserControls
             dayContainer.Controls.Clear();
             displayMonth();
         }
+        public void showScheduler()
+        {
+            //trainingScheduler1.Show();
+        }
+        public void hideScheduler()
+        {
+            //trainingScheduler1.Hide();
+        }
 
     }
 }

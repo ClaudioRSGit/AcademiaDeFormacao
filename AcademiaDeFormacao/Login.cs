@@ -77,13 +77,12 @@ namespace TryProject
                                 this.Hide();
                                 new Menu(AuthenticatedUser, UserRole,this).Show();
                             }
-                            else
+                            else if (employee.Role == "Trainer" || employee.Role == "Trainee")
                             {
                                 this.AuthenticatedUser = txt_username.Text;
                                 this.UserRole = employee.Role;
-                                //this.Hide();
-                                MessageBox.Show("OUTRO FORM");
-                                // vai entrar no outro menu
+                                this.Hide();
+                                new MenuTrainer(AuthenticatedUser, UserRole, this).Show();
                             }
                         }
                         else

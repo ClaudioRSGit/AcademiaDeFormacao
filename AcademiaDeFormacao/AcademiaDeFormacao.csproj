@@ -86,6 +86,12 @@
     <Compile Include="MenuTrainer.Designer.cs">
       <DependentUpon>MenuTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduler.Designer.cs">
+      <DependentUpon>Scheduler.cs</DependentUpon>
+    </Compile>
     <Compile Include="School.cs" />
     <Compile Include="Coordinator.cs" />
     <Compile Include="Director.cs" />
@@ -186,6 +192,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Scheduler.resx">
+      <DependentUpon>Scheduler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>

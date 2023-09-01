@@ -45,6 +45,11 @@
             this.lbl_remainingContractDays = new System.Windows.Forms.Label();
             this.lbl_criminalRecordDays = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.newbieMedal = new System.Windows.Forms.PictureBox();
+            this.bronzeMedal = new System.Windows.Forms.PictureBox();
+            this.silverMedal = new System.Windows.Forms.PictureBox();
+            this.goldenMedal = new System.Windows.Forms.PictureBox();
+            this.disabledAccount = new System.Windows.Forms.PictureBox();
             this.lbl_partner = new System.Windows.Forms.Label();
             this.lbl_partnerCondition = new System.Windows.Forms.Label();
             this.btn_renewContract = new System.Windows.Forms.Button();
@@ -52,24 +57,19 @@
             this.cmb_roles = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_role = new System.Windows.Forms.TextBox();
-            this.newbieMedal = new System.Windows.Forms.PictureBox();
-            this.bronzeMedal = new System.Windows.Forms.PictureBox();
-            this.silverMedal = new System.Windows.Forms.PictureBox();
-            this.goldenMedal = new System.Windows.Forms.PictureBox();
-            this.disabledAccount = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_salaryCalculator = new System.Windows.Forms.Label();
             this.calculatorPNG = new System.Windows.Forms.PictureBox();
+            this.lbl_salaryCalculator = new System.Windows.Forms.Label();
             this.panel_Trainer = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_salary = new System.Windows.Forms.TextBox();
+            this.dt_trainingEnd = new System.Windows.Forms.DateTimePicker();
+            this.dt_trainingStart = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbl_timevalue = new System.Windows.Forms.Label();
             this.btn_save_trainer = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dt_trainingStart = new System.Windows.Forms.DateTimePicker();
-            this.dt_trainingEnd = new System.Windows.Forms.DateTimePicker();
-            this.txt_salary = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newbieMedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMedal)).BeginInit();
@@ -259,6 +259,56 @@
             this.panel1.Size = new System.Drawing.Size(108, 91);
             this.panel1.TabIndex = 74;
             // 
+            // newbieMedal
+            // 
+            this.newbieMedal.Image = global::AcademiaDeFormacao.Properties.Resources.newbieMedal;
+            this.newbieMedal.Location = new System.Drawing.Point(-63, -88);
+            this.newbieMedal.Name = "newbieMedal";
+            this.newbieMedal.Size = new System.Drawing.Size(232, 261);
+            this.newbieMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.newbieMedal.TabIndex = 79;
+            this.newbieMedal.TabStop = false;
+            // 
+            // bronzeMedal
+            // 
+            this.bronzeMedal.Image = global::AcademiaDeFormacao.Properties.Resources.bronzeMedal;
+            this.bronzeMedal.Location = new System.Drawing.Point(-63, -91);
+            this.bronzeMedal.Name = "bronzeMedal";
+            this.bronzeMedal.Size = new System.Drawing.Size(232, 261);
+            this.bronzeMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bronzeMedal.TabIndex = 78;
+            this.bronzeMedal.TabStop = false;
+            // 
+            // silverMedal
+            // 
+            this.silverMedal.Image = global::AcademiaDeFormacao.Properties.Resources.silverMedal;
+            this.silverMedal.Location = new System.Drawing.Point(-63, -88);
+            this.silverMedal.Name = "silverMedal";
+            this.silverMedal.Size = new System.Drawing.Size(232, 261);
+            this.silverMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.silverMedal.TabIndex = 77;
+            this.silverMedal.TabStop = false;
+            // 
+            // goldenMedal
+            // 
+            this.goldenMedal.Image = global::AcademiaDeFormacao.Properties.Resources.goldenMedal;
+            this.goldenMedal.Location = new System.Drawing.Point(-66, -91);
+            this.goldenMedal.Name = "goldenMedal";
+            this.goldenMedal.Size = new System.Drawing.Size(232, 261);
+            this.goldenMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.goldenMedal.TabIndex = 75;
+            this.goldenMedal.TabStop = false;
+            // 
+            // disabledAccount
+            // 
+            this.disabledAccount.Image = global::AcademiaDeFormacao.Properties.Resources.disabled;
+            this.disabledAccount.Location = new System.Drawing.Point(-63, -87);
+            this.disabledAccount.Name = "disabledAccount";
+            this.disabledAccount.Size = new System.Drawing.Size(232, 261);
+            this.disabledAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.disabledAccount.TabIndex = 80;
+            this.disabledAccount.TabStop = false;
+            // 
             // lbl_partner
             // 
             this.lbl_partner.AutoSize = true;
@@ -339,56 +389,6 @@
             this.txt_role.Size = new System.Drawing.Size(202, 30);
             this.txt_role.TabIndex = 81;
             // 
-            // newbieMedal
-            // 
-            this.newbieMedal.Image = global::AcademiaDeFormacao.Properties.Resources.newbieMedal;
-            this.newbieMedal.Location = new System.Drawing.Point(-63, -88);
-            this.newbieMedal.Name = "newbieMedal";
-            this.newbieMedal.Size = new System.Drawing.Size(232, 261);
-            this.newbieMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.newbieMedal.TabIndex = 79;
-            this.newbieMedal.TabStop = false;
-            // 
-            // bronzeMedal
-            // 
-            this.bronzeMedal.Image = global::AcademiaDeFormacao.Properties.Resources.bronzeMedal;
-            this.bronzeMedal.Location = new System.Drawing.Point(-63, -91);
-            this.bronzeMedal.Name = "bronzeMedal";
-            this.bronzeMedal.Size = new System.Drawing.Size(232, 261);
-            this.bronzeMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bronzeMedal.TabIndex = 78;
-            this.bronzeMedal.TabStop = false;
-            // 
-            // silverMedal
-            // 
-            this.silverMedal.Image = global::AcademiaDeFormacao.Properties.Resources.silverMedal;
-            this.silverMedal.Location = new System.Drawing.Point(-63, -88);
-            this.silverMedal.Name = "silverMedal";
-            this.silverMedal.Size = new System.Drawing.Size(232, 261);
-            this.silverMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.silverMedal.TabIndex = 77;
-            this.silverMedal.TabStop = false;
-            // 
-            // goldenMedal
-            // 
-            this.goldenMedal.Image = global::AcademiaDeFormacao.Properties.Resources.goldenMedal;
-            this.goldenMedal.Location = new System.Drawing.Point(-66, -91);
-            this.goldenMedal.Name = "goldenMedal";
-            this.goldenMedal.Size = new System.Drawing.Size(232, 261);
-            this.goldenMedal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.goldenMedal.TabIndex = 75;
-            this.goldenMedal.TabStop = false;
-            // 
-            // disabledAccount
-            // 
-            this.disabledAccount.Image = global::AcademiaDeFormacao.Properties.Resources.disabled;
-            this.disabledAccount.Location = new System.Drawing.Point(-63, -87);
-            this.disabledAccount.Name = "disabledAccount";
-            this.disabledAccount.Size = new System.Drawing.Size(232, 261);
-            this.disabledAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.disabledAccount.TabIndex = 80;
-            this.disabledAccount.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.calculatorPNG);
@@ -396,17 +396,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(85, 63);
             this.panel3.TabIndex = 83;
-            // 
-            // lbl_salaryCalculator
-            // 
-            this.lbl_salaryCalculator.AutoSize = true;
-            this.lbl_salaryCalculator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_salaryCalculator.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_salaryCalculator.Location = new System.Drawing.Point(60, 343);
-            this.lbl_salaryCalculator.Name = "lbl_salaryCalculator";
-            this.lbl_salaryCalculator.Size = new System.Drawing.Size(161, 25);
-            this.lbl_salaryCalculator.TabIndex = 84;
-            this.lbl_salaryCalculator.Text = "Salary Calculator";
             // 
             // calculatorPNG
             // 
@@ -418,6 +407,17 @@
             this.calculatorPNG.TabIndex = 85;
             this.calculatorPNG.TabStop = false;
             this.calculatorPNG.Click += new System.EventHandler(this.calculatorPNG_Click);
+            // 
+            // lbl_salaryCalculator
+            // 
+            this.lbl_salaryCalculator.AutoSize = true;
+            this.lbl_salaryCalculator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_salaryCalculator.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_salaryCalculator.Location = new System.Drawing.Point(60, 343);
+            this.lbl_salaryCalculator.Name = "lbl_salaryCalculator";
+            this.lbl_salaryCalculator.Size = new System.Drawing.Size(161, 25);
+            this.lbl_salaryCalculator.TabIndex = 84;
+            this.lbl_salaryCalculator.Text = "Salary Calculator";
             // 
             // panel_Trainer
             // 
@@ -435,6 +435,62 @@
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 280);
             this.panel_Trainer.TabIndex = 86;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(214, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(27, 23);
+            this.button3.TabIndex = 74;
+            this.button3.Text = "x";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Yellow;
+            this.label11.Location = new System.Drawing.Point(14, 172);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 20);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "Salary";
+            // 
+            // txt_salary
+            // 
+            this.txt_salary.Location = new System.Drawing.Point(18, 195);
+            this.txt_salary.Multiline = true;
+            this.txt_salary.Name = "txt_salary";
+            this.txt_salary.Size = new System.Drawing.Size(208, 31);
+            this.txt_salary.TabIndex = 71;
+            // 
+            // dt_trainingEnd
+            // 
+            this.dt_trainingEnd.Location = new System.Drawing.Point(18, 137);
+            this.dt_trainingEnd.Name = "dt_trainingEnd";
+            this.dt_trainingEnd.Size = new System.Drawing.Size(208, 22);
+            this.dt_trainingEnd.TabIndex = 70;
+            // 
+            // dt_trainingStart
+            // 
+            this.dt_trainingStart.Location = new System.Drawing.Point(18, 80);
+            this.dt_trainingStart.Name = "dt_trainingStart";
+            this.dt_trainingStart.Size = new System.Drawing.Size(208, 22);
+            this.dt_trainingStart.TabIndex = 69;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.Location = new System.Drawing.Point(14, 114);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 20);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Training End";
             // 
             // lbl_timevalue
             // 
@@ -467,62 +523,6 @@
             this.label9.Size = new System.Drawing.Size(206, 29);
             this.label9.TabIndex = 63;
             this.label9.Text = "Salary Calculator";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(14, 114);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 20);
-            this.label10.TabIndex = 68;
-            this.label10.Text = "Training End";
-            // 
-            // dt_trainingStart
-            // 
-            this.dt_trainingStart.Location = new System.Drawing.Point(18, 80);
-            this.dt_trainingStart.Name = "dt_trainingStart";
-            this.dt_trainingStart.Size = new System.Drawing.Size(208, 22);
-            this.dt_trainingStart.TabIndex = 69;
-            // 
-            // dt_trainingEnd
-            // 
-            this.dt_trainingEnd.Location = new System.Drawing.Point(18, 137);
-            this.dt_trainingEnd.Name = "dt_trainingEnd";
-            this.dt_trainingEnd.Size = new System.Drawing.Size(208, 22);
-            this.dt_trainingEnd.TabIndex = 70;
-            // 
-            // txt_salary
-            // 
-            this.txt_salary.Location = new System.Drawing.Point(18, 195);
-            this.txt_salary.Multiline = true;
-            this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(208, 31);
-            this.txt_salary.TabIndex = 71;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(14, 172);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 20);
-            this.label11.TabIndex = 72;
-            this.label11.Text = "Salary";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(214, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 23);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "x";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Contracts
             // 
