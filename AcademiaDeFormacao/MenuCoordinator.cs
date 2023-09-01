@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TryProject;
 
 namespace AcademiaDeFormacao
 {
@@ -27,6 +28,12 @@ namespace AcademiaDeFormacao
         {
             /*editUserProfile1.PopulateFormFields();
             ShowUserControl(editUserProfile1);*/
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
         }
     }
 }

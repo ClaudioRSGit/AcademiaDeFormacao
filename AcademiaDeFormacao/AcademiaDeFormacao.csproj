@@ -80,6 +80,12 @@
     <Compile Include="MenuCoordinator.Designer.cs">
       <DependentUpon>MenuCoordinator.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuTrainer.Designer.cs">
+      <DependentUpon>MenuTrainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="School.cs" />
     <Compile Include="Coordinator.cs" />
     <Compile Include="Director.cs" />
@@ -119,11 +125,23 @@
     <Compile Include="UserControls\CalculateSalary.Designer.cs">
       <DependentUpon>CalculateSalary.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Contracts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Contracts.Designer.cs">
       <DependentUpon>Contracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Day.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Day.Designer.cs">
+      <DependentUpon>Day.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\EditUserProfile.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +155,12 @@
     <Compile Include="UserControls\ExportData.Designer.cs">
       <DependentUpon>ExportData.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TrainingDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TrainingDay.Designer.cs">
+      <DependentUpon>TrainingDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuCoordinator.resx">
       <DependentUpon>MenuCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTrainer.resx">
+      <DependentUpon>MenuTrainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,14 +199,23 @@
     <EmbeddedResource Include="UserControls\CalculateSalary.resx">
       <DependentUpon>CalculateSalary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Contracts.resx">
       <DependentUpon>Contracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Day.resx">
+      <DependentUpon>Day.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EditUserProfile.resx">
       <DependentUpon>EditUserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ExportData.resx">
       <DependentUpon>ExportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TrainingDay.resx">
+      <DependentUpon>TrainingDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>

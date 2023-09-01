@@ -45,14 +45,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.calendar1 = new AcademiaDeFormacao.UserControls.Calendar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
+            this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.contracts1 = new AcademiaDeFormacao.UserControls.Contracts();
             this.OnMenuEditProf = new AcademiaDeFormacao.UserControls.EditUserProfile();
             this.addEmployee1 = new AcademiaDeFormacao.UserControls.AddEmployee();
             this.exportData2 = new AcademiaDeFormacao.UserControls.ExportData();
-            this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
-            this.welcomePage1 = new AcademiaDeFormacao.UserControls.WelcomePage();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -233,6 +234,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.calendar1);
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.DashBoard);
@@ -246,6 +248,15 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(876, 632);
             this.mainPanel.TabIndex = 2;
+            // 
+            // calendar1
+            // 
+            this.calendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.calendar1.Location = new System.Drawing.Point(0, 0);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.calendar1.Size = new System.Drawing.Size(876, 632);
+            this.calendar1.TabIndex = 49;
             // 
             // panel3
             // 
@@ -265,6 +276,22 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
+            // 
+            // DashBoard
+            // 
+            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.DashBoard.Location = new System.Drawing.Point(-24, -1);
+            this.DashBoard.Name = "DashBoard";
+            this.DashBoard.Size = new System.Drawing.Size(897, 633);
+            this.DashBoard.TabIndex = 48;
+            // 
+            // welcomePage1
+            // 
+            this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.welcomePage1.Location = new System.Drawing.Point(0, 3);
+            this.welcomePage1.Name = "welcomePage1";
+            this.welcomePage1.Size = new System.Drawing.Size(876, 629);
+            this.welcomePage1.TabIndex = 2;
             // 
             // contracts1
             // 
@@ -298,22 +325,6 @@
             this.exportData2.Name = "exportData2";
             this.exportData2.Size = new System.Drawing.Size(873, 605);
             this.exportData2.TabIndex = 47;
-            // 
-            // DashBoard
-            // 
-            this.DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.DashBoard.Location = new System.Drawing.Point(-24, -1);
-            this.DashBoard.Name = "DashBoard";
-            this.DashBoard.Size = new System.Drawing.Size(897, 633);
-            this.DashBoard.TabIndex = 48;
-            // 
-            // welcomePage1
-            // 
-            this.welcomePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.welcomePage1.Location = new System.Drawing.Point(0, 3);
-            this.welcomePage1.Name = "welcomePage1";
-            this.welcomePage1.Size = new System.Drawing.Size(876, 629);
-            this.welcomePage1.TabIndex = 2;
             // 
             // Menu
             // 
@@ -376,5 +387,6 @@
         private AcademiaDeFormacao.UserControls.EditUserProfile OnMenuEditProf;
         private AcademiaDeFormacao.UserControls.ExportData exportData2;
         private AcademiaDeFormacao.UserControls.CalculateSalary DashBoard;
+        private AcademiaDeFormacao.UserControls.Calendar calendar1;
     }
     }
