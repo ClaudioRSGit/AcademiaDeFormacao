@@ -24,9 +24,9 @@ namespace AcademiaDeFormacao
         }
         private void ShowUserControl(UserControl userControl)
         {
-            welcomePage1.Hide();
-            calendar1.Hide();
-            editUserProfile1.Hide();
+            welcomePage2.Hide();
+            calendar2.Hide();
+            editUserProfile2.Hide();
 
             userControl.Show();
         }
@@ -38,21 +38,24 @@ namespace AcademiaDeFormacao
 
         private void associateTrainings_Click(object sender, EventArgs e)
         {
-            ShowUserControl(calendar1);
+            ShowUserControl(calendar2);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ShowUserControl(welcomePage1);
+            ShowUserControl(welcomePage2);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            editUserProfile1.PopulateFormFields(this.AuthenticatedUser);
-            ShowUserControl(editUserProfile1);
+            editUserProfile2.PopulateFormFields(this.AuthenticatedUser);
+            ShowUserControl(editUserProfile2);
         }
-        public void showScheduler()
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
+            new Login().Show();
         }
     }
 }
