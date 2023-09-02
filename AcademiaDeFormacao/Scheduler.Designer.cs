@@ -55,7 +55,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(437, 191);
+            this.label5.Location = new System.Drawing.Point(426, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 17;
@@ -85,7 +85,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(76, 191);
+            this.label3.Location = new System.Drawing.Point(40, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 13;
@@ -105,7 +105,7 @@
             // cmb_trainers
             // 
             this.cmb_trainers.FormattingEnabled = true;
-            this.cmb_trainers.Location = new System.Drawing.Point(144, 191);
+            this.cmb_trainers.Location = new System.Drawing.Point(132, 191);
             this.cmb_trainers.Name = "cmb_trainers";
             this.cmb_trainers.Size = new System.Drawing.Size(247, 24);
             this.cmb_trainers.TabIndex = 12;

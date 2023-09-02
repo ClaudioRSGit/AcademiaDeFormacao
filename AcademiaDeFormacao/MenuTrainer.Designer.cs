@@ -37,9 +37,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.associateTrainings = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.welcomePage2 = new AcademiaDeFormacao.UserControls.WelcomePage();
-            this.calendar2 = new AcademiaDeFormacao.UserControls.Calendar();
-            this.editUserProfile2 = new AcademiaDeFormacao.UserControls.EditUserProfile();
+            this.OnMenuTrainerEditProfile = new AcademiaDeFormacao.UserControls.EditUserProfile();
+            this.OnMenuTrainerWelcome = new AcademiaDeFormacao.UserControls.WelcomePage();
+            this.OnMenuTrainerCalendar = new AcademiaDeFormacao.UserControls.Calendar();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(-15, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(156, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,30 +135,30 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // welcomePage2
+            // OnMenuTrainerEditProfile
             // 
-            this.welcomePage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.welcomePage2.Location = new System.Drawing.Point(125, 0);
-            this.welcomePage2.Name = "welcomePage2";
-            this.welcomePage2.Size = new System.Drawing.Size(886, 632);
-            this.welcomePage2.TabIndex = 9;
+            this.OnMenuTrainerEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.OnMenuTrainerEditProfile.Location = new System.Drawing.Point(125, 0);
+            this.OnMenuTrainerEditProfile.Name = "OnMenuTrainerEditProfile";
+            this.OnMenuTrainerEditProfile.Size = new System.Drawing.Size(882, 632);
+            this.OnMenuTrainerEditProfile.TabIndex = 7;
             // 
-            // calendar2
+            // OnMenuTrainerWelcome
             // 
-            this.calendar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.calendar2.Location = new System.Drawing.Point(125, -5);
-            this.calendar2.Name = "calendar2";
-            this.calendar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.calendar2.Size = new System.Drawing.Size(886, 637);
-            this.calendar2.TabIndex = 8;
+            this.OnMenuTrainerWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.OnMenuTrainerWelcome.Location = new System.Drawing.Point(125, 0);
+            this.OnMenuTrainerWelcome.Name = "OnMenuTrainerWelcome";
+            this.OnMenuTrainerWelcome.Size = new System.Drawing.Size(882, 632);
+            this.OnMenuTrainerWelcome.TabIndex = 8;
             // 
-            // editUserProfile2
+            // OnMenuTrainerCalendar
             // 
-            this.editUserProfile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.editUserProfile2.Location = new System.Drawing.Point(125, 0);
-            this.editUserProfile2.Name = "editUserProfile2";
-            this.editUserProfile2.Size = new System.Drawing.Size(886, 632);
-            this.editUserProfile2.TabIndex = 7;
+            this.OnMenuTrainerCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
+            this.OnMenuTrainerCalendar.Location = new System.Drawing.Point(125, 0);
+            this.OnMenuTrainerCalendar.Name = "OnMenuTrainerCalendar";
+            this.OnMenuTrainerCalendar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.OnMenuTrainerCalendar.Size = new System.Drawing.Size(882, 632);
+            this.OnMenuTrainerCalendar.TabIndex = 9;
             // 
             // MenuTrainer
             // 
@@ -166,9 +166,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1004, 632);
-            this.Controls.Add(this.welcomePage2);
-            this.Controls.Add(this.calendar2);
-            this.Controls.Add(this.editUserProfile2);
+            this.Controls.Add(this.OnMenuTrainerCalendar);
+            this.Controls.Add(this.OnMenuTrainerWelcome);
+            this.Controls.Add(this.OnMenuTrainerEditProfile);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MenuTrainer";
@@ -201,5 +201,8 @@
         private UserControls.EditUserProfile editUserProfile2;
         private UserControls.Calendar calendar2;
         private UserControls.WelcomePage welcomePage2;
+        private UserControls.EditUserProfile OnMenuTrainerEditProfile;
+        private UserControls.WelcomePage OnMenuTrainerWelcome;
+        private UserControls.Calendar OnMenuTrainerCalendar;
     }
 }

@@ -18,10 +18,17 @@ namespace AcademiaDeFormacao.UserControls
         public Calendar()
         {
             InitializeComponent();
-            displayDays();
+            DateTime now = DateTime.Now;
+            month = now.Month;
+            year = now.Year;
+
+            displayMonth();
         }
         public void displayMonth()
         {
+            // Limpar o container de dias antes de adicionar novos dias
+            dayContainer.Controls.Clear();
+
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbl_dateMonthYear.Text = monthName + " " + year;
 
@@ -43,12 +50,12 @@ namespace AcademiaDeFormacao.UserControls
             for (int i = 1; i <= daysCount; i++)
             {
                 TrainingDay trainingDay = new TrainingDay();
-                trainingDay.TrainingDays(i);
 
                 // Set the Year and Month properties
                 trainingDay.Year = year;
                 trainingDay.Month = month;
 
+                trainingDay.TrainingDays(i);
                 dayContainer.Controls.Add(trainingDay);
 
                 trainingDay.DayClicked += DayClicked;
