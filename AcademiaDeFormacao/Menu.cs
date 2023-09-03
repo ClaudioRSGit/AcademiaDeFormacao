@@ -109,14 +109,28 @@ namespace TryProject
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            contracts1.PopulateFormFields();
-            ShowUserControl(contracts1);
+            try
+            {
+                contracts1.PopulateFormFields();
+                ShowUserControl(contracts1);
+            }
+            catch
+            {
+
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            exportData2.LoadDatabasePreview();
-            ShowUserControl(exportData2);
+            try
+            {
+                exportData2.LoadDatabasePreview();
+                ShowUserControl(exportData2);
+            }
+            catch
+            {
+                
+            }
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

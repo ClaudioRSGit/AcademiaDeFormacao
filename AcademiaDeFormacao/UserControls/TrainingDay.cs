@@ -15,22 +15,26 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class TrainingDay : UserControl
     {
-        public string TrainerAndDescription { get; set; }
-
         public event Action<DateTime> DayClicked;
         public int Year { get; set; }
         public int Month { get; set; }
+
         int dayNumber;
-        DateTime clickedDate;//clickedDate.Date.ToString("MM/dd/yy"); -> dia clicado
+
+        DateTime clickedDate;
+
+        //clickedDate.Date.ToString("MM/dd/yy"); -> dia clicado
         public TrainingDay()
         {
             InitializeComponent();
         }
         public void TrainingDays(int numDay)
         {
-            lb_days.Text = Convert.ToString(numDay);
+            try
+            {
+                lb_days.Text = Convert.ToString(numDay);
 
-            /*// Verificar se existe uma formação para o dia em questão
+            // Verificar se existe uma formação para o dia em questão
             DateTime selectedDate = new DateTime(Year, Month, numDay);
 
             using (var context = new School())
@@ -48,19 +52,23 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     lbl_trainer.Text = string.Empty; // No training session, so clear the label
                 }
-            }*/
+            }
+            }
+            catch
+            {
+            }
         }
         private void TrainingDay_Click(object sender, EventArgs e)
         {
-            int dayNumber = Convert.ToInt32(lb_days.Text);
-            DateTime clickedDate = new DateTime(Year, Month, dayNumber);
+                dayNumber = Convert.ToInt32(lb_days.Text);
+                clickedDate = new DateTime(Year, Month, dayNumber);
 
-            /*Scheduler scheduler1 = new Scheduler();
-            scheduler1.PopulateTrainersComboBox();
-            scheduler1.Show();
+                Scheduler scheduler1 = new Scheduler();
+                scheduler1.PopulateTrainersComboBox();
+                scheduler1.Show();
 
-            // Pass the DateTime to the event handler
-            DayClicked?.Invoke(clickedDate);*/
+                // Pass the DateTime to the event handler
+                DayClicked?.Invoke(clickedDate);
         }
 
     }

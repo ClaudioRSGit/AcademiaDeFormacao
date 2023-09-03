@@ -67,7 +67,7 @@ namespace AcademiaDeFormacao.UserControls
         }
         private void DayClicked(DateTime clickedDate)
         {
-            
+
         }
         private void displayDays()
         {
