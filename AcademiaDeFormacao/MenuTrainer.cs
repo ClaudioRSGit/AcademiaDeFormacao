@@ -19,8 +19,15 @@ namespace AcademiaDeFormacao
         public MenuTrainer(string userName, string userRole, Form log)
         {
             InitializeComponent();
-            AuthenticatedUser = userName;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.AuthenticatedUser = userName;
+            this.UserRole = userRole;
+
+            void CloseForm(object sender, EventArgs e)
+            {
+                log.Close();
+            }
+            this.FormClosing += CloseForm;
         }
         private void ShowUserControl(UserControl userControl)
         {
@@ -38,6 +45,7 @@ namespace AcademiaDeFormacao
 
         private void associateTrainings_Click(object sender, EventArgs e)
         {
+            OnMenuTrainerCalendar.PopulateData(AuthenticatedUser,UserRole);
             ShowUserControl(OnMenuTrainerCalendar);
         }
 

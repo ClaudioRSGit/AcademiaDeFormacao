@@ -14,7 +14,8 @@ namespace AcademiaDeFormacao.UserControls
     public partial class Calendar : UserControl
     {
         int month, year;
-
+        public string AuthenticatedUser { get; set; }
+        public string UserRole { get; set; }
         public Calendar()
         {
             InitializeComponent();
@@ -23,6 +24,11 @@ namespace AcademiaDeFormacao.UserControls
             year = now.Year;
 
             displayMonth();
+        }
+        public void PopulateData(string authUser, string userRole)
+        {
+            this.AuthenticatedUser = authUser;
+            this.UserRole = userRole;
         }
         public void displayMonth()
         {
@@ -46,29 +52,74 @@ namespace AcademiaDeFormacao.UserControls
                 Day day = new Day();
                 dayContainer.Controls.Add(day);
             }
-
+            
             for (int i = 1; i <= daysCount; i++)
             {
-                TrainingDay trainingDay = new TrainingDay();
+                Panel dayPanel = new Panel();
+                dayPanel.BackColor = Color.FromArgb(61, 69, 76);
+                dayPanel.Size = new Size(80, 78);
 
-                // Set the Year and Month properties
-                trainingDay.Year = year;
-                trainingDay.Month = month;
+                Label dayLabel = new Label();
+                dayLabel.AutoSize = true;
+                dayLabel.Font = new Font("Arial", 8);
+                dayLabel.Text = i.ToString();
+                dayLabel.ForeColor = Color.White;
 
-                trainingDay.TrainingDays(i);
-                dayContainer.Controls.Add(trainingDay);
+                // Position the label within the panel
+                dayLabel.Location = new Point(5, 5); // Adjust the position as needed
 
-                trainingDay.DayClicked += DayClicked;
+                // Add the label to the panel
+                dayPanel.Controls.Add(dayLabel);
+
+                Label lblTrainingDay = new Label();
+                lblTrainingDay.AutoSize = true;
+                lblTrainingDay.Font = new Font("Arial", 8);
+                lblTrainingDay.ForeColor = Color.Green;
+
+                // Position the label within the panel
+                lblTrainingDay.Location = new Point(15, 15); // Adjust the position as needed
+                dayPanel.Controls.Add(lblTrainingDay);
+
+
+                DateTime selectedDate = new DateTime(year, month, dayOfTheWeek);
+
+                using (var context = new School())
+                {
+                    var training = context.TrainingSessions
+                        .FirstOrDefault(Training =>
+                            selectedDate >= Training.TrainingStartDate &&
+                            selectedDate <= Training.TrainingEndDate);
+
+                    if (training != null)
+                    {
+                        lblTrainingDay.Text = $"{training.TrainerName} \n {training.Description}";
+                    }
+                    else
+                    {
+                        lblTrainingDay.Text = string.Empty; // No training session, so clear the label
+                    }
+                }
+
+                dayContainer.Controls.Add(dayPanel);
+
+                dayPanel.Click += (sender, e) =>
+                {
+                    int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
+                    DateTime clickedDate = new DateTime(year, month, dayNumber);
+
+                    Scheduler scheduler1 = new Scheduler();
+                    scheduler1.PopulateTrainersComboBox();
+                    scheduler1.Show();
+
+                };
             }
         }
+
         public void PopulateTrainingDays(int year, int month)
         {
 
         }
-        private void DayClicked(DateTime clickedDate)
-        {
-
-        }
+    
         private void displayDays()
         {
             DateTime now = DateTime.Now;

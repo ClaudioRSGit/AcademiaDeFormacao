@@ -15,13 +15,13 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class TrainingDay : UserControl
     {
-        public event Action<DateTime> DayClicked;
+        /*public event Action<DateTime> DayClicked;
         public int Year { get; set; }
         public int Month { get; set; }
 
         int dayNumber;
 
-        DateTime clickedDate;
+        DateTime clickedDate;*/
 
         //clickedDate.Date.ToString("MM/dd/yy"); -> dia clicado
         public TrainingDay()
@@ -30,7 +30,7 @@ namespace AcademiaDeFormacao.UserControls
         }
         public void TrainingDays(int numDay)
         {
-            try
+            /*try
             {
                 lb_days.Text = Convert.ToString(numDay);
 
@@ -56,11 +56,11 @@ namespace AcademiaDeFormacao.UserControls
             }
             catch
             {
-            }
+            }*/
         }
         private void TrainingDay_Click(object sender, EventArgs e)
         {
-                dayNumber = Convert.ToInt32(lb_days.Text);
+               /* dayNumber = Convert.ToInt32(lb_days.Text);
                 clickedDate = new DateTime(Year, Month, dayNumber);
 
                 Scheduler scheduler1 = new Scheduler();
@@ -68,7 +68,7 @@ namespace AcademiaDeFormacao.UserControls
                 scheduler1.Show();
 
                 // Pass the DateTime to the event handler
-                DayClicked?.Invoke(clickedDate);
+                DayClicked?.Invoke(clickedDate);*/
         }
 
     }
