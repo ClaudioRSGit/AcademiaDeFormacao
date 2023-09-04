@@ -76,13 +76,13 @@
             this.btn_save_trainer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel_coordinator = new System.Windows.Forms.Panel();
-            this.listView_TrainersToAdd = new System.Windows.Forms.ListView();
-            this.listView_TrainersAdded = new System.Windows.Forms.ListView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btn_addTrainer = new System.Windows.Forms.Button();
-            this.btn_removeTrainer = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.btn_exitPanelCoordinator = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_removeTrainer = new System.Windows.Forms.Button();
+            this.btn_addTrainer = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listView_TrainersAdded = new System.Windows.Forms.ListView();
+            this.listView_TrainersToAdd = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_listDirectors.SuspendLayout();
             this.panel_Trainer.SuspendLayout();
@@ -536,7 +536,7 @@
             this.panel_Trainer.Controls.Add(this.btn_back_trainer);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label6);
-            this.panel_Trainer.Location = new System.Drawing.Point(413, 243);
+            this.panel_Trainer.Location = new System.Drawing.Point(440, 199);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;
@@ -613,57 +613,20 @@
             this.panel_coordinator.Controls.Add(this.label7);
             this.panel_coordinator.Controls.Add(this.listView_TrainersAdded);
             this.panel_coordinator.Controls.Add(this.listView_TrainersToAdd);
-            this.panel_coordinator.Location = new System.Drawing.Point(85, 53);
+            this.panel_coordinator.Location = new System.Drawing.Point(112, 53);
             this.panel_coordinator.Name = "panel_coordinator";
             this.panel_coordinator.Size = new System.Drawing.Size(575, 505);
             this.panel_coordinator.TabIndex = 67;
             // 
-            // listView_TrainersToAdd
+            // btn_exitPanelCoordinator
             // 
-            this.listView_TrainersToAdd.HideSelection = false;
-            this.listView_TrainersToAdd.Location = new System.Drawing.Point(41, 57);
-            this.listView_TrainersToAdd.Name = "listView_TrainersToAdd";
-            this.listView_TrainersToAdd.Size = new System.Drawing.Size(163, 389);
-            this.listView_TrainersToAdd.TabIndex = 0;
-            this.listView_TrainersToAdd.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView_TrainersAdded
-            // 
-            this.listView_TrainersAdded.HideSelection = false;
-            this.listView_TrainersAdded.Location = new System.Drawing.Point(352, 57);
-            this.listView_TrainersAdded.Name = "listView_TrainersAdded";
-            this.listView_TrainersAdded.Size = new System.Drawing.Size(163, 389);
-            this.listView_TrainersAdded.TabIndex = 1;
-            this.listView_TrainersAdded.UseCompatibleStateImageBehavior = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(36, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 26);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Trainers";
-            // 
-            // btn_addTrainer
-            // 
-            this.btn_addTrainer.Location = new System.Drawing.Point(250, 171);
-            this.btn_addTrainer.Name = "btn_addTrainer";
-            this.btn_addTrainer.Size = new System.Drawing.Size(75, 23);
-            this.btn_addTrainer.TabIndex = 3;
-            this.btn_addTrainer.Text = "Add";
-            this.btn_addTrainer.UseVisualStyleBackColor = true;
-            // 
-            // btn_removeTrainer
-            // 
-            this.btn_removeTrainer.Location = new System.Drawing.Point(248, 255);
-            this.btn_removeTrainer.Name = "btn_removeTrainer";
-            this.btn_removeTrainer.Size = new System.Drawing.Size(75, 23);
-            this.btn_removeTrainer.TabIndex = 4;
-            this.btn_removeTrainer.Text = "Remove";
-            this.btn_removeTrainer.UseVisualStyleBackColor = true;
+            this.btn_exitPanelCoordinator.Location = new System.Drawing.Point(532, 10);
+            this.btn_exitPanelCoordinator.Name = "btn_exitPanelCoordinator";
+            this.btn_exitPanelCoordinator.Size = new System.Drawing.Size(30, 27);
+            this.btn_exitPanelCoordinator.TabIndex = 6;
+            this.btn_exitPanelCoordinator.Text = "X";
+            this.btn_exitPanelCoordinator.UseVisualStyleBackColor = true;
+            this.btn_exitPanelCoordinator.Click += new System.EventHandler(this.btn_exitPanelCoordinator_Click);
             // 
             // label8
             // 
@@ -676,15 +639,52 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Trainers Added";
             // 
-            // btn_exitPanelCoordinator
+            // btn_removeTrainer
             // 
-            this.btn_exitPanelCoordinator.Location = new System.Drawing.Point(532, 10);
-            this.btn_exitPanelCoordinator.Name = "btn_exitPanelCoordinator";
-            this.btn_exitPanelCoordinator.Size = new System.Drawing.Size(30, 27);
-            this.btn_exitPanelCoordinator.TabIndex = 6;
-            this.btn_exitPanelCoordinator.Text = "X";
-            this.btn_exitPanelCoordinator.UseVisualStyleBackColor = true;
-            this.btn_exitPanelCoordinator.Click += new System.EventHandler(this.btn_exitPanelCoordinator_Click);
+            this.btn_removeTrainer.Location = new System.Drawing.Point(248, 255);
+            this.btn_removeTrainer.Name = "btn_removeTrainer";
+            this.btn_removeTrainer.Size = new System.Drawing.Size(75, 23);
+            this.btn_removeTrainer.TabIndex = 4;
+            this.btn_removeTrainer.Text = "Remove";
+            this.btn_removeTrainer.UseVisualStyleBackColor = true;
+            // 
+            // btn_addTrainer
+            // 
+            this.btn_addTrainer.Location = new System.Drawing.Point(250, 171);
+            this.btn_addTrainer.Name = "btn_addTrainer";
+            this.btn_addTrainer.Size = new System.Drawing.Size(75, 23);
+            this.btn_addTrainer.TabIndex = 3;
+            this.btn_addTrainer.Text = "Add";
+            this.btn_addTrainer.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(36, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 26);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Trainers";
+            // 
+            // listView_TrainersAdded
+            // 
+            this.listView_TrainersAdded.HideSelection = false;
+            this.listView_TrainersAdded.Location = new System.Drawing.Point(352, 57);
+            this.listView_TrainersAdded.Name = "listView_TrainersAdded";
+            this.listView_TrainersAdded.Size = new System.Drawing.Size(163, 389);
+            this.listView_TrainersAdded.TabIndex = 1;
+            this.listView_TrainersAdded.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView_TrainersToAdd
+            // 
+            this.listView_TrainersToAdd.HideSelection = false;
+            this.listView_TrainersToAdd.Location = new System.Drawing.Point(41, 57);
+            this.listView_TrainersToAdd.Name = "listView_TrainersToAdd";
+            this.listView_TrainersToAdd.Size = new System.Drawing.Size(163, 389);
+            this.listView_TrainersToAdd.TabIndex = 0;
+            this.listView_TrainersToAdd.UseCompatibleStateImageBehavior = false;
             // 
             // AddEmployee
             // 
@@ -692,6 +692,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel_coordinator);
+            this.Controls.Add(this.panel_listDirectors);
+            this.Controls.Add(this.panel_Trainer);
             this.Controls.Add(this.cbx_area_trainer);
             this.Controls.Add(this.director_name);
             this.Controls.Add(this.lbl_Area);
@@ -726,8 +728,6 @@
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_Username);
-            this.Controls.Add(this.panel_Trainer);
-            this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);

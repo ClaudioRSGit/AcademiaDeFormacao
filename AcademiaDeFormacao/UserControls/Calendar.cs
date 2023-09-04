@@ -77,8 +77,16 @@ namespace AcademiaDeFormacao.UserControls
                 lblTrainingDay.Font = new Font("Arial", 8);
                 lblTrainingDay.ForeColor = Color.Green;
 
-                // Position the label within the panel
-                lblTrainingDay.Location = new Point(15, 15); // Adjust the position as needed
+                // Calculate the position to center the label
+                int horizontalCenter = (dayPanel.Width - lblTrainingDay.Width) / 2;
+                int verticalCenter = (dayPanel.Height - lblTrainingDay.Height) / 2;
+
+                // Ensure the label is within the panel's bounds
+                horizontalCenter = Math.Max(horizontalCenter, 0);
+                verticalCenter = Math.Max(verticalCenter, 0);
+
+                // Set the label's location
+                lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
                 dayPanel.Controls.Add(lblTrainingDay);
 
 
