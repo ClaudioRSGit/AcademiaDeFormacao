@@ -91,9 +91,8 @@ namespace TryProject
                     else
                     {
                         Employee NewRegister = new Employee(
-                            txt_username.Text, txt_password.Text
+                            txt_username.Text, txt_username.Text, txt_password.Text
                             );
-
                         context.Employees.Add(NewRegister);
                         context.SaveChanges();
                         MessageBox.Show("Account ceated successfully, awaiting activation approval", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
