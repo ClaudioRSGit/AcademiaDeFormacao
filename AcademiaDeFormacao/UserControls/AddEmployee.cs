@@ -37,6 +37,7 @@ namespace AcademiaDeFormacao.UserControls
             btn_ShowPanels.Hide();
             panel_listDirectors.Hide();
             panel_Trainer.Hide();
+            panel_coordinator.Hide();
             director_name.Hide();
             cbx_area_trainer.Hide();
         }
@@ -119,10 +120,19 @@ namespace AcademiaDeFormacao.UserControls
                     txt_salary.Enabled = false;
                     break;
                 case "Coordinator":
-                    
-                    
-                    
+                    btn_ShowPanels.Show();
+                    lbl_Area.Hide();
+                    cbx_Area.Hide();
+                    cbx_area_trainer.Hide();
+                    director_name.Hide();
+                    cbx_timeExemption.Hide();
+                    cbx_Car.Hide();
+                    lbl_MensalBonus.Hide();
+                    txt_mensalBonus.Hide();
+                    btn_ShowPanels.Text = "Add Trainers";
+                    txt_salary.Enabled = true;
                     break;
+
                 default:
                     cbx_timeExemption.Hide();
                     cbx_Car.Hide();
@@ -235,8 +245,32 @@ namespace AcademiaDeFormacao.UserControls
 
                     break;
                 case "Coordinator":
-                    //placeholder coordinator
-                    break;
+                    using (var context = new School())
+                    {
+                        Coordinator newCoordinator = new Coordinator();
+
+                        newCoordinator.Username = txt_username.Text;
+                        newCoordinator.Password = txt_password.Text;
+                        newCoordinator.Name = txt_name.Text;
+                        newCoordinator.Email = txt_email.Text;
+                        newCoordinator.Salary = Convert.ToDouble(txt_salary.Text);
+                        newCoordinator.Role = selectedRole;
+                        newCoordinator.Address = txt_address.Text;
+                        newCoordinator.Contact = txt_contact.Text;
+                        newCoordinator.ContractEndDate = dtp_ContractEndDate.Value;
+                        newCoordinator.CriminalRecordEndDate = dtp_CriminalRecord.Value;
+                        newCoordinator.DateOfBirth = dtp_BirthDate.Value;
+                        newCoordinator.AccountStatus = true;
+                        //newCoordinator.AssociatedTrainer = "ewr";
+
+                        context.Coordinators.Add(newCoordinator);
+                        context.SaveChanges();
+                        MessageBox.Show("ADICIONADO");
+
+                        //wipe all fields
+                        wipeFields();
+                        break;
+                    }
 
             }
 
@@ -253,6 +287,10 @@ namespace AcademiaDeFormacao.UserControls
             else if (selectedRole == "Trainer")
             {
                 panel_Trainer.Show();
+            }
+            else
+            {
+                panel_coordinator.Show();
             }
         }
 
@@ -326,6 +364,26 @@ namespace AcademiaDeFormacao.UserControls
             {
                 e.Handled = true; // Cancel the key press event
             }
+        }
+
+        private void btn_exitPanelCoordinator_Click(object sender, EventArgs e)
+        {
+            panel_coordinator.Hide();
+        }
+
+        public void LoadTrainers()
+        {
+
+            using (var context = new School())
+            {
+                List<Trainer> trainers = context.Trainers.ToList();
+
+                foreach (Trainer trainer in trainers)
+                {
+                    listView_TrainersToAdd.Items.Add(trainer.Name);
+                }
+            }
+
         }
     }
 }

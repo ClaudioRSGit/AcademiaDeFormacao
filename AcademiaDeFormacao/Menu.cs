@@ -83,6 +83,7 @@ namespace TryProject
         {
             ShowUserControl(addEmployee1);
             addEmployee1.LoadDirectors();
+            addEmployee1.LoadTrainers();
         }
 
         private void button1_Click(object sender, EventArgs e)
