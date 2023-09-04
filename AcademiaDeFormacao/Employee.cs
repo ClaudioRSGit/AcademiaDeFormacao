@@ -56,16 +56,18 @@ namespace AcademiaDeFormacao
 
         public Employee(
            string username,
+           string name,
            string password
            )
            
         {
             Username = username;
+            Name = name;
             Password = password;
             Role = "Trainee";
-            DateOfBirth = DateTime.MaxValue;
-            ContractEndDate = DateTime.MaxValue; 
-            CriminalRecordEndDate = DateTime.MaxValue;
+            DateOfBirth = DateTime.Today;
+            ContractEndDate = DateTime.Today.AddDays(-1);
+            CriminalRecordEndDate = DateTime.Today;
             AccountStatus = false;
 
         }
