@@ -96,8 +96,10 @@ namespace TryProject
 
                         context.Employees.Add(NewRegister);
                         context.SaveChanges();
-                        MessageBox.Show("Account Successfully Created", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        MessageBox.Show("Account ceated successfully, awaiting activation approval", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        this.Hide();
+                        new Login().Show();
                     }
                 }
 
@@ -121,6 +123,12 @@ namespace TryProject
             txt_username.Text = "";
             txt_password.Text = "";
             txt_confirmPassword.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
         }
     }
 }

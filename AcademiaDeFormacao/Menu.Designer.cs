@@ -235,12 +235,12 @@
             // 
             this.mainPanel.Controls.Add(this.lbl_DisplayUserName);
             this.mainPanel.Controls.Add(this.panel3);
-            this.mainPanel.Controls.Add(this.DashBoard);
             this.mainPanel.Controls.Add(this.welcomePage1);
             this.mainPanel.Controls.Add(this.contracts1);
             this.mainPanel.Controls.Add(this.OnMenuEditProf);
             this.mainPanel.Controls.Add(this.addEmployee1);
             this.mainPanel.Controls.Add(this.exportData2);
+            this.mainPanel.Controls.Add(this.DashBoard);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(128, 0);
             this.mainPanel.Name = "mainPanel";

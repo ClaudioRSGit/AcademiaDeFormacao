@@ -22,7 +22,6 @@ namespace AcademiaDeFormacao
             this.StartPosition = FormStartPosition.CenterScreen;
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
-
             void CloseForm(object sender, EventArgs e)
             {
                 log.Close();
@@ -45,6 +44,7 @@ namespace AcademiaDeFormacao
 
         private void associateTrainings_Click(object sender, EventArgs e)
         {
+            OnMenuTrainerCalendar.PopulateData(AuthenticatedUser,UserRole);
             OnMenuTrainerCalendar.displayMonth();
             OnMenuTrainerCalendar.PopulateData(AuthenticatedUser,UserRole);
             ShowUserControl(OnMenuTrainerCalendar);

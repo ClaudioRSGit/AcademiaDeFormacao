@@ -79,7 +79,7 @@ namespace AcademiaDeFormacao.UserControls
                 var latestEmployee = context.Employees.OrderByDescending(emp => emp.EmployeeId).FirstOrDefault();
                 if (latestEmployee != null)
                 {
-                    lbl_latestEmployee.Text = $"New Emp: {latestEmployee.Role} {latestEmployee.Name}";
+                    lbl_latestEmployee.Text = $"New Emp: {latestEmployee.Role} \n {latestEmployee.Name}";
                 }
 
                 //update AccountStatus
@@ -389,7 +389,7 @@ namespace AcademiaDeFormacao.UserControls
             {
                 // Contracts ending in the current month
                 var contractsEndingThisMonth = context.Employees
-                    .Where(emp => emp.ContractEndDate.Month == currentDate.Month)
+                    .Where(emp => emp.ContractEndDate.Month == currentDate.Month && emp.ContractEndDate.Year == currentDate.Year)
                     .ToList();
 
                 if (contractsEndingThisMonth.Any())

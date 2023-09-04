@@ -68,21 +68,20 @@ namespace TryProject
 
                     if (employee != null)
                     {
+                        this.AuthenticatedUser = txt_username.Text;
+                        this.UserRole = employee.Role;
                         if (employee.AccountStatus == true) // Check if the account is enabled
                         {
+                            
                             if (employee.Role == "Director" || employee.Role == "Secretary")
                             {
-                                this.AuthenticatedUser = txt_username.Text;
-                                this.UserRole = employee.Role;
                                 this.Hide();
-                                new Menu(AuthenticatedUser, UserRole,this).Show();
+                                new Menu(AuthenticatedUser, employee.Role.ToString(), this).Show();
                             }
                             else if (employee.Role == "Trainer" || employee.Role == "Trainee" || employee.Role == "Coordinator")
                             {
-                                this.AuthenticatedUser = txt_username.Text;
-                                this.UserRole = employee.Role;
                                 this.Hide();
-                                new MenuTrainer(AuthenticatedUser, UserRole, this).Show();
+                                new MenuTrainer(AuthenticatedUser, employee.Role.ToString(), this).Show();
                             }
                         }
                         else

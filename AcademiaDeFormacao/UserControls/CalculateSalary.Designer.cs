@@ -454,9 +454,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::AcademiaDeFormacao.Properties.Resources.celebration;
-            this.pictureBox5.Location = new System.Drawing.Point(30, -18);
+            this.pictureBox5.Location = new System.Drawing.Point(2, -29);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(84, 86);
+            this.pictureBox5.Size = new System.Drawing.Size(130, 116);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 66;
             this.pictureBox5.TabStop = false;

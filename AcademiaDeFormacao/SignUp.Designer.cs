@@ -203,6 +203,7 @@
             this.label1.Size = new System.Drawing.Size(160, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Already Have An Account";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_ToLogin
             // 
