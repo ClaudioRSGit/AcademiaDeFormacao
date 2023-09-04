@@ -1,6 +1,6 @@
 # 🎓 Academia de Formação  Asset Management Application 🎓
 
-<div style="text-align: center;">
+<div align="center">
     <img src="images/logo.png" style="max-width: 100%; height: 40%; width: 40%;" alt="Logo">
 </div>
 
