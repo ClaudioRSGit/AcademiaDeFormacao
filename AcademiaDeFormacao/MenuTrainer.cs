@@ -45,6 +45,7 @@ namespace AcademiaDeFormacao
 
         private void associateTrainings_Click(object sender, EventArgs e)
         {
+            OnMenuTrainerCalendar.displayMonth();
             OnMenuTrainerCalendar.PopulateData(AuthenticatedUser,UserRole);
             ShowUserControl(OnMenuTrainerCalendar);
         }

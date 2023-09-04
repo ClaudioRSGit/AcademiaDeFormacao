@@ -23,7 +23,7 @@ namespace AcademiaDeFormacao.UserControls
             month = now.Month;
             year = now.Year;
 
-            displayMonth();
+            //displayMonth();
         }
         public void PopulateData(string authUser, string userRole)
         {
@@ -52,7 +52,14 @@ namespace AcademiaDeFormacao.UserControls
                 Day day = new Day();
                 dayContainer.Controls.Add(day);
             }
-            
+            if (UserRole == "Coordinator")
+            {
+                dayContainer.Enabled = true;
+            }
+            else
+            {
+                dayContainer.Enabled = false;
+            }
             for (int i = 1; i <= daysCount; i++)
             {
                 Panel dayPanel = new Panel();

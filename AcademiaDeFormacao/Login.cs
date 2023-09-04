@@ -77,7 +77,7 @@ namespace TryProject
                                 this.Hide();
                                 new Menu(AuthenticatedUser, UserRole,this).Show();
                             }
-                            else if (employee.Role == "Trainer" || employee.Role == "Trainee")
+                            else if (employee.Role == "Trainer" || employee.Role == "Trainee" || employee.Role == "Coordinator")
                             {
                                 this.AuthenticatedUser = txt_username.Text;
                                 this.UserRole = employee.Role;

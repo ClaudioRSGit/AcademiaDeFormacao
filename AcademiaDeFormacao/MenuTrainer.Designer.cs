@@ -153,12 +153,14 @@
             // 
             // OnMenuTrainerCalendar
             // 
+            this.OnMenuTrainerCalendar.AuthenticatedUser = null;
             this.OnMenuTrainerCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.OnMenuTrainerCalendar.Location = new System.Drawing.Point(125, 0);
             this.OnMenuTrainerCalendar.Name = "OnMenuTrainerCalendar";
             this.OnMenuTrainerCalendar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.OnMenuTrainerCalendar.Size = new System.Drawing.Size(882, 632);
             this.OnMenuTrainerCalendar.TabIndex = 9;
+            this.OnMenuTrainerCalendar.UserRole = null;
             // 
             // MenuTrainer
             // 
@@ -166,10 +168,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1004, 632);
-            this.Controls.Add(this.OnMenuTrainerCalendar);
             this.Controls.Add(this.OnMenuTrainerWelcome);
             this.Controls.Add(this.OnMenuTrainerEditProfile);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.OnMenuTrainerCalendar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MenuTrainer";
             this.Text = "MenuTrainer";
