@@ -47,7 +47,7 @@
             this.label_Form1_Data.AutoSize = true;
             this.label_Form1_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Form1_Data.ForeColor = System.Drawing.Color.White;
-            this.label_Form1_Data.Location = new System.Drawing.Point(371, 387);
+            this.label_Form1_Data.Location = new System.Drawing.Point(371, 513);
             this.label_Form1_Data.Name = "label_Form1_Data";
             this.label_Form1_Data.Size = new System.Drawing.Size(160, 15);
             this.label_Form1_Data.TabIndex = 24;
@@ -60,7 +60,7 @@
             this.label_Hora.AutoSize = true;
             this.label_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Hora.ForeColor = System.Drawing.Color.White;
-            this.label_Hora.Location = new System.Drawing.Point(669, 387);
+            this.label_Hora.Location = new System.Drawing.Point(669, 513);
             this.label_Hora.Name = "label_Hora";
             this.label_Hora.Size = new System.Drawing.Size(78, 15);
             this.label_Hora.TabIndex = 25;
@@ -69,10 +69,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AcademiaDeFormacao.Properties.Resources.Untitled__10__transformed;
-            this.pictureBox1.Location = new System.Drawing.Point(-480, -344);
+            this.pictureBox1.Image = global::AcademiaDeFormacao.Properties.Resources.background2;
+            this.pictureBox1.Location = new System.Drawing.Point(-147, -167);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1820, 1307);
+            this.pictureBox1.Size = new System.Drawing.Size(1293, 1090);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -86,7 +86,7 @@
             this.Controls.Add(this.label_Form1_Data);
             this.Controls.Add(this.pictureBox1);
             this.Name = "WelcomePage";
-            this.Size = new System.Drawing.Size(817, 578);
+            this.Size = new System.Drawing.Size(924, 704);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

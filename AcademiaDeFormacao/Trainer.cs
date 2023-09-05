@@ -28,7 +28,8 @@ namespace AcademiaDeFormacao
             string educationArea,
             string availability,
             double timeValue,
-            bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate, accountStatus)
+            bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, 
+            criminalRecordEndDate, accountStatus)
         {
             EducationArea = educationArea;
             Availability = availability;

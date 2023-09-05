@@ -23,7 +23,8 @@ namespace AcademiaDeFormacao
            DateTime dateOfBirth,
            DateTime contractEndDate,
            DateTime criminalRecordEndDate,
-           bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, criminalRecordEndDate, accountStatus)
+           bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, 
+           criminalRecordEndDate, accountStatus)
         {
             AssociatedTrainer = new List<Trainer>();
         }

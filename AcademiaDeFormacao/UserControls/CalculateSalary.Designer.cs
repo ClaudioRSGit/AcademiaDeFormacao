@@ -425,7 +425,7 @@
             this.lbl_latestEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.lbl_latestEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_latestEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_latestEmployee.Location = new System.Drawing.Point(11, 35);
+            this.lbl_latestEmployee.Location = new System.Drawing.Point(11, 30);
             this.lbl_latestEmployee.Name = "lbl_latestEmployee";
             this.lbl_latestEmployee.Size = new System.Drawing.Size(72, 18);
             this.lbl_latestEmployee.TabIndex = 68;
@@ -437,7 +437,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Ivory;
-            this.label13.Location = new System.Drawing.Point(11, 10);
+            this.label13.Location = new System.Drawing.Point(7, 5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 22);
             this.label13.TabIndex = 62;
