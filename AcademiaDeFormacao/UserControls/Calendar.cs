@@ -16,6 +16,8 @@ namespace AcademiaDeFormacao.UserControls
         int month, year;
         public string AuthenticatedUser { get; set; }
         public string UserRole { get; set; }
+
+        private ToolTip dayToolTip = new ToolTip();
         public Calendar()
         {
             InitializeComponent();
@@ -89,8 +91,11 @@ namespace AcademiaDeFormacao.UserControls
                 lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
                 dayPanel.Controls.Add(lblTrainingDay);
 
-
                 DateTime selectedDate = new DateTime(year, month, dayOfTheWeek);
+                dayToolTip.SetToolTip(dayPanel, GetTrainingSessionsTooltip(selectedDate));
+
+                dayContainer.Controls.Add(dayPanel);
+
 
                 using (var context = new School())
                 {
@@ -121,6 +126,34 @@ namespace AcademiaDeFormacao.UserControls
                     scheduler1.Show();
 
                 };
+            }
+        }
+        private string GetTrainingSessionsTooltip(DateTime selectedDate)
+        {
+            using (var context = new School())
+            {
+                var trainingSessions = context.TrainingSessions
+                    .Where(Training =>
+                        selectedDate >= Training.TrainingStartDate &&
+                        selectedDate <= Training.TrainingEndDate)
+                    .ToList();
+
+                if (trainingSessions.Count > 0)
+                {
+                    StringBuilder tooltipText = new StringBuilder();
+                    tooltipText.AppendLine("Training Sessions:");
+
+                    foreach (var training in trainingSessions)
+                    {
+                        tooltipText.AppendLine($"{training.TrainerName}: {training.Description}");
+                    }
+
+                    return tooltipText.ToString();
+                }
+                else
+                {
+                    return "No training sessions for this day.";
+                }
             }
         }
 
