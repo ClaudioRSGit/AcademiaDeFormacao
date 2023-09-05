@@ -30,6 +30,7 @@
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_role = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -75,6 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.lbl_role);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel2);
@@ -87,6 +89,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 632);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_role
+            // 
+            this.lbl_role.AutoSize = true;
+            this.lbl_role.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_role.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lbl_role.Location = new System.Drawing.Point(16, 82);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.Size = new System.Drawing.Size(82, 18);
+            this.lbl_role.TabIndex = 49;
+            this.lbl_role.Text = "Coordinator";
             // 
             // panel8
             // 
@@ -212,7 +225,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-11, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(-13, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(156, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,11 +236,11 @@
             // lbl_DisplayUserName
             // 
             this.lbl_DisplayUserName.AutoSize = true;
-            this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DisplayUserName.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DisplayUserName.ForeColor = System.Drawing.Color.Goldenrod;
             this.lbl_DisplayUserName.Location = new System.Drawing.Point(726, 17);
             this.lbl_DisplayUserName.Name = "lbl_DisplayUserName";
-            this.lbl_DisplayUserName.Size = new System.Drawing.Size(64, 24);
+            this.lbl_DisplayUserName.Size = new System.Drawing.Size(54, 21);
             this.lbl_DisplayUserName.TabIndex = 3;
             this.lbl_DisplayUserName.Text = "label1";
             // 
@@ -259,7 +272,7 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::AcademiaDeFormacao.Properties.Resources.l1;
-            this.pictureBox7.Location = new System.Drawing.Point(-71, -71);
+            this.pictureBox7.Location = new System.Drawing.Point(-71, -72);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(238, 177);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,6 +342,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
@@ -376,5 +390,6 @@
         private AcademiaDeFormacao.UserControls.EditUserProfile OnMenuEditProf;
         private AcademiaDeFormacao.UserControls.ExportData exportData2;
         private AcademiaDeFormacao.UserControls.CalculateSalary DashBoard;
+        private System.Windows.Forms.Label lbl_role;
     }
     }

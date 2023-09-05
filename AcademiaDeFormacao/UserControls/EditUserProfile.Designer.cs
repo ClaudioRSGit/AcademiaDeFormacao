@@ -237,7 +237,6 @@
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(197, 30);
             this.txt_contact.TabIndex = 56;
-            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
             // 
             // txt_email
             // 

@@ -46,9 +46,15 @@ namespace TryProject
             this.UserRole = userRole;
             lbl_DisplayUserName.Text = userName;
             UserRole = userRole;
-            //Colocar border no Form
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,25,25));
-            //MessageBox.Show(UserRole.ToString());
+
+            lbl_role.Text = userRole;
+            // Calculate the center position within panel1
+            int centerX = (panel1.Width - lbl_role.Width) / 2;
+            int centerY = 70;
+
+            // Set the label's location
+            lbl_role.Location = new Point(centerX, centerY);
+ 
 
             void CloseForm(object sender,EventArgs e)
             {

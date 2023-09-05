@@ -358,11 +358,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label4.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Ivory;
             this.label4.Location = new System.Drawing.Point(48, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 46);
+            this.label4.Size = new System.Drawing.Size(199, 49);
             this.label4.TabIndex = 54;
             this.label4.Text = "Add Employee";
             // 

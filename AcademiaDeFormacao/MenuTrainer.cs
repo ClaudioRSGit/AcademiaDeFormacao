@@ -22,6 +22,16 @@ namespace AcademiaDeFormacao
             this.StartPosition = FormStartPosition.CenterScreen;
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
+            lbl_DisplayUserName.Text = userName;
+
+            lbl_role.Text = userRole;
+            // Calculate the center position within panel1
+            int centerX = (panel1.Width - lbl_role.Width) / 2;
+            int centerY = 70;
+
+            // Set the label's location
+            lbl_role.Location = new Point(centerX, centerY);
+
             void CloseForm(object sender, EventArgs e)
             {
                 log.Close();
