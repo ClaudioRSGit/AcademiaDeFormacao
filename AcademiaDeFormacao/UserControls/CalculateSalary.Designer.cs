@@ -425,7 +425,7 @@
             this.lbl_latestEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.lbl_latestEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_latestEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_latestEmployee.Location = new System.Drawing.Point(11, 30);
+            this.lbl_latestEmployee.Location = new System.Drawing.Point(9, 28);
             this.lbl_latestEmployee.Name = "lbl_latestEmployee";
             this.lbl_latestEmployee.Size = new System.Drawing.Size(72, 18);
             this.lbl_latestEmployee.TabIndex = 68;
@@ -489,11 +489,11 @@
             // 
             this.lbl_birthdays.AutoSize = true;
             this.lbl_birthdays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.lbl_birthdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_birthdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_birthdays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_birthdays.Location = new System.Drawing.Point(6, 42);
+            this.lbl_birthdays.Location = new System.Drawing.Point(7, 34);
             this.lbl_birthdays.Name = "lbl_birthdays";
-            this.lbl_birthdays.Size = new System.Drawing.Size(134, 22);
+            this.lbl_birthdays.Size = new System.Drawing.Size(100, 16);
             this.lbl_birthdays.TabIndex = 62;
             this.lbl_birthdays.Text = "birthday person";
             // 
@@ -508,7 +508,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.birthday;
-            this.pictureBox3.Location = new System.Drawing.Point(7, -18);
+            this.pictureBox3.Location = new System.Drawing.Point(15, -18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(102, 93);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -237,6 +237,8 @@
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(197, 30);
             this.txt_contact.TabIndex = 56;
+            this.txt_contact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contact_KeyDown);
+            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contact_KeyDown);
             // 
             // txt_email
             // 
@@ -249,6 +251,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(377, 30);
             this.txt_email.TabIndex = 57;
+            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contact_KeyDown);
             // 
             // txt_address
             // 

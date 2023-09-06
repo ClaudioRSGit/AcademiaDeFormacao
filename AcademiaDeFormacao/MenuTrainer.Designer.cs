@@ -34,10 +34,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_role = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.associateTrainings = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_role = new System.Windows.Forms.Label();
             this.lbl_DisplayUserName = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -110,6 +110,16 @@
             this.panel1.Size = new System.Drawing.Size(128, 632);
             this.panel1.TabIndex = 6;
             // 
+            // lbl_role
+            // 
+            this.lbl_role.AutoSize = true;
+            this.lbl_role.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lbl_role.Location = new System.Drawing.Point(38, 84);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.Size = new System.Drawing.Size(44, 16);
+            this.lbl_role.TabIndex = 10;
+            this.lbl_role.Text = "label1";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.associateTrainings);
@@ -142,16 +152,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lbl_role
-            // 
-            this.lbl_role.AutoSize = true;
-            this.lbl_role.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lbl_role.Location = new System.Drawing.Point(38, 84);
-            this.lbl_role.Name = "lbl_role";
-            this.lbl_role.Size = new System.Drawing.Size(44, 16);
-            this.lbl_role.TabIndex = 10;
-            this.lbl_role.Text = "label1";
-            // 
             // lbl_DisplayUserName
             // 
             this.lbl_DisplayUserName.AutoSize = true;
@@ -167,9 +167,9 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::AcademiaDeFormacao.Properties.Resources.l1;
-            this.pictureBox7.Location = new System.Drawing.Point(-88, -78);
+            this.pictureBox7.Location = new System.Drawing.Point(-59, -55);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(238, 177);
+            this.pictureBox7.Size = new System.Drawing.Size(176, 132);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
@@ -222,7 +222,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.OnMenuTrainerCalendar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MenuTrainer";
             this.Text = "MenuTrainer";
             this.panel8.ResumeLayout(false);

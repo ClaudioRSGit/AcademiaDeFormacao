@@ -228,22 +228,22 @@
             // lbl_remainingContractDays
             // 
             this.lbl_remainingContractDays.AutoSize = true;
-            this.lbl_remainingContractDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_remainingContractDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_remainingContractDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_remainingContractDays.Location = new System.Drawing.Point(60, 303);
+            this.lbl_remainingContractDays.Location = new System.Drawing.Point(61, 294);
             this.lbl_remainingContractDays.Name = "lbl_remainingContractDays";
-            this.lbl_remainingContractDays.Size = new System.Drawing.Size(52, 25);
+            this.lbl_remainingContractDays.Size = new System.Drawing.Size(41, 20);
             this.lbl_remainingContractDays.TabIndex = 71;
             this.lbl_remainingContractDays.Text = "xxxx";
             // 
             // lbl_criminalRecordDays
             // 
             this.lbl_criminalRecordDays.AutoSize = true;
-            this.lbl_criminalRecordDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_criminalRecordDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_criminalRecordDays.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(425, 303);
+            this.lbl_criminalRecordDays.Location = new System.Drawing.Point(426, 294);
             this.lbl_criminalRecordDays.Name = "lbl_criminalRecordDays";
-            this.lbl_criminalRecordDays.Size = new System.Drawing.Size(22, 25);
+            this.lbl_criminalRecordDays.Size = new System.Drawing.Size(17, 20);
             this.lbl_criminalRecordDays.TabIndex = 72;
             this.lbl_criminalRecordDays.Text = "x";
             // 
@@ -431,7 +431,7 @@
             this.panel_Trainer.Controls.Add(this.lbl_timevalue);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label9);
-            this.panel_Trainer.Location = new System.Drawing.Point(430, 221);
+            this.panel_Trainer.Location = new System.Drawing.Point(449, 221);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 280);
             this.panel_Trainer.TabIndex = 86;

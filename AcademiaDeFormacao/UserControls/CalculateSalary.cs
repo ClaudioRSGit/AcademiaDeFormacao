@@ -79,7 +79,7 @@ namespace AcademiaDeFormacao.UserControls
                 var latestEmployee = context.Employees.OrderByDescending(emp => emp.EmployeeId).FirstOrDefault();
                 if (latestEmployee != null)
                 {
-                    lbl_latestEmployee.Text = $"New Emp: {latestEmployee.Role} \n {latestEmployee.Name}";
+                    lbl_latestEmployee.Text = $"New Emp: {latestEmployee.Role} \n{latestEmployee.Name}";
                 }
 
                 //update AccountStatus

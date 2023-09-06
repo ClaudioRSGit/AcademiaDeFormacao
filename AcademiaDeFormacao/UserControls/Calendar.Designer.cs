@@ -43,16 +43,16 @@
             // 
             // dayContainer
             // 
-            this.dayContainer.Location = new System.Drawing.Point(15, 62);
+            this.dayContainer.Location = new System.Drawing.Point(15, 64);
             this.dayContainer.Name = "dayContainer";
             this.dayContainer.Size = new System.Drawing.Size(813, 514);
             this.dayContainer.TabIndex = 0;
             // 
             // btn_previous
             // 
-            this.btn_previous.Location = new System.Drawing.Point(658, 595);
+            this.btn_previous.Location = new System.Drawing.Point(412, 591);
             this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(75, 23);
+            this.btn_previous.Size = new System.Drawing.Size(189, 23);
             this.btn_previous.TabIndex = 1;
             this.btn_previous.Text = "Previous";
             this.btn_previous.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // btn_next
             // 
-            this.btn_next.Location = new System.Drawing.Point(752, 595);
+            this.btn_next.Location = new System.Drawing.Point(626, 591);
             this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(75, 23);
+            this.btn_next.Size = new System.Drawing.Size(189, 23);
             this.btn_next.TabIndex = 2;
             this.btn_next.Text = "Next";
             this.btn_next.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             this.lbl_dateMonthYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.lbl_dateMonthYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dateMonthYear.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_dateMonthYear.Location = new System.Drawing.Point(357, 9);
+            this.lbl_dateMonthYear.Location = new System.Drawing.Point(357, 10);
             this.lbl_dateMonthYear.Name = "lbl_dateMonthYear";
             this.lbl_dateMonthYear.Size = new System.Drawing.Size(130, 25);
             this.lbl_dateMonthYear.TabIndex = 7;

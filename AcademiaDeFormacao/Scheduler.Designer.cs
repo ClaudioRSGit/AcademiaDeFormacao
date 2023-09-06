@@ -67,6 +67,7 @@
             // 
             // cmb_classes
             // 
+            this.cmb_classes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_classes.FormattingEnabled = true;
             this.cmb_classes.Location = new System.Drawing.Point(495, 191);
             this.cmb_classes.Name = "cmb_classes";
@@ -79,7 +80,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(408, 119);
+            this.label4.Location = new System.Drawing.Point(399, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 15;
@@ -105,12 +106,13 @@
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(243, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 53);
+            this.label2.Size = new System.Drawing.Size(292, 52);
             this.label2.TabIndex = 14;
             this.label2.Text = "Training Scheduler";
             // 
             // cmb_trainers
             // 
+            this.cmb_trainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_trainers.FormattingEnabled = true;
             this.cmb_trainers.Location = new System.Drawing.Point(132, 191);
             this.cmb_trainers.Name = "cmb_trainers";
@@ -170,7 +172,9 @@
             this.Controls.Add(this.dt_trainingStartDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Scheduler";
             this.Text = "Scheduler";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

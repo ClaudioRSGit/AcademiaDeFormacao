@@ -45,6 +45,8 @@ namespace AcademiaDeFormacao.UserControls
                     dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email, employee.Address);
                 }
             }
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = dataTable;
         }
@@ -77,6 +79,10 @@ namespace AcademiaDeFormacao.UserControls
                 }
 
             }
+
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
+
             dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = dataTable;
         }

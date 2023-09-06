@@ -20,9 +20,6 @@ namespace AcademiaDeFormacao
             // Set the first DateTimePicker to today's date
             dt_trainingStartDate.Value = DateTime.Today;
 
-            // Disable the first DateTimePicker
-            dt_trainingStartDate.Enabled = false;
-
             // Set the minimum date for the first DateTimePicker to today
             dt_trainingEndDate.MinDate = dt_trainingStartDate.Value;
             dt_trainingStartDate.MinDate = DateTime.Today;

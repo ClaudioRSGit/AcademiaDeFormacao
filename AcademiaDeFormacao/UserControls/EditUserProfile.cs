@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AcademiaDeFormacao.UserControls
@@ -101,6 +102,21 @@ namespace AcademiaDeFormacao.UserControls
             {
                 e.Handled = true; // Cancel the key press event
             }
+        }
+
+        private void txt_contact_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if Ctrl+V (paste) is pressed
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Prevent the paste operation
+                e.Handled = true;
+            }
+        }
+
+        private void txt_contact_KeyDown(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
