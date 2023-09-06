@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 //ToDo Ver bugs quando se clica no btn_add pois pode haver campos nao escritos
@@ -76,7 +77,7 @@ namespace AcademiaDeFormacao.UserControls
         private void cmb_Role_SelectedIndexChanged(object sender, EventArgs e)
         {
             wipeFields();
-            
+
             string selectedRole = cmb_Role.SelectedItem.ToString();
 
             switch (selectedRole)
@@ -232,7 +233,7 @@ namespace AcademiaDeFormacao.UserControls
                         newTrainer.DateOfBirth = dtp_BirthDate.Value;
                         newTrainer.EducationArea = cbx_area_trainer.SelectedItem.ToString();
                         newTrainer.Availability = cmb_availability.SelectedItem.ToString();
-                        newTrainer.TimeValue = Convert.ToDouble( txt_timevalue.Text);
+                        newTrainer.TimeValue = Convert.ToDouble(txt_timevalue.Text);
                         newTrainer.AccountStatus = true;
 
                         context.Trainers.Add(newTrainer);
@@ -261,7 +262,25 @@ namespace AcademiaDeFormacao.UserControls
                         newCoordinator.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newCoordinator.DateOfBirth = dtp_BirthDate.Value;
                         newCoordinator.AccountStatus = true;
-                        //newCoordinator.AssociatedTrainer = "ewr";
+                        
+                        foreach (Trainer trainer in trainersToAddToCoordinator)
+                        {
+                            if (trainer != null)
+                            {
+                                newCoordinator.AddTrainer(trainer);
+                            }
+                        }
+                        
+                            // Use um loop para criar uma string com a lista de treinadores
+                            string trainerListMessage = "Treinadores associados ao Coordinator:\n";
+
+                            foreach (Trainer trainer in newCoordinator.Trainers)
+                            {
+                                trainerListMessage += trainer.Name + "\n";
+                            }
+
+                            // Exiba a mensagem com a lista de treinadores
+                            MessageBox.Show(trainerListMessage, "Lista de Treinadores", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         context.Coordinators.Add(newCoordinator);
                         context.SaveChanges();
@@ -335,7 +354,7 @@ namespace AcademiaDeFormacao.UserControls
             else
             {
                 //BUGS A VER ... Podem colocar um "." em vez de "," / Podem colocar letras
-                double timevalue = Convert.ToDouble( txt_timevalue.Text);
+                double timevalue = Convert.ToDouble(txt_timevalue.Text);
                 int currentMonth = DateTime.Today.Month;
                 int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
                 double calculatedSalary = (timevalue * 6) * daysInCurrentMonth;
@@ -384,6 +403,70 @@ namespace AcademiaDeFormacao.UserControls
                 }
             }
 
+        }
+
+
+        List<Trainer> trainersToAddToCoordinator = new List<Trainer>(); //tem de ser fora do scope da func
+
+        private void btn_addTrainer_Click(object sender, EventArgs e)
+        {
+
+            if (listView_TrainersToAdd.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem selectedItem in listView_TrainersToAdd.SelectedItems)
+                {
+                    string selectedTrainerName = selectedItem.Text;
+
+                    // Clone o item selecionado
+                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
+
+                    // Adicione o item clonado a listView2
+                    listView_TrainersAdded.Items.Add(clonedItem);
+
+                    // Remova o item da listView1
+                    listView_TrainersToAdd.Items.Remove(selectedItem);
+                    using (var context = new School())
+                    {
+                        Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName); 
+                        if (selectedTrainer != null)
+                        {
+                            trainersToAddToCoordinator.Add(selectedTrainer); // Adicione o treinador à lista temporária
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        private void btn_removeTrainer_Click(object sender, EventArgs e)
+        {
+            if (listView_TrainersAdded.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem selectedItem in listView_TrainersAdded.SelectedItems)
+                {
+                    string selectedTrainerName = selectedItem.Text;
+
+                    // Clone o item selecionado
+                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
+
+                    // Adicione o item clonado a listView2
+                    listView_TrainersToAdd.Items.Add(clonedItem);
+
+                    // Remova o item da listView1
+                    listView_TrainersAdded.Items.Remove(selectedItem);
+
+                    using (var context = new School())
+                    {
+                        Trainer selectedTrainer = trainersToAddToCoordinator.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
+                        if (selectedTrainer != null)
+                        {
+                            trainersToAddToCoordinator.Remove(selectedTrainer); // Remove o treinador à lista temporária
+                        }
+                    }
+                }
+            }
         }
     }
 }

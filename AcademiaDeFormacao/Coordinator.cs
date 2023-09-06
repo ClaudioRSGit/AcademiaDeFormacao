@@ -8,7 +8,8 @@ namespace AcademiaDeFormacao
 {
     internal class Coordinator : Employee
     {
-        public virtual ICollection<Trainer> AssociatedTrainer { get; set; }
+        public List<Trainer> Trainers = new List<Trainer>();
+
 
         public Coordinator(
            int employeeId,
@@ -26,19 +27,19 @@ namespace AcademiaDeFormacao
            bool accountStatus) : base(employeeId, username, password, name, email, salary, role, address, contact, dateOfBirth, contractEndDate, 
            criminalRecordEndDate, accountStatus)
         {
-            AssociatedTrainer = new List<Trainer>();
+            Trainers = new List<Trainer>();
         }
 
         public Coordinator() { }
 
         public void AddTrainer(Trainer trainer)
         {
-            AssociatedTrainer.Add(trainer);
+            Trainers.Add(trainer);
         }
 
         public void RemoveTrainer(Trainer trainer)
         {
-            AssociatedTrainer.Remove(trainer);
+            Trainers.Remove(trainer);
         }
     }
 }
