@@ -29,8 +29,8 @@ namespace AcademiaDeFormacao
                     new DateTime(1997, 12, 31), //DateTime dateOfBirth,
                     new DateTime(2027, 12, 31), //DateTime contractEndDate,
                     new DateTime(2027, 6, 30),  //DateTime criminalRecordEndDate,
-                    "Ciência da Computação",    //string educationArea,
-                    "Período Integral",         //string availability,
+                    "Computer Science",    //string educationArea,
+                    "Full Time",         //string availability,
                     9.5,                        //double timeValue
                     true                        //bool accountStatus
                 );
@@ -48,8 +48,8 @@ namespace AcademiaDeFormacao
                     new DateTime(1980, 10, 11),
                     new DateTime(2029, 6, 30),
                     new DateTime(2028, 12, 31),
-                    "Web Design e Multimédia",
-                    "Meio Período",
+                    "Web Design and Development",
+                    "Half Time",
                     10.0,
                     true
                 );
@@ -67,8 +67,8 @@ namespace AcademiaDeFormacao
                     new DateTime(1994, 02, 20),
                     new DateTime(2031, 9, 30),
                     new DateTime(2030, 8, 31),
-                    "Marketing e Publicidade",
-                    "Período Integral",
+                    "Laravel",
+                    "Full Time",
                     15.0,
                     true
                 );

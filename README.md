@@ -51,7 +51,7 @@ Our school management software represents an invaluable asset for educational in
 
 ### Code First Methodology
 Our software employs the "Code First" methodology in database design. This approach involves defining the data model using C# classes, referred to as entities. The database schema is then automatically generated based on these classes when the application runs for the first time. This streamlines the process of database creation and management.
-
+ 
 ### Database Context and DbSet
 In our application, the Database Context serves as the bridge between the application and the database, our DAL. It's represented by the School class derived from DbContext. DbSet, on the other hand, represents a collection of entities in the context, corresponding to a table in the database. We use DbSet to query and manipulate data.
 
@@ -87,59 +87,79 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 
 ## Usage
 
-Lets say that you're the Director
+### Lets say that you're the Director
 
-
-<div style="text-align: center;">
 
 `login system`
 <br><br>
     <img src="images/login.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div> 
-
-
-<div style="text-align: center;">
 
 `Main Menu`
 <br><br>
     <img src="images/menuDirectorSecretary.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
-
-<div style="text-align: center;">
 
 `Dashboard`
 <br><br>
     <img src="images/dashboard.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
-
-<div style="text-align: center;">
 
 `Add Employee`
 <br><br>
     <img src="images/addEmployee.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
-
-<div style="text-align: center;">
 
 `Contract Management`
 <br><br>
     <img src="images/contractManagement.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
-
-<div style="text-align: center;">
 
 `Export Data`
 <br><br>
     <img src="images/exportData.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
 
-<div style="text-align: center;">
 
 `Edit Profile`
 <br><br>
     <img src="images/editProfile.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-</div>
 
+>Director and Secretary can export data in 3 different data types (CSV, XML and JSON)
+
+### Coordinator point of view
+
+`Cordinator Menu`
+<br><br>
+    <img src="images/MenuCoordinator.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+
+`Calendar`
+<br><br>
+    <img src="images/CalendarEnabled.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+
+> The Coordinator has access to see all training sessions and also schedule future ones, selecting the start date, end date, trainer and training description.
+
+`Calendar`
+<br><br>
+    <img src="images/CalendarHover.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+
+>Coordinator can hover the training days to check if there ate some other scheduled training sessions.
+
+`Edit Profile`
+<br><br>
+    <img src="images/EditProfileCoordinator.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+
+>Coordinators are also able to edit some fields of their own profile.
+
+### Trainer Point of View
+
+`Trainer Menu`
+<br><br>
+    <img src="images/MenuTrainer.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+`Calendar`
+<br><br>
+    <img src="images/Calendar.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+>Trainers can only check pre scheduled training sessions
 
 ## Class Diagram
 
@@ -152,4 +172,3 @@ Lets say that you're the Director
 Cláudio Silva: claudio.silva.t0123173@edu.atec.pt
 
 Gonçalo Moreira: goncalo.moreira.t0123177@edu.atec.pt
-

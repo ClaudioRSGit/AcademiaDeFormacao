@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AcademiaDeFormacao.UserControls
 {
@@ -57,170 +56,110 @@ namespace AcademiaDeFormacao.UserControls
 
             dayContainer.Enabled = UserRole == "Coordinator" ? true : false;
 
-            if (UserRole == "Trainer")
+            for (int i = 1; i <= daysCount; i++)
             {
-                string trainerName = ConvertUsernameToFullName(AuthenticatedUser);
-                for (int i = 1; i <= daysCount; i++)
+                Panel dayPanel = new Panel();
+                dayPanel.BackColor = Color.FromArgb(61, 69, 76);
+                dayPanel.Size = new Size(80, 78);
+
+                Label dayLabel = new Label();
+                dayLabel.AutoSize = true;
+                dayLabel.Font = new Font("Arial", 8);
+                dayLabel.Text = i.ToString();
+                dayLabel.ForeColor = Color.White;
+
+                // Position the label within the panel
+                dayLabel.Location = new Point(5, 5); // Adjust the position as needed
+
+                // Add the label to the panel
+                dayPanel.Controls.Add(dayLabel);
+
+                Label lblTrainingDay = new Label();
+                lblTrainingDay.AutoSize = true;
+                lblTrainingDay.Font = new Font("Arial", 8);
+                lblTrainingDay.ForeColor = Color.Green;
+
+                // Calculate the position to center the label
+                int horizontalCenter = (dayPanel.Width - lblTrainingDay.Width) / 2;
+                int verticalCenter = (dayPanel.Height - lblTrainingDay.Height) / 2;
+
+                // Ensure the label is within the panel's bounds
+                horizontalCenter = Math.Max(horizontalCenter, 0);
+                verticalCenter = Math.Max(verticalCenter, 0);
+
+                // Set the label's location
+                lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
+                dayPanel.Controls.Add(lblTrainingDay);
+
+                DateTime selectedDate = new DateTime(year, month, dayOfTheWeek);
+                dayToolTip.SetToolTip(dayPanel, GetTrainingSessionsTooltip(selectedDate));
+
+                dayContainer.Controls.Add(dayPanel);
+
+
+                using (var context = new School())
                 {
-                    Panel dayPanel = new Panel();
-                    dayPanel.BackColor = Color.FromArgb(61, 69, 76);
-                    dayPanel.Size = new Size(80, 78);
+                    var training = context.TrainingSessions
+                        .FirstOrDefault(Training =>
+                            selectedDate >= Training.TrainingStartDate &&
+                            selectedDate <= Training.TrainingEndDate);
 
-                    Label dayLabel = new Label();
-                    dayLabel.AutoSize = true;
-                    dayLabel.Font = new Font("Arial", 8);
-                    dayLabel.Text = i.ToString();
-                    dayLabel.ForeColor = Color.White;
-
-                    // Position the label within the panel
-                    dayLabel.Location = new Point(5, 5); // Adjust the position as needed
-
-                    // Add the label to the panel
-                    dayPanel.Controls.Add(dayLabel);
-
-                    Label lblTrainingDay = new Label();
-                    lblTrainingDay.AutoSize = true;
-                    lblTrainingDay.Font = new Font("Arial", 8);
-                    lblTrainingDay.ForeColor = Color.Green;
-
-                    // Calculate the position to center the label
-                    int horizontalCenter = (dayPanel.Width - lblTrainingDay.Width) / 2;
-                    int verticalCenter = (dayPanel.Height - lblTrainingDay.Height) / 2;
-
-                    // Ensure the label is within the panel's bounds
-                    horizontalCenter = Math.Max(horizontalCenter, 0);
-                    verticalCenter = Math.Max(verticalCenter, 0);
-
-                    // Set the label's location
-                    lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
-                    dayPanel.Controls.Add(lblTrainingDay);
-
-                    DateTime selectedDate = new DateTime(year, month, dayOfTheWeek);
-                    dayToolTip.SetToolTip(dayPanel, GetTrainingSessionsTooltip(selectedDate));
-
-                    dayContainer.Controls.Add(dayPanel);
-
-
-                    using (var context = new School())
+                    if (training != null)
                     {
-                        var training = context.TrainingSessions
-                            .FirstOrDefault(Training =>
-                                selectedDate >= Training.TrainingStartDate &&
-                                selectedDate <= Training.TrainingEndDate &&
-                                Training.TrainerName == trainerName);
-
-                        if (training != null)
-                        {
-                            lblTrainingDay.Text = $"{training.TrainerName} \n {training.Description}";
-                        }
-                        else
-                        {
-                            lblTrainingDay.Text = string.Empty; // No training session, so clear the label
-                        }
+                        lblTrainingDay.Text = $"{training.TrainerName} \n {training.Description}";
                     }
-
-                    dayContainer.Controls.Add(dayPanel);
-
-                    dayPanel.Click += (sender, e) =>
+                    else
                     {
-                        int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
-                        DateTime clickedDate = new DateTime(year, month, dayNumber);
-
-                        Scheduler scheduler1 = new Scheduler();
-                        scheduler1.PopulateTrainersComboBox();
-                        scheduler1.Show();
-
-                    };
+                        lblTrainingDay.Text = string.Empty; // No training session, so clear the label
+                    }
                 }
-            }
-            else
-            {
-                for (int i = 1; i <= daysCount; i++)
+
+                dayContainer.Controls.Add(dayPanel);
+
+                dayPanel.Click += (sender, e) =>
                 {
-                    Panel dayPanel = new Panel();
-                    dayPanel.BackColor = Color.FromArgb(61, 69, 76);
-                    dayPanel.Size = new Size(80, 78);
+                    /* int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
+                     DateTime clickedDate = new DateTime(year, month, dayNumber);
 
-                    Label dayLabel = new Label();
-                    dayLabel.AutoSize = true;
-                    dayLabel.Font = new Font("Arial", 8);
-                    dayLabel.Text = i.ToString();
-                    dayLabel.ForeColor = Color.White;
+                     Scheduler scheduler1 = new Scheduler();
+                     scheduler1.PopulateTrainersComboBox();
+                     scheduler1.Show();
+                    */
 
-                    // Position the label within the panel
-                    dayLabel.Location = new Point(5, 5); // Adjust the position as needed
-
-                    // Add the label to the panel
-                    dayPanel.Controls.Add(dayLabel);
-
-                    Label lblTrainingDay = new Label();
-                    lblTrainingDay.AutoSize = true;
-                    lblTrainingDay.Font = new Font("Arial", 8);
-                    lblTrainingDay.ForeColor = Color.Green;
-
-                    // Calculate the position to center the label
-                    int horizontalCenter = (dayPanel.Width - lblTrainingDay.Width) / 2;
-                    int verticalCenter = (dayPanel.Height - lblTrainingDay.Height) / 2;
-
-                    // Ensure the label is within the panel's bounds
-                    horizontalCenter = Math.Max(horizontalCenter, 0);
-                    verticalCenter = Math.Max(verticalCenter, 0);
-
-                    // Set the label's location
-                    lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
-                    dayPanel.Controls.Add(lblTrainingDay);
-
-                    DateTime selectedDate = new DateTime(year, month, dayOfTheWeek);
-                    dayToolTip.SetToolTip(dayPanel, GetTrainingSessionsTooltip(selectedDate));
-
-                    dayContainer.Controls.Add(dayPanel);
-
-
-                    using (var context = new School())
-                    {
-                        var training = context.TrainingSessions
-                            .FirstOrDefault(Training =>
-                                selectedDate >= Training.TrainingStartDate &&
-                                selectedDate <= Training.TrainingEndDate);
-
-                        if (training != null)
-                        {
-                            lblTrainingDay.Text = $"{training.TrainerName} \n {training.Description}";
-                        }
-                        else
-                        {
-                            lblTrainingDay.Text = string.Empty; // No training session, so clear the label
-                        }
-                    }
-
-                    dayContainer.Controls.Add(dayPanel);
-
-                    dayPanel.Click += (sender, e) =>
-                    {
-                        int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
-                        DateTime clickedDate = new DateTime(year, month, dayNumber);
-
-                        Scheduler scheduler1 = new Scheduler();
-                        scheduler1.PopulateTrainersComboBox();
-                        scheduler1.Show();
-
-                    };
-                }
+                    InitializeDailyCalendar();
+                };
             }
         }
-        static string ConvertUsernameToFullName(string username)
+        private void InitializeDailyCalendar()
         {
-            // Split the username by periods
-            string[] parts = username.Split('.');
+            // Create the main panel for the daily calendar
+            Panel dailyCalendarPanel = new Panel();
+            dailyCalendarPanel.Size = new Size(400, 250);
+            dailyCalendarPanel.BackColor = Color.FromArgb(61, 69, 76);
 
-            // Create a TextInfo object to properly capitalize names
-            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            // Add the daily calendar panel to your form
+            this.Controls.Add(dailyCalendarPanel);
 
-            // Capitalize each part and join them with a space
-            string fullName = string.Join(" ", Array.ConvertAll(parts, part => textInfo.ToTitleCase(part)));
+            // Create labels and small panels for each hour from 8 am to 11 pm
+            for (int hour = 8; hour <= 23; hour++)
+            {
+                // Create a label for the hour
+                Label hourLabel = new Label();
+                hourLabel.Text = hour.ToString("00") + ":00";
+                hourLabel.ForeColor = Color.White;
+                hourLabel.Location = new Point(10, 20 + (hour - 8) * 20); // Adjust the Y-position as needed
+                dailyCalendarPanel.Controls.Add(hourLabel);
 
-            return fullName;
+                // Create a small panel for the hour's events
+                Panel hourPanel = new Panel();
+                hourPanel.Size = new Size(360, 20);
+                hourPanel.BackColor = Color.White;
+                hourPanel.Location = new Point(70, 20 + (hour - 8) * 20); // Adjust the Y-position as needed
+                dailyCalendarPanel.Controls.Add(hourPanel);
+            }
+            dailyCalendarPanel.Show();
         }
+
         private string GetTrainingSessionsTooltip(DateTime selectedDate)
         {
             using (var context = new School())
