@@ -23,6 +23,10 @@ namespace AcademiaDeFormacao.UserControls
         {
             InitializeComponent();
             HideAll();
+            dtp_CriminalRecord.MinDate = DateTime.Now.AddDays(+1);
+            dtp_ContractEndDate.MinDate = DateTime.Now.AddDays(+1);
+            dtp_BirthDate.MaxDate = DateTime.Now.AddYears(-18);
+            
         }
 
         #region Utils
@@ -46,6 +50,7 @@ namespace AcademiaDeFormacao.UserControls
         //Wipe all inputs
         private void wipeFields()
         {
+            //Global
             txt_username.Text = "";
             txt_password.Text = "";
             txt_name.Text = "";
@@ -53,12 +58,28 @@ namespace AcademiaDeFormacao.UserControls
             txt_salary.Text = "";
             txt_address.Text = "";
             txt_contact.Text = "";
+            dtp_BirthDate.Value = DateTime.Now;
+            dtp_ContractEndDate.Value = DateTime.Now;
+            dtp_CriminalRecord.Value = DateTime.Now;
+            //Directors
+            txt_mensalBonus.Text = "";
+            cbx_timeExemption.Checked = false;
+            cbx_Car.Checked = false;
+            //Secretary
+            cbx_Area.SelectedIndex = 0;
+            director_name.Text = "Director Name";
+            list_director.ClearSelected();
+            this.SelectedDirectorId = 0;
+            //Trainers
+            cmb_availability.SelectedIndex = 0;
+            txt_timevalue.Text = "";
+            //Coordinators
+            listView_TrainersAdded.Clear();
+            
 
-            //Todo Colocar aqui o resto
         }
 
         #endregion
-
 
 
         public void LoadDirectors()
@@ -182,6 +203,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         //wipe all fields
                         wipeFields();
+                        cmb_Role.SelectedIndex = 0;
 
                     }
                     break;
@@ -212,6 +234,8 @@ namespace AcademiaDeFormacao.UserControls
 
                         //wipe all fields
                         wipeFields();
+                        cmb_Role.SelectedIndex = 0;
+
                     }
                     break;
 
@@ -242,6 +266,8 @@ namespace AcademiaDeFormacao.UserControls
 
                         //wipe all fields
                         wipeFields();
+                        cmb_Role.SelectedIndex = 0;
+
                     }
 
                     break;
@@ -262,7 +288,7 @@ namespace AcademiaDeFormacao.UserControls
                         newCoordinator.CriminalRecordEndDate = dtp_CriminalRecord.Value;
                         newCoordinator.DateOfBirth = dtp_BirthDate.Value;
                         newCoordinator.AccountStatus = true;
-                        
+
                         foreach (Trainer trainer in trainersToAddToCoordinator)
                         {
                             if (trainer != null)
@@ -270,17 +296,17 @@ namespace AcademiaDeFormacao.UserControls
                                 newCoordinator.AddTrainer(trainer);
                             }
                         }
-                        
-                            // Use um loop para criar uma string com a lista de treinadores
-                            string trainerListMessage = "Treinadores associados ao Coordinator:\n";
 
-                            foreach (Trainer trainer in newCoordinator.Trainers)
-                            {
-                                trainerListMessage += trainer.Name + "\n";
-                            }
+                        // Use um loop para criar uma string com a lista de treinadores
+                        string trainerListMessage = "Treinadores associados ao Coordinator:\n";
 
-                            // Exiba a mensagem com a lista de treinadores
-                            MessageBox.Show(trainerListMessage, "Lista de Treinadores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        foreach (Trainer trainer in newCoordinator.Trainers)
+                        {
+                            trainerListMessage += trainer.Name + "\n";
+                        }
+
+                        // Exiba a mensagem com a lista de treinadores
+                        MessageBox.Show(trainerListMessage, "Lista de Treinadores", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         context.Coordinators.Add(newCoordinator);
                         context.SaveChanges();
@@ -288,6 +314,8 @@ namespace AcademiaDeFormacao.UserControls
 
                         //wipe all fields
                         wipeFields();
+                        cmb_Role.SelectedIndex = 0;
+
                         break;
                     }
 
@@ -302,14 +330,23 @@ namespace AcademiaDeFormacao.UserControls
             if (selectedRole == "Secretary")
             {
                 panel_listDirectors.Show();
+                panel_listDirectors.BringToFront();
+                panel_Trainer.SendToBack();
+                panel_coordinator.SendToBack();
             }
             else if (selectedRole == "Trainer")
             {
                 panel_Trainer.Show();
+                panel_Trainer.BringToFront();
+                panel_coordinator.SendToBack();
+                panel_listDirectors.SendToBack();
             }
             else
             {
                 panel_coordinator.Show();
+                panel_coordinator.BringToFront();
+                panel_listDirectors.SendToBack();
+                panel_Trainer.SendToBack();
             }
         }
 
@@ -388,6 +425,15 @@ namespace AcademiaDeFormacao.UserControls
         private void btn_exitPanelCoordinator_Click(object sender, EventArgs e)
         {
             panel_coordinator.Hide();
+            foreach (ListViewItem item in listView_TrainersAdded.Items)
+            {
+                // Clone o item selecionado
+                ListViewItem clonedItem = (ListViewItem)item.Clone();
+
+                // Adicione o item clonado à listView2
+                listView_TrainersToAdd.Items.Add(clonedItem);
+            }
+            listView_TrainersAdded.Clear();
         }
 
         public void LoadTrainers()
@@ -410,13 +456,10 @@ namespace AcademiaDeFormacao.UserControls
 
         private void btn_addTrainer_Click(object sender, EventArgs e)
         {
-
             if (listView_TrainersToAdd.SelectedItems.Count > 0)
             {
                 foreach (ListViewItem selectedItem in listView_TrainersToAdd.SelectedItems)
                 {
-                    string selectedTrainerName = selectedItem.Text;
-
                     // Clone o item selecionado
                     ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
 
@@ -425,19 +468,9 @@ namespace AcademiaDeFormacao.UserControls
 
                     // Remova o item da listView1
                     listView_TrainersToAdd.Items.Remove(selectedItem);
-                    using (var context = new School())
-                    {
-                        Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName); 
-                        if (selectedTrainer != null)
-                        {
-                            trainersToAddToCoordinator.Add(selectedTrainer); // Adicione o treinador à lista temporária
-                        }
-                    }
+
                 }
-
-
             }
-
         }
 
         private void btn_removeTrainer_Click(object sender, EventArgs e)
@@ -467,6 +500,36 @@ namespace AcademiaDeFormacao.UserControls
                     }
                 }
             }
+        }
+
+        private void btn_SaveTrainersAdd_Click(object sender, EventArgs e)
+        {
+            // Limpar a lista temporária antes de copiar os itens da listView2
+            trainersToAddToCoordinator.Clear();
+
+            foreach (ListViewItem item in listView_TrainersAdded.Items)
+            {
+                // Obtenha o nome do treinador a partir do item
+                string selectedTrainerName = item.Text;
+
+                // Encontre o treinador correspondente no contexto do banco de dados ou onde quer que esteja armazenado
+                using (var context = new School())
+                {
+                    Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
+                    if (selectedTrainer != null)
+                    {
+                        // Adicione o treinador à lista temporária
+                        trainersToAddToCoordinator.Add(selectedTrainer);
+                    }
+                }
+            }
+            panel_coordinator.Hide();
+        }
+
+
+        private void PreventPaste(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }
