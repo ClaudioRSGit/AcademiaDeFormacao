@@ -83,6 +83,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.listView_TrainersAdded = new System.Windows.Forms.ListView();
             this.listView_TrainersToAdd = new System.Windows.Forms.ListView();
+            this.btn_SaveTrainersAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_listDirectors.SuspendLayout();
             this.panel_Trainer.SuspendLayout();
@@ -212,17 +213,20 @@
             this.txt_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_username.Location = new System.Drawing.Point(56, 102);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(317, 30);
             this.txt_username.TabIndex = 39;
+            this.txt_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreventPaste);
             // 
             // txt_password
             // 
             this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_password.Location = new System.Drawing.Point(439, 102);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
@@ -234,6 +238,7 @@
             this.txt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_name.Location = new System.Drawing.Point(57, 163);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
@@ -246,6 +251,7 @@
             this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_email.Location = new System.Drawing.Point(57, 224);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
@@ -257,6 +263,7 @@
             this.txt_salary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_salary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_salary.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_salary.Location = new System.Drawing.Point(57, 285);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
@@ -269,6 +276,7 @@
             this.txt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_address.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_address.Location = new System.Drawing.Point(57, 346);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
@@ -280,6 +288,7 @@
             this.txt_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_contact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contact.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_contact.Location = new System.Drawing.Point(439, 285);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
@@ -371,6 +380,7 @@
             this.txt_mensalBonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_mensalBonus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_mensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mensalBonus.ForeColor = System.Drawing.SystemColors.Info;
             this.txt_mensalBonus.Location = new System.Drawing.Point(598, 469);
             this.txt_mensalBonus.Multiline = true;
             this.txt_mensalBonus.Name = "txt_mensalBonus";
@@ -468,7 +478,7 @@
             this.panel_listDirectors.Controls.Add(this.button1);
             this.panel_listDirectors.Controls.Add(this.label1);
             this.panel_listDirectors.Controls.Add(this.list_director);
-            this.panel_listDirectors.Location = new System.Drawing.Point(106, 77);
+            this.panel_listDirectors.Location = new System.Drawing.Point(117, 138);
             this.panel_listDirectors.Name = "panel_listDirectors";
             this.panel_listDirectors.Size = new System.Drawing.Size(267, 278);
             this.panel_listDirectors.TabIndex = 63;
@@ -536,7 +546,7 @@
             this.panel_Trainer.Controls.Add(this.btn_back_trainer);
             this.panel_Trainer.Controls.Add(this.btn_save_trainer);
             this.panel_Trainer.Controls.Add(this.label6);
-            this.panel_Trainer.Location = new System.Drawing.Point(440, 199);
+            this.panel_Trainer.Location = new System.Drawing.Point(136, 134);
             this.panel_Trainer.Name = "panel_Trainer";
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;
@@ -606,6 +616,8 @@
             // 
             // panel_coordinator
             // 
+            this.panel_coordinator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            this.panel_coordinator.Controls.Add(this.btn_SaveTrainersAdd);
             this.panel_coordinator.Controls.Add(this.btn_exitPanelCoordinator);
             this.panel_coordinator.Controls.Add(this.label8);
             this.panel_coordinator.Controls.Add(this.btn_removeTrainer);
@@ -613,7 +625,7 @@
             this.panel_coordinator.Controls.Add(this.label7);
             this.panel_coordinator.Controls.Add(this.listView_TrainersAdded);
             this.panel_coordinator.Controls.Add(this.listView_TrainersToAdd);
-            this.panel_coordinator.Location = new System.Drawing.Point(112, 53);
+            this.panel_coordinator.Location = new System.Drawing.Point(157, 44);
             this.panel_coordinator.Name = "panel_coordinator";
             this.panel_coordinator.Size = new System.Drawing.Size(575, 505);
             this.panel_coordinator.TabIndex = 67;
@@ -688,14 +700,21 @@
             this.listView_TrainersToAdd.TabIndex = 0;
             this.listView_TrainersToAdd.UseCompatibleStateImageBehavior = false;
             // 
+            // btn_SaveTrainersAdd
+            // 
+            this.btn_SaveTrainersAdd.Location = new System.Drawing.Point(250, 365);
+            this.btn_SaveTrainersAdd.Name = "btn_SaveTrainersAdd";
+            this.btn_SaveTrainersAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_SaveTrainersAdd.TabIndex = 7;
+            this.btn_SaveTrainersAdd.Text = "Save";
+            this.btn_SaveTrainersAdd.UseVisualStyleBackColor = true;
+            this.btn_SaveTrainersAdd.Click += new System.EventHandler(this.btn_SaveTrainersAdd_Click);
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.panel_coordinator);
-            this.Controls.Add(this.panel_listDirectors);
-            this.Controls.Add(this.panel_Trainer);
             this.Controls.Add(this.cbx_area_trainer);
             this.Controls.Add(this.director_name);
             this.Controls.Add(this.lbl_Area);
@@ -731,6 +750,9 @@
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_Username);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel_listDirectors);
+            this.Controls.Add(this.panel_Trainer);
+            this.Controls.Add(this.panel_coordinator);
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -801,5 +823,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_exitPanelCoordinator;
+        private System.Windows.Forms.Button btn_SaveTrainersAdd;
     }
 }
