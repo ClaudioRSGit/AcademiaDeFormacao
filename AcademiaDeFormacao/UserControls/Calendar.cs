@@ -54,7 +54,7 @@ namespace AcademiaDeFormacao.UserControls
                 dayContainer.Controls.Add(day);
             }
 
-            dayContainer.Enabled = UserRole == "Coordinator" ? true : false;
+            //dayContainer.Enabled = UserRole == "Coordinator" ? true : false;
 
             for (int i = 1; i <= daysCount; i++)
             {
@@ -118,46 +118,17 @@ namespace AcademiaDeFormacao.UserControls
 
                 dayPanel.Click += (sender, e) =>
                 {
-                    /* int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
-                     DateTime clickedDate = new DateTime(year, month, dayNumber);
+                    if (UserRole == "Coordinator")
+                    {
+                        int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
+                        DateTime clickedDate = new DateTime(year, month, dayNumber);
 
-                     Scheduler scheduler1 = new Scheduler();
-                     scheduler1.PopulateTrainersComboBox();
-                     scheduler1.Show();
-                    */
-
-                    InitializeDailyCalendar();
+                        Scheduler scheduler1 = new Scheduler();
+                        scheduler1.PopulateTrainersComboBox();
+                        scheduler1.Show();
+                    }
                 };
             }
-        }
-        private void InitializeDailyCalendar()
-        {
-            // Create the main panel for the daily calendar
-            Panel dailyCalendarPanel = new Panel();
-            dailyCalendarPanel.Size = new Size(400, 250);
-            dailyCalendarPanel.BackColor = Color.FromArgb(61, 69, 76);
-
-            // Add the daily calendar panel to your form
-            this.Controls.Add(dailyCalendarPanel);
-
-            // Create labels and small panels for each hour from 8 am to 11 pm
-            for (int hour = 8; hour <= 23; hour++)
-            {
-                // Create a label for the hour
-                Label hourLabel = new Label();
-                hourLabel.Text = hour.ToString("00") + ":00";
-                hourLabel.ForeColor = Color.White;
-                hourLabel.Location = new Point(10, 20 + (hour - 8) * 20); // Adjust the Y-position as needed
-                dailyCalendarPanel.Controls.Add(hourLabel);
-
-                // Create a small panel for the hour's events
-                Panel hourPanel = new Panel();
-                hourPanel.Size = new Size(360, 20);
-                hourPanel.BackColor = Color.White;
-                hourPanel.Location = new Point(70, 20 + (hour - 8) * 20); // Adjust the Y-position as needed
-                dailyCalendarPanel.Controls.Add(hourPanel);
-            }
-            dailyCalendarPanel.Show();
         }
 
         private string GetTrainingSessionsTooltip(DateTime selectedDate)
@@ -177,9 +148,12 @@ namespace AcademiaDeFormacao.UserControls
 
                     foreach (var training in trainingSessions)
                     {
-                        tooltipText.AppendLine($"{training.TrainerName}: {training.Description}");
-                    }
+                        // Format the TimeOfDay using custom format "hh:mm tt" (AM/PM)
+                        string formattedTimeStart = training.TrainingStartDate.ToString("hh:mm tt");
+                        string formattedTimeEnd = training.TrainingEndDate.ToString("hh:mm tt");
 
+                        tooltipText.AppendLine($"{formattedTimeStart} - {formattedTimeEnd} : {training.TrainerName} - {training.Description}");
+                    }
                     return tooltipText.ToString();
                 }
                 else

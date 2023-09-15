@@ -56,12 +56,20 @@ namespace AcademiaDeFormacao
                 string selectedDescription = cmb_classes.SelectedItem.ToString();
                 string selectedTrainerName = cmb_trainers.SelectedItem.ToString();
 
+                // Parse the selected hour values from cmb_startingHour and cmb_endingHour
+                int startingHour = int.Parse(cmb_startingHour.SelectedItem.ToString().Split(':')[0]);
+                int endingHour = int.Parse(cmb_endingHour.SelectedItem.ToString().Split(':')[0]);
+
+                // Create DateTime objects for TrainingStartDate and TrainingEndDate
+                DateTime trainingStartDate = dt_trainingStartDate.Value.Date.AddHours(startingHour);
+                DateTime trainingEndDate = dt_trainingEndDate.Value.Date.AddHours(endingHour);
+
                 // Create a new Training object without specifying an ID
                 var newTraining = new Training
                 {
                     Description = selectedDescription,
-                    TrainingStartDate = dt_trainingStartDate.Value.Date,
-                    TrainingEndDate = dt_trainingEndDate.Value.Date,
+                    TrainingStartDate = trainingStartDate,
+                    TrainingEndDate = trainingEndDate,
                     TrainerName = selectedTrainerName
                 };
 

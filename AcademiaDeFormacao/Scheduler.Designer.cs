@@ -40,12 +40,16 @@
             this.dt_trainingStartDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmb_endingHour = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmb_startingHour = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_saveTraining
             // 
-            this.btn_saveTraining.Location = new System.Drawing.Point(598, 236);
+            this.btn_saveTraining.Location = new System.Drawing.Point(598, 258);
             this.btn_saveTraining.Name = "btn_saveTraining";
             this.btn_saveTraining.Size = new System.Drawing.Size(143, 28);
             this.btn_saveTraining.TabIndex = 18;
@@ -59,7 +63,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(426, 191);
+            this.label5.Location = new System.Drawing.Point(399, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 17;
@@ -69,7 +73,7 @@
             // 
             this.cmb_classes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_classes.FormattingEnabled = true;
-            this.cmb_classes.Location = new System.Drawing.Point(495, 191);
+            this.cmb_classes.Location = new System.Drawing.Point(495, 206);
             this.cmb_classes.Name = "cmb_classes";
             this.cmb_classes.Size = new System.Drawing.Size(246, 24);
             this.cmb_classes.TabIndex = 16;
@@ -92,7 +96,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(40, 191);
+            this.label3.Location = new System.Drawing.Point(40, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 13;
@@ -114,7 +118,7 @@
             // 
             this.cmb_trainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_trainers.FormattingEnabled = true;
-            this.cmb_trainers.Location = new System.Drawing.Point(132, 191);
+            this.cmb_trainers.Location = new System.Drawing.Point(132, 206);
             this.cmb_trainers.Name = "cmb_trainers";
             this.cmb_trainers.Size = new System.Drawing.Size(247, 24);
             this.cmb_trainers.TabIndex = 12;
@@ -155,12 +159,94 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(399, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Ending Hour";
+            // 
+            // cmb_endingHour
+            // 
+            this.cmb_endingHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_endingHour.FormattingEnabled = true;
+            this.cmb_endingHour.Items.AddRange(new object[] {
+            "07:00 AM",
+            "08:00 AM",
+            "09:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "12:00 PM",
+            "01:00 PM",
+            "02:00 PM",
+            "03:00 PM",
+            "04:00 PM",
+            "05:00 PM",
+            "06:00 PM",
+            "07:00 PM",
+            "08:00 PM",
+            "09:00 PM",
+            "10:00 PM",
+            "11:00 PM"});
+            this.cmb_endingHour.Location = new System.Drawing.Point(578, 160);
+            this.cmb_endingHour.Name = "cmb_endingHour";
+            this.cmb_endingHour.Size = new System.Drawing.Size(163, 24);
+            this.cmb_endingHour.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(40, 160);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 20);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Starting Hour";
+            // 
+            // cmb_startingHour
+            // 
+            this.cmb_startingHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_startingHour.FormattingEnabled = true;
+            this.cmb_startingHour.Items.AddRange(new object[] {
+            "07:00 AM",
+            "08:00 AM",
+            "09:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "12:00 PM",
+            "01:00 PM",
+            "02:00 PM",
+            "03:00 PM",
+            "04:00 PM",
+            "05:00 PM",
+            "06:00 PM",
+            "07:00 PM",
+            "08:00 PM",
+            "09:00 PM",
+            "10:00 PM",
+            "11:00 PM"});
+            this.cmb_startingHour.Location = new System.Drawing.Point(207, 160);
+            this.cmb_startingHour.Name = "cmb_startingHour";
+            this.cmb_startingHour.Size = new System.Drawing.Size(172, 24);
+            this.cmb_startingHour.TabIndex = 20;
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(773, 298);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmb_endingHour);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmb_startingHour);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_saveTraining);
             this.Controls.Add(this.label5);
@@ -196,5 +282,9 @@
         private System.Windows.Forms.DateTimePicker dt_trainingStartDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmb_endingHour;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_startingHour;
     }
 }
