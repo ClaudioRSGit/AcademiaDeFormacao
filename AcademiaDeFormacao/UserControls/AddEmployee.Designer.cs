@@ -63,14 +63,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.list_director = new System.Windows.Forms.ListBox();
             this.panel_listDirectors = new System.Windows.Forms.Panel();
-            this.btn_backPanelDirectors = new System.Windows.Forms.Button();
-            this.btn_saveDirector = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.director_name = new System.Windows.Forms.Label();
             this.cbx_area_trainer = new System.Windows.Forms.ComboBox();
             this.panel_Trainer = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_timevalue2 = new System.Windows.Forms.TextBox();
             this.txt_timevalue = new System.Windows.Forms.TextBox();
             this.lbl_timevalue = new System.Windows.Forms.Label();
             this.cmb_availability = new System.Windows.Forms.ComboBox();
@@ -78,7 +76,6 @@
             this.btn_save_trainer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel_coordinator = new System.Windows.Forms.Panel();
-            this.btn_SaveTrainersAdd = new System.Windows.Forms.Button();
             this.btn_exitPanelCoordinator = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_removeTrainer = new System.Windows.Forms.Button();
@@ -86,6 +83,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.listView_TrainersAdded = new System.Windows.Forms.ListView();
             this.listView_TrainersToAdd = new System.Windows.Forms.ListView();
+            this.btn_SaveTrainersAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_listDirectors.SuspendLayout();
             this.panel_Trainer.SuspendLayout();
@@ -221,6 +219,7 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(317, 30);
             this.txt_username.TabIndex = 39;
+            this.txt_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreventPaste);
             // 
             // txt_password
             // 
@@ -475,8 +474,8 @@
             // 
             // panel_listDirectors
             // 
-            this.panel_listDirectors.Controls.Add(this.btn_backPanelDirectors);
-            this.panel_listDirectors.Controls.Add(this.btn_saveDirector);
+            this.panel_listDirectors.Controls.Add(this.button2);
+            this.panel_listDirectors.Controls.Add(this.button1);
             this.panel_listDirectors.Controls.Add(this.label1);
             this.panel_listDirectors.Controls.Add(this.list_director);
             this.panel_listDirectors.Location = new System.Drawing.Point(117, 138);
@@ -484,25 +483,25 @@
             this.panel_listDirectors.Size = new System.Drawing.Size(267, 278);
             this.panel_listDirectors.TabIndex = 63;
             // 
-            // btn_backPanelDirectors
+            // button2
             // 
-            this.btn_backPanelDirectors.Location = new System.Drawing.Point(147, 241);
-            this.btn_backPanelDirectors.Name = "btn_backPanelDirectors";
-            this.btn_backPanelDirectors.Size = new System.Drawing.Size(83, 23);
-            this.btn_backPanelDirectors.TabIndex = 65;
-            this.btn_backPanelDirectors.Text = "Back";
-            this.btn_backPanelDirectors.UseVisualStyleBackColor = true;
-            this.btn_backPanelDirectors.Click += new System.EventHandler(this.btn_backPanelDirectors_Click);
+            this.button2.Location = new System.Drawing.Point(147, 241);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 23);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_saveDirector
+            // button1
             // 
-            this.btn_saveDirector.Location = new System.Drawing.Point(9, 241);
-            this.btn_saveDirector.Name = "btn_saveDirector";
-            this.btn_saveDirector.Size = new System.Drawing.Size(91, 23);
-            this.btn_saveDirector.TabIndex = 64;
-            this.btn_saveDirector.Text = "Save";
-            this.btn_saveDirector.UseVisualStyleBackColor = true;
-            this.btn_saveDirector.Click += new System.EventHandler(this.btn_saveDirector_Click);
+            this.button1.Location = new System.Drawing.Point(9, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -541,8 +540,6 @@
             // 
             // panel_Trainer
             // 
-            this.panel_Trainer.Controls.Add(this.label9);
-            this.panel_Trainer.Controls.Add(this.txt_timevalue2);
             this.panel_Trainer.Controls.Add(this.txt_timevalue);
             this.panel_Trainer.Controls.Add(this.lbl_timevalue);
             this.panel_Trainer.Controls.Add(this.cmb_availability);
@@ -554,30 +551,11 @@
             this.panel_Trainer.Size = new System.Drawing.Size(247, 206);
             this.panel_Trainer.TabIndex = 66;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(55, 129);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 26);
-            this.label9.TabIndex = 70;
-            this.label9.Text = ".";
-            // 
-            // txt_timevalue2
-            // 
-            this.txt_timevalue2.Location = new System.Drawing.Point(72, 131);
-            this.txt_timevalue2.Name = "txt_timevalue2";
-            this.txt_timevalue2.Size = new System.Drawing.Size(46, 22);
-            this.txt_timevalue2.TabIndex = 69;
-            this.txt_timevalue2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
-            // 
             // txt_timevalue
             // 
             this.txt_timevalue.Location = new System.Drawing.Point(10, 131);
             this.txt_timevalue.Name = "txt_timevalue";
-            this.txt_timevalue.Size = new System.Drawing.Size(46, 22);
+            this.txt_timevalue.Size = new System.Drawing.Size(216, 22);
             this.txt_timevalue.TabIndex = 68;
             this.txt_timevalue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
             // 
@@ -652,16 +630,6 @@
             this.panel_coordinator.Size = new System.Drawing.Size(575, 505);
             this.panel_coordinator.TabIndex = 67;
             // 
-            // btn_SaveTrainersAdd
-            // 
-            this.btn_SaveTrainersAdd.Location = new System.Drawing.Point(250, 365);
-            this.btn_SaveTrainersAdd.Name = "btn_SaveTrainersAdd";
-            this.btn_SaveTrainersAdd.Size = new System.Drawing.Size(75, 23);
-            this.btn_SaveTrainersAdd.TabIndex = 7;
-            this.btn_SaveTrainersAdd.Text = "Save";
-            this.btn_SaveTrainersAdd.UseVisualStyleBackColor = true;
-            this.btn_SaveTrainersAdd.Click += new System.EventHandler(this.btn_SaveTrainersAdd_Click);
-            // 
             // btn_exitPanelCoordinator
             // 
             this.btn_exitPanelCoordinator.Location = new System.Drawing.Point(532, 10);
@@ -732,6 +700,16 @@
             this.listView_TrainersToAdd.TabIndex = 0;
             this.listView_TrainersToAdd.UseCompatibleStateImageBehavior = false;
             // 
+            // btn_SaveTrainersAdd
+            // 
+            this.btn_SaveTrainersAdd.Location = new System.Drawing.Point(250, 365);
+            this.btn_SaveTrainersAdd.Name = "btn_SaveTrainersAdd";
+            this.btn_SaveTrainersAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_SaveTrainersAdd.TabIndex = 7;
+            this.btn_SaveTrainersAdd.Text = "Save";
+            this.btn_SaveTrainersAdd.UseVisualStyleBackColor = true;
+            this.btn_SaveTrainersAdd.Click += new System.EventHandler(this.btn_SaveTrainersAdd_Click);
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -772,9 +750,9 @@
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_Username);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel_coordinator);
             this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.panel_Trainer);
+            this.Controls.Add(this.panel_coordinator);
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -826,8 +804,8 @@
         private System.Windows.Forms.ListBox list_director;
         private System.Windows.Forms.Panel panel_listDirectors;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_backPanelDirectors;
-        private System.Windows.Forms.Button btn_saveDirector;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label director_name;
         private System.Windows.Forms.ComboBox cbx_area_trainer;
         private System.Windows.Forms.Panel panel_Trainer;
@@ -846,7 +824,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_exitPanelCoordinator;
         private System.Windows.Forms.Button btn_SaveTrainersAdd;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_timevalue2;
     }
 }
