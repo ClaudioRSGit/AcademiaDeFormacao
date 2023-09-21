@@ -58,9 +58,9 @@ namespace AcademiaDeFormacao.UserControls
             txt_salary.Text = "";
             txt_address.Text = "";
             txt_contact.Text = "";
-            dtp_BirthDate.Value = DateTime.Now;
-            dtp_ContractEndDate.Value = DateTime.Now;
-            dtp_CriminalRecord.Value = DateTime.Now;
+            dtp_CriminalRecord.MinDate = DateTime.Now.AddDays(+1);
+            dtp_ContractEndDate.MinDate = DateTime.Now.AddDays(+1);
+            dtp_BirthDate.MaxDate = DateTime.Now.AddYears(-18);
             //Directors
             txt_mensalBonus.Text = "";
             cbx_timeExemption.Checked = false;
@@ -73,15 +73,37 @@ namespace AcademiaDeFormacao.UserControls
             //Trainers
             cmb_availability.SelectedIndex = 0;
             txt_timevalue.Text = "";
+            txt_timevalue2.Text = "";
             //Coordinators
             listView_TrainersAdded.Clear();
             
 
         }
 
+        private void txt_onlyNumbers(object sender, KeyPressEventArgs e)
+        {
+            // Check if the pressed key is a valid numeric character or control key
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                e.KeyChar != '\b' && e.KeyChar != '\u007F' )
+            {
+                e.Handled = true; // Cancel the key press event
+            }
+
+        }
+
+        private void txt_onlyLetters(object sender, KeyPressEventArgs e)
+        {
+            // Check if the pressed key is a valid letter character or control key
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) &&
+                e.KeyChar != ' ' && e.KeyChar != '\'' && e.KeyChar != '-' &&
+                e.KeyChar != '\b' && e.KeyChar != '\u007F') // Backspace and Delete keys
+            {
+                e.Handled = true; // Cancel the key press event
+            }
+        }
         #endregion
 
-
+        #region AddSecretary
         public void LoadDirectors()
         {
             using (var context = new School())
@@ -95,6 +117,167 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        private void list_director_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (list_director.SelectedIndex != -1)
+            {
+                using (var context = new School())
+                {
+                    var selectedDirector = context.Directors.FirstOrDefault(d => d.Name == list_director.SelectedItem.ToString());
+                    if (selectedDirector != null)
+                    {
+                        this.SelectedDirectorId = selectedDirector.EmployeeId;
+                    }
+                }
+            }
+        }
+        
+        private void btn_backPanelDirectors_Click(object sender, EventArgs e)
+        {
+            panel_listDirectors.Hide();
+        }
+
+        private void btn_saveDirector_Click(object sender, EventArgs e)
+        {
+            director_name.Show();
+            director_name.Text = list_director.SelectedItem.ToString();
+            panel_listDirectors.Hide();
+        }
+        #endregion
+
+        #region AddCoordinador
+        public void LoadTrainers()
+        {
+
+            using (var context = new School())
+            {
+                List<Trainer> trainers = context.Trainers.ToList();
+
+                foreach (Trainer trainer in trainers)
+                {
+                    listView_TrainersToAdd.Items.Add(trainer.Name);
+                }
+            }
+
+        }
+        
+        private void btn_exitPanelCoordinator_Click(object sender, EventArgs e)
+        {
+            panel_coordinator.Hide();
+            foreach (ListViewItem item in listView_TrainersAdded.Items)
+            {
+                // Clone o item selecionado
+                ListViewItem clonedItem = (ListViewItem)item.Clone();
+
+                // Adicione o item clonado à listView2
+                listView_TrainersToAdd.Items.Add(clonedItem);
+            }
+            listView_TrainersAdded.Clear();
+        }
+
+        List<Trainer> trainersToAddToCoordinator = new List<Trainer>(); //tem de ser fora do scope da func
+        private void btn_addTrainer_Click(object sender, EventArgs e)
+        {
+            if (listView_TrainersToAdd.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem selectedItem in listView_TrainersToAdd.SelectedItems)
+                {
+                    // Clone o item selecionado
+                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
+
+                    // Adicione o item clonado a listView2
+                    listView_TrainersAdded.Items.Add(clonedItem);
+
+                    // Remova o item da listView1
+                    listView_TrainersToAdd.Items.Remove(selectedItem);
+
+                }
+            }
+        }
+
+        private void btn_removeTrainer_Click(object sender, EventArgs e)
+        {
+            if (listView_TrainersAdded.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem selectedItem in listView_TrainersAdded.SelectedItems)
+                {
+                    string selectedTrainerName = selectedItem.Text;
+
+                    // Clone o item selecionado
+                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
+
+                    // Adicione o item clonado a listView2
+                    listView_TrainersToAdd.Items.Add(clonedItem);
+
+                    // Remova o item da listView1
+                    listView_TrainersAdded.Items.Remove(selectedItem);
+
+                    using (var context = new School())
+                    {
+                        Trainer selectedTrainer = trainersToAddToCoordinator.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
+                        if (selectedTrainer != null)
+                        {
+                            trainersToAddToCoordinator.Remove(selectedTrainer); // Remove o treinador à lista temporária
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_SaveTrainersAdd_Click(object sender, EventArgs e)
+        {
+            // Limpar a lista temporária antes de copiar os itens da listView2
+            trainersToAddToCoordinator.Clear();
+
+            foreach (ListViewItem item in listView_TrainersAdded.Items)
+            {
+                // Obtenha o nome do treinador a partir do item
+                string selectedTrainerName = item.Text;
+
+                // Encontre o treinador correspondente no contexto do banco de dados ou onde quer que esteja armazenado
+                using (var context = new School())
+                {
+                    Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
+                    if (selectedTrainer != null)
+                    {
+                        // Adicione o treinador à lista temporária
+                        trainersToAddToCoordinator.Add(selectedTrainer);
+                    }
+                }
+            }
+            panel_coordinator.Hide();
+        }
+        #endregion
+
+        #region AddTrainer
+        private void btn_back_trainer_Click(object sender, EventArgs e)
+        {
+            panel_Trainer.Hide();
+        }
+
+        private void btn_save_trainer_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_timevalue.Text) || cmb_availability.SelectedIndex == -1)
+            {
+                MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string value1 = txt_timevalue.Text;
+                string value2 = txt_timevalue2.Text;
+                string finalValue = value1 +","+ value2;
+                double timevalue = Convert.ToDouble(finalValue);
+                int currentMonth = DateTime.Today.Month;
+                int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
+                double calculatedSalary = (timevalue * 6) * daysInCurrentMonth;
+                txt_salary.Text = calculatedSalary.ToString();
+                panel_Trainer.Hide();
+            }
+        }
+
+        #endregion
+
+        #region AddEmployee
         private void cmb_Role_SelectedIndexChanged(object sender, EventArgs e)
         {
             wipeFields();
@@ -163,7 +346,7 @@ namespace AcademiaDeFormacao.UserControls
                     break;
             }
         }
-
+        
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
@@ -349,187 +532,9 @@ namespace AcademiaDeFormacao.UserControls
                 panel_Trainer.SendToBack();
             }
         }
+        
+        #endregion
 
-        private void list_director_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (list_director.SelectedIndex != -1)
-            {
-                using (var context = new School())
-                {
-                    var selectedDirector = context.Directors.FirstOrDefault(d => d.Name == list_director.SelectedItem.ToString());
-                    if (selectedDirector != null)
-                    {
-                        this.SelectedDirectorId = selectedDirector.EmployeeId;
-                    }
-                }
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            panel_listDirectors.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            director_name.Show();
-            director_name.Text = list_director.SelectedItem.ToString();
-            panel_listDirectors.Hide();
-        }
-
-        private void btn_back_trainer_Click(object sender, EventArgs e)
-        {
-            panel_Trainer.Hide();
-        }
-
-        private void btn_save_trainer_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_timevalue.Text) || cmb_availability.SelectedIndex == -1)
-            {
-                MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                //BUGS A VER ... Podem colocar um "." em vez de "," / Podem colocar letras
-                double timevalue = Convert.ToDouble(txt_timevalue.Text);
-                int currentMonth = DateTime.Today.Month;
-                int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
-                double calculatedSalary = (timevalue * 6) * daysInCurrentMonth;
-                txt_salary.Text = calculatedSalary.ToString();
-                panel_Trainer.Hide();
-            }
-        }
-
-        private void txt_onlyNumbers(object sender, KeyPressEventArgs e)
-        {
-            // Check if the pressed key is a valid numeric character or control key
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                e.KeyChar != '\b' && e.KeyChar != '\u007F' && e.KeyChar != ',' && e.KeyChar != '.')
-            {
-                e.Handled = true; // Cancel the key press event
-            }
-
-        }
-
-        private void txt_onlyLetters(object sender, KeyPressEventArgs e)
-        {
-            // Check if the pressed key is a valid letter character or control key
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) &&
-                e.KeyChar != ' ' && e.KeyChar != '\'' && e.KeyChar != '-' &&
-                e.KeyChar != '\b' && e.KeyChar != '\u007F') // Backspace and Delete keys
-            {
-                e.Handled = true; // Cancel the key press event
-            }
-        }
-
-        private void btn_exitPanelCoordinator_Click(object sender, EventArgs e)
-        {
-            panel_coordinator.Hide();
-            foreach (ListViewItem item in listView_TrainersAdded.Items)
-            {
-                // Clone o item selecionado
-                ListViewItem clonedItem = (ListViewItem)item.Clone();
-
-                // Adicione o item clonado à listView2
-                listView_TrainersToAdd.Items.Add(clonedItem);
-            }
-            listView_TrainersAdded.Clear();
-        }
-
-        public void LoadTrainers()
-        {
-
-            using (var context = new School())
-            {
-                List<Trainer> trainers = context.Trainers.ToList();
-
-                foreach (Trainer trainer in trainers)
-                {
-                    listView_TrainersToAdd.Items.Add(trainer.Name);
-                }
-            }
-
-        }
-
-
-        List<Trainer> trainersToAddToCoordinator = new List<Trainer>(); //tem de ser fora do scope da func
-
-        private void btn_addTrainer_Click(object sender, EventArgs e)
-        {
-            if (listView_TrainersToAdd.SelectedItems.Count > 0)
-            {
-                foreach (ListViewItem selectedItem in listView_TrainersToAdd.SelectedItems)
-                {
-                    // Clone o item selecionado
-                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
-
-                    // Adicione o item clonado a listView2
-                    listView_TrainersAdded.Items.Add(clonedItem);
-
-                    // Remova o item da listView1
-                    listView_TrainersToAdd.Items.Remove(selectedItem);
-
-                }
-            }
-        }
-
-        private void btn_removeTrainer_Click(object sender, EventArgs e)
-        {
-            if (listView_TrainersAdded.SelectedItems.Count > 0)
-            {
-                foreach (ListViewItem selectedItem in listView_TrainersAdded.SelectedItems)
-                {
-                    string selectedTrainerName = selectedItem.Text;
-
-                    // Clone o item selecionado
-                    ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
-
-                    // Adicione o item clonado a listView2
-                    listView_TrainersToAdd.Items.Add(clonedItem);
-
-                    // Remova o item da listView1
-                    listView_TrainersAdded.Items.Remove(selectedItem);
-
-                    using (var context = new School())
-                    {
-                        Trainer selectedTrainer = trainersToAddToCoordinator.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
-                        if (selectedTrainer != null)
-                        {
-                            trainersToAddToCoordinator.Remove(selectedTrainer); // Remove o treinador à lista temporária
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btn_SaveTrainersAdd_Click(object sender, EventArgs e)
-        {
-            // Limpar a lista temporária antes de copiar os itens da listView2
-            trainersToAddToCoordinator.Clear();
-
-            foreach (ListViewItem item in listView_TrainersAdded.Items)
-            {
-                // Obtenha o nome do treinador a partir do item
-                string selectedTrainerName = item.Text;
-
-                // Encontre o treinador correspondente no contexto do banco de dados ou onde quer que esteja armazenado
-                using (var context = new School())
-                {
-                    Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
-                    if (selectedTrainer != null)
-                    {
-                        // Adicione o treinador à lista temporária
-                        trainersToAddToCoordinator.Add(selectedTrainer);
-                    }
-                }
-            }
-            panel_coordinator.Hide();
-        }
-
-
-        private void PreventPaste(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+        
     }
 }
