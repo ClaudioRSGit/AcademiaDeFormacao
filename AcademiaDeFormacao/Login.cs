@@ -25,6 +25,32 @@ namespace TryProject
             txt_username.KeyPress += Txt_username_KeyPress;
         }
 
+
+
+        static string EncryptPassword(string password, int leap)
+        {
+            char[] chars = password.ToCharArray();
+
+
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsLower(chars[i]))
+                {
+                    chars[i] = (char)(chars[i] + leap);
+
+
+
+                    // ifi surpasses z goes to a
+                    if (chars[i] > 'z')
+                    {
+                        chars[i] = (char)(chars[i] - 26);
+                    }
+                }
+            }
+            return new string(chars);
+        }
+
         private void Txt_username_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -56,15 +82,15 @@ namespace TryProject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            
+            string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
 
-            using(var context = new School())
+            using (var context = new School())
             {
 
                 try
                 {
                     
-                    Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == txt_password.Text);
+                    Employee employee = context.Employees.FirstOrDefault(emp => emp.Username == txt_username.Text && emp.Password == EncryptedPassword);
 
                     if (employee != null)
                     {
@@ -89,7 +115,7 @@ namespace TryProject
                             MessageBox.Show("Account is currently disabled.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    else if (txt_username.Text == string.Empty && txt_password.Text == string.Empty)
+                    else if (txt_username.Text == string.Empty && EncryptedPassword == string.Empty)
                     {
                             MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             txt_username.Focus();

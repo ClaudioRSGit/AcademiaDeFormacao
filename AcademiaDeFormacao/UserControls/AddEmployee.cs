@@ -101,6 +101,30 @@ namespace AcademiaDeFormacao.UserControls
                 e.Handled = true; // Cancel the key press event
             }
         }
+
+        static string EncryptPassword(string password, int leap)
+        {
+            char[] chars = password.ToCharArray();
+
+
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsLower(chars[i]))
+                {
+                    chars[i] = (char)(chars[i] + leap);
+
+
+
+                    // ifi surpasses z goes to a
+                    if (chars[i] > 'z')
+                    {
+                        chars[i] = (char)(chars[i] - 26);
+                    }
+                }
+            }
+            return new string(chars);
+        }
         #endregion
 
         #region AddSecretary
@@ -349,6 +373,8 @@ namespace AcademiaDeFormacao.UserControls
 
         private void button_addEmployee_Click(object sender, EventArgs e)
         {
+            string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
+
             if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
@@ -366,7 +392,7 @@ namespace AcademiaDeFormacao.UserControls
                         Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == this.SelectedDirectorId);
                         Secretary newSecretary = new Secretary();
                         newSecretary.Username = txt_username.Text;
-                        newSecretary.Password = txt_password.Text;
+                        newSecretary.Password = EncryptedPassword;
                         newSecretary.Name = txt_name.Text;
                         newSecretary.Email = txt_email.Text;
                         newSecretary.Salary = Convert.ToDouble(txt_salary.Text);
@@ -382,7 +408,7 @@ namespace AcademiaDeFormacao.UserControls
                         context.Secretaries.Add(newSecretary);
                         context.SaveChanges();
 
-                        MessageBox.Show("ADICIONADO");
+                        MessageBox.Show("Created");
 
                         //wipe all fields
                         wipeFields();
@@ -396,7 +422,7 @@ namespace AcademiaDeFormacao.UserControls
                         Director newDirector = new Director();
 
                         newDirector.Username = txt_username.Text;
-                        newDirector.Password = txt_password.Text;
+                        newDirector.Password = EncryptedPassword;
                         newDirector.Name = txt_name.Text;
                         newDirector.Email = txt_email.Text;
                         newDirector.Salary = Convert.ToDouble(txt_salary.Text);
@@ -413,7 +439,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         context.Directors.Add(newDirector);
                         context.SaveChanges();
-                        MessageBox.Show("ADICIONADO");
+                        MessageBox.Show("Created");
 
                         //wipe all fields
                         wipeFields();
@@ -428,7 +454,7 @@ namespace AcademiaDeFormacao.UserControls
                         Trainer newTrainer = new Trainer();
 
                         newTrainer.Username = txt_username.Text;
-                        newTrainer.Password = txt_password.Text;
+                        newTrainer.Password = EncryptedPassword;
                         newTrainer.Name = txt_name.Text;
                         newTrainer.Email = txt_email.Text;
                         newTrainer.Salary = Convert.ToDouble(txt_salary.Text);
@@ -445,7 +471,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         context.Trainers.Add(newTrainer);
                         context.SaveChanges();
-                        MessageBox.Show("ADICIONADO");
+                        MessageBox.Show("Created");
 
                         //wipe all fields
                         wipeFields();
@@ -460,7 +486,7 @@ namespace AcademiaDeFormacao.UserControls
                         Coordinator newCoordinator = new Coordinator();
 
                         newCoordinator.Username = txt_username.Text;
-                        newCoordinator.Password = txt_password.Text;
+                        newCoordinator.Password = EncryptedPassword;
                         newCoordinator.Name = txt_name.Text;
                         newCoordinator.Email = txt_email.Text;
                         newCoordinator.Salary = Convert.ToDouble(txt_salary.Text);

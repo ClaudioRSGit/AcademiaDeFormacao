@@ -11,15 +11,43 @@ namespace AcademiaDeFormacao
 {
     internal class Bootstrap
     {
+
+        static string EncryptPassword(string password, int leap)
+        {
+            char[] chars = password.ToCharArray();
+
+
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsLower(chars[i]))
+                {
+                    chars[i] = (char)(chars[i] + leap);
+
+
+
+                    // ifi surpasses z goes to a
+                    if (chars[i] > 'z')
+                    {
+                        chars[i] = (char)(chars[i] - 26);
+                    }
+                }
+            }
+            return new string(chars);
+        }
+
+
         //Trainers
         public static void DefaultTrainers()
         {
             using (var context = new School())
             {
+                string EncryptedPassword = EncryptPassword("senha123", 150);
+
                 Trainer trainer1 = new Trainer(
                     1,                          //int employeeId,
                     "ana.silva",                //string username,
-                    "senha123",                 //string password,
+                    EncryptedPassword,          //string password,
                     "Ana Silva",                //string name,
                     "ana_silva@email.com",      //string email,
                     0.0,                        //double salary,
@@ -29,16 +57,17 @@ namespace AcademiaDeFormacao
                     new DateTime(1997, 12, 31), //DateTime dateOfBirth,
                     new DateTime(2027, 12, 31), //DateTime contractEndDate,
                     new DateTime(2027, 6, 30),  //DateTime criminalRecordEndDate,
-                    "Computer Science",    //string educationArea,
-                    "Full Time",         //string availability,
+                    "Computer Science",         //string educationArea,
+                    "Full Time",                //string availability,
                     9.5,                        //double timeValue
                     true                        //bool accountStatus
                 );
+                string EncryptedPassword1 = EncryptPassword("pass123", 150);
 
                 Trainer trainer2 = new Trainer(
                     2,
                     "ricardo.sousa",
-                    "ricardo123",
+                    EncryptedPassword1,
                     "Ricardo Sousa",
                     "ricardo_sousa@email.com",
                     0.0,
@@ -53,11 +82,12 @@ namespace AcademiaDeFormacao
                     10.0,
                     true
                 );
+                string EncryptedPassword3 = EncryptPassword("senha123", 150);
 
                 Trainer trainer3 = new Trainer(
                     3,
                     "marta.pereira",
-                    "marta123",
+                    EncryptedPassword3,
                     "Marta Pereira",
                     "marta.pereira@email.com",
                     0.0,
@@ -87,10 +117,12 @@ namespace AcademiaDeFormacao
         {
             using (var context = new School())
             {
+                string EncryptedPassword = EncryptPassword("pass123", 150);
+
                 Coordinator coordinator1 = new Coordinator(
                    1,
                    "alice.brown",
-                   "password123",
+                   EncryptedPassword,
                    "Alice Brown",
                    "alice@example.com",
                    1200,
@@ -103,11 +135,12 @@ namespace AcademiaDeFormacao
                    true
 
                 );
+                string EncryptedPassword2 = EncryptPassword("password123", 150);
 
                 Coordinator coordinator2 = new Coordinator(
                     2,
                     "david.lee",
-                    "pass123",
+                    EncryptedPassword2,
                     "David Lee",
                     "david@example.com",
                     1300,
@@ -119,11 +152,12 @@ namespace AcademiaDeFormacao
                     DateTime.Now.Date.AddDays(90),
                     true
                 );
+                string EncryptedPassword3 = EncryptPassword("paulpass", 150);
 
                 Coordinator coordinator3 = new Coordinator(
                     3,
                     "paul.garcia",
-                    "paulpass",
+                    EncryptedPassword3,
                     "Paul Garcia",
                     "paul@example.com",
                     1100,
@@ -168,10 +202,12 @@ namespace AcademiaDeFormacao
 
             using (var context = new School())
             {
+                string EncryptedPassword = EncryptPassword("pass123", 150);
+
                 Director director1 = new Director(
                    4,
                    "john.doe",
-                   "password123",
+                   EncryptedPassword,
                    "John Doe",
                    "john@example.com",
                    5000.0,
@@ -186,11 +222,12 @@ namespace AcademiaDeFormacao
                    true,
                    true
                 );
+                string EncryptedPassword2 = EncryptPassword("Atec123", 150);
 
                 Director director2 = new Director(
                     5,
                     "jane.smith",
-                    "pass123",
+                    EncryptedPassword2,
                     "Jane Smith",
                     "jane@example.com",
                     6000.0,
@@ -205,11 +242,12 @@ namespace AcademiaDeFormacao
                     false,
                     true
                 );
+                string EncryptedPassword3 = EncryptPassword("pass123", 150);
 
                 Director director3 = new Director(
                     6,
                     "michael.johnson",
-                    "mypass",
+                    EncryptedPassword3,
                     "Michael Johnson",
                     "michael@example.com",
                     5500.0,
@@ -238,10 +276,12 @@ namespace AcademiaDeFormacao
         {
             using (var context = new School())
             {
+                string EncryptedPassword = EncryptPassword("pass123", 150);
+
                 Secretary secretary1 = new Secretary(
                     7,
                     "susan_johnson",
-                    "pass456",
+                    EncryptedPassword,
                     "Susan Johnson",
                     "susan@example.com",
                     2500,
@@ -255,11 +295,12 @@ namespace AcademiaDeFormacao
                     "Administration",
                     true
                 );
+                string EncryptedPassword2 = EncryptPassword("google", 150);
 
                 Secretary secretary2 = new Secretary(
                     8,
                     "mary_smith",
-                    "marypass",
+                    EncryptedPassword2,
                     "Mary Smith",
                     "mary@example.com",
                     2300,
@@ -273,11 +314,12 @@ namespace AcademiaDeFormacao
                     "HR",
                     true
                 );
+                string EncryptedPassword3 = EncryptPassword("SENHA", 150);
 
                 Secretary secretary3 = new Secretary(
                     9,
                     "robert_white",
-                    "pass789",
+                    EncryptedPassword3,
                     "Robert White",
                     "robert@example.com",
                     2400,
