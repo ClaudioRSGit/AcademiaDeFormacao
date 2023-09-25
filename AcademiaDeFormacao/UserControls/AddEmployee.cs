@@ -102,6 +102,70 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
+        private void CheckValues(string role)
+        {
+            switch (role)
+            {
+                case "secretary":
+                    
+                    if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
+                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
+                    {
+                        MessageBox.Show("Please fill in all required fields.");
+                    }
+                        else if (director_name.Text == "Director Name")
+                        {
+                            panel_listDirectors.Show();
+                            MessageBox.Show("fILL DIRECOTR");
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    break;
+                case "director":
+                    if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
+                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text))
+                    {
+                        MessageBox.Show("Please fill in all required fields.");
+                        return;
+                    }
+                    break;
+                case " coordinator":
+                    if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
+                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || listView_TrainersAdded == null)
+                    {
+                        MessageBox.Show("Please fill in all required fields.");
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    break;
+                case "trainer":
+                    if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
+                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_timevalue.Text)
+                || string.IsNullOrWhiteSpace(txt_timevalue2.Text))
+                    {
+                        MessageBox.Show("Please fill in all required fields.");
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            
+        }
+
         static string EncryptPassword(string password, int leap)
         {
             char[] chars = password.ToCharArray();
@@ -110,19 +174,15 @@ namespace AcademiaDeFormacao.UserControls
 
             for (int i = 0; i < chars.Length; i++)
             {
-                if (char.IsLower(chars[i]))
+                if (char.IsLetter(chars[i]))
                 {
-                    chars[i] = (char)(chars[i] + leap);
-
-
-
-                    // ifi surpasses z goes to a
-                    if (chars[i] > 'z')
-                    {
-                        chars[i] = (char)(chars[i] - 26);
-                    }
+                    char baseChar = char.IsLower(chars[i]) ? 'a' : 'A';
+                    chars[i] = (char)(baseChar + (chars[i] - baseChar + leap) % 26);
                 }
             }
+
+
+
             return new string(chars);
         }
         #endregion
@@ -375,20 +435,14 @@ namespace AcademiaDeFormacao.UserControls
         {
             string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
 
-            if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
-                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
-                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
-            {
-                MessageBox.Show("Please fill in all required fields.");
-                return;
-            }
+            
             string selectedRole = cmb_Role.SelectedItem.ToString();
             switch (selectedRole)
             {
                 case "Secretary":
                     using (var context = new School())
                     {
+                        CheckValues("secretary");
                         Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == this.SelectedDirectorId);
                         Secretary newSecretary = new Secretary();
                         newSecretary.Username = txt_username.Text;
@@ -408,7 +462,7 @@ namespace AcademiaDeFormacao.UserControls
                         context.Secretaries.Add(newSecretary);
                         context.SaveChanges();
 
-                        MessageBox.Show("Created");
+                        MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //wipe all fields
                         wipeFields();
@@ -419,6 +473,8 @@ namespace AcademiaDeFormacao.UserControls
                 case "Director":
                     using (var context = new School())
                     {
+                        CheckValues("director");
+
                         Director newDirector = new Director();
 
                         newDirector.Username = txt_username.Text;
@@ -439,7 +495,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         context.Directors.Add(newDirector);
                         context.SaveChanges();
-                        MessageBox.Show("Created");
+                        MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //wipe all fields
                         wipeFields();
@@ -451,6 +507,8 @@ namespace AcademiaDeFormacao.UserControls
                 case "Trainer":
                     using (var context = new School())
                     {
+                        CheckValues("trainer");
+
                         Trainer newTrainer = new Trainer();
 
                         newTrainer.Username = txt_username.Text;
@@ -471,7 +529,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         context.Trainers.Add(newTrainer);
                         context.SaveChanges();
-                        MessageBox.Show("Created");
+                        MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //wipe all fields
                         wipeFields();
@@ -483,6 +541,8 @@ namespace AcademiaDeFormacao.UserControls
                 case "Coordinator":
                     using (var context = new School())
                     {
+                        CheckValues("coordinator");
+
                         Coordinator newCoordinator = new Coordinator();
 
                         newCoordinator.Username = txt_username.Text;
@@ -507,7 +567,7 @@ namespace AcademiaDeFormacao.UserControls
                         }
 
                         // Use um loop para criar uma string com a lista de treinadores
-                        string trainerListMessage = "Treinadores associados ao Coordinator:\n";
+                        string trainerListMessage = "Coordinators associated:\n";
 
                         foreach (Trainer trainer in newCoordinator.Trainers)
                         {
@@ -515,11 +575,11 @@ namespace AcademiaDeFormacao.UserControls
                         }
 
                         // Exiba a mensagem com a lista de treinadores
-                        MessageBox.Show(trainerListMessage, "Lista de Treinadores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(trainerListMessage, "Trainer List", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         context.Coordinators.Add(newCoordinator);
                         context.SaveChanges();
-                        MessageBox.Show("ADICIONADO");
+                        MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //wipe all fields
                         wipeFields();

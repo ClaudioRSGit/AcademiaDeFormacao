@@ -17,25 +17,19 @@ namespace AcademiaDeFormacao
             char[] chars = password.ToCharArray();
 
 
-
             for (int i = 0; i < chars.Length; i++)
             {
-                if (char.IsLower(chars[i]))
+                if (char.IsLetter(chars[i]))
                 {
-                    chars[i] = (char)(chars[i] + leap);
-
-
-
-                    // ifi surpasses z goes to a
-                    if (chars[i] > 'z')
-                    {
-                        chars[i] = (char)(chars[i] - 26);
-                    }
+                    char baseChar = char.IsLower(chars[i]) ? 'a' : 'A';
+                    chars[i] = (char)(baseChar + (chars[i] - baseChar + leap) % 26);
                 }
             }
+
+
+
             return new string(chars);
         }
-
 
         //Trainers
         public static void DefaultTrainers()
