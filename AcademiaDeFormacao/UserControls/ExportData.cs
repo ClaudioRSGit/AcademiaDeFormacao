@@ -101,7 +101,6 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     foreach (var secretary in secretaries)
                     {
-
                         dataTable.Rows.Add(secretary.EmployeeId, secretary.Username, secretary.Role, secretary.Email, secretary.Address, secretary.DiretorID);
                     }
                 }
@@ -166,7 +165,6 @@ namespace AcademiaDeFormacao.UserControls
                             AddXmlElement(xmlDoc, employeeElement, "Role", employee.Role);
                             AddXmlElement(xmlDoc, employeeElement, "Email", employee.Email);
                             AddXmlElement(xmlDoc, employeeElement, "Address", employee.Address);
-                            // Add other properties as needed
                         }
 
                         // Save the XML document to the file
@@ -204,20 +202,35 @@ namespace AcademiaDeFormacao.UserControls
                     {
                         string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
                         List<Employee> employees = context.Employees.ToList();
+                        List<Secretary> secretaries = context.Secretaries.ToList();
 
                         // Apply filter based on the selected option in cmb_filter
                         if (selectedFilter != "All")
                         {
                             employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
                         }
-
-                        using (StreamWriter writer = new StreamWriter(csvFilePath))
+                        if (selectedFilter == "Secretary")
                         {
-                            writer.WriteLine("ID,Name,Function, Email, Address");
-
-                            foreach (var employee in employees)
+                            using (StreamWriter writer = new StreamWriter(csvFilePath))
                             {
-                                writer.WriteLine($"{employee.EmployeeId},{employee.Username},{employee.Role}, {employee.Email}, {employee.Address}");
+                                writer.WriteLine("ID,Name,Function, Email, Address, DirectorID");
+                                
+                                foreach (var secretary in secretaries)
+                                {
+                                    writer.WriteLine($"{secretary.EmployeeId},{secretary.Username},{secretary.Role}, {secretary.Email}, {secretary.Address}, {secretary.DiretorID}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            using (StreamWriter writer = new StreamWriter(csvFilePath))
+                            {
+                                writer.WriteLine("ID,Name,Function, Email, Address");
+
+                                foreach (var employee in employees)
+                                {
+                                    writer.WriteLine($"{employee.EmployeeId},{employee.Username},{employee.Role}, {employee.Email}, {employee.Address}");
+                                }
                             }
                         }
 
