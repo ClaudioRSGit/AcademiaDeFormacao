@@ -366,7 +366,7 @@ namespace AcademiaDeFormacao.UserControls
             {
                 string value1 = txt_timevalue.Text;
                 string value2 = txt_timevalue2.Text;
-                string finalValue = value1 + "," + value2;
+                string finalValue = value1 + "." + value2;
                 double timevalue = Convert.ToDouble(finalValue);
                 int currentMonth = DateTime.Today.Month;
                 int daysInCurrentMonth = DateTime.DaysInMonth(DateTime.Today.Year, currentMonth);
