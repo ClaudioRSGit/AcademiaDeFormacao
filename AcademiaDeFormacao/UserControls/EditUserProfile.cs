@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AcademiaDeFormacao.UserControls
 {
@@ -18,9 +10,6 @@ namespace AcademiaDeFormacao.UserControls
         public EditUserProfile()
         {
             InitializeComponent();
-            //this.AuthenticatedUser = userName;
-            //PopulateFormFields(userName);
-        
         }
 
         public void PopulateFormFields(string userName)
@@ -56,8 +45,10 @@ namespace AcademiaDeFormacao.UserControls
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_saveData_Click(object sender, EventArgs e)
         {
+            string EncryptedPassword = EncryptPassword(txt_newPassword.Text, 150);
+
             if (txt_newPassword.Text == txt_confirmPassword.Text)
             {
                 using (var context = new School())
@@ -68,7 +59,7 @@ namespace AcademiaDeFormacao.UserControls
                     {
                         employee.Name = txt_name.Text;
                         employee.Address = txt_address.Text;
-                        employee.Password = txt_newPassword.Text;
+                        employee.Password = EncryptedPassword;
                         employee.Email = txt_email.Text;
                         employee.Contact = txt_contact.Text;
 
@@ -82,6 +73,22 @@ namespace AcademiaDeFormacao.UserControls
                 MessageBox.Show("New password and confirm password do not match.");
             }
 
+        }
+
+        static string EncryptPassword(string password, int leap)
+        {
+            char[] chars = password.ToCharArray();
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsLetter(chars[i]))
+                {
+                    char baseChar = char.IsLower(chars[i]) ? 'a' : 'A';
+                    chars[i] = (char)(baseChar + (chars[i] - baseChar + leap) % 26);
+                }
+            }
+
+            return new string(chars);
         }
         private void txt_onlyNumbers(object sender, KeyPressEventArgs e)
         {
@@ -114,9 +121,5 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
-        private void txt_contact_KeyDown(object sender, KeyPressEventArgs e)
-        {
-
-        }
     }
 }

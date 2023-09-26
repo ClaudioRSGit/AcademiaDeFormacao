@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_saveData = new System.Windows.Forms.Button();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.txt_role = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
@@ -177,15 +177,15 @@
             this.label9.TabIndex = 44;
             this.label9.Text = "Confirm Password";
             // 
-            // button1
+            // btn_saveData
             // 
-            this.button1.Location = new System.Drawing.Point(40, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(730, 32);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Save Data";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_saveData.Location = new System.Drawing.Point(40, 513);
+            this.btn_saveData.Name = "btn_saveData";
+            this.btn_saveData.Size = new System.Drawing.Size(730, 32);
+            this.btn_saveData.TabIndex = 45;
+            this.btn_saveData.Text = "Save Data";
+            this.btn_saveData.UseVisualStyleBackColor = true;
+            this.btn_saveData.Click += new System.EventHandler(this.btn_saveData);
             // 
             // txt_id
             // 
@@ -238,7 +238,6 @@
             this.txt_contact.Size = new System.Drawing.Size(197, 30);
             this.txt_contact.TabIndex = 56;
             this.txt_contact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contact_KeyDown);
-            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contact_KeyDown);
             // 
             // txt_email
             // 
@@ -420,7 +419,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.txt_role);
             this.Controls.Add(this.txt_id);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_saveData);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -451,7 +450,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_saveData;
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.TextBox txt_role;
         private System.Windows.Forms.TextBox txt_name;

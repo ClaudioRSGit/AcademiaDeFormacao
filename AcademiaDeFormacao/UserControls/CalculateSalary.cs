@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -15,13 +12,15 @@ namespace AcademiaDeFormacao.UserControls
 {
     public partial class CalculateSalary : UserControl
     {
+        // Dictionary to store the distribution of employees by age groups
         private Dictionary<string, int> ageDistribution = new Dictionary<string, int>();
+
         DateTime currentDate = DateTime.Today;
+        
         int disabledAccountsCount, expiredContractsCount, contractsEndingThisMonthCount, enabledAccountsCount;
         public CalculateSalary()
         {
             InitializeComponent();
-            //PopulateDashboard();
         }
 
         public void CalculateTotalSalary()
@@ -29,15 +28,20 @@ namespace AcademiaDeFormacao.UserControls
             using (var context = new School())
             {
                 List<Employee> employees = context.Employees.ToList();
+                //temporary salary varaiable
                 double t_salary = 0;
 
                 // Apply filter based on the selected option in cmb_filter
                 string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
+
+                // Filter the list of employees based on the selected option in the filter dropdown
                 if (selectedFilter != "All")
                 {
+                    // Update the 'employees' list to include only those with a matching role
                     employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
                 }
 
+                // Iterate through each employee in the list and calculate their total salary
                 foreach (var employee in employees)
                 {
                     t_salary += employee.Salary;
@@ -392,14 +396,20 @@ namespace AcademiaDeFormacao.UserControls
                     .Where(emp => emp.ContractEndDate.Month == currentDate.Month && emp.ContractEndDate.Year == currentDate.Year)
                     .ToList();
 
+                // Display a tooltip if there are contracts ending this month
                 if (contractsEndingThisMonth.Any())
                 {
+                    // Create a StringBuilder to build the tooltip text
                     StringBuilder tooltipText = new StringBuilder("Contracts Ending This Month:\n");
+
+                    // Iterate through employees with contracts ending this month
                     foreach (var employee in contractsEndingThisMonth)
                     {
+                        // Append employee name and contract end date to the tooltip text
                         tooltipText.AppendLine(employee.Name + " : " + employee.ContractEndDate.ToString("MM/dd/yy"));
                     }
 
+                    // Create a tooltip object and configure its properties
                     ToolTip tooltip = new ToolTip();
                     tooltip.IsBalloon = true;
                     tooltip.ShowAlways = false;
@@ -411,11 +421,8 @@ namespace AcademiaDeFormacao.UserControls
 
         private void lbl_currentDate_Click(object sender, EventArgs e)
         {
-            //add one day
             currentDate = currentDate.AddDays(1);
-            //current date
             lbl_currentDate.Text = currentDate.ToString("MM/dd/yyyy");
-
             PopulateDashboard();
         }
         private void lbl_currentDate_DoubleClick(object sender, EventArgs e)
@@ -428,11 +435,8 @@ namespace AcademiaDeFormacao.UserControls
 
             if (confirmationResult == DialogResult.Yes)
             {
-                //add one day
                 currentDate = currentDate.AddYears(1);
-                //current date
                 lbl_currentDate.Text = currentDate.ToString("MM/dd/yyyy");
-
                 PopulateDashboard();
             }
         }

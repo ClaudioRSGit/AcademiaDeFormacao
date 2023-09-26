@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AcademiaDeFormacao.UserControls
@@ -53,6 +47,7 @@ namespace AcademiaDeFormacao.UserControls
         }
         private string GetPartnerCondition(double yearsOfService)
         {
+            // Get the selected employee from the ComboBox
             Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
 
             if (selectedEmployee.AccountStatus == false)
@@ -71,8 +66,10 @@ namespace AcademiaDeFormacao.UserControls
         }
         private void UpdatePartnerInfo(double yearsOfService)
         {
+            // Retrieve the selected employee from the ComboBox
             Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
 
+            // isDisabled?
             if (selectedEmployee.AccountStatus == false)
             {
                 UpdateMedalVisibility(false, false, false, false, true);
@@ -80,14 +77,19 @@ namespace AcademiaDeFormacao.UserControls
             }
             else if (yearsOfService >= 10)
                 UpdateMedalVisibility(true, false, false, false, false);
+            
             else if (yearsOfService >= 5 && yearsOfService < 10)
                 UpdateMedalVisibility(false, true, false, false, false);
+            
             else if (yearsOfService >= 2 && yearsOfService < 5)
                 UpdateMedalVisibility(false, false, true, false, false);
+            
             else if (yearsOfService == 0 || yearsOfService == 1 && selectedEmployee.AccountStatus == true)
                 UpdateMedalVisibility(false, false, false, true, false);
+           
             else if (yearsOfService == 0 || yearsOfService == 1 && selectedEmployee.AccountStatus == false)
                 UpdateMedalVisibility(false, false, false, false, true);
+            
             else if (yearsOfService < 0)
             {
                 UpdateMedalVisibility(false, false, false, false, true);
@@ -225,15 +227,10 @@ namespace AcademiaDeFormacao.UserControls
             DateTime currentDate = DateTime.Now.Date;
             TimeSpan remainingTime = contractEndDate - currentDate;
 
-            double years = (int)(remainingTime.TotalDays / 365); // Approximate calculation
+            double years = (int)(remainingTime.TotalDays / 365);
             return years;
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void UpdateUIAfterContractEnd()
         {
             Employee selectedEmployee = (Employee)cmb_employee.SelectedItem;
@@ -284,11 +281,10 @@ namespace AcademiaDeFormacao.UserControls
             using (var dateDialog = new Form())
             {
                 dateDialog.Text = "Select New Contract End Date";
-                dateDialog.Width = 250; // Set the width of the dialog (adjust as needed)
-                dateDialog.Height = 150; // Set the height of the dialog (adjust as needed)
+                dateDialog.Width = 250;
+                dateDialog.Height = 150;
                 dateDialog.BackColor = Color.FromArgb(49, 57, 64);
 
-                // Center the form both vertically and horizontally
                 dateDialog.StartPosition = FormStartPosition.CenterScreen;
 
                 DateTimePicker datePicker = new DateTimePicker();
@@ -301,7 +297,7 @@ namespace AcademiaDeFormacao.UserControls
                 datePicker.Top = (dateDialog.ClientSize.Height - datePicker.Height) / 2;
                 datePicker.Left = (dateDialog.ClientSize.Width - datePicker.Width) / 2;
 
-                datePicker.Anchor = AnchorStyles.None; // Remove the Anchor setting
+                datePicker.Anchor = AnchorStyles.None;
 
                 Button confirmButton = new Button();
                 confirmButton.Text = "Confirm";
@@ -336,11 +332,9 @@ namespace AcademiaDeFormacao.UserControls
         private void UpdateUIAfterRenewContract()
         {
             cmb_employee_SelectedIndexChanged(null, EventArgs.Empty);
-            // Any additional UI updates after renewing the contract can be added here
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            // Display a confirmation dialog
             DialogResult result = MessageBox.Show("Are you sure you want to end the contract?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -367,7 +361,7 @@ namespace AcademiaDeFormacao.UserControls
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btn_saveData_Click(object sender, EventArgs e)
         {
             if (cmb_employee.SelectedIndex >= 0 && cmb_roles.SelectedIndex >= 0)
             {
@@ -424,7 +418,7 @@ namespace AcademiaDeFormacao.UserControls
             txt_salary.Text = $"Calculated Salary: {salary:C}";
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btn_closeSalaryCalculator_Click(object sender, EventArgs e)
         {
             dt_trainingStart.Value = DateTime.Today;
             dt_trainingEnd.Value = DateTime.Today;

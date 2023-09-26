@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -25,7 +22,6 @@ namespace AcademiaDeFormacao.UserControls
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
-            //displayMonth();
         }
         public void PopulateData(string authUser, string userRole)
         {
@@ -34,19 +30,15 @@ namespace AcademiaDeFormacao.UserControls
         }
         public void displayMonth()
         {
-            // Limpar o container de dias antes de adicionar novos dias
             dayContainer.Controls.Clear();
 
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbl_dateMonthYear.Text = monthName + " " + year;
 
-            //first day of the month
             DateTime firstDayOfMonth = new DateTime(year, month, 1);
 
-            //days count per month
             int daysCount = DateTime.DaysInMonth(year, month);
 
-            //convert firstDayOfMonth to int
             int dayOfTheWeek = Convert.ToInt32(firstDayOfMonth.DayOfWeek.ToString("d")) + 1;
 
             for (int i = 1; i < dayOfTheWeek; i++)
@@ -54,8 +46,6 @@ namespace AcademiaDeFormacao.UserControls
                 Day day = new Day();
                 dayContainer.Controls.Add(day);
             }
-
-            //dayContainer.Enabled = UserRole == "Coordinator" ? true : false;
 
             for (int i = 1; i <= daysCount; i++)
             {
@@ -69,10 +59,8 @@ namespace AcademiaDeFormacao.UserControls
                 dayLabel.Text = i.ToString();
                 dayLabel.ForeColor = Color.White;
 
-                // Position the label within the panel
-                dayLabel.Location = new Point(5, 5); // Adjust the position as needed
+                dayLabel.Location = new Point(5, 5);
 
-                // Add the label to the panel
                 dayPanel.Controls.Add(dayLabel);
 
                 Label lblTrainingDay = new Label();
@@ -80,15 +68,12 @@ namespace AcademiaDeFormacao.UserControls
                 lblTrainingDay.Font = new Font("Arial", 8);
                 lblTrainingDay.ForeColor = Color.Green;
 
-                // Calculate the position to center the label
                 int horizontalCenter = (dayPanel.Width - lblTrainingDay.Width) / 2;
                 int verticalCenter = (dayPanel.Height - lblTrainingDay.Height) / 2;
 
-                // Ensure the label is within the panel's bounds
                 horizontalCenter = Math.Max(horizontalCenter, 0);
                 verticalCenter = Math.Max(verticalCenter, 0);
 
-                // Set the label's location
                 lblTrainingDay.Location = new Point(horizontalCenter, verticalCenter);
                 dayPanel.Controls.Add(lblTrainingDay);
 
@@ -107,21 +92,23 @@ namespace AcademiaDeFormacao.UserControls
 
                     if (training != null)
                     {
+                        //training found
                         lblTrainingDay.Text = $"{training.TrainerName} \n {training.Description}";
                     }
                     else
                     {
-                        lblTrainingDay.Text = string.Empty; // No training session, so clear the label
+                        lblTrainingDay.Text = string.Empty; // No training session, clear the label
                     }
                 }
 
                 dayContainer.Controls.Add(dayPanel);
 
+                //Training day click event
                 dayPanel.Click += (sender, e) =>
                 {
                     if (UserRole == "Coordinator")
                     {
-                        int dayNumber = Convert.ToInt32(dayLabel.Text); // Get the day number from the label
+                        int dayNumber = Convert.ToInt32(dayLabel.Text);
                         DateTime clickedDate = new DateTime(year, month, dayNumber);
 
                         Scheduler scheduler1 = new Scheduler();
@@ -149,7 +136,6 @@ namespace AcademiaDeFormacao.UserControls
 
                     foreach (var training in trainingSessions)
                     {
-                        // Format the TimeOfDay using custom format "hh:mm tt" (AM/PM)
                         string formattedTimeStart = training.TrainingStartDate.ToString("hh:mm tt");
                         string formattedTimeEnd = training.TrainingEndDate.ToString("hh:mm tt");
 

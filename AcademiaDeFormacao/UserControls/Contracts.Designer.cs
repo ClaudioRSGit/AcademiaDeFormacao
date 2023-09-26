@@ -33,7 +33,7 @@
             this.cmb_employee = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_saveData = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_contractEndDate = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             this.calculatorPNG = new System.Windows.Forms.PictureBox();
             this.lbl_salaryCalculator = new System.Windows.Forms.Label();
             this.panel_Trainer = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_closeSalaryCalculator = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_salary = new System.Windows.Forms.TextBox();
             this.dt_trainingEnd = new System.Windows.Forms.DateTimePicker();
@@ -130,15 +130,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_saveData
             // 
-            this.button2.Location = new System.Drawing.Point(430, 528);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(335, 37);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Save Data";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btn_saveData.Location = new System.Drawing.Point(430, 528);
+            this.btn_saveData.Name = "btn_saveData";
+            this.btn_saveData.Size = new System.Drawing.Size(335, 37);
+            this.btn_saveData.TabIndex = 40;
+            this.btn_saveData.Text = "Save Data";
+            this.btn_saveData.UseVisualStyleBackColor = true;
+            this.btn_saveData.Click += new System.EventHandler(this.btn_saveData_Click);
             // 
             // label3
             // 
@@ -422,7 +422,7 @@
             // panel_Trainer
             // 
             this.panel_Trainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Trainer.Controls.Add(this.button3);
+            this.panel_Trainer.Controls.Add(this.btn_closeSalaryCalculator);
             this.panel_Trainer.Controls.Add(this.label11);
             this.panel_Trainer.Controls.Add(this.txt_salary);
             this.panel_Trainer.Controls.Add(this.dt_trainingEnd);
@@ -436,17 +436,17 @@
             this.panel_Trainer.Size = new System.Drawing.Size(247, 280);
             this.panel_Trainer.TabIndex = 86;
             // 
-            // button3
+            // btn_closeSalaryCalculator
             // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(214, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(27, 23);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "x";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btn_closeSalaryCalculator.BackColor = System.Drawing.Color.Gray;
+            this.btn_closeSalaryCalculator.FlatAppearance.BorderSize = 0;
+            this.btn_closeSalaryCalculator.Location = new System.Drawing.Point(214, 3);
+            this.btn_closeSalaryCalculator.Name = "btn_closeSalaryCalculator";
+            this.btn_closeSalaryCalculator.Size = new System.Drawing.Size(27, 23);
+            this.btn_closeSalaryCalculator.TabIndex = 74;
+            this.btn_closeSalaryCalculator.Text = "x";
+            this.btn_closeSalaryCalculator.UseVisualStyleBackColor = false;
+            this.btn_closeSalaryCalculator.Click += new System.EventHandler(this.btn_closeSalaryCalculator_Click);
             // 
             // label11
             // 
@@ -550,7 +550,7 @@
             this.Controls.Add(this.txt_contractEndDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_saveData);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_employee);
@@ -580,7 +580,7 @@
         private System.Windows.Forms.ComboBox cmb_employee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_saveData;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_contractEndDate;
@@ -616,6 +616,6 @@
         private System.Windows.Forms.Label lbl_timevalue;
         private System.Windows.Forms.Button btn_save_trainer;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_closeSalaryCalculator;
     }
 }

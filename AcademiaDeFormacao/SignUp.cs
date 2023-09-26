@@ -72,12 +72,15 @@ namespace TryProject
 
         private void btn_register_Click(object sender, EventArgs e)
         {
+            string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
+            string EncryptedPasswordConfirmation = EncryptPassword(txt_confirmPassword.Text, 150);
+
             if (txt_username.Text == string.Empty && txt_password.Text == string.Empty && txt_confirmPassword.Text == string.Empty)
             {
                 MessageBox.Show("Fields Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_username.Focus();
             }
-            else if (txt_password.Text == txt_confirmPassword.Text)
+            else if (EncryptedPassword == EncryptedPasswordConfirmation)
             {
                 using (var context = new School())
                 {
@@ -91,7 +94,7 @@ namespace TryProject
                     else
                     {
                         Employee NewRegister = new Employee(
-                            txt_username.Text, txt_username.Text, txt_password.Text
+                            txt_username.Text, txt_username.Text, EncryptedPassword
                             );
                         context.Employees.Add(NewRegister);
                         context.SaveChanges();
@@ -116,7 +119,21 @@ namespace TryProject
             }
 
         }
+        static string EncryptPassword(string password, int leap)
+        {
+            char[] chars = password.ToCharArray();
 
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsLetter(chars[i]))
+                {
+                    char baseChar = char.IsLower(chars[i]) ? 'a' : 'A';
+                    chars[i] = (char)(baseChar + (chars[i] - baseChar + leap) % 26);
+                }
+            }
+
+            return new string(chars);
+        }
         private void btn_clear_Click(object sender, EventArgs e)
         {
             txt_username.Text = "";
