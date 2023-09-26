@@ -108,9 +108,14 @@ namespace AcademiaDeFormacao.UserControls
                         string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                         string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
                         string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null ||
-                        director_name.Text == "Director Name" || !ValidateEmail(txt_email.Text))
+                        director_name.Text == "Director Name")
                     {
                         MessageBox.Show("Please fill in all required fields and provide a valid email address.");
+                        fieldsChecked = false;
+                    }
+                    else if (!ValidateEmail(txt_email.Text))
+                    {
+                        MessageBox.Show("Please fill a valid email");
                         fieldsChecked = false;
                     }
                     break;
@@ -118,10 +123,14 @@ namespace AcademiaDeFormacao.UserControls
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text)
-                || !ValidateEmail(txt_email.Text))
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.");
+                        fieldsChecked = false;
+                    }
+                    else if (!ValidateEmail(txt_email.Text))
+                    {
+                        MessageBox.Show("Please fill a valid email");
                         fieldsChecked = false;
                     }
                     break;
@@ -129,7 +138,7 @@ namespace AcademiaDeFormacao.UserControls
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || !ValidateEmail(txt_email.Text))
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
                     {
                         MessageBox.Show("Please fill in all required fields.");
                         fieldsChecked = false;
@@ -140,12 +149,17 @@ namespace AcademiaDeFormacao.UserControls
                         MessageBox.Show("Please select Trainers associated!");
                         fieldsChecked = false;
                     }
+                    else if (!ValidateEmail(txt_email.Text))
+                    {
+                        MessageBox.Show("Please fill a valid email");
+                        fieldsChecked = false;
+                    }
                     break;
                 case "Trainer":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || !ValidateEmail(txt_email.Text))
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
                     {
                         MessageBox.Show("Please fill in all required fields.");
                         fieldsChecked = false;
@@ -155,6 +169,11 @@ namespace AcademiaDeFormacao.UserControls
                     {
                         panel_Trainer.Show();
                         MessageBox.Show("Please fill in all required fields.");
+                        fieldsChecked = false;
+                    }
+                    else if (!ValidateEmail(txt_email.Text))
+                    {
+                        MessageBox.Show("Please fill a valid email");
                         fieldsChecked = false;
                     }
                     break;
