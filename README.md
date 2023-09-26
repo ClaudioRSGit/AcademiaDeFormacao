@@ -77,11 +77,6 @@ dotnet build
 dotnet sln AcademiaDeFormacao.sln add AcademiaDeFormacao/AcademiaDeFormacao.csproj
 ```
 
-`Apply migrations and create the database`
-```bash
-dotnet ef database update --project AcademiaDeFormacao
-```
-
 # Note
 Make sure you have the required .NET Core SDK installed on your machine. You can download it from the official .NET Core website.
 
