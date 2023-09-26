@@ -18,31 +18,50 @@ namespace AcademiaDeFormacao.UserControls
         public ExportData()
         {
             InitializeComponent();
-           // LoadDatabasePreview();
+            // LoadDatabasePreview();
         }
         public void LoadDatabasePreview()
         {
+            string selectedFilter = cmb_filter?.SelectedItem?.ToString() ?? "All";
+
             DataTable dataTable = new DataTable();
+
             dataTable.Columns.Add("ID");
             dataTable.Columns.Add("Name");
             dataTable.Columns.Add("Role");
             dataTable.Columns.Add("Email");
             dataTable.Columns.Add("Address");
+            
+            if (selectedFilter == "Secretary")
+            {
+                dataTable.Columns.Add("DirectorID");
+            }
 
             using (var context = new School())
             {
                 List<Employee> employees = context.Employees.ToList();
+                List<Secretary> secretaries = context.Secretaries.ToList();
 
                 // Apply filter based on the selected option in cmb_filter
-                string selectedFilter = cmb_filter?.SelectedItem?.ToString()??"All";
                 if (selectedFilter != "All")
                 {
                     employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
                 }
-
-                foreach (var employee in employees)
+                if (selectedFilter == "Secretary")
                 {
-                    dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email, employee.Address);
+                    foreach (var secretary in secretaries)
+                    {
+
+                        dataTable.Rows.Add(secretary.EmployeeId, secretary.Username, secretary.Role, secretary.Email, secretary.Address, secretary.DiretorID);
+                    }
+                }
+                else
+                {
+                    foreach (var employee in employees)
+                    {
+
+                        dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email, employee.Address);
+                    }
                 }
             }
             dataGridView1.RowHeadersVisible = false;
@@ -52,7 +71,7 @@ namespace AcademiaDeFormacao.UserControls
         }
         private void btn_exportCSV_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void LoadDatabasePreview(string selectedFilter)
         {
@@ -63,21 +82,37 @@ namespace AcademiaDeFormacao.UserControls
             dataTable.Columns.Add("Email");
             dataTable.Columns.Add("Address");
 
+            if (selectedFilter == "Secretary")
+            {
+                dataTable.Columns.Add("DirectorID");
+            }
+
             using (var context = new School())
             {
                 List<Employee> employees = context.Employees.ToList();
+                List<Secretary> secretaries = context.Secretaries.ToList();
 
                 // Apply filter based on the selected option in cmb_filter
                 if (selectedFilter != "All")
                 {
                     employees = employees.Where(emp => emp.Role == selectedFilter).ToList();
                 }
-
-                foreach (var employee in employees)
+                if (selectedFilter == "Secretary")
                 {
-                    dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email, employee.Address);
-                }
+                    foreach (var secretary in secretaries)
+                    {
 
+                        dataTable.Rows.Add(secretary.EmployeeId, secretary.Username, secretary.Role, secretary.Email, secretary.Address, secretary.DiretorID);
+                    }
+                }
+                else
+                {
+                    foreach (var employee in employees)
+                    {
+
+                        dataTable.Rows.Add(employee.EmployeeId, employee.Username, employee.Role, employee.Email, employee.Address);
+                    }
+                }
             }
 
             dataGridView1.RowHeadersVisible = false;

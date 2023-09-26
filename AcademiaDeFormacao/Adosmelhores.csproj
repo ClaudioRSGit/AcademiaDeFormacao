@@ -406,6 +406,18 @@
   <ItemGroup>
     <None Include="Resources\Ionic-Ionicons-School.512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csvNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\json-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csv %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xml %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

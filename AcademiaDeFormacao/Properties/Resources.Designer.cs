@@ -213,9 +213,29 @@ namespace AcademiaDeFormacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap csv__1_ {
+            get {
+                object obj = ResourceManager.GetObject("csv (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap csv1 {
             get {
                 object obj = ResourceManager.GetObject("csv1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap csvNew {
+            get {
+                object obj = ResourceManager.GetObject("csvNew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,16 @@ namespace AcademiaDeFormacao.Properties {
         internal static System.Drawing.Bitmap json {
             get {
                 object obj = ResourceManager.GetObject("json", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap json_file {
+            get {
+                object obj = ResourceManager.GetObject("json-file", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,6 +506,16 @@ namespace AcademiaDeFormacao.Properties {
         internal static System.Drawing.Bitmap xml {
             get {
                 object obj = ResourceManager.GetObject("xml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xml__1_ {
+            get {
+                object obj = ResourceManager.GetObject("xml (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
