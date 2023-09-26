@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-
-//ToDo Ver bugs quando se clica no btn_add pois pode haver campos nao escritos
 
 namespace AcademiaDeFormacao.UserControls
 {
@@ -23,6 +13,8 @@ namespace AcademiaDeFormacao.UserControls
         {
             InitializeComponent();
             HideAll();
+
+            // Initialize Dates
             dtp_CriminalRecord.MinDate = DateTime.Now.AddDays(+1);
             dtp_ContractEndDate.MinDate = DateTime.Now.AddDays(+1);
             dtp_BirthDate.MaxDate = DateTime.Now.AddYears(-18);
@@ -30,6 +22,8 @@ namespace AcademiaDeFormacao.UserControls
         }
 
         #region Utils
+        private bool fieldsChecked = true;
+
         //Hide all Components
         private void HideAll()
         {
@@ -104,66 +98,75 @@ namespace AcademiaDeFormacao.UserControls
 
         private void CheckValues(string role)
         {
+            fieldsChecked = true;
+
             switch (role)
             {
-                case "secretary":
-                    
+                case "Secretary":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
                     {
                         MessageBox.Show("Please fill in all required fields.");
+                        fieldsChecked = false;
                     }
-                        else if (director_name.Text == "Director Name")
-                        {
-                            panel_listDirectors.Show();
-                            MessageBox.Show("fILL DIRECOTR");
-                    }
-                    else
+                    else if (director_name.Text == "Director Name")
                     {
-                        return;
+                        panel_listDirectors.Show();
+                        MessageBox.Show("Please select the Associated Director!");
+                        fieldsChecked = false;
                     }
                     break;
-                case "director":
+                case "Director":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
                 string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.");
-                        return;
+                        fieldsChecked = false;
                     }
                     break;
-                case " coordinator":
+                case "Coordinator":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || listView_TrainersAdded == null)
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
                     {
                         MessageBox.Show("Please fill in all required fields.");
+                        fieldsChecked = false;
                     }
-                    else
+                    else if (listView_TrainersAdded.Items.Count == 0) 
                     {
-                        return;
+                        panel_coordinator.Show();
+                        MessageBox.Show("Please select Trainers associated!");
+                        fieldsChecked = false;
                     }
                     break;
-                case "trainer":
+                case "Trainer":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_timevalue.Text)
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
+                    {
+                        MessageBox.Show("Please fill in all required fields.");
+                        fieldsChecked = false;
+                    }
+                    else if (string.IsNullOrWhiteSpace(txt_timevalue.Text)
                 || string.IsNullOrWhiteSpace(txt_timevalue2.Text))
                     {
+                        panel_Trainer.Show();
                         MessageBox.Show("Please fill in all required fields.");
-                        return;
+                        fieldsChecked = false;
                     }
                     break;
                 default:
+                    fieldsChecked = true;
                     break;
             }
 
-            
+
         }
 
         static string EncryptPassword(string password, int leap)
@@ -250,29 +253,30 @@ namespace AcademiaDeFormacao.UserControls
             panel_coordinator.Hide();
             foreach (ListViewItem item in listView_TrainersAdded.Items)
             {
-                // Clone o item selecionado
+                // Clone selected item
                 ListViewItem clonedItem = (ListViewItem)item.Clone();
 
-                // Adicione o item clonado à listView2
+                // Add clone to listView_TrainersToAdd
                 listView_TrainersToAdd.Items.Add(clonedItem);
             }
             listView_TrainersAdded.Clear();
         }
 
-        List<Trainer> trainersToAddToCoordinator = new List<Trainer>(); //tem de ser fora do scope da func
+        List<Trainer> trainersToAddToCoordinator = new List<Trainer>();
+
         private void btn_addTrainer_Click(object sender, EventArgs e)
         {
             if (listView_TrainersToAdd.SelectedItems.Count > 0)
             {
                 foreach (ListViewItem selectedItem in listView_TrainersToAdd.SelectedItems)
                 {
-                    // Clone o item selecionado
+                    // Clone selected item
                     ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
 
-                    // Adicione o item clonado a listView2
+                    // Add clone to listView_TrainersAdded
                     listView_TrainersAdded.Items.Add(clonedItem);
 
-                    // Remova o item da listView1
+                    // Remove item from listView_TrainersToAdd
                     listView_TrainersToAdd.Items.Remove(selectedItem);
 
                 }
@@ -287,13 +291,13 @@ namespace AcademiaDeFormacao.UserControls
                 {
                     string selectedTrainerName = selectedItem.Text;
 
-                    // Clone o item selecionado
+                    // Clone selected item
                     ListViewItem clonedItem = (ListViewItem)selectedItem.Clone();
 
-                    // Adicione o item clonado a listView2
+                    // Add clone to listView_TrainersToAdd
                     listView_TrainersToAdd.Items.Add(clonedItem);
 
-                    // Remova o item da listView1
+                    // Remove item from listView_TrainersAdded
                     listView_TrainersAdded.Items.Remove(selectedItem);
 
                     using (var context = new School())
@@ -301,7 +305,7 @@ namespace AcademiaDeFormacao.UserControls
                         Trainer selectedTrainer = trainersToAddToCoordinator.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
                         if (selectedTrainer != null)
                         {
-                            trainersToAddToCoordinator.Remove(selectedTrainer); // Remove o treinador à lista temporária
+                            trainersToAddToCoordinator.Remove(selectedTrainer); // Remove trainer from temporary List<>
                         }
                     }
                 }
@@ -310,21 +314,21 @@ namespace AcademiaDeFormacao.UserControls
 
         private void btn_SaveTrainersAdd_Click(object sender, EventArgs e)
         {
-            // Limpar a lista temporária antes de copiar os itens da listView2
+            // Clean trainers from temporary List<>
             trainersToAddToCoordinator.Clear();
 
             foreach (ListViewItem item in listView_TrainersAdded.Items)
             {
-                // Obtenha o nome do treinador a partir do item
+                // Get Trainer Name
                 string selectedTrainerName = item.Text;
 
-                // Encontre o treinador correspondente no contexto do banco de dados ou onde quer que esteja armazenado
+                // Find the corresponding Trainer in the database context
                 using (var context = new School())
                 {
                     Trainer selectedTrainer = context.Trainers.FirstOrDefault(trainer => trainer.Name == selectedTrainerName);
                     if (selectedTrainer != null)
                     {
-                        // Adicione o treinador à lista temporária
+                        // Add Trainer to Temporary List<>
                         trainersToAddToCoordinator.Add(selectedTrainer);
                     }
                 }
@@ -435,14 +439,20 @@ namespace AcademiaDeFormacao.UserControls
         {
             string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
 
-            
             string selectedRole = cmb_Role.SelectedItem.ToString();
+
+            CheckValues(selectedRole);
+
+            if (!fieldsChecked)
+            {
+                return;
+            }
+
             switch (selectedRole)
             {
                 case "Secretary":
                     using (var context = new School())
                     {
-                        CheckValues("secretary");
                         Director selectedDirector = context.Directors.FirstOrDefault(d => d.EmployeeId == this.SelectedDirectorId);
                         Secretary newSecretary = new Secretary();
                         newSecretary.Username = txt_username.Text;
@@ -464,7 +474,7 @@ namespace AcademiaDeFormacao.UserControls
 
                         MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //wipe all fields
+                        //Wipe all fields
                         wipeFields();
                         cmb_Role.SelectedIndex = 0;
 
@@ -473,8 +483,6 @@ namespace AcademiaDeFormacao.UserControls
                 case "Director":
                     using (var context = new School())
                     {
-                        CheckValues("director");
-
                         Director newDirector = new Director();
 
                         newDirector.Username = txt_username.Text;
@@ -497,7 +505,7 @@ namespace AcademiaDeFormacao.UserControls
                         context.SaveChanges();
                         MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //wipe all fields
+                        //Wipe all fields
                         wipeFields();
                         cmb_Role.SelectedIndex = 0;
 
@@ -507,8 +515,6 @@ namespace AcademiaDeFormacao.UserControls
                 case "Trainer":
                     using (var context = new School())
                     {
-                        CheckValues("trainer");
-
                         Trainer newTrainer = new Trainer();
 
                         newTrainer.Username = txt_username.Text;
@@ -531,7 +537,7 @@ namespace AcademiaDeFormacao.UserControls
                         context.SaveChanges();
                         MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //wipe all fields
+                        //Wipe all fields
                         wipeFields();
                         cmb_Role.SelectedIndex = 0;
 
@@ -541,8 +547,6 @@ namespace AcademiaDeFormacao.UserControls
                 case "Coordinator":
                     using (var context = new School())
                     {
-                        CheckValues("coordinator");
-
                         Coordinator newCoordinator = new Coordinator();
 
                         newCoordinator.Username = txt_username.Text;
@@ -566,7 +570,7 @@ namespace AcademiaDeFormacao.UserControls
                             }
                         }
 
-                        // Use um loop para criar uma string com a lista de treinadores
+                        // Loop with Trainer list
                         string trainerListMessage = "Coordinators associated:\n";
 
                         foreach (Trainer trainer in newCoordinator.Trainers)
@@ -574,14 +578,14 @@ namespace AcademiaDeFormacao.UserControls
                             trainerListMessage += trainer.Name + "\n";
                         }
 
-                        // Exiba a mensagem com a lista de treinadores
+                        // Message
                         MessageBox.Show(trainerListMessage, "Trainer List", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         context.Coordinators.Add(newCoordinator);
                         context.SaveChanges();
                         MessageBox.Show("Account created successfully", "Registration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //wipe all fields
+                        //Wipe all fields
                         wipeFields();
                         cmb_Role.SelectedIndex = 0;
 
@@ -620,6 +624,6 @@ namespace AcademiaDeFormacao.UserControls
         }
 
         #endregion
-   
+
     }
 }
