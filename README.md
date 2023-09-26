@@ -89,6 +89,10 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 <br><br>
     <img src="images/login.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
+`sign in system`
+<br><br>
+    <img src="images/signUp.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">    
+
 `Main Menu`
 <br><br>
     <img src="images/menuDirectorSecretary.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
@@ -97,9 +101,30 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 <br><br>
     <img src="images/dashboard.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
+`Dashboard Hovers`
+<br><br>
+    <img src="images/DashboardHover.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
 `Add Employee`
 <br><br>
     <img src="images/addEmployee.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+`Add Employee -> Director`
+<br><br>
+    <img src="images/addEmployeeDirector.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+`Add Employee -> Secretary`
+<br><br>
+    <img src="images/addEmployeeScretaryNormal.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">    
+    <img src="images/addEmployeeScretaryWithPanel.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">   
+
+`Add Employee -> Trainer`
+<br><br>
+    <img src="images/addEmployeeTrainer.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+`Add Employee -> Coordinator`
+<br><br>
+    <img src="images/addEmployeeCoordinator.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
 `Contract Management`
 <br><br>
@@ -133,6 +158,13 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 `Calendar`
 <br><br>
     <img src="images/CalendarHover.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+
+>Coordinator can hover the training days to check if there ate some other scheduled training sessions.
+
+`Training Schedule`
+<br><br>
+    <img src="images/TrainingScheduler.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
 
 >Coordinator can hover the training days to check if there ate some other scheduled training sessions.
