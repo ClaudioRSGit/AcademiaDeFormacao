@@ -141,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(15, 111);
+            this.label1.Location = new System.Drawing.Point(17, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 29);
             this.label1.TabIndex = 35;
@@ -184,9 +184,9 @@
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cmb_filter);
-            this.panel1.Location = new System.Drawing.Point(276, 202);
+            this.panel1.Location = new System.Drawing.Point(326, 202);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 151);
+            this.panel1.Size = new System.Drawing.Size(277, 151);
             this.panel1.TabIndex = 60;
             // 
             // panel10
@@ -219,14 +219,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(314, 386);
+            this.chart1.Location = new System.Drawing.Point(326, 402);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(299, 215);
+            this.chart1.Size = new System.Drawing.Size(277, 202);
             this.chart1.TabIndex = 61;
             this.chart1.Text = "chart1";
             // 
@@ -242,14 +242,14 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(32, 386);
+            this.chart2.Location = new System.Drawing.Point(33, 402);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(276, 215);
+            this.chart2.Size = new System.Drawing.Size(273, 202);
             this.chart2.TabIndex = 62;
             this.chart2.Text = "chart2";
             // 
@@ -262,7 +262,7 @@
             this.panel3.Controls.Add(this.lbl_totalEmployees);
             this.panel3.Location = new System.Drawing.Point(33, 116);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 77);
+            this.panel3.Size = new System.Drawing.Size(273, 77);
             this.panel3.TabIndex = 61;
             // 
             // label4
@@ -288,7 +288,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AcademiaDeFormacao.Properties.Resources.total1;
-            this.pictureBox2.Location = new System.Drawing.Point(-33, -29);
+            this.pictureBox2.Location = new System.Drawing.Point(-20, -27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(153, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -312,7 +312,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Ivory;
-            this.label9.Location = new System.Drawing.Point(69, 361);
+            this.label9.Location = new System.Drawing.Point(61, 377);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(201, 22);
             this.label9.TabIndex = 60;
@@ -324,7 +324,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Ivory;
-            this.label10.Location = new System.Drawing.Point(334, 361);
+            this.label10.Location = new System.Drawing.Point(335, 377);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(254, 22);
             this.label10.TabIndex = 63;
@@ -342,14 +342,14 @@
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(561, 116);
+            this.chart3.Location = new System.Drawing.Point(621, 402);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(331, 237);
+            this.chart3.Size = new System.Drawing.Size(267, 202);
             this.chart3.TabIndex = 64;
             this.chart3.Text = "chart3";
             // 
@@ -362,7 +362,7 @@
             this.panel7.Controls.Add(this.lbl_averageSalary);
             this.panel7.Location = new System.Drawing.Point(33, 202);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(237, 77);
+            this.panel7.Size = new System.Drawing.Size(273, 72);
             this.panel7.TabIndex = 62;
             // 
             // label11
@@ -416,7 +416,7 @@
             this.panel8.Controls.Add(this.panel14);
             this.panel8.Location = new System.Drawing.Point(33, 285);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(237, 68);
+            this.panel8.Size = new System.Drawing.Size(273, 68);
             this.panel8.TabIndex = 63;
             // 
             // lbl_latestEmployee
@@ -468,9 +468,9 @@
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.lbl_birthdays);
             this.panel9.Controls.Add(this.panel12);
-            this.panel9.Location = new System.Drawing.Point(306, 116);
+            this.panel9.Location = new System.Drawing.Point(326, 116);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(249, 77);
+            this.panel9.Size = new System.Drawing.Size(277, 77);
             this.panel9.TabIndex = 63;
             // 
             // label8
@@ -491,7 +491,7 @@
             this.lbl_birthdays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.lbl_birthdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_birthdays.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_birthdays.Location = new System.Drawing.Point(7, 34);
+            this.lbl_birthdays.Location = new System.Drawing.Point(7, 37);
             this.lbl_birthdays.Name = "lbl_birthdays";
             this.lbl_birthdays.Size = new System.Drawing.Size(100, 16);
             this.lbl_birthdays.TabIndex = 62;
@@ -500,7 +500,7 @@
             // panel12
             // 
             this.panel12.Controls.Add(this.pictureBox3);
-            this.panel12.Location = new System.Drawing.Point(154, 7);
+            this.panel12.Location = new System.Drawing.Point(213, 7);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(90, 64);
             this.panel12.TabIndex = 68;
@@ -508,9 +508,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.birthday;
-            this.pictureBox3.Location = new System.Drawing.Point(15, -18);
+            this.pictureBox3.Location = new System.Drawing.Point(-39, -29);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(102, 93);
+            this.pictureBox3.Size = new System.Drawing.Size(122, 111);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 69;
             this.pictureBox3.TabStop = false;
@@ -521,9 +521,9 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.lbl_contractsEnding);
-            this.panel4.Location = new System.Drawing.Point(619, 386);
+            this.panel4.Location = new System.Drawing.Point(621, 116);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(130, 77);
+            this.panel4.Size = new System.Drawing.Size(127, 77);
             this.panel4.TabIndex = 69;
             // 
             // label6
@@ -558,9 +558,9 @@
             this.panel6.Controls.Add(this.lbl_enabledAccounts);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.panel15);
-            this.panel6.Location = new System.Drawing.Point(619, 469);
+            this.panel6.Location = new System.Drawing.Point(621, 202);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(269, 64);
+            this.panel6.Size = new System.Drawing.Size(267, 72);
             this.panel6.TabIndex = 70;
             // 
             // lbl_enabledAccounts
@@ -613,9 +613,9 @@
             this.panel16.Controls.Add(this.lbl_disabledAccounts);
             this.panel16.Controls.Add(this.label15);
             this.panel16.Controls.Add(this.panel17);
-            this.panel16.Location = new System.Drawing.Point(619, 537);
+            this.panel16.Location = new System.Drawing.Point(621, 285);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(269, 64);
+            this.panel16.Size = new System.Drawing.Size(267, 68);
             this.panel16.TabIndex = 71;
             // 
             // lbl_disabledAccounts
@@ -668,7 +668,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Ivory;
-            this.label5.Location = new System.Drawing.Point(629, 91);
+            this.label5.Location = new System.Drawing.Point(662, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(186, 22);
             this.label5.TabIndex = 72;
@@ -691,9 +691,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.lbl_expiredContracts);
-            this.panel5.Location = new System.Drawing.Point(755, 386);
+            this.panel5.Location = new System.Drawing.Point(757, 116);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(133, 77);
+            this.panel5.Size = new System.Drawing.Size(131, 77);
             this.panel5.TabIndex = 70;
             // 
             // label7
