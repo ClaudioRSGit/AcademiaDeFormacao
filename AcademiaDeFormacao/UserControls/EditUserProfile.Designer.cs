@@ -185,7 +185,7 @@
             this.btn_saveData.TabIndex = 45;
             this.btn_saveData.Text = "Save Data";
             this.btn_saveData.UseVisualStyleBackColor = true;
-            this.btn_saveData.Click += new System.EventHandler(this.btn_saveData);
+            this.btn_saveData.Click += new System.EventHandler(this.btn_saveData_Click);
             // 
             // txt_id
             // 

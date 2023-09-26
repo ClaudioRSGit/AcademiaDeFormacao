@@ -10,6 +10,9 @@ namespace AcademiaDeFormacao.UserControls
         public EditUserProfile()
         {
             InitializeComponent();
+
+            // Associate the event handler with the txt_contact control's KeyDown event
+            txt_contact.KeyDown += new KeyEventHandler(txt_contact_KeyDown);
         }
 
         public void PopulateFormFields(string userName)
@@ -113,10 +116,8 @@ namespace AcademiaDeFormacao.UserControls
 
         private void txt_contact_KeyDown(object sender, KeyEventArgs e)
         {
-            // Check if Ctrl+V (paste) is pressed
             if (e.Control && e.KeyCode == Keys.V)
             {
-                // Prevent the paste operation
                 e.Handled = true;
             }
         }
