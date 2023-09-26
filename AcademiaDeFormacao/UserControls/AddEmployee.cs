@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace AcademiaDeFormacao.UserControls
 {
@@ -104,17 +105,12 @@ namespace AcademiaDeFormacao.UserControls
             {
                 case "Secretary":
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
-                string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
-                string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null)
+                        string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
+                        string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
+                        string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null ||
+                        director_name.Text == "Director Name" || !ValidateEmail(txt_email.Text))
                     {
-                        MessageBox.Show("Please fill in all required fields.");
-                        fieldsChecked = false;
-                    }
-                    else if (director_name.Text == "Director Name")
-                    {
-                        panel_listDirectors.Show();
-                        MessageBox.Show("Please select the Associated Director!");
+                        MessageBox.Show("Please fill in all required fields and provide a valid email address.");
                         fieldsChecked = false;
                     }
                     break;
@@ -122,7 +118,8 @@ namespace AcademiaDeFormacao.UserControls
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text))
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || string.IsNullOrWhiteSpace(txt_mensalBonus.Text)
+                || !ValidateEmail(txt_email.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.");
                         fieldsChecked = false;
@@ -132,7 +129,7 @@ namespace AcademiaDeFormacao.UserControls
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || !ValidateEmail(txt_email.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.");
                         fieldsChecked = false;
@@ -148,7 +145,7 @@ namespace AcademiaDeFormacao.UserControls
                     if (string.IsNullOrWhiteSpace(txt_username.Text) || string.IsNullOrWhiteSpace(txt_password.Text) ||
                 string.IsNullOrWhiteSpace(txt_name.Text) || string.IsNullOrWhiteSpace(txt_email.Text) ||
                 string.IsNullOrWhiteSpace(txt_salary.Text) || string.IsNullOrWhiteSpace(txt_address.Text) ||
-                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null )
+                string.IsNullOrWhiteSpace(txt_contact.Text) || cmb_Role.SelectedItem == null || !ValidateEmail(txt_email.Text))
                     {
                         MessageBox.Show("Please fill in all required fields.");
                         fieldsChecked = false;
@@ -188,6 +185,22 @@ namespace AcademiaDeFormacao.UserControls
 
             return new string(chars);
         }
+
+        private bool ValidateEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Use Regex.IsMatch to check if the email matches the pattern
+            if (Regex.IsMatch(email, pattern))
+            {
+                return true; // Email is valid
+            }
+            else
+            {
+                return false; // Email is invalid
+            }
+        }
+
         #endregion
 
         #region AddSecretary

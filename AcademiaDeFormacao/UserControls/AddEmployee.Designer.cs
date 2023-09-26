@@ -215,7 +215,7 @@
             this.txt_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_username.Location = new System.Drawing.Point(56, 102);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
@@ -228,7 +228,7 @@
             this.txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_password.Location = new System.Drawing.Point(439, 102);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
@@ -241,7 +241,7 @@
             this.txt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_name.Location = new System.Drawing.Point(57, 163);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
@@ -255,7 +255,7 @@
             this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_email.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_email.Location = new System.Drawing.Point(57, 224);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
@@ -268,7 +268,7 @@
             this.txt_salary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_salary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_salary.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_salary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_salary.Location = new System.Drawing.Point(57, 285);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
@@ -282,7 +282,7 @@
             this.txt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_address.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_address.Location = new System.Drawing.Point(57, 346);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
@@ -295,7 +295,7 @@
             this.txt_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_contact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_contact.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_contact.Location = new System.Drawing.Point(439, 285);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
@@ -388,7 +388,7 @@
             this.txt_mensalBonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_mensalBonus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_mensalBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mensalBonus.ForeColor = System.Drawing.SystemColors.Info;
+            this.txt_mensalBonus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_mensalBonus.Location = new System.Drawing.Point(598, 469);
             this.txt_mensalBonus.Multiline = true;
             this.txt_mensalBonus.Name = "txt_mensalBonus";

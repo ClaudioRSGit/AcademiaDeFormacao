@@ -1,0 +1,19 @@
+O projeto tem passwords encriptadas, logo não é possivel verificar diretamente na base de dados quais sao as credenciais para fazer login.
+
+Aqui vão algumas contas para testes
+
+Director:
+user: john.doe
+pass: pass123
+
+Secretary:
+user: susan_johnson
+pass: pass123
+
+Trainer:
+user: ana.silva
+pass: senha123
+
+Coordinator:
+user: paul.garcia
+passs: paulpass

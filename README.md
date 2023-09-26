@@ -89,9 +89,11 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 <br><br>
     <img src="images/login.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
-`sign in system`
+`sign up system`
 <br><br>
     <img src="images/signUp.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">    
+
+> As a trainee, you're allowed to sign up on the application, doing this, the account will be created disabled, awaiting to be enabled by the secretary or director.
 
 `Main Menu`
 <br><br>
@@ -101,13 +103,19 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 <br><br>
     <img src="images/dashboard.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
+> On this Dashbord, we have powerful insights such as total employees, average salaries, number of employees by role, as long as age distribution age charts, etc...
+
 `Dashboard Hovers`
 <br><br>
     <img src="images/DashboardHover.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
 
+> Our hover feature allow us to get a deeper understanding on each topic.
+
 `Add Employee`
 <br><br>
     <img src="images/addEmployee.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
+
+> Directors and Secretaries can add 4 different types of employees (Directors, Trainers, Secretaries and Coordinators).
 
 `Add Employee -> Director`
 <br><br>
@@ -146,7 +154,6 @@ Make sure you have the required .NET Core SDK installed on your machine. You can
 `Cordinator Menu`
 <br><br>
     <img src="images/MenuCoordinator.png" style="min-width: 80%; height: 80%; width: 80%;" alt="Logo">
-
 
 `Calendar`
 <br><br>

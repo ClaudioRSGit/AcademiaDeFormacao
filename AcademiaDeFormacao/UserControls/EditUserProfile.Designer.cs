@@ -193,7 +193,7 @@
             this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_id.Enabled = false;
             this.txt_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_id.ForeColor = System.Drawing.Color.White;
             this.txt_id.Location = new System.Drawing.Point(40, 132);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
@@ -207,7 +207,7 @@
             this.txt_role.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_role.Enabled = false;
             this.txt_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_role.ForeColor = System.Drawing.Color.White;
             this.txt_role.Location = new System.Drawing.Point(186, 132);
             this.txt_role.Multiline = true;
             this.txt_role.Name = "txt_role";
@@ -220,7 +220,7 @@
             this.txt_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_name.ForeColor = System.Drawing.Color.White;
             this.txt_name.Location = new System.Drawing.Point(42, 216);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
@@ -234,7 +234,7 @@
             this.txt_contact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_contact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_contact.ForeColor = System.Drawing.Color.White;
             this.txt_contact.Location = new System.Drawing.Point(42, 307);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
@@ -247,7 +247,7 @@
             this.txt_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_email.ForeColor = System.Drawing.Color.White;
             this.txt_email.Location = new System.Drawing.Point(42, 377);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
@@ -260,7 +260,7 @@
             this.txt_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_address.ForeColor = System.Drawing.Color.White;
             this.txt_address.Location = new System.Drawing.Point(42, 447);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
@@ -274,7 +274,7 @@
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_username.Enabled = false;
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_username.ForeColor = System.Drawing.Color.White;
             this.txt_username.Location = new System.Drawing.Point(413, 132);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
@@ -287,7 +287,7 @@
             this.txt_confirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_confirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_confirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_confirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_confirmPassword.ForeColor = System.Drawing.Color.White;
             this.txt_confirmPassword.Location = new System.Drawing.Point(510, 307);
             this.txt_confirmPassword.Multiline = true;
             this.txt_confirmPassword.Name = "txt_confirmPassword";
@@ -300,7 +300,7 @@
             this.txt_newPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.txt_newPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_newPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_newPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_newPassword.ForeColor = System.Drawing.Color.White;
             this.txt_newPassword.Location = new System.Drawing.Point(271, 307);
             this.txt_newPassword.Multiline = true;
             this.txt_newPassword.Name = "txt_newPassword";
@@ -314,7 +314,7 @@
             this.txt_salary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_salary.Enabled = false;
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_salary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_salary.ForeColor = System.Drawing.Color.White;
             this.txt_salary.Location = new System.Drawing.Point(271, 216);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
@@ -339,7 +339,7 @@
             this.txt_dateOfBirth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_dateOfBirth.Enabled = false;
             this.txt_dateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_dateOfBirth.ForeColor = System.Drawing.Color.White;
             this.txt_dateOfBirth.Location = new System.Drawing.Point(510, 216);
             this.txt_dateOfBirth.Multiline = true;
             this.txt_dateOfBirth.Name = "txt_dateOfBirth";
@@ -364,7 +364,7 @@
             this.txt_contractEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_contractEndDate.Enabled = false;
             this.txt_contractEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contractEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_contractEndDate.ForeColor = System.Drawing.Color.White;
             this.txt_contractEndDate.Location = new System.Drawing.Point(448, 377);
             this.txt_contractEndDate.Multiline = true;
             this.txt_contractEndDate.Name = "txt_contractEndDate";
@@ -389,7 +389,7 @@
             this.txt_criminalRecordEndDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_criminalRecordEndDate.Enabled = false;
             this.txt_criminalRecordEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_criminalRecordEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.txt_criminalRecordEndDate.ForeColor = System.Drawing.Color.White;
             this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(447, 447);
             this.txt_criminalRecordEndDate.Multiline = true;
             this.txt_criminalRecordEndDate.Name = "txt_criminalRecordEndDate";
