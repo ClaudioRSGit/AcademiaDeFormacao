@@ -145,6 +145,7 @@
             this.txt_password.Location = new System.Drawing.Point(305, 298);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.ShortcutsEnabled = false;
             this.txt_password.Size = new System.Drawing.Size(234, 30);
             this.txt_password.TabIndex = 27;
             this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);

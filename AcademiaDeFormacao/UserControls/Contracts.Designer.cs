@@ -171,6 +171,7 @@
             this.txt_contractEndDate.Location = new System.Drawing.Point(65, 258);
             this.txt_contractEndDate.Multiline = true;
             this.txt_contractEndDate.Name = "txt_contractEndDate";
+            this.txt_contractEndDate.ShortcutsEnabled = false;
             this.txt_contractEndDate.Size = new System.Drawing.Size(344, 30);
             this.txt_contractEndDate.TabIndex = 62;
             // 
@@ -183,6 +184,7 @@
             this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(430, 258);
             this.txt_criminalRecordEndDate.Multiline = true;
             this.txt_criminalRecordEndDate.Name = "txt_criminalRecordEndDate";
+            this.txt_criminalRecordEndDate.ShortcutsEnabled = false;
             this.txt_criminalRecordEndDate.Size = new System.Drawing.Size(335, 30);
             this.txt_criminalRecordEndDate.TabIndex = 63;
             // 
@@ -464,6 +466,7 @@
             this.txt_salary.Location = new System.Drawing.Point(18, 195);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
+            this.txt_salary.ShortcutsEnabled = false;
             this.txt_salary.Size = new System.Drawing.Size(208, 31);
             this.txt_salary.TabIndex = 71;
             // 

@@ -10,9 +10,6 @@ namespace AcademiaDeFormacao.UserControls
         public EditUserProfile()
         {
             InitializeComponent();
-
-            // Associate the event handler with the txt_contact control's KeyDown event
-            txt_contact.KeyDown += new KeyEventHandler(txt_contact_KeyDown);
         }
 
         public void PopulateFormFields(string userName)
@@ -111,14 +108,6 @@ namespace AcademiaDeFormacao.UserControls
                 e.KeyChar != '\b' && e.KeyChar != '\u007F') // Backspace and Delete keys
             {
                 e.Handled = true; // Cancel the key press event
-            }
-        }
-
-        private void txt_contact_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control && e.KeyCode == Keys.V)
-            {
-                e.Handled = true;
             }
         }
 

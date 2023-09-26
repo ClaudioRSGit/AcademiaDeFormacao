@@ -104,6 +104,7 @@
             this.txt_password.Location = new System.Drawing.Point(275, 321);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.ShortcutsEnabled = false;
             this.txt_password.Size = new System.Drawing.Size(314, 30);
             this.txt_password.TabIndex = 10;
             this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
@@ -152,6 +153,7 @@
             this.txt_confirmPassword.Location = new System.Drawing.Point(275, 387);
             this.txt_confirmPassword.Multiline = true;
             this.txt_confirmPassword.Name = "txt_confirmPassword";
+            this.txt_confirmPassword.ShortcutsEnabled = false;
             this.txt_confirmPassword.Size = new System.Drawing.Size(314, 30);
             this.txt_confirmPassword.TabIndex = 16;
             this.txt_confirmPassword.TextChanged += new System.EventHandler(this.txt_confirmPassword_TextChanged);

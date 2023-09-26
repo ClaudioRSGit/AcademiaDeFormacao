@@ -197,6 +197,7 @@
             this.txt_id.Location = new System.Drawing.Point(40, 132);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
+            this.txt_id.ShortcutsEnabled = false;
             this.txt_id.Size = new System.Drawing.Size(121, 30);
             this.txt_id.TabIndex = 46;
             // 
@@ -210,6 +211,7 @@
             this.txt_role.Location = new System.Drawing.Point(186, 132);
             this.txt_role.Multiline = true;
             this.txt_role.Name = "txt_role";
+            this.txt_role.ShortcutsEnabled = false;
             this.txt_role.Size = new System.Drawing.Size(197, 30);
             this.txt_role.TabIndex = 54;
             // 
@@ -222,6 +224,7 @@
             this.txt_name.Location = new System.Drawing.Point(42, 216);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
+            this.txt_name.ShortcutsEnabled = false;
             this.txt_name.Size = new System.Drawing.Size(197, 30);
             this.txt_name.TabIndex = 55;
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
@@ -235,9 +238,9 @@
             this.txt_contact.Location = new System.Drawing.Point(42, 307);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
+            this.txt_contact.ShortcutsEnabled = false;
             this.txt_contact.Size = new System.Drawing.Size(197, 30);
             this.txt_contact.TabIndex = 56;
-            this.txt_contact.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contact_KeyDown);
             // 
             // txt_email
             // 
@@ -248,9 +251,9 @@
             this.txt_email.Location = new System.Drawing.Point(42, 377);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
+            this.txt_email.ShortcutsEnabled = false;
             this.txt_email.Size = new System.Drawing.Size(377, 30);
             this.txt_email.TabIndex = 57;
-            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_contact_KeyDown);
             // 
             // txt_address
             // 
@@ -261,6 +264,7 @@
             this.txt_address.Location = new System.Drawing.Point(42, 447);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
+            this.txt_address.ShortcutsEnabled = false;
             this.txt_address.Size = new System.Drawing.Size(377, 30);
             this.txt_address.TabIndex = 58;
             // 
@@ -274,6 +278,7 @@
             this.txt_username.Location = new System.Drawing.Point(413, 132);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
+            this.txt_username.ShortcutsEnabled = false;
             this.txt_username.Size = new System.Drawing.Size(357, 30);
             this.txt_username.TabIndex = 59;
             // 
@@ -286,6 +291,7 @@
             this.txt_confirmPassword.Location = new System.Drawing.Point(510, 307);
             this.txt_confirmPassword.Multiline = true;
             this.txt_confirmPassword.Name = "txt_confirmPassword";
+            this.txt_confirmPassword.ShortcutsEnabled = false;
             this.txt_confirmPassword.Size = new System.Drawing.Size(260, 30);
             this.txt_confirmPassword.TabIndex = 60;
             // 
@@ -298,6 +304,7 @@
             this.txt_newPassword.Location = new System.Drawing.Point(271, 307);
             this.txt_newPassword.Multiline = true;
             this.txt_newPassword.Name = "txt_newPassword";
+            this.txt_newPassword.ShortcutsEnabled = false;
             this.txt_newPassword.Size = new System.Drawing.Size(217, 30);
             this.txt_newPassword.TabIndex = 61;
             // 
@@ -311,6 +318,7 @@
             this.txt_salary.Location = new System.Drawing.Point(271, 216);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
+            this.txt_salary.ShortcutsEnabled = false;
             this.txt_salary.Size = new System.Drawing.Size(217, 30);
             this.txt_salary.TabIndex = 62;
             // 
@@ -335,6 +343,7 @@
             this.txt_dateOfBirth.Location = new System.Drawing.Point(510, 216);
             this.txt_dateOfBirth.Multiline = true;
             this.txt_dateOfBirth.Name = "txt_dateOfBirth";
+            this.txt_dateOfBirth.ShortcutsEnabled = false;
             this.txt_dateOfBirth.Size = new System.Drawing.Size(260, 30);
             this.txt_dateOfBirth.TabIndex = 64;
             // 
@@ -359,6 +368,7 @@
             this.txt_contractEndDate.Location = new System.Drawing.Point(448, 377);
             this.txt_contractEndDate.Multiline = true;
             this.txt_contractEndDate.Name = "txt_contractEndDate";
+            this.txt_contractEndDate.ShortcutsEnabled = false;
             this.txt_contractEndDate.Size = new System.Drawing.Size(322, 30);
             this.txt_contractEndDate.TabIndex = 67;
             // 
@@ -383,6 +393,7 @@
             this.txt_criminalRecordEndDate.Location = new System.Drawing.Point(447, 447);
             this.txt_criminalRecordEndDate.Multiline = true;
             this.txt_criminalRecordEndDate.Name = "txt_criminalRecordEndDate";
+            this.txt_criminalRecordEndDate.ShortcutsEnabled = false;
             this.txt_criminalRecordEndDate.Size = new System.Drawing.Size(323, 30);
             this.txt_criminalRecordEndDate.TabIndex = 69;
             // 

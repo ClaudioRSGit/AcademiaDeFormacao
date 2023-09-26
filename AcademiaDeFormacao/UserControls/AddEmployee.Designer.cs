@@ -219,6 +219,7 @@
             this.txt_username.Location = new System.Drawing.Point(56, 102);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
+            this.txt_username.ShortcutsEnabled = false;
             this.txt_username.Size = new System.Drawing.Size(317, 30);
             this.txt_username.TabIndex = 39;
             // 
@@ -231,6 +232,7 @@
             this.txt_password.Location = new System.Drawing.Point(439, 102);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.ShortcutsEnabled = false;
             this.txt_password.Size = new System.Drawing.Size(318, 30);
             this.txt_password.TabIndex = 40;
             // 
@@ -243,6 +245,7 @@
             this.txt_name.Location = new System.Drawing.Point(57, 163);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
+            this.txt_name.ShortcutsEnabled = false;
             this.txt_name.Size = new System.Drawing.Size(316, 30);
             this.txt_name.TabIndex = 40;
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyLetters);
@@ -256,6 +259,7 @@
             this.txt_email.Location = new System.Drawing.Point(57, 224);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
+            this.txt_email.ShortcutsEnabled = false;
             this.txt_email.Size = new System.Drawing.Size(700, 30);
             this.txt_email.TabIndex = 41;
             // 
@@ -268,6 +272,7 @@
             this.txt_salary.Location = new System.Drawing.Point(57, 285);
             this.txt_salary.Multiline = true;
             this.txt_salary.Name = "txt_salary";
+            this.txt_salary.ShortcutsEnabled = false;
             this.txt_salary.Size = new System.Drawing.Size(316, 30);
             this.txt_salary.TabIndex = 42;
             this.txt_salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
@@ -281,6 +286,7 @@
             this.txt_address.Location = new System.Drawing.Point(57, 346);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
+            this.txt_address.ShortcutsEnabled = false;
             this.txt_address.Size = new System.Drawing.Size(700, 30);
             this.txt_address.TabIndex = 44;
             // 
@@ -293,6 +299,7 @@
             this.txt_contact.Location = new System.Drawing.Point(439, 285);
             this.txt_contact.Multiline = true;
             this.txt_contact.Name = "txt_contact";
+            this.txt_contact.ShortcutsEnabled = false;
             this.txt_contact.Size = new System.Drawing.Size(318, 30);
             this.txt_contact.TabIndex = 45;
             this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
@@ -385,6 +392,7 @@
             this.txt_mensalBonus.Location = new System.Drawing.Point(598, 469);
             this.txt_mensalBonus.Multiline = true;
             this.txt_mensalBonus.Name = "txt_mensalBonus";
+            this.txt_mensalBonus.ShortcutsEnabled = false;
             this.txt_mensalBonus.Size = new System.Drawing.Size(159, 30);
             this.txt_mensalBonus.TabIndex = 55;
             this.txt_mensalBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_onlyNumbers);
