@@ -654,7 +654,7 @@
             // 
             // btn_SaveTrainersAdd
             // 
-            this.btn_SaveTrainersAdd.Location = new System.Drawing.Point(250, 365);
+            this.btn_SaveTrainersAdd.Location = new System.Drawing.Point(245, 366);
             this.btn_SaveTrainersAdd.Name = "btn_SaveTrainersAdd";
             this.btn_SaveTrainersAdd.Size = new System.Drawing.Size(75, 23);
             this.btn_SaveTrainersAdd.TabIndex = 7;
@@ -737,7 +737,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(57)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.panel_listDirectors);
             this.Controls.Add(this.cbx_area_trainer);
             this.Controls.Add(this.director_name);
             this.Controls.Add(this.lbl_Area);
@@ -772,9 +771,10 @@
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.label_Password);
             this.Controls.Add(this.label_Username);
-            this.Controls.Add(this.panel_coordinator);
-            this.Controls.Add(this.panel_Trainer);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel_coordinator);
+            this.Controls.Add(this.panel_listDirectors);
+            this.Controls.Add(this.panel_Trainer);
             this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(817, 577);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

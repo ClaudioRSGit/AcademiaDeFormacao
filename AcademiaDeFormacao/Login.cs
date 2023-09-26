@@ -1,15 +1,8 @@
 ﻿ using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using AcademiaDeFormacao;
-using System.IO;
 
 namespace TryProject
 {
@@ -24,13 +17,11 @@ namespace TryProject
             txt_password.KeyPress += TxtPassword_KeyPress;
             txt_username.KeyPress += Txt_username_KeyPress;
         }
-        
 
+        #region Utils
         static string EncryptPassword(string password, int leap)
         {
             char[] chars = password.ToCharArray();
-
-
 
             for (int i = 0; i < chars.Length; i++)
             {
@@ -40,8 +31,6 @@ namespace TryProject
                     chars[i] = (char)(baseChar + (chars[i] - baseChar + leap) % 26);
                 }
             }
-
-
 
             return new string(chars);
         }
@@ -62,19 +51,48 @@ namespace TryProject
             }
         }
 
-
         private void btn_clear_Click(object sender, EventArgs e)
         {
             txt_username.Text = "";
             txt_password.Text = "";
         }
+        
+        private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check_ShowPassword.Checked)
+            {
+                txt_password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_password.PasswordChar = '*';
+            }
+        }
+        
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            
+            if (check_ShowPassword.Checked)
+            {
+                txt_password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_password.PasswordChar = '*';
+            }
+        }
+        #endregion
 
+        #region MoveTo
         private void lbl_singUp_Click(object sender, EventArgs e)
         {
             this.Hide();
             new SignUp(this).Show();
         }
 
+        #endregion
+
+        #region Login
         private void btn_login_Click(object sender, EventArgs e)
         {
             string EncryptedPassword = EncryptPassword(txt_password.Text, 150);
@@ -126,46 +144,14 @@ namespace TryProject
                 }
                 catch (Exception ex)
                 {
-                    // Handle any exceptions that might occur during the database query
+                    // Handle any exceptions that might occur during the database
                     MessageBox.Show("An error occurred while trying to log in: " + ex.Message);
                 }
             }
 
         }
 
+        #endregion
 
-        private void check_ShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (check_ShowPassword.Checked)
-            {
-                txt_password.PasswordChar = '\0';
-            }
-            else
-            {
-                txt_password.PasswordChar = '*';
-            }
-        }
-
-        private void txt_password_TextChanged(object sender, EventArgs e)
-        {
-            
-            if (check_ShowPassword.Checked)
-            {
-                txt_password.PasswordChar = '\0';
-            }
-            else
-            {
-                txt_password.PasswordChar = '*';
-            }
-        }
-
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.pictureBox3.Parent = this.pictureBox1;
-            this.pictureBox3.BackColor = Color.Yellow;
-        }
-
-        
     }
 }
