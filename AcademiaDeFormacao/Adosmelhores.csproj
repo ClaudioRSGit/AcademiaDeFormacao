@@ -74,12 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
-    <Compile Include="MenuCoordinator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuCoordinator.Designer.cs">
-      <DependentUpon>MenuCoordinator.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,9 +169,6 @@
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCoordinator.resx">
-      <DependentUpon>MenuCoordinator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuTrainer.resx">
       <DependentUpon>MenuTrainer.cs</DependentUpon>
