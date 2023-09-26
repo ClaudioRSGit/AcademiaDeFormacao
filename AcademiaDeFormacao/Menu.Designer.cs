@@ -32,15 +32,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_role = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.picB_EditProf = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.picB_Login = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picB_AddEmployee = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picB_ExportCSV = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picB_Contracts = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_CalculateSalary = new System.Windows.Forms.PictureBox();
             this.picB_WelcomePage = new System.Windows.Forms.PictureBox();
@@ -56,15 +56,15 @@
             this.DashBoard = new AcademiaDeFormacao.UserControls.CalculateSalary();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_EditProf)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB_Login)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB_AddEmployee)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_ExportCSV)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Contracts)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB_WelcomePage)).BeginInit();
@@ -103,23 +103,23 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.pictureBox8);
+            this.panel8.Controls.Add(this.picB_EditProf);
             this.panel8.Location = new System.Drawing.Point(12, 479);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(104, 90);
             this.panel8.TabIndex = 41;
             // 
-            // pictureBox8
+            // picB_EditProf
             // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
-            this.pictureBox8.Location = new System.Drawing.Point(-119, -105);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(346, 307);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.picB_EditProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picB_EditProf.Image = global::AcademiaDeFormacao.Properties.Resources.edit;
+            this.picB_EditProf.Location = new System.Drawing.Point(-119, -105);
+            this.picB_EditProf.Name = "picB_EditProf";
+            this.picB_EditProf.Size = new System.Drawing.Size(346, 307);
+            this.picB_EditProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_EditProf.TabIndex = 3;
+            this.picB_EditProf.TabStop = false;
+            this.picB_EditProf.Click += new System.EventHandler(this.picB_EditProf_Click);
             // 
             // panel7
             // 
@@ -163,43 +163,43 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Controls.Add(this.picB_ExportCSV);
             this.panel6.Location = new System.Drawing.Point(14, 393);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(105, 76);
             this.panel6.TabIndex = 38;
             // 
-            // pictureBox5
+            // picB_ExportCSV
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::AcademiaDeFormacao.Properties.Resources.csv;
-            this.pictureBox5.Location = new System.Drawing.Point(-76, -80);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(251, 241);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 31;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.picB_ExportCSV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picB_ExportCSV.Image = global::AcademiaDeFormacao.Properties.Resources.csv;
+            this.picB_ExportCSV.Location = new System.Drawing.Point(-76, -80);
+            this.picB_ExportCSV.Name = "picB_ExportCSV";
+            this.picB_ExportCSV.Size = new System.Drawing.Size(251, 241);
+            this.picB_ExportCSV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_ExportCSV.TabIndex = 31;
+            this.picB_ExportCSV.TabStop = false;
+            this.picB_ExportCSV.Click += new System.EventHandler(this.picB_ExportCSV_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.picB_Contracts);
             this.panel5.Location = new System.Drawing.Point(14, 301);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(105, 76);
             this.panel5.TabIndex = 37;
             // 
-            // pictureBox3
+            // picB_Contracts
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
-            this.pictureBox3.Location = new System.Drawing.Point(-74, -94);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(249, 264);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.picB_Contracts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picB_Contracts.Image = global::AcademiaDeFormacao.Properties.Resources.contacts;
+            this.picB_Contracts.Location = new System.Drawing.Point(-74, -94);
+            this.picB_Contracts.Name = "picB_Contracts";
+            this.picB_Contracts.Size = new System.Drawing.Size(249, 264);
+            this.picB_Contracts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Contracts.TabIndex = 32;
+            this.picB_Contracts.TabStop = false;
+            this.picB_Contracts.Click += new System.EventHandler(this.picB_Contracts_Click);
             // 
             // panel4
             // 
@@ -346,15 +346,15 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_EditProf)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picB_Login)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picB_AddEmployee)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_ExportCSV)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Contracts)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_CalculateSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picB_WelcomePage)).EndInit();
@@ -371,7 +371,7 @@
             private System.Windows.Forms.Panel panel1;
             private System.Windows.Forms.PictureBox picB_WelcomePage;
             private System.Windows.Forms.PictureBox picB_Login;
-            private System.Windows.Forms.PictureBox pictureBox5;
+            private System.Windows.Forms.PictureBox picB_ExportCSV;
             private System.Windows.Forms.PictureBox btn_CalculateSalary;
             private System.Windows.Forms.PictureBox picB_AddEmployee;
             private System.Windows.Forms.Panel mainPanel;
@@ -380,12 +380,12 @@
             private AcademiaDeFormacao.UserControls.WelcomePage welcomePage1;
             private System.Windows.Forms.Panel panel4;
             private System.Windows.Forms.Panel panel2;
-            private System.Windows.Forms.PictureBox pictureBox3;
+            private System.Windows.Forms.PictureBox picB_Contracts;
             private System.Windows.Forms.Panel panel5;
             private System.Windows.Forms.Panel panel6;
             private System.Windows.Forms.Panel panel7;
             private System.Windows.Forms.Panel panel8;
-            private System.Windows.Forms.PictureBox pictureBox8;
+            private System.Windows.Forms.PictureBox picB_EditProf;
             private System.Windows.Forms.Label lbl_DisplayUserName;
             private System.Windows.Forms.PictureBox pictureBox7;
             private System.Windows.Forms.Panel panel3;

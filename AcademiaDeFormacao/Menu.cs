@@ -29,7 +29,8 @@ namespace TryProject
             InitializeComponent();
 
             ShowUserControl(welcomePage1);
-            //
+
+            //Pass information to the form
             this.AuthenticatedUser = userName;
             this.UserRole = userRole;
             lbl_DisplayUserName.Text = userName;
@@ -64,17 +65,24 @@ namespace TryProject
             userControl.Show();
         }
 
-
-
-        #endregion
-
-
         private void picB_Login_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Login().Show();
         }
 
+        private void btn_ExitProgram_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        
+        private void picB_WelcomePage_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(welcomePage1);
+        }
+        #endregion
+
+        #region AddEmployee
         private void picB_AddEmployee_Click(object sender, EventArgs e)
         {
             ShowUserControl(addEmployee1);
@@ -82,38 +90,39 @@ namespace TryProject
             addEmployee1.LoadTrainers();
         }
 
-        private void btn_ExitProgram_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        #endregion
 
+        #region Contracts
         private void btn_CalculateSalary_Click(object sender, EventArgs e)
         {
             DashBoard.PopulateDashboard();
             ShowUserControl(DashBoard);
         }
 
-        private void picB_WelcomePage_Click(object sender, EventArgs e)
-        {
-            ShowUserControl(welcomePage1);
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void picB_Contracts_Click(object sender, EventArgs e)
         {
             contracts1.PopulateFormFields();
             ShowUserControl(contracts1);
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        #endregion
+
+        #region ExportData
+        private void picB_ExportCSV_Click(object sender, EventArgs e)
         {
             exportData2.LoadDatabasePreview();
             ShowUserControl(exportData2);
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        #endregion
+
+        #region EditProfile
+        private void picB_EditProf_Click(object sender, EventArgs e)
         {
             OnMenuEditProf.PopulateFormFields(this.AuthenticatedUser);
             ShowUserControl(OnMenuEditProf);
         }
+
+        #endregion
     }
 }
